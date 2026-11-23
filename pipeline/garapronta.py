@@ -183,8 +183,23 @@ def iscritti(key, lista):
 
 
 # ---------------------------------------------------------------- 3. scelta gare
+_COMUNI = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "comuni_regioni.json")))
+
+
+def _norm(t):
+    import unicodedata, re
+    t = unicodedata.normalize("NFKD", str(t)).encode("ascii", "ignore").decode().upper()
+    return re.sub(r"[^A-Z0-9]+", " ", t).strip()
+
+
 def regione(it):
-    return NUTS_REGIONE.get((it.get("nuts") or "")[:4])
+    n = str(it.get("nuts") or "")
+    if n[:4] in NUTS_REGIONE:
+        return NUTS_REGIONE[n[:4]]
+    for campo in (it.get("istat"), n):
+        if campo and _norm(campo) in _COMUNI:
+            return _COMUNI[_norm(campo)]
+    return None
 
 
 def per_iscritto(avvisi, u):
@@ -216,7 +231,18 @@ def per_iscritto(avvisi, u):
                 elenchi.append(riga)
             elif a["tipologia"] == "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA":
                 diretti.append(riga)
+    oggi = datetime.now(timezone.utc).date()
+
+    def aperta(r):
+        a, it = r
+        s = it.get("scadenza") or a.get("scadenza")
+        try:
+            return datetime.fromisoformat(s.replace("Z", "+00:00")).date() >= oggi
+        except Exception:
+            return True
     key = lambda r: -(r[1].get("valore") or 0)
+    bandi = [r for r in bandi if aperta(r)]
+    indagini = [r for r in indagini if aperta(r)]
     return sorted(bandi, key=key), sorted(indagini, key=key), elenchi[:5], diretti
 
 
@@ -244,15 +270,18 @@ def scheda(a, it, soa, tipo):
         manca = [c for c in it["cat"] if c not in soa] if soa and "ALTRA" not in soa else []
         badge = ('<span style="background:#e7f6ee;color:#1f9d55;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:600">✓ Hai le categorie</span>'
                  if not manca else
-                 f'<span style="background:#fdeee6;color:#c2410c;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:600">Ti serve un partner {", ".join(manca)}</span>')
+                 f'<span style="background:#fdeee6;color:#c2410c;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:600">Ti serve un partner {", ".join(manca[:3])}{" e altre" if len(manca) > 3 else ""}</span>')
     rib = ""
     if tipo == "bando":
         r = next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI)
         rib = f' · ribasso vincente tipico <b>{str(r).replace(".", ",")}%</b>'
     link = a.get("link") or SITE
-    titolo = html.escape((a["titolo"] or it["descr"] or "Lavori")[:140])
+    t = (a["titolo"] or it["descr"] or "Lavori")
+    if sum(ch.isupper() for ch in t) > 0.6 * max(1, sum(ch.isalpha() for ch in t)):
+        t = t.lower().capitalize()
+    titolo = html.escape(t[:140] + ("…" if len(t) > 140 else ""))
     return f'''<div style="{CSS_CARD}">
-<div style="font-size:12px;color:#6e6e73;margin-bottom:4px">{html.escape(a["ente"] or "")} · {html.escape(regione(it) or "")}</div>
+<div style="font-size:12px;color:#6e6e73;margin-bottom:4px">{html.escape((a["ente"] or "")[:70])} · {html.escape(regione(it) or "")}</div>
 <div style="font-size:16px;font-weight:650;line-height:1.3;margin-bottom:6px">{titolo}</div>
 <div style="font-size:14px;color:#1d1d1f;margin-bottom:8px"><b>{euro(it.get("valore"))}</b> · {html.escape(cats)} · {scad_txt(it.get("scadenza") or a.get("scadenza"))}{rib}</div>
 <div style="margin-bottom:10px">{badge}</div>
