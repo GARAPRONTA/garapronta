@@ -7,19 +7,15 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Crea la lista "Prova gratuita" se manca e mostra gli ID
+      - name: Pulizia e elenco liste
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: |
           H=(-H "api-key: $BREVO_API_KEY" -H "accept: application/json" -H "content-type: application/json")
           B=https://api.brevo.com/v3
-          echo "== Cartelle =="; curl -s "${H[@]}" "$B/contacts/folders?limit=50" | tee f.json | jq -c '.folders'
-          echo "== Liste prima =="; curl -s "${H[@]}" "$B/contacts/lists?limit=50" | tee l.json | jq -c '.'
-          if ! jq -e '.lists[]? | select(.name=="Prova gratuita")' l.json >/dev/null; then
-            FID=$(jq -r '.folders[0].id // empty' f.json)
-            if [ -z "$FID" ]; then FID=$(curl -s "${H[@]}" -X POST "$B/contacts/folders" -d '{"name":"GaraPronta"}' | jq -r .id); fi
-            echo "Creo la lista nella cartella $FID"
-            curl -s "${H[@]}" -X POST "$B/contacts/lists" -d "{\"name\":\"Prova gratuita\",\"folderId\":$FID}"; echo
-          fi
-          echo "== Liste dopo =="; curl -s "${H[@]}" "$B/contacts/lists?limit=50" | jq -c '[.lists[]? | {id,name}]'
-          rm -f f.json l.json
+          echo "Rimuovo il doppione creato per errore (lista 7, cartella 6), entrambi vuoti"
+          N=$(curl -s "${H[@]}" "$B/contacts/lists/7" | jq -r '.totalSubscribers // "x"')
+          if [ "$N" = "0" ]; then curl -s -o /dev/null -w "lista 7: HTTP %{http_code}\n" "${H[@]}" -X DELETE "$B/contacts/lists/7"; fi
+          C=$(curl -s "${H[@]}" "$B/contacts/folders/6" | jq -r '.totalSubscribers // "x"')
+          if [ "$C" = "0" ]; then curl -s -o /dev/null -w "cartella 6: HTTP %{http_code}\n" "${H[@]}" -X DELETE "$B/contacts/folders/6"; fi
+          echo "== Liste =="; curl -s "${H[@]}" "$B/contacts/lists?limit=50" | jq -c '[.lists[]? | {id,name}]'
