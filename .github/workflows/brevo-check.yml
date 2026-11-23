@@ -23,3 +23,4 @@ jobs:
           curl -s https://api.brevo.com/v3/contacts/attributes -H "api-key: $BREVO_API_KEY" | jq -c '[.attributes[]? | select(.category=="normal") | {name,type}]'
           echo "== Mittenti =="
           curl -s https://api.brevo.com/v3/senders -H "api-key: $BREVO_API_KEY" | jq -c '[.senders[]? | {email, active}]'
+
