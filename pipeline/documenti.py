@@ -32,6 +32,7 @@ PIATTAFORME = [  # (nome, test sul dominio/percorso, pattern dei link ai file)
 ]
 
 _proxy_url = None
+SCADENZA = time.time() + 40 * 60   # massimo 40 minuti in totale
 import threading
 _browser_lock = threading.Lock()
 
@@ -156,8 +157,8 @@ def pagina_con_browser(url):
         b = p.chromium.launch()
         pg = b.new_page(user_agent=UA, locale="it-IT")
         try:
-            pg.goto(url, wait_until="networkidle", timeout=45000)
-            pg.wait_for_timeout(1500)
+            pg.goto(url, wait_until="domcontentloaded", timeout=20000)
+            pg.wait_for_timeout(3000)
             html = pg.content()
             for fr in pg.frames[1:]:
                 try:
@@ -188,7 +189,8 @@ def gara(cig, url):
     if html is None:
         return f"bloccata ({ultimo})", metodo, []
     links = link_file(html, base, url)
-    if not links:
+    nota = any(test(url) for _, test, _ in PIATTAFORME)
+    if not links and not nota and time.time() < SCADENZA:
         h2 = pagina_con_browser(url)
         if h2:
             links = link_file(h2, url, url)
@@ -235,11 +237,19 @@ def main():
     rapporto = []
     from concurrent.futures import ThreadPoolExecutor
 
+    fatte = [0]
+
     def scarica_una(url):
+        t = time.time()
+        if t > SCADENZA:
+            return "saltata (tempo)", "-", []
         try:
-            return gara(None, url)
+            r = gara(None, url)
         except Exception as e:
-            return f"errore {type(e).__name__}", "diretto", []
+            r = (f"errore {type(e).__name__}", "diretto", [])
+        fatte[0] += 1
+        print(f"  [{fatte[0]}] {time.time() - t:5.0f}s {r[0]:22} {len(r[2]):2} file  {urlparse(url).netloc}", flush=True)
+        return r
     unici = list(dict.fromkeys(u for _, u, _ in righe))
     with ThreadPoolExecutor(max_workers=8) as ex:
         risultati = dict(zip(unici, ex.map(scarica_una, unici)))
@@ -278,7 +288,7 @@ def main():
         esiti[esito.split(" (")[0]] += 1
         per_piatt.setdefault(p, Counter())[esito.split(" (")[0]] += 1
         rapporto.append({"cig": cig, "url": url, "piattaforma": p, "esito": esito, "metodo": metodo, "file": nf})
-        print(f"  {esito:28} {metodo:16} {nf:2} file  {p}", flush=True)
+
     os.makedirs(f"testi/{d:%Y/%m/%d}", exist_ok=True)
     json.dump(rapporto, open(f"testi/{d:%Y/%m/%d}/rapporto.json", "w"), ensure_ascii=False, indent=1)
     ok = esiti.get("ok", 0)
