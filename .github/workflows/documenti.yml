@@ -2,6 +2,7 @@ name: Documenti di gara
 on:
   workflow_run:
     workflows: ["GaraPronta giornaliera"]
+    branches: [main]
     types: [completed]
   push:
     paths: ['pipeline/documenti.py', '.github/workflows/documenti.yml']

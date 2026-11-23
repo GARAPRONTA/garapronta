@@ -32,6 +32,8 @@ PIATTAFORME = [  # (nome, test sul dominio/percorso, pattern dei link ai file)
 ]
 
 _proxy_url = None
+import threading
+_browser_lock = threading.Lock()
 
 
 def piattaforma(url):
@@ -48,7 +50,7 @@ def apri(url, proxy=False, max_bytes=MAX_FILE):
         handlers.append(urllib.request.ProxyHandler({"http": _proxy_url, "https": _proxy_url}))
     opener = urllib.request.build_opener(*handlers)
     req = urllib.request.Request(url, headers=h)
-    with opener.open(req, timeout=60) as r:
+    with opener.open(req, timeout=30) as r:
         data = r.read(max_bytes + 1)
         if len(data) > max_bytes:
             raise ValueError("file troppo grande")
@@ -64,7 +66,7 @@ def link_file(html, base, url_pagina):
             trovati += re.findall(pat, html)
     for href in re.findall(r"href=[\"']([^\"']+)[\"']", html, re.I):
         h = href.lower()
-        if h.split("?")[0].endswith(EST) or re.search(r"download|scarica|allegat|getfile|documento", h):
+        if h.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", h):
             if not re.search(r"(login|registra|password|javascript:|mailto:|#$|verifica)", h):
                 trovati.append(href)
     out, visti = [], set()
@@ -150,7 +152,7 @@ def pagina_con_browser(url):
         from playwright.sync_api import sync_playwright
     except ImportError:
         return None
-    with sync_playwright() as p:
+    with _browser_lock, sync_playwright() as p:
         b = p.chromium.launch()
         pg = b.new_page(user_agent=UA, locale="it-IT")
         try:
@@ -195,9 +197,9 @@ def gara(cig, url):
     if not links:
         login = bool(re.search(r"login|accedi|spid|registrati", html, re.I))
         return ("serve accesso" if login and len(html) < 15000 else "nessun file trovato"), metodo, []
-    files = []
+    files, t0 = [], time.time()
     for u in links[:MAX_FILES * 2]:
-        if len(files) >= MAX_FILES:
+        if len(files) >= MAX_FILES or time.time() - t0 > 120:
             break
         try:
             data, hdr, _ = apri(u, proxy=("proxy" in metodo))
@@ -231,15 +233,22 @@ def main():
     print(f"== {giorno}: {len(righe)} gare di lavori da leggere · proxy {'sì' if _proxy_url else 'no'}")
     esiti, per_piatt, cache = Counter(), {}, {}
     rapporto = []
+    from concurrent.futures import ThreadPoolExecutor
+
+    def scarica_una(url):
+        try:
+            return gara(None, url)
+        except Exception as e:
+            return f"errore {type(e).__name__}", "diretto", []
+    unici = list(dict.fromkeys(u for _, u, _ in righe))
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        risultati = dict(zip(unici, ex.map(scarica_una, unici)))
     for cig, url, tip in righe:
         cart = f"testi/{d:%Y/%m/%d}/{cig}"
         if url in cache:   # più lotti sulla stessa pagina
             esito, metodo, nf = cache[url]
         else:
-            try:
-                esito, metodo, files = gara(cig, url)
-            except Exception as e:
-                esito, metodo, files = f"errore {type(e).__name__}", "diretto", []
+            esito, metodo, files = risultati[url]
             nf = 0
             if files:
                 os.makedirs(cart, exist_ok=True)
@@ -269,8 +278,7 @@ def main():
         esiti[esito.split(" (")[0]] += 1
         per_piatt.setdefault(p, Counter())[esito.split(" (")[0]] += 1
         rapporto.append({"cig": cig, "url": url, "piattaforma": p, "esito": esito, "metodo": metodo, "file": nf})
-        print(f"  {esito:28} {metodo:16} {nf:2} file  {p}")
-        time.sleep(0.3)
+        print(f"  {esito:28} {metodo:16} {nf:2} file  {p}", flush=True)
     os.makedirs(f"testi/{d:%Y/%m/%d}", exist_ok=True)
     json.dump(rapporto, open(f"testi/{d:%Y/%m/%d}/rapporto.json", "w"), ensure_ascii=False, indent=1)
     ok = esiti.get("ok", 0)
