@@ -51,7 +51,7 @@
   "cig": "BDE51F7561",
   "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77",
   "piattaforma": "www.acquistinretepa.it",
-  "esito": "bloccata (HTTPError)",
+  "esito": "nessun file trovato",
   "metodo": "diretto",
   "file": 0
  },
@@ -99,9 +99,9 @@
   "cig": "BDE50FD712",
   "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTPError)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 12
  },
  {
   "cig": "BDDBAD2AE6",
@@ -147,7 +147,7 @@
   "cig": "BDE02DDE8A",
   "url": "https://cucunionevallesusa.traspare.com/announcements/1450",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTPError)",
+  "esito": "nessun file trovato",
   "metodo": "diretto",
   "file": 0
  },
