@@ -32,7 +32,7 @@ PIATTAFORME = [  # (nome, test sul dominio/percorso, pattern dei link ai file)
 ]
 
 _proxy_url = None
-SCADENZA = time.time() + 40 * 60   # massimo 40 minuti in totale
+SCADENZA = time.time() + 25 * 60   # massimo 40 minuti in totale
 import threading
 _browser_lock = threading.Lock()
 
@@ -51,11 +51,19 @@ def apri(url, proxy=False, max_bytes=MAX_FILE):
         handlers.append(urllib.request.ProxyHandler({"http": _proxy_url, "https": _proxy_url}))
     opener = urllib.request.build_opener(*handlers)
     req = urllib.request.Request(url, headers=h)
+    fine = time.time() + 90
     with opener.open(req, timeout=30) as r:
-        data = r.read(max_bytes + 1)
-        if len(data) > max_bytes:
-            raise ValueError("file troppo grande")
-        return data, r.headers, r.geturl()
+        buf = bytearray()
+        while True:
+            pezzo = r.read(256 * 1024)
+            if not pezzo:
+                break
+            buf += pezzo
+            if len(buf) > max_bytes:
+                raise ValueError("file troppo grande")
+            if time.time() > fine:
+                raise TimeoutError("download troppo lento")
+        return bytes(buf), r.headers, r.geturl()
 
 
 def link_file(html, base, url_pagina):
@@ -212,6 +220,18 @@ def gara(cig, url):
             time.sleep(0.5)
         except Exception:
             continue
+    if not files and _proxy_url and "proxy" not in metodo:
+        metodo += "+proxy-file"
+        for u in links[:MAX_FILES * 2]:
+            if len(files) >= MAX_FILES or time.time() - t0 > 200:
+                break
+            try:
+                data, hdr, _ = apri(u, proxy=True)
+                if "text/html" in (hdr.get("content-type") or "").lower() and data[:4] != b"%PDF":
+                    continue
+                files.append((nome_file(u, hdr), data))
+            except Exception:
+                continue
     return ("ok" if files else "link senza file"), metodo, files
 
 
@@ -251,8 +271,12 @@ def main():
         print(f"  [{fatte[0]}] {time.time() - t:5.0f}s {r[0]:22} {len(r[2]):2} file  {urlparse(url).netloc}", flush=True)
         return r
     unici = list(dict.fromkeys(u for _, u, _ in righe))
-    with ThreadPoolExecutor(max_workers=8) as ex:
-        risultati = dict(zip(unici, ex.map(scarica_una, unici)))
+    from concurrent.futures import wait
+    ex = ThreadPoolExecutor(max_workers=8)
+    fut = {u: ex.submit(scarica_una, u) for u in unici}
+    wait(list(fut.values()), timeout=max(60, SCADENZA - time.time()))
+    risultati = {u: (f.result() if f.done() else ("saltata (tempo)", "-", [])) for u, f in fut.items()}
+    ex.shutdown(wait=False, cancel_futures=True)
     for cig, url, tip in righe:
         cart = f"testi/{d:%Y/%m/%d}/{cig}"
         if url in cache:   # più lotti sulla stessa pagina
@@ -300,3 +324,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    sys.stdout.flush()
+    os._exit(0)   # chiude anche eventuali download rimasti appesi
