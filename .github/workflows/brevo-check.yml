@@ -24,3 +24,4 @@ jobs:
           echo "== Mittenti =="
           curl -s https://api.brevo.com/v3/senders -H "api-key: $BREVO_API_KEY" | jq -c '[.senders[]? | {email, active}]'
 
+
