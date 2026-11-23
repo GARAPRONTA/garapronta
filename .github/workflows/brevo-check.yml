@@ -7,11 +7,8 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Crea l'attributo SETTORE
+      - name: Iscritti della lista 5
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: |
-          curl -s -w "\ncrea SETTORE: HTTP %{http_code}\n" -X POST "https://api.brevo.com/v3/contacts/attributes/normal/SETTORE" \
-            -H "api-key: $BREVO_API_KEY" -H "content-type: application/json" -d '{"type":"text"}'
-          curl -s -o /dev/null -w "settore contatto prova: HTTP %{http_code}\n" -X PUT "https://api.brevo.com/v3/contacts/garapronta%2Btest%40gmail.com" \
-            -H "api-key: $BREVO_API_KEY" -H "content-type: application/json" -d '{"attributes":{"SETTORE":"Lavori edili"}}'
+          curl -s "https://api.brevo.com/v3/contacts/lists/5/contacts?limit=20" -H "api-key: $BREVO_API_KEY" | jq -c '[.contacts[]? | {email, SETTORE: .attributes.SETTORE, SOA: .attributes.SOA, REGIONE: .attributes.REGIONE}]'
