@@ -7,21 +7,19 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Elenco liste e attributi Brevo (senza mostrare la chiave)
+      - name: Crea la lista "Prova gratuita" se manca e mostra gli ID
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: |
-          if [ -z "$BREVO_API_KEY" ]; then echo "ERRORE: secret BREVO_API_KEY mancante"; exit 1; fi
-          echo "== Esito chiamata (solo codice ed errore) =="
-          curl -s -o r.json -w "HTTP %{http_code}\n" https://api.brevo.com/v3/account -H "api-key: $BREVO_API_KEY" -H "accept: application/json"
-          jq '{code, message}' r.json; rm -f r.json
-          echo "== Account =="
-          curl -s https://api.brevo.com/v3/account -H "api-key: $BREVO_API_KEY" | jq '{email, companyName, plan: [.plan[]?.type]}'
-          echo "== Liste =="
-          curl -s "https://api.brevo.com/v3/contacts/lists?limit=50" -H "api-key: $BREVO_API_KEY" | jq '.lists[]? | {id, name, totalSubscribers}'
-          echo "== Attributi normali =="
-          curl -s https://api.brevo.com/v3/contacts/attributes -H "api-key: $BREVO_API_KEY" | jq -c '[.attributes[]? | select(.category=="normal") | {name,type}]'
-          echo "== Mittenti =="
-          curl -s https://api.brevo.com/v3/senders -H "api-key: $BREVO_API_KEY" | jq -c '[.senders[]? | {email, active}]'
-
-
+          H=(-H "api-key: $BREVO_API_KEY" -H "accept: application/json" -H "content-type: application/json")
+          B=https://api.brevo.com/v3
+          echo "== Cartelle =="; curl -s "${H[@]}" "$B/contacts/folders?limit=50" | tee f.json | jq -c '.folders'
+          echo "== Liste prima =="; curl -s "${H[@]}" "$B/contacts/lists?limit=50" | tee l.json | jq -c '.'
+          if ! jq -e '.lists[]? | select(.name=="Prova gratuita")' l.json >/dev/null; then
+            FID=$(jq -r '.folders[0].id // empty' f.json)
+            if [ -z "$FID" ]; then FID=$(curl -s "${H[@]}" -X POST "$B/contacts/folders" -d '{"name":"GaraPronta"}' | jq -r .id); fi
+            echo "Creo la lista nella cartella $FID"
+            curl -s "${H[@]}" -X POST "$B/contacts/lists" -d "{\"name\":\"Prova gratuita\",\"folderId\":$FID}"; echo
+          fi
+          echo "== Liste dopo =="; curl -s "${H[@]}" "$B/contacts/lists?limit=50" | jq -c '[.lists[]? | {id,name}]'
+          rm -f f.json l.json
