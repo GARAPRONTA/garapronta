@@ -1,0 +1,22 @@
+name: Controllo Brevo
+on:
+  push:
+    paths: ['.github/workflows/brevo-check.yml']
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Elenco liste e attributi Brevo (senza mostrare la chiave)
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: |
+          if [ -z "$BREVO_API_KEY" ]; then echo "ERRORE: secret BREVO_API_KEY mancante"; exit 1; fi
+          echo "== Account =="
+          curl -s https://api.brevo.com/v3/account -H "api-key: $BREVO_API_KEY" | jq '{email, companyName, plan: [.plan[]?.type]}'
+          echo "== Liste =="
+          curl -s "https://api.brevo.com/v3/contacts/lists?limit=50" -H "api-key: $BREVO_API_KEY" | jq '.lists[]? | {id, name, totalSubscribers}'
+          echo "== Attributi normali =="
+          curl -s https://api.brevo.com/v3/contacts/attributes -H "api-key: $BREVO_API_KEY" | jq -c '[.attributes[]? | select(.category=="normal") | {name,type}]'
+          echo "== Mittenti =="
+          curl -s https://api.brevo.com/v3/senders -H "api-key: $BREVO_API_KEY" | jq -c '[.senders[]? | {email, active}]'
