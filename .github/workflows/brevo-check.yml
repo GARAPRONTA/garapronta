@@ -12,6 +12,9 @@ jobs:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: |
           if [ -z "$BREVO_API_KEY" ]; then echo "ERRORE: secret BREVO_API_KEY mancante"; exit 1; fi
+          echo "== Esito chiamata (solo codice ed errore) =="
+          curl -s -o r.json -w "HTTP %{http_code}\n" https://api.brevo.com/v3/account -H "api-key: $BREVO_API_KEY" -H "accept: application/json"
+          jq '{code, message}' r.json; rm -f r.json
           echo "== Account =="
           curl -s https://api.brevo.com/v3/account -H "api-key: $BREVO_API_KEY" | jq '{email, companyName, plan: [.plan[]?.type]}'
           echo "== Liste =="
