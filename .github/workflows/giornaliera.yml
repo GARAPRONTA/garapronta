@@ -1,0 +1,39 @@
+name: GaraPronta giornaliera
+on:
+  schedule:
+    - cron: '7 5 * * *'   # 06:07 ora italiana (inverno): dati del giorno prima + email
+  push:
+    paths: ['pipeline/**', '.github/workflows/giornaliera.yml']
+  workflow_dispatch:
+    inputs:
+      data:
+        description: 'Giorno da elaborare (gg/mm/aaaa), vuoto = ieri'
+        required: false
+permissions:
+  contents: write
+concurrency: giornaliera
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Scarica avvisi ANAC, salva lo storico, invia le email
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: '5'
+          DATA: ${{ github.event.inputs.data }}
+          LIVE: '0'   # PROVA: scrive solo agli indirizzi con +test
+        run: python pipeline/garapronta.py
+      - name: Anteprime email
+        uses: actions/upload-artifact@v4
+        with: { name: anteprime, path: anteprime/, retention-days: 7 }
+      - name: Salva lo storico nel repository
+        run: |
+          git config user.name "GaraPronta bot"
+          git config user.email "garapronta@users.noreply.github.com"
+          git add data/
+          git commit -m "Dati ANAC $(date -u +%F)" || echo "niente di nuovo"
+          git push || echo "push non riuscito"
