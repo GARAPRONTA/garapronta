@@ -175,7 +175,8 @@ def iscritti(key, lista):
             at = c.get("attributes") or {}
             soa = [s.strip().upper().replace("OG", "OG ").replace("OS", "OS ").replace("  ", " ")
                    for s in (at.get("SOA") or "").split(",") if s.strip()]
-            out.append({"email": c["email"], "soa": soa, "regione": (at.get("REGIONE") or "Tutta Italia").strip()})
+            out.append({"email": c["email"], "soa": soa, "regione": (at.get("REGIONE") or "Tutta Italia").strip(),
+                        "settore": (at.get("SETTORE") or "Lavori edili").strip()})
         if len(cs) < 500:
             break
         off += 500
@@ -432,7 +433,11 @@ def main():
     print(f"Iscritti: {len(utenti)} · modalità {'LIVE' if live else 'PROVA (solo +test)'}{' · DRY' if dry else ''}")
     os.makedirs("anteprime", exist_ok=True)
     inviate = 0
-    for u in utenti:
+    attesa = [u for u in utenti if u["settore"] != "Lavori edili"]
+    if attesa:
+        print(f"In lista d'attesa (settori non ancora attivi): {len(attesa)} · " +
+              ", ".join(f"{k}: {v}" for k, v in Counter(u['settore'] for u in attesa).most_common()))
+    for u in [u for u in utenti if u["settore"] == "Lavori edili"]:
         b, i, e, d = per_iscritto(avvisi, u)
         corpo, n = email_html(u, b, i, e, d, giorno)
         nome = u["email"].replace("@", "_at_")
