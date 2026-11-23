@@ -7,15 +7,11 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Pulizia e elenco liste
+      - name: Contatti della lista Prova Gratuita
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: |
           H=(-H "api-key: $BREVO_API_KEY" -H "accept: application/json" -H "content-type: application/json")
           B=https://api.brevo.com/v3
-          echo "Rimuovo il doppione creato per errore (lista 7, cartella 6), entrambi vuoti"
-          N=$(curl -s "${H[@]}" "$B/contacts/lists/7" | jq -r '.totalSubscribers // "x"')
-          if [ "$N" = "0" ]; then curl -s -o /dev/null -w "lista 7: HTTP %{http_code}\n" "${H[@]}" -X DELETE "$B/contacts/lists/7"; fi
-          C=$(curl -s "${H[@]}" "$B/contacts/folders/6" | jq -r '.totalSubscribers // "x"')
-          if [ "$C" = "0" ]; then curl -s -o /dev/null -w "cartella 6: HTTP %{http_code}\n" "${H[@]}" -X DELETE "$B/contacts/folders/6"; fi
-          echo "== Liste =="; curl -s "${H[@]}" "$B/contacts/lists?limit=50" | jq -c '[.lists[]? | {id,name}]'
+          echo "== Contatti nella lista 5 =="
+          curl -s "${H[@]}" "$B/contacts/lists/5/contacts?limit=20" | jq -c '[.contacts[]? | {email, SOA: .attributes.SOA, REGIONE: .attributes.REGIONE}]'
