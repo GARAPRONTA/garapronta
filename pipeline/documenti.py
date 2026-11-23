@@ -44,9 +44,17 @@ def piattaforma(url):
     return urlparse(url).netloc
 
 
+import http.cookiejar
+_cookies = http.cookiejar.CookieJar()   # sessione della piattaforma (un processo = una gara)
+_referer = [None]
+
+
 def apri(url, proxy=False, max_bytes=MAX_FILE):
-    h = {"user-agent": UA, "accept-language": "it-IT,it;q=0.9"}
-    handlers = []
+    h = {"user-agent": UA, "accept-language": "it-IT,it;q=0.9",
+         "accept": "text/html,application/xhtml+xml,application/pdf,*/*;q=0.8"}
+    if _referer[0]:
+        h["referer"] = _referer[0]
+    handlers = [urllib.request.HTTPCookieProcessor(_cookies)]
     if proxy and _proxy_url:
         handlers.append(urllib.request.ProxyHandler({"http": _proxy_url, "https": _proxy_url}))
     opener = urllib.request.build_opener(*handlers)
@@ -190,6 +198,7 @@ def gara(cig, url):
             if data[:4] == b"%PDF" or "pdf" in (hdr.get("content-type") or ""):
                 return "ok", metodo, [(nome_file(url, hdr), data)]
             html = data.decode("utf-8", "ignore")
+            _referer[0] = base
             break
         except Exception as e:
             ultimo = f"{type(e).__name__}"
