@@ -1,0 +1,266 @@
+[
+ {
+  "cig": "BDE184699C",
+  "url": "https://surbo.tuttogare.it/gare/dettaglio.php?codice=517",
+  "piattaforma": "TuttoGare",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDFD49421",
+  "url": "https://amagportalegare.aflink.it/",
+  "piattaforma": "amagportalegare.aflink.it",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDC99489B",
+  "url": "https://portaleappalti.mit.gov.it/PortaleAppalti/it/procedure/codice/G07732",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDE35F5881",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1072171",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE04BEB7A",
+  "url": "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8536",
+  "piattaforma": "autobrennero.acquistitelematici.it",
+  "esito": "bloccata (HTTPError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE4A6239E",
+  "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5317",
+  "piattaforma": "gare.provincia.fr.it",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE51F7561",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "bloccata (HTTPError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE400022B",
+  "url": "https://fano.tuttogare.it/gare/dettaglio.php?codice=2357",
+  "piattaforma": "TuttoGare",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE378FAD8",
+  "url": "https://comunebrindisi.tuttogare.it/gare/dettaglio.php?codice=1016",
+  "piattaforma": "TuttoGare",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE4C0A184",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@17518962",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDE2268640",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1030011",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDF8CBF1B",
+  "url": "https://comunemaidallpp.tuttogare.it/gare/dettaglio.php?codice=344",
+  "piattaforma": "TuttoGare",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE50FD712",
+  "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTPError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDBAD2AE6",
+  "url": "https://appalti.comune.vicenza.it/PortaleAppalti/it/procedure/codice/G01153",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDDDC4CB16",
+  "url": "https://gare.comune.prato.it/gare/dettaglio.php?codice=5062",
+  "piattaforma": "gare.comune.prato.it",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCC5ACD5B",
+  "url": "https://supplier.snam.it/web/login.html",
+  "piattaforma": "supplier.snam.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDE53B7714",
+  "url": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1811",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "B80CA55C30",
+  "url": "https://www.comune.cogoleto.ge.it/",
+  "piattaforma": "www.comune.cogoleto.ge.it",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE02DDE8A",
+  "url": "https://cucunionevallesusa.traspare.com/announcements/1450",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTPError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE469D745",
+  "url": "https://start.toscana.it/tendering/tenders/048007-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE15027B9",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/af1602555d075807",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "troppo lenta",
+  "metodo": "-",
+  "file": 0
+ },
+ {
+  "cig": "BDDE0EBB54",
+  "url": "https://arst.acquistitelematici.it/tender/700",
+  "piattaforma": "arst.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDE52FCCC1",
+  "url": "https://servizi.provincia.biella.it/openweb/trasparenza/index.php?layout=true",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTPError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDFCE40C9",
+  "url": "https://gare-provincia-agrigento.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01085",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD441AF1A9",
+  "url": "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara ",
+  "piattaforma": "comune.rho.mi.it",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE4E9D157",
+  "url": "https://appalti.fnmgroup.it/PortaleAppalti/it/procedure/codice/1314-2026",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDD990AA58",
+  "url": "https://appalti.consorziobonifica9ct.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=354",
+  "piattaforma": "appalti.consorziobonifica9ct.lavoripubblici.sicilia.it",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE45E7116",
+  "url": "https://cmvallecamonica-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00221",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDE451649C",
+  "url": "http://intercenter.regione.emilia-romagna.it/search_bandi?getId=BANDO_GARA_PORTALE@13429925",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE543818A",
+  "url": "https://saludecio.tuttogare.it/gare/dettaglio.php?codice=231",
+  "piattaforma": "TuttoGare",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE4225736",
+  "url": "https://comunefrancavillaangitola.tuttogare.it/gare/dettaglio.php?codice=394",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDD54702B",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDDF5E3B9",
+  "url": "https://start.toscana.it/tendering/tenders/047824-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ }
+]
