@@ -363,7 +363,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <p class="eyebrow" data-r>Prova gratuita</p>
     <h2 data-split>Domani mattina, le tue prime gare.</h2>
     <form class="form-card glass" id="form" data-r style="text-align:left" novalidate>
-      <!-- Anteprima: qui il modulo verrà collegato a Brevo -->
       <div id="fields">
         <div class="field">
           <span class="lbl">Le tue categorie SOA <span class="hint">· tocca per scegliere</span></span>
@@ -507,7 +506,8 @@ if(!reduce) setInterval(push,3200);
 const demo=[...document.querySelectorAll('#chipsDemo .chip')];
 if(!reduce) setInterval(()=>{const c=demo[Math.floor(Math.random()*demo.length)];c.classList.toggle('on')},1500);
 
-/* modulo */
+/* modulo: invia a Brevo (lista Prova Gratuita) */
+const BREVO_FORM='https://dc9bd8f3.sibforms.com/serve/MUIFAIBB0bSAoL1j9Fh1gMLuSGrnAkCEgMSWThxpBn_ZBx9aHV4mWlf49-KTkOqNg_B7W4HnxKbHOKQF032ezSmjeh9VZIUp4vzgLLpFdE7E4v_CoaaaNSpXzuTU6KTqL8f7sw1NGAoWsASxjBYHyXLO2Ikwkk0VDfSKouBm7BkvAw3dcOoo-H2iQ3U-7bCB87FpwJ061ULKj5P9jw==';
 const SOA=['OG 1','OG 2','OG 3','OG 6','OG 8','OG 10','OG 11','OS 3','OS 6','OS 21','OS 24','OS 28','OS 30','Altra'];
 const soaBox=document.getElementById('soa');const picked=new Set();
 SOA.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=s;
@@ -520,8 +520,14 @@ document.getElementById('form').addEventListener('submit',e=>{
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) return err.textContent='Controlla l\'indirizzo email.';
   if(!document.getElementById('priv').checked) return err.textContent='Serve il consenso per inviarti le email.';
   err.textContent='';
-  document.getElementById('fields').style.display='none';
-  document.getElementById('done').style.display='block';
+  const btn=e.target.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Invio…';
+  const fd=new FormData();
+  fd.append('EMAIL',mail);fd.append('SOA',[...picked].join(', '));
+  fd.append('REGIONE',document.getElementById('reg').value);
+  fd.append('email_address_check','');fd.append('locale','it');
+  fetch(BREVO_FORM,{method:'POST',body:fd,mode:'no-cors'})
+    .then(()=>{document.getElementById('fields').style.display='none';document.getElementById('done').style.display='block'})
+    .catch(()=>{btn.disabled=false;btn.textContent='Attiva la prova gratuita';err.textContent='Connessione non riuscita. Riprova tra un attimo.'});
 });
 })();
 </script>
