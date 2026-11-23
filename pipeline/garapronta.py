@@ -247,94 +247,164 @@ def per_iscritto(avvisi, u):
 
 
 # ---------------------------------------------------------------- 4. email
-CSS_CARD = "background:#fff;border-radius:16px;padding:18px 20px;margin:0 0 12px;border:1px solid #e8e8ed"
+# Stile del sito: sfondo #f5f5f7, accento blu iPhone #007aff, schede bianche arrotondate.
+BLU, INK, INK2, INK3 = "#007aff", "#1d1d1f", "#6e6e73", "#86868b"
+FONT = "-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Helvetica,Arial,sans-serif"
 
 
-def scad_txt(s):
-    if not s:
-        return ""
+def pill(testo, fg, bg):
+    return (f'<span style="display:inline-block;background:{bg};color:{fg};border-radius:999px;'
+            f'padding:5px 11px;font-size:12px;font-weight:600;line-height:1">{testo}</span>')
+
+
+def giorni_a(s):
     try:
         d = datetime.fromisoformat(s.replace("Z", "+00:00"))
-        gg = (d.date() - datetime.now(timezone.utc).date()).days
-        col = "#c2410c" if gg <= 10 else "#1d1d1f"
-        return f'<span style="color:{col};font-weight:600">scade il {d:%d/%m} ({gg} giorni)</span>'
+        return d, (d.date() - datetime.now(timezone.utc).date()).days
     except Exception:
+        return None, None
+
+
+def scad_pill(s):
+    d, gg = giorni_a(s) if s else (None, None)
+    if d is None:
         return ""
+    if gg <= 7:
+        return pill(f"⏱ {gg} giorni · {d:%d/%m}", "#c2410c", "#fdeee6")
+    return pill(f"Scade il {d:%d/%m} · {gg} gg", INK, "#f0f0f3")
+
+
+def frase(t):
+    t = t or ""
+    if sum(ch.isupper() for ch in t) > 0.6 * max(1, sum(ch.isalpha() for ch in t)):
+        t = t.lower().capitalize()
+    return t
+
+
+def barra_ribasso(r):
+    w = max(8, min(100, round(r / 30 * 100)))
+    return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px"><tr>
+<td style="font-size:12px;color:{INK2};padding-bottom:6px">Ribasso che vince di solito</td>
+<td align="right" style="font-size:13px;font-weight:700;color:{INK};padding-bottom:6px">{str(r).replace('.', ',')}%</td></tr>
+<tr><td colspan="2"><div style="height:8px;background:#ececf0;border-radius:99px"><div style="height:8px;width:{w}%;background:{BLU};border-radius:99px"></div></div></td></tr></table>"""
 
 
 def scheda(a, it, soa, tipo):
-    cats = ", ".join(it["cat"]) or "categoria n.d."
+    cats = " · ".join(it["cat"]) or "categoria n.d."
     if tipo == "indagine":
-        badge = '<span style="background:#e8f1ff;color:#007aff;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:600">Candidati per essere invitato</span>'
+        badge = pill("✉︎ Candidati per essere invitato", BLU, "#e8f1ff")
+        accento = BLU
     else:
         manca = [c for c in it["cat"] if c not in soa] if soa and "ALTRA" not in soa else []
-        badge = ('<span style="background:#e7f6ee;color:#1f9d55;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:600">✓ Hai le categorie</span>'
-                 if not manca else
-                 f'<span style="background:#fdeee6;color:#c2410c;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:600">Ti serve un partner {", ".join(manca[:3])}{" e altre" if len(manca) > 3 else ""}</span>')
+        if not manca:
+            badge, accento = pill("✓ Puoi partecipare", "#1f9d55", "#e7f6ee"), "#34c759"
+        else:
+            badge = pill(f"Ti serve un partner {', '.join(manca[:3])}{' +' if len(manca) > 3 else ''}", "#c2410c", "#fdeee6")
+            accento = "#ff9f0a"
     rib = ""
     if tipo == "bando":
-        r = next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI)
-        rib = f' · ribasso vincente tipico <b>{str(r).replace(".", ",")}%</b>'
-    link = a.get("link") or SITE
-    t = (a["titolo"] or it["descr"] or "Lavori")
-    if sum(ch.isupper() for ch in t) > 0.6 * max(1, sum(ch.isalpha() for ch in t)):
-        t = t.lower().capitalize()
-    titolo = html.escape(t[:140] + ("…" if len(t) > 140 else ""))
-    return f'''<div style="{CSS_CARD}">
-<div style="font-size:12px;color:#6e6e73;margin-bottom:4px">{html.escape((a["ente"] or "")[:70])} · {html.escape(regione(it) or "")}</div>
-<div style="font-size:16px;font-weight:650;line-height:1.3;margin-bottom:6px">{titolo}</div>
-<div style="font-size:14px;color:#1d1d1f;margin-bottom:8px"><b>{euro(it.get("valore"))}</b> · {html.escape(cats)} · {scad_txt(it.get("scadenza") or a.get("scadenza"))}{rib}</div>
-<div style="margin-bottom:10px">{badge}</div>
-<a href="{html.escape(link)}" style="color:#007aff;font-weight:600;font-size:14px;text-decoration:none">Apri i documenti ufficiali →</a>
-<span style="font-size:11px;color:#86868b;margin-left:8px">CIG {html.escape(it.get("cig") or "")}</span>
-</div>'''
+        rib = barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
+    t = frase(a["titolo"] or it["descr"] or "Lavori")
+    titolo = html.escape(t[:130] + ("…" if len(t) > 130 else ""))
+    link = html.escape(a.get("link") or SITE)
+    com = it.get("istat") and str(it["istat"]).title()
+    if com and com.lower() in (a.get("ente") or "").lower():
+        com = None
+    luogo = " · ".join(x for x in [com, regione(it)] if x)
+    return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 14px;background:#ffffff;border-radius:22px;border:1px solid #ececf0">
+<tr><td style="padding:20px 22px;border-left:4px solid {accento};border-radius:22px">
+<div style="font-size:12px;color:{INK3};margin-bottom:6px">{html.escape((a['ente'] or '')[:70])}{(' · ' + html.escape(luogo)) if luogo else ''}</div>
+<div style="font-size:17px;font-weight:650;line-height:1.3;color:{INK};letter-spacing:-.01em;margin-bottom:12px">{titolo}</div>
+<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:{INK};padding-right:14px">{euro(it.get('valore'))}</td>
+<td style="font-size:12px;color:{INK2}">{html.escape(cats)}</td></tr></table>
+<div style="margin-top:12px">{badge} &nbsp;{scad_pill(it.get('scadenza') or a.get('scadenza'))}</div>
+{rib}
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:16px"><tr>
+<td style="background:{BLU};border-radius:999px"><a href="{link}" style="display:inline-block;padding:10px 18px;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none">Apri i documenti</a></td>
+<td style="padding-left:12px;font-size:11px;color:{INK3}">CIG {html.escape(it.get('cig') or '')}</td></tr></table>
+</td></tr></table>"""
+
+
+def titolo_sezione(eyebrow, titolo, sotto):
+    return f"""<div style="margin:34px 0 14px">
+<div style="font-size:13px;font-weight:600;color:{BLU};margin-bottom:4px">{eyebrow}</div>
+<div style="font-size:24px;font-weight:700;letter-spacing:-.03em;color:{INK}">{titolo}</div>
+<div style="font-size:14px;color:{INK2};margin-top:4px">{sotto}</div></div>"""
+
+
+def tile(numero, etichetta, colore=INK):
+    return f"""<td width="33%" valign="top" style="padding:4px"><div style="background:rgba(255,255,255,.75);border-radius:18px;padding:16px 14px;border:1px solid rgba(255,255,255,.9)">
+<div style="font-size:30px;font-weight:700;letter-spacing:-.04em;color:{colore};line-height:1">{numero}</div>
+<div style="font-size:12px;color:{INK2};margin-top:6px;line-height:1.3">{etichetta}</div></div></td>"""
 
 
 def riepilogo_diretti(diretti, u):
     if not diretti:
         return ""
     tot = sum(it.get("valore") or 0 for _, it in diretti)
-    enti = Counter(a["ente"] for a, _ in diretti if a["ente"]).most_common(3)
+    enti = Counter(a["ente"] for a, _ in diretti if a["ente"]).most_common(4)
+    mx = enti[0][1] if enti else 1
     zona = "in Italia" if u["regione"].lower() in ("tutta italia", "") else f"in {u['regione']}"
-    righe = "".join(f"<li>{html.escape(e)}: {n} lavori</li>" for e, n in enti)
-    return f'''<div style="{CSS_CARD}">
-<div style="font-size:16px;font-weight:650;margin-bottom:6px">Lavori affidati senza gara {zona}</div>
-<div style="font-size:14px;color:#1d1d1f">Ieri <b>{len(diretti)}</b> lavori affidati direttamente, per <b>{euro(tot)}</b>. Gli enti che ne hanno affidati di più:</div>
-<ul style="font-size:14px;margin:8px 0 0;padding-left:18px">{righe}</ul>
-<div style="font-size:12px;color:#6e6e73;margin-top:8px">Questi enti scelgono le imprese da elenchi e indagini di mercato: iscriversi ai loro elenchi è il primo passo per essere chiamati.</div>
-</div>'''
+    righe = "".join(f"""<tr><td style="font-size:13px;color:{INK};padding:7px 0;width:55%">{html.escape(e[:45])}</td>
+<td style="padding:7px 10px"><div style="height:8px;background:#ececf0;border-radius:99px"><div style="height:8px;width:{max(10, round(n / mx * 100))}%;background:{BLU};border-radius:99px"></div></div></td>
+<td align="right" style="font-size:13px;font-weight:700;color:{INK}">{n}</td></tr>""" for e, n in enti)
+    return titolo_sezione("Lavori senza gara", f"{len(diretti)} affidamenti diretti {zona}",
+                          f"Valore totale {euro(tot)}. Gli enti più attivi ieri:") + f"""
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:16px 22px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{righe}</table>
+<div style="font-size:12px;color:{INK2};margin-top:10px;line-height:1.45">Questi enti scelgono le imprese dai loro elenchi e dalle indagini di mercato. Iscriversi agli elenchi è il primo passo per essere chiamati.</div>
+</td></tr></table>"""
 
 
 def email_html(u, bandi, indagini, elenchi, diretti, giorno):
     soa = set(u["soa"])
-    blocchi = []
+    n = len(bandi) + len(indagini)
+    profilo = f'{" · ".join(u["soa"]) or "Tutte le categorie"} · {u["regione"]}'
+    gg = datetime.strptime(giorno, "%d/%m/%Y")
+    mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+    data_txt = f"{gg.day} {mesi[gg.month - 1]}"
+    head = f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:28px;background:#dbe9ff;background-image:linear-gradient(135deg,#cfe6ff 0%,#eef3ff 45%,#f3ecff 100%)">
+<tr><td style="padding:26px 24px 20px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td style="font-size:16px;font-weight:650;color:{INK}"><span style="display:inline-block;width:20px;height:20px;border-radius:6px;background:{INK};vertical-align:-4px;margin-right:8px;text-align:center"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:{BLU};margin-top:6.5px"></span></span>GaraPronta</td>
+<td align="right" style="font-size:12px;color:{INK2}">{data_txt}</td></tr></table>
+<div style="font-size:40px;font-weight:700;letter-spacing:-.045em;line-height:1.02;color:{INK};margin:26px 0 8px">{n} occasioni<br><span style="color:{INK3}">per te oggi.</span></div>
+<div style="font-size:13px;color:{INK2};margin-bottom:18px">{html.escape(profilo)}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+{tile(len(indagini), "inviti a cui candidarti", BLU)}{tile(len(bandi), "gare aperte per te")}{tile(len(diretti), "lavori affidati senza gara")}
+</tr></table></td></tr></table>"""
+    blocchi = [head]
     if indagini:
-        blocchi.append('<h2 style="font-size:18px;margin:26px 0 10px">Fatti invitare</h2>' +
+        blocchi.append(titolo_sezione("Fatti invitare", "Cercano imprese come la tua",
+                                      "Candidati entro la scadenza per essere invitato alla gara.") +
                        "".join(scheda(a, it, soa, "indagine") for a, it in indagini[:8]))
     if bandi:
-        blocchi.append('<h2 style="font-size:18px;margin:26px 0 10px">Gare aperte per te</h2>' +
+        blocchi.append(titolo_sezione("Gare aperte", "Le gare per le tue categorie",
+                                      "Ordinate per importo. Il verde vuol dire che hai già tutto.") +
                        "".join(scheda(a, it, soa, "bando") for a, it in bandi[:10]))
     if elenchi:
-        blocchi.append('<h2 style="font-size:18px;margin:26px 0 10px">Elenchi di imprese aperti</h2>' +
-                       "".join(f'<div style="{CSS_CARD}"><b>{html.escape(a["ente"])}</b><br>'
-                               f'<span style="font-size:14px">{html.escape((a["titolo"] or it["descr"])[:140])}</span><br>'
-                               f'<a href="{html.escape(a.get("link") or SITE)}" style="color:#007aff;font-size:14px;font-weight:600;text-decoration:none">Come iscriversi →</a></div>'
-                               for a, it in elenchi))
+        blocchi.append(titolo_sezione("Elenchi aperti", "Iscriviti e fatti chiamare", "Enti che stanno raccogliendo le imprese da invitare.") +
+                       "".join(f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 12px;background:#fff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:18px 22px">
+<div style="font-size:15px;font-weight:650;color:{INK}">{html.escape(a['ente'][:70])}</div>
+<div style="font-size:13px;color:{INK2};margin:4px 0 12px">{html.escape(frase(a['titolo'] or it['descr'])[:140])}</div>
+<a href="{html.escape(a.get('link') or SITE)}" style="color:{BLU};font-size:14px;font-weight:600;text-decoration:none">Come iscriversi →</a></td></tr></table>""" for a, it in elenchi))
     blocchi.append(riepilogo_diretti(diretti, u))
     if not (indagini or bandi or elenchi):
-        blocchi.insert(0, f'<div style="{CSS_CARD}">Ieri nessuna gara nuova per le tue categorie nella tua zona. Ti scriviamo appena esce.</div>')
-    n = len(bandi) + len(indagini)
-    profilo = f'{", ".join(u["soa"]) or "tutte le categorie"} · {u["regione"]}'
-    return f'''<!DOCTYPE html><html><body style="margin:0;background:#f5f5f7;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#1d1d1f">
-<div style="max-width:620px;margin:0 auto;padding:24px 16px">
-<div style="font-size:17px;font-weight:650;margin-bottom:18px">● GaraPronta</div>
-<h1 style="font-size:28px;letter-spacing:-.02em;margin:0 0 6px">{n} occasioni per te</h1>
-<div style="color:#6e6e73;font-size:14px;margin-bottom:8px">Pubblicate il {giorno} · {html.escape(profilo)}</div>
-{"".join(blocchi)}
-<div style="font-size:12px;color:#86868b;margin-top:26px;line-height:1.5">Fonte: Piattaforma di pubblicità legale ANAC (dati CC BY 4.0). Controlla sempre i requisiti sui documenti ufficiali.
+        blocchi.insert(1, f'<div style="background:#fff;border-radius:22px;border:1px solid #ececf0;padding:18px 22px;margin-top:20px;font-size:14px;color:{INK}">Ieri nessuna gara nuova per le tue categorie nella tua zona. Ti scriviamo appena esce.</div>')
+    corpo = f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"></head>
+<body style="margin:0;padding:0;background:#f5f5f7;font-family:{FONT};color:{INK};-webkit-font-smoothing:antialiased">
+<div style="display:none;max-height:0;overflow:hidden">{len(indagini)} inviti, {len(bandi)} gare aperte e {len(diretti)} lavori diretti nella tua zona.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f7"><tr><td align="center" style="padding:20px 12px 40px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px"><tr><td>
+{''.join(blocchi)}
+<div style="text-align:center;margin:34px 0 0">
+<table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td style="background:{INK};border-radius:999px"><a href="{SITE}" style="display:inline-block;padding:12px 22px;color:#fff;font-size:14px;font-weight:600;text-decoration:none">Modifica categorie e zona</a></td></tr></table></div>
+<div style="font-size:11px;color:{INK3};margin-top:26px;line-height:1.55;text-align:center">Fonte: Piattaforma di pubblicità legale ANAC (dati CC BY 4.0). Controlla sempre i requisiti sui documenti ufficiali.<br>
 Il ribasso tipico è la mediana dei ribassi vincenti in gare simili: è un dato di mercato, non un consiglio d'offerta.<br>
-Ricevi questa email perché ti sei iscritto a GaraPronta. <a href="mailto:garapronta@gmail.com?subject=Disiscrivimi" style="color:#86868b">Disiscriviti</a></div>
-</div></body></html>''', n
+Ricevi questa email perché ti sei iscritto a GaraPronta · <a href="mailto:garapronta@gmail.com?subject=Disiscrivimi" style="color:{INK3}">Disiscriviti</a></div>
+</td></tr></table></td></tr></table></body></html>"""
+    return corpo, n
 
 
 def invia(key, to, oggetto, corpo):
@@ -371,7 +441,7 @@ def main():
         print(f"  {u['email']}: {len(b)} bandi, {len(i)} indagini, {len(e)} elenchi, {len(d)} affid. diretti")
         if dry or (not live and "+test" not in u["email"]):
             continue
-        oggetto = f"{n} gare e inviti per te · {', '.join(u['soa'][:3]) or 'GaraPronta'}" if n else "GaraPronta · il punto di oggi"
+        oggetto = f"{n} occasioni per te oggi · {' '.join(u['soa'][:3]) or 'GaraPronta'}" if n else "GaraPronta · il punto di oggi"
         invia(key, u["email"], oggetto, corpo)
         inviate += 1
     print(f"Email inviate: {inviate}")

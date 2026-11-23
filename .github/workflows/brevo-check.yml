@@ -7,11 +7,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Contatti della lista Prova Gratuita
+      - name: Contatto di prova su "Tutta Italia" (per vedere un'email completa)
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: |
-          H=(-H "api-key: $BREVO_API_KEY" -H "accept: application/json" -H "content-type: application/json")
-          B=https://api.brevo.com/v3
-          echo "== Contatti nella lista 5 =="
-          curl -s "${H[@]}" "$B/contacts/lists/5/contacts?limit=20" | jq -c '[.contacts[]? | {email, SOA: .attributes.SOA, REGIONE: .attributes.REGIONE}]'
+          curl -s -o /dev/null -w "aggiornamento: HTTP %{http_code}\n" -X PUT "https://api.brevo.com/v3/contacts/garapronta%2Btest%40gmail.com" \
+            -H "api-key: $BREVO_API_KEY" -H "content-type: application/json" -d '{"attributes":{"REGIONE":"Tutta Italia"}}'
