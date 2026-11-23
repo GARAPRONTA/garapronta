@@ -1,0 +1,10 @@
+name: Test documenti di gara
+on:
+  push:
+    paths: ['tools/test_documenti.py', '.github/workflows/test-documenti.yml']
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tools/test_documenti.py data/2026/11/20.json.gz
