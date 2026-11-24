@@ -25,7 +25,7 @@ MAX_TESTO = 600_000          # caratteri salvati per gara
 EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt", ".xls", ".xlsx")
 
 PIATTAFORME = [  # (nome, test sul dominio/percorso, pattern dei link ai file)
-    ("TuttoGare", lambda u: "tuttogare" in u, r"allegati/open\.php\?[^\"'\s<>]+"),
+    ("TuttoGare", lambda u: "tuttogare" in u, r"/?allegati/open\.php\?[^\"'\s<>]+"),
     ("Maggioli PortaleAppalti", lambda u: "portaleappalti" in u.lower() or "maggiolicloud" in u,
      r"[^\"'\s<>]*downloadDocumentoPubblico\.action[^\"'\s<>]*"),
     ("Traspare", lambda u: "traspare" in u, r"[^\"'\s<>]*fs_public_action\?do=download_document[^\"'\s<>]*"),
@@ -86,6 +86,19 @@ def link_file(html, base, url_pagina):
         if h.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", h):
             if not re.search(r"(login|registra|password|javascript:|mailto:|#$|verifica)", h):
                 trovati.append(href)
+    def prio(h):
+        n = h.lower()
+        try:
+            q = parse_qs(urlparse(h).query)
+            if "filename" in q:
+                n += base64.b64decode(q["filename"][0]).decode("utf-8", "ignore").lower()
+        except Exception:
+            pass
+        for i, k in enumerate(["disciplinar", "invito", "bando", "avviso", "criteri", "capitolat", "elenco", "computo"]):
+            if k in n:
+                return i
+        return 20 if re.search(r"progett|elaborat|tavol|esecutiv|\.zip", n) else 10
+    trovati.sort(key=prio)
     out, visti = [], set()
     for t in trovati:
         u = urljoin(base, t.strip())

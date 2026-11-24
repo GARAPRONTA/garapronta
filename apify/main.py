@@ -8,7 +8,7 @@ from apify import Actor
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt")
-PAT = [r"allegati/open\.php\?[^\"'\s<>]+", r"[^\"'\s<>]*downloadDocumentoPubblico\.action[^\"'\s<>]*",
+PAT = [r"/?allegati/open\.php\?[^\"'\s<>]+", r"[^\"'\s<>]*downloadDocumentoPubblico\.action[^\"'\s<>]*",
        r"[^\"'\s<>]*fs_public_action\?do=download_document[^\"'\s<>]*"]
 
 
@@ -22,6 +22,19 @@ def links(html, base):
         if (hl.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", hl)) \
                 and not re.search(r"(login|registra|password|javascript:|mailto:|verifica)", hl):
             out.append(h)
+    def prio(h):
+        n = h.lower()
+        try:
+            q = parse_qs(urlparse(h).query)
+            if "filename" in q:
+                n += base64.b64decode(q["filename"][0]).decode("utf-8", "ignore").lower()
+        except Exception:
+            pass
+        for i, k in enumerate(["disciplinar", "invito", "bando", "avviso", "criteri", "capitolat", "elenco", "computo"]):
+            if k in n:
+                return i
+        return 20 if re.search(r"progett|elaborat|tavol|esecutiv|\.zip", n) else 10
+    out.sort(key=prio)
     res, seen = [], set()
     for t in out:
         u = re.sub(r";jsessionid=[^?]+", "", urljoin(base, t.strip()))
