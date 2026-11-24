@@ -61,7 +61,7 @@ async def una(page, proxy, kv):
     rec = {"page": page, "esito": "", "files": []}
     try:
         async with httpx.AsyncClient(proxy=proxy, headers={"user-agent": UA, "accept-language": "it-IT,it;q=0.9"},
-                                     follow_redirects=True, timeout=40, verify=False) as c:
+                                     follow_redirects=True, timeout=httpx.Timeout(30, connect=15), verify=False) as c:
             r = await c.get(page)
             ct = r.headers.get("content-type", "")
             if r.content[:4] == b"%PDF":
@@ -71,13 +71,13 @@ async def una(page, proxy, kv):
                     rec["esito"] = f"HTTP {r.status_code}"; return rec
                 cand = []
                 for u in links(r.text, str(r.url)):
-                    if len(cand) >= 15:
+                    if len(cand) >= 8:
                         break
                     try:
                         f = await c.get(u, headers={"referer": str(r.url)})
                         if "text/html" in f.headers.get("content-type", "") and f.content[:4] != b"%PDF":
                             continue
-                        if len(f.content) > 30_000_000:
+                        if len(f.content) > 15_000_000:
                             continue
                         cand.append((u, f))
                     except Exception:
