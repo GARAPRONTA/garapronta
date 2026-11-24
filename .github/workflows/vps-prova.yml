@@ -1,0 +1,27 @@
+name: Server italiano – prova sulle gare fallite
+on:
+  workflow_dispatch:
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lista gare senza documenti
+        run: |
+          python3 - <<'PY'
+          import json,glob
+          out=open("lista.tsv","w")
+          for f in sorted(glob.glob("testi/2026/11/*/rapporto.json")):
+              for g in json.load(open(f)):
+                  if g.get("file",0)==0 and g.get("url"):
+                      t=(g.get("titolo") or "").replace("\t"," ").replace("\n"," ")[:150]
+                      out.write(f'{g["url"].strip()}\t{g.get("cig","")}\t{t}\n')
+          PY
+          wc -l lista.tsv; sudo apt-get install -y -qq sshpass >/dev/null
+      - name: Prova dal server
+        env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
+        run: |
+          O="-o StrictHostKeyChecking=no"
+          sshpass -e scp $O pipeline/lettori.py pipeline/documenti.py lista.tsv root@$H:/opt/garapronta/
+          sshpass -e ssh $O root@$H 'cd /opt/garapronta && rm -rf /tmp/prova && cat lista.tsv | tr "\t" "\037" | xargs -P 3 -I{} bash -c '"'"'IFS=$'"'"'"'"'"'"'"'"'\037'"'"'"'"'"'"'"'"' read u c t <<< "{}"; r=$(timeout 200 ./venv/bin/python documenti.py --una "$u" /tmp/prova/$c "$c" "$t" 2>/dev/null | tail -1); echo "$c | ${r:-timeout} | $(echo $u | cut -d/ -f3)"'"'"''
