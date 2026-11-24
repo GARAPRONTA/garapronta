@@ -247,6 +247,8 @@ def per_iscritto(avvisi, u):
     return sorted(bandi, key=key), sorted(indagini, key=key), elenchi[:5], diretti
 
 
+RESOCONTI = {}
+
 # ---------------------------------------------------------------- 4. email
 # Stile del sito: sfondo #f5f5f7, accento blu iPhone #007aff, schede bianche arrotondate.
 BLU, INK, INK2, INK3 = "#007aff", "#1d1d1f", "#6e6e73", "#86868b"
@@ -308,6 +310,18 @@ def scheda(a, it, soa, tipo):
     t = frase(a["titolo"] or it["descr"] or "Lavori")
     titolo = html.escape(t[:130] + ("…" if len(t) > 130 else ""))
     link = html.escape(a.get("link") or SITE)
+    res = RESOCONTI.get(it.get("cig") or "")
+    breve = ""
+    if res and res.get("punti"):
+        righe = "".join(
+            f'<tr><td valign="top" style="font-size:13px;color:{INK2};padding:5px 10px 5px 0;white-space:nowrap">{html.escape(p.get("t", ""))}</td>'
+            f'<td style="font-size:13px;color:{INK};padding:5px 0">{html.escape(p.get("v", ""))}'
+            f'{(" <span style=\"color:" + INK3 + ";font-size:11px\">· " + html.escape(p["fonte"]) + "</span>") if p.get("fonte") else ""}</td></tr>'
+            for p in res["punti"][:9])
+        att = "".join(f'<div style="font-size:13px;color:#c2410c;margin-top:6px">⚠︎ {html.escape(x)}</div>' for x in (res.get("attenzione") or [])[:3])
+        breve = (f'<div style="margin-top:16px;background:#f5f5f7;border-radius:16px;padding:14px 16px">'
+                 f'<div style="font-size:12px;font-weight:700;color:{BLU};margin-bottom:6px">IN BREVE · letto dai documenti di gara</div>'
+                 f'<table role="presentation" cellpadding="0" cellspacing="0" width="100%">{righe}</table>{att}</div>')
     com = it.get("istat") and str(it["istat"]).title()
     if com and com.lower() in (a.get("ente") or "").lower():
         com = None
@@ -321,6 +335,7 @@ def scheda(a, it, soa, tipo):
 <td style="font-size:12px;color:{INK2}">{html.escape(cats)}</td></tr></table>
 <div style="margin-top:12px">{badge} &nbsp;{scad_pill(it.get('scadenza') or a.get('scadenza'))}</div>
 {rib}
+{breve}
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:16px"><tr>
 <td style="background:{BLU};border-radius:999px"><a href="{link}" style="display:inline-block;padding:10px 18px;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none">Apri i documenti</a></td>
 <td style="padding-left:12px;font-size:11px;color:{INK3}">CIG {html.escape(it.get('cig') or '')}</td></tr></table>
@@ -417,11 +432,23 @@ def invia(key, to, oggetto, corpo):
 # ---------------------------------------------------------------- main
 def main():
     giorno = os.environ.get("DATA") or (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%d/%m/%Y")
-    print(f"== Giorno {giorno}")
-    grezzi = scarica(giorno)
-    avvisi = [estrai(a) for a in grezzi]
-    path = salva(giorno, avvisi)
-    print(f"Scaricati {len(grezzi)} avvisi, salvati in {path}")
+    modo = os.environ.get("MODE", "tutto")
+    print(f"== Giorno {giorno} · modo {modo}")
+    dd = datetime.strptime(giorno, "%d/%m/%Y")
+    if modo == "invio" and os.path.exists(f"data/{dd:%Y/%m/%d}.json.gz"):
+        avvisi = json.load(gzip.open(f"data/{dd:%Y/%m/%d}.json.gz", "rt"))
+        print(f"Letti {len(avvisi)} avvisi salvati")
+    else:
+        grezzi = scarica(giorno)
+        avvisi = [estrai(a) for a in grezzi]
+        path = salva(giorno, avvisi)
+        print(f"Scaricati {len(grezzi)} avvisi, salvati in {path}")
+    if modo == "dati":
+        return
+    global RESOCONTI
+    rp = f"resoconti/{dd:%Y/%m/%d}.json"
+    RESOCONTI = json.load(open(rp)) if os.path.exists(rp) else {}
+    print(f"Resoconti disponibili: {len(RESOCONTI)}")
     print("Per tipologia:", dict(Counter(a["tipologia"] for a in avvisi if a["tipo"] == "avviso").most_common()))
 
     key = os.environ.get("BREVO_API_KEY")

@@ -1,0 +1,28 @@
+name: GaraPronta invio email
+on:
+  schedule:
+    - cron: '37 6 * * *'   # 07:37 ora italiana (inverno): dopo dati, documenti e resoconti
+  workflow_dispatch:
+    inputs:
+      data:
+        description: 'Giorno (gg/mm/aaaa), vuoto = ieri'
+        required: false
+concurrency: giornaliera
+jobs:
+  invia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Invia le email (con i resoconti, se pronti)
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: '5'
+          DATA: ${{ github.event.inputs.data }}
+          LIVE: '0'   # PROVA: scrive solo agli indirizzi con +test
+          MODE: invio
+        run: python pipeline/garapronta.py
+      - uses: actions/upload-artifact@v4
+        with: { name: anteprime, path: anteprime/, retention-days: 7 }

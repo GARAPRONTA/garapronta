@@ -1,7 +1,7 @@
 name: GaraPronta giornaliera
 on:
   schedule:
-    - cron: '7 5 * * *'   # 06:07 ora italiana (inverno): dati del giorno prima + email
+    - cron: '7 5 * * *'   # 06:07 ora italiana (inverno): scarica i dati del giorno prima
   push:
     paths: ['pipeline/garapronta.py', '.github/workflows/giornaliera.yml']
   workflow_dispatch:
@@ -25,7 +25,8 @@ jobs:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_LIST_ID: '5'
           DATA: ${{ github.event.inputs.data }}
-          LIVE: '0'   # PROVA: scrive solo agli indirizzi con +test
+          LIVE: '0'
+          MODE: ${{ github.event_name == 'schedule' && 'dati' || 'tutto' }}
         run: python pipeline/garapronta.py
       - name: Anteprime email
         uses: actions/upload-artifact@v4

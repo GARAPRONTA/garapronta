@@ -1,0 +1,21 @@
+{
+ "BDDBAD2AE6": {
+  "titolo": "Manutenzione straordinaria strade, lotto 3 · Comune di Vicenza",
+  "punti": [
+   {"t": "Importo", "v": "903.243 € (887.243 € a base di gara + 16.000 € sicurezza) · durata 65 giorni", "fonte": "Bando II.1.8"},
+   {"t": "Requisiti", "v": "SOA OG 3 classifica III · avvalimento ammesso", "fonte": "Bando III.1 · Disciplinare §9"},
+   {"t": "Subappalto", "v": "Solo se indicato nel DGUE (parte II, sez. D), altrimenti vietato", "fonte": "Disciplinare §10"},
+   {"t": "Sopralluogo", "v": "Non previsto", "fonte": "Disciplinare §14.9"},
+   {"t": "Garanzia", "v": "9.032 € (1%), nessuna riduzione ammessa · cauzione PagoPA o fideiussione", "fonte": "Disciplinare §14.4"},
+   {"t": "Criterio", "v": "Offerta più vantaggiosa: tecnica 80, prezzo 20 (prezzi unitari)", "fonte": "Allegato criteri"},
+   {"t": "Punti facili", "v": "Lavoro notturno 21–6: 20 punti solo dichiarandolo · mezzi 18 · ISO 14001 4 · parità di genere 2", "fonte": "Allegato criteri"},
+   {"t": "Chiarimenti", "v": "Entro il 7/12/2026, solo dalla piattaforma", "fonte": "Disciplinare §2.2"},
+   {"t": "Offerta", "v": "Entro il 14/12/2026 ore 12:00 (termini ridotti per urgenza) · apertura 15/12 ore 10", "fonte": "Bando IV.2"}
+  ],
+  "attenzione": [
+   "La garanzia non si può ridurre neanche con le certificazioni: 9.032 € pieni.",
+   "Contributo ANAC non pagato = esclusione, non sanabile.",
+   "Il prezzo vale solo 20 punti su 100: conta l'offerta tecnica."
+  ]
+ }
+}
