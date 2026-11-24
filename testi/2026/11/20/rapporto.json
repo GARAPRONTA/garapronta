@@ -76,8 +76,8 @@
   "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@17518962",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
   "esito": "ok",
-  "metodo": "browser",
-  "file": 2
+  "metodo": "diretto",
+  "file": 9
  },
  {
   "cig": "BDE2268640",
@@ -99,9 +99,9 @@
   "cig": "BDE50FD712",
   "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
   "piattaforma": "Traspare",
-  "esito": "ok",
+  "esito": "bloccata (HTTP 403)",
   "metodo": "diretto",
-  "file": 12
+  "file": 0
  },
  {
   "cig": "BDDBAD2AE6",
@@ -147,9 +147,9 @@
   "cig": "BDE02DDE8A",
   "url": "https://cucunionevallesusa.traspare.com/announcements/1450",
   "piattaforma": "Traspare",
-  "esito": "ok",
-  "metodo": "browser",
-  "file": 7
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
  },
  {
   "cig": "BDE469D745",
@@ -227,9 +227,9 @@
   "cig": "BDE451649C",
   "url": "http://intercenter.regione.emilia-romagna.it/search_bandi?getId=BANDO_GARA_PORTALE@13429925",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
-  "esito": "link senza file",
-  "metodo": "browser",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
  },
  {
   "cig": "BDE543818A",
