@@ -387,6 +387,54 @@ def apify_scarica(tok, pagine, info=None, actor=ACTOR):
     return out
 
 
+def lista(tsv, outdir):
+    """Sul server: legge 'url\tcig\ttitolo' e stampa 'url\tjson' per ogni gara (3 alla volta)."""
+    from concurrent.futures import ThreadPoolExecutor
+    righe = [l.rstrip("\n").split("\t") + ["", ""] for l in open(tsv, encoding="utf-8") if l.strip()]
+
+    def uno(r):
+        url, cig, tit = r[0], r[1], r[2]
+        try:
+            p = subprocess.run([sys.executable, __file__, "--una", url, f"{outdir}/{cig}", cig, tit],
+                               capture_output=True, text=True, timeout=200)
+            ris = json.loads((p.stdout.strip().splitlines() or ["{}"])[-1] or "{}")
+        except Exception:
+            ris = {}
+        print(url + "\t" + json.dumps(ris or {"esito": "troppo lenta", "metodo": "-", "file": 0}), flush=True)
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        list(ex.map(uno, righe))
+
+
+def vps_giro(falliti, unici, titoli, base):
+    """Manda le gare fallite al server italiano, le fa leggere lì e riporta indietro i testi."""
+    host, d = os.environ["VPS_HOST"], os.path.dirname(os.path.abspath(__file__))
+    ssh = ["sshpass", "-e", "ssh", "-o", "StrictHostKeyChecking=no", "-o", "ConnectTimeout=20", f"root@{host}"]
+    scp = ["sshpass", "-e", "scp", "-o", "StrictHostKeyChecking=no"]
+    with open("/tmp/vps.tsv", "w", encoding="utf-8") as f:
+        for u in falliti:
+            t = titoli.get(unici[u], "").replace("\t", " ").replace("\n", " ")
+            f.write(f"{u}\t{unici[u]}\t{t}\n")
+    subprocess.run(scp + [f"{d}/lettori.py", f"{d}/documenti.py", "/tmp/vps.tsv", f"root@{host}:/opt/garapronta/"],
+                   check=True, timeout=120)
+    r = subprocess.run(ssh + ["cd /opt/garapronta && rm -rf /tmp/gp && mkdir -p /tmp/gp && "
+                              "./venv/bin/python documenti.py --lista vps.tsv /tmp/gp"],
+                       capture_output=True, text=True, timeout=3600)
+    out = {}
+    for l in r.stdout.splitlines():
+        if "\t" in l:
+            u, j = l.split("\t", 1)
+            try:
+                out[u] = json.loads(j)
+            except Exception:
+                pass
+    ok = {u: x for u, x in out.items() if x.get("file", 0) > 0}
+    if ok:
+        os.makedirs(base, exist_ok=True)
+        tar = subprocess.run(ssh + ["tar czf - -C /tmp/gp ."], capture_output=True, timeout=600).stdout
+        subprocess.run(["tar", "xzf", "-", "-C", base], input=tar, check=True)
+    return ok
+
+
 def main():
     giorno = os.environ.get("DATA") or (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%d/%m/%Y")
     d = datetime.strptime(giorno, "%d/%m/%Y")
@@ -425,10 +473,20 @@ def main():
         return url, ris
     with ThreadPoolExecutor(max_workers=8) as ex:
         risultati = dict(ex.map(lancia, unici.items()))
-    # --- secondo giro: le pagine fallite passano dal programma su Apify (proxy italiano)
+    DA_RIFARE = ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore", "file senza testo")
+    # --- secondo giro: server italiano (Aruba) con Chrome, gratis
+    falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in DA_RIFARE]
+    if falliti and os.environ.get("VPS_HOST") and os.environ.get("SSHPASS"):
+        print(f"\n== Server italiano: riprovo {len(falliti)} pagine", flush=True)
+        try:
+            for url, ris in vps_giro(falliti, unici, titoli, base).items():
+                risultati[url] = {**ris, "metodo": "server-IT/" + ris.get("metodo", "")}
+                print(f"  server  {ris['esito']:24} {ris['file']:2} file  {urlparse(url).netloc}", flush=True)
+        except Exception as e:
+            print(f"  Server italiano non disponibile: {e}", flush=True)
+    # --- terzo giro: le pagine ancora fallite passano dal programma su Apify (proxy residenziale)
     tok = os.environ.get("APIFY_TOKEN")
-    falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in
-               ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore", "file senza testo")]
+    falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in DA_RIFARE]
     SOLO = ("traspare",)   # piattaforme dove il proxy Apify ha dato risultati
     falliti = [u for u in falliti if any(k in u for k in SOLO)]
     if tok and falliti:
@@ -480,5 +538,7 @@ def main():
 if __name__ == "__main__":
     if len(sys.argv) >= 4 and sys.argv[1] == "--una":
         una(sys.argv[2], sys.argv[3], *(sys.argv[4:6]))
+    elif len(sys.argv) == 4 and sys.argv[1] == "--lista":
+        lista(sys.argv[2], sys.argv[3])
     else:
         main()
