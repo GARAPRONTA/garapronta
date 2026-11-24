@@ -9,6 +9,27 @@ import base64, json, re
 from html import unescape
 from urllib.parse import urljoin, urlparse, parse_qs, unquote
 
+JS_START = """async (tid) => {
+  const j = async u => { const r = await fetch(u); return r.ok ? r.json() : null };
+  let tipo = 'open_procedure';
+  try { const t = await (await fetch('/tendering-api/tenders/tenderType/' + tid)).text(); if (t && t.length < 60) tipo = t.replace(/"/g,''); } catch(e) {}
+  const info = await j(`/tendering-api/tenders/${tipo}/${tid}/basic-info`);
+  if (!info) return [];
+  const pr = s => { s = s.toLowerCase(); const k = ['disciplinar','invito','bando','avviso','criteri','capitolat']; for (let i=0;i<k.length;i++) if (s.includes(k[i])) return i; return 10; };
+  const atts = (info.attachments||[]).filter(a => a.file && a.whoCanDownload === 'anyone' && !a.isDeleted)
+     .sort((a,b) => pr(((a.description||{}).it_IT||'')+a.file.fileName) - pr(((b.description||{}).it_IT||'')+b.file.fileName)).slice(0,10);
+  const out = [];
+  for (const a of atts) {
+    try {
+      const t = await j(`/tendering-api/tenders/${tipo}/${tid}/attachments/${a.id}/template`);
+      const r = await fetch(t.redirectUrl); const b = new Uint8Array(await r.arrayBuffer());
+      let s = ''; for (let i = 0; i < b.length; i += 32768) s += String.fromCharCode.apply(null, b.subarray(i, i + 32768));
+      out.push([a.file.fileName, btoa(s)]);
+    } catch(e) {}
+  }
+  return out;
+}"""
+
 EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt")
 PATTERN = [
     r"/?allegati/open\.php\?[^\"'\s<>]+",                                   # TuttoGare

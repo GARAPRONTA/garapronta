@@ -251,26 +251,7 @@ def browser_scarica(url):
     return links, files
 
 
-JS_START = """async (tid) => {
-  const j = async u => { const r = await fetch(u); return r.ok ? r.json() : null };
-  let tipo = 'open_procedure';
-  try { const t = await (await fetch('/tendering-api/tenders/tenderType/' + tid)).text(); if (t && t.length < 60) tipo = t.replace(/"/g,''); } catch(e) {}
-  const info = await j(`/tendering-api/tenders/${tipo}/${tid}/basic-info`);
-  if (!info) return [];
-  const pr = s => { s = s.toLowerCase(); const k = ['disciplinar','invito','bando','avviso','criteri','capitolat']; for (let i=0;i<k.length;i++) if (s.includes(k[i])) return i; return 10; };
-  const atts = (info.attachments||[]).filter(a => a.file && a.whoCanDownload === 'anyone' && !a.isDeleted)
-     .sort((a,b) => pr(((a.description||{}).it_IT||'')+a.file.fileName) - pr(((b.description||{}).it_IT||'')+b.file.fileName)).slice(0,10);
-  const out = [];
-  for (const a of atts) {
-    try {
-      const t = await j(`/tendering-api/tenders/${tipo}/${tid}/attachments/${a.id}/template`);
-      const r = await fetch(t.redirectUrl); const b = new Uint8Array(await r.arrayBuffer());
-      let s = ''; for (let i = 0; i < b.length; i += 32768) s += String.fromCharCode.apply(null, b.subarray(i, i + 32768));
-      out.push([a.file.fileName, btoa(s)]);
-    } catch(e) {}
-  }
-  return out;
-}"""
+JS_START = lettori.JS_START
 
 
 def browser_start(url):
@@ -372,10 +353,15 @@ def una(url, cart, cig="", titolo=""):
 ACTOR = "nIBsoLkrJU9zeelw0"   # garapronta-fetcher su Apify
 
 
-def apify_scarica(tok, pagine, info=None):
+def actor_id(tok, nome):
+    j = json.load(urllib.request.urlopen(f"https://api.apify.com/v2/acts?token={tok}&my=true&limit=50", timeout=60))
+    return next((a["id"] for a in j["data"]["items"] if a["name"] == nome), None)
+
+
+def apify_scarica(tok, pagine, info=None, actor=ACTOR):
     """Lancia l'actor su Apify, aspetta (max 15 min) e scarica i file trovati. {pagina: [(nome, bytes)]}"""
     A = "https://api.apify.com/v2"
-    req = urllib.request.Request(f"{A}/acts/{ACTOR}/runs?token={tok}&memory=2048&timeout=1500",
+    req = urllib.request.Request(f"{A}/acts/{actor}/runs?token={tok}&memory=2048&timeout=1500",
                                  data=json.dumps({"pages": pagine, "info": info or {}}).encode(),
                                  headers={"content-type": "application/json"}, method="POST")
     run = json.load(urllib.request.urlopen(req, timeout=60))["data"]
@@ -397,7 +383,7 @@ def apify_scarica(tok, pagine, info=None):
                 pass
         out[it["page"]] = files
         if not files:
-            print(f"  apify {it.get('esito', '?'):14} {urlparse(it['page']).netloc}", flush=True)
+            print(f"  {'apify':7} {it.get('esito', '?'):14} {urlparse(it['page']).netloc}", flush=True)
     return out
 
 
@@ -456,6 +442,22 @@ def main():
                 print(f"  apify ok {len(files):2} file  {urlparse(url).netloc}", flush=True)
         except Exception as e:
             print(f"  Apify non disponibile: {e}", flush=True)
+        # --- terzo giro: Chrome vero su Apify con indirizzo italiano (START, MEPA, piattaforme difficili)
+        ancora = [u for u in falliti if risultati[u]["esito"] != "ok"]
+        if ancora:
+            print(f"\n== Apify browser (Chrome + proxy italiano): riprovo {len(ancora)} pagine", flush=True)
+            try:
+                bid = actor_id(tok, "garapronta-browser")
+                for url, files in apify_scarica(tok, ancora, None, bid).items():
+                    if not files:
+                        continue
+                    cig = unici[url]
+                    docs = salva_gara(files, f"{base}/{cig}")
+                    es = "ok" if any(x["caratteri"] > 500 for x in docs) else "file senza testo (scansioni?)"
+                    risultati[url] = {"esito": es, "metodo": "apify-browser", "file": len(files)}
+                    print(f"  browser ok {len(files):2} file  {urlparse(url).netloc}", flush=True)
+            except Exception as e:
+                print(f"  Apify browser non disponibile: {e}", flush=True)
     esiti, per_piatt, rapporto = Counter(), {}, []
     for cig, url, tip in righe:
         r = risultati[url]

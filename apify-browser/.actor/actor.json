@@ -1,0 +1,1 @@
+{ "actorSpecification": 1, "name": "garapronta-browser", "title": "GaraPronta – browser per piattaforme difficili", "version": "0.1", "dockerfile": "../Dockerfile" }

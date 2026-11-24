@@ -1,38 +1,41 @@
 name: Apify – pubblica il programma di download
 on:
   push:
-    paths: ['apify/**', 'pipeline/lettori.py', '.github/workflows/apify-deploy.yml']
+    paths: ['apify/**', 'apify-browser/**', 'pipeline/lettori.py', '.github/workflows/apify-deploy.yml']
   workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        actor: [{dir: apify, name: garapronta-fetcher}, {dir: apify-browser, name: garapronta-browser}]
     steps:
       - uses: actions/checkout@v4
       - name: Crea o aggiorna l'actor e lo compila
         env: { T: '${{ secrets.APIFY_TOKEN }}' }
         run: |
           set -e
-          cp pipeline/lettori.py apify/lettori.py
+          cp pipeline/lettori.py ${{ matrix.actor.dir }}/lettori.py
           FILES=$(python3 - <<'PY'
           import json,os
           fs=[]
-          for root,_,names in os.walk('apify'):
+          for root,_,names in os.walk('${{ matrix.actor.dir }}'):
               for n in names:
                   if n.endswith('.pyc') or '__pycache__' in root: continue
-                  p=os.path.join(root,n); fs.append({"name":os.path.relpath(p,'apify'),"format":"TEXT","content":open(p).read()})
+                  p=os.path.join(root,n); fs.append({"name":os.path.relpath(p,'${{ matrix.actor.dir }}'),"format":"TEXT","content":open(p).read()})
           print(json.dumps(fs))
           PY
           )
           VER=$(jq -n --argjson f "$FILES" '{versionNumber:"0.1",sourceType:"SOURCE_FILES",buildTag:"latest",sourceFiles:$f}')
-          ID=$(curl -s "https://api.apify.com/v2/acts?token=$T&my=true" | jq -r '.data.items[]|select(.name=="garapronta-fetcher")|.id' | head -1)
+          ID=$(curl -s "https://api.apify.com/v2/acts?token=$T&my=true" | jq -r '.data.items[]|select(.name=="${{ matrix.actor.name }}")|.id' | head -1)
           if [ -z "$ID" ]; then
             ID=$(curl -s -X POST "https://api.apify.com/v2/acts?token=$T" -H 'content-type: application/json' \
-              -d "$(jq -n --argjson v "$VER" '{name:"garapronta-fetcher",isPublic:false,versions:[$v]}')" | jq -r .data.id)
+              -d "$(jq -n --argjson v "$VER" '{name:"${{ matrix.actor.name }}",isPublic:false,versions:[$v]}')" | jq -r .data.id)
             echo "creato actor $ID"
           else
             curl -s -o /dev/null -w "aggiornato: HTTP %{http_code}\n" -X PUT "https://api.apify.com/v2/acts/$ID/versions/0.1?token=$T" -H 'content-type: application/json' -d "$VER"
           fi
           B=$(curl -s -X POST "https://api.apify.com/v2/acts/$ID/builds?token=$T&version=0.1&tag=latest&waitForFinish=60" | jq -r .data.id)
-          for i in $(seq 1 30); do S=$(curl -s "https://api.apify.com/v2/actor-builds/$B?token=$T" | jq -r .data.status); echo "build $S"; [ "$S" != "RUNNING" ] && [ "$S" != "READY" ] && break; sleep 10; done
+          for i in $(seq 1 60); do S=$(curl -s "https://api.apify.com/v2/actor-builds/$B?token=$T" | jq -r .data.status); echo "build $S"; [ "$S" != "RUNNING" ] && [ "$S" != "READY" ] && break; sleep 10; done
           [ "$S" = "SUCCEEDED" ] || { curl -s "https://api.apify.com/v2/actor-builds/$B/log?token=$T" | tail -30; exit 1; }
           echo "PRONTO: actor $ID"
