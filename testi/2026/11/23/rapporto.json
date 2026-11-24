@@ -99,9 +99,9 @@
   "cig": "BDE85002F6",
   "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18746988",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
-  "esito": "troppo lenta",
-  "metodo": "-",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
  },
  {
   "cig": "BDE60E0345",
@@ -179,9 +179,9 @@
   "cig": "BDDEB63EEE",
   "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18698466",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
-  "esito": "troppo lenta",
-  "metodo": "-",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
  },
  {
   "cig": "BDE3BD2F29",
