@@ -269,9 +269,6 @@ def salva_gara(files, cart):
 def una(url, cart):
     """Processo figlio: una sola pagina di gara, con tempo limitato dal processo padre."""
     global _proxy_url
-    tok = os.environ.get("APIFY_TOKEN")
-    if tok:
-        _proxy_url = f"http://groups-RESIDENTIAL,country-IT:{tok}@proxy.apify.com:8000"
     try:
         esito, metodo, files = gara(None, url)
     except Exception as e:
@@ -283,6 +280,38 @@ def una(url, cart):
         if not any(x["caratteri"] > 500 for x in docs):
             esito = "file senza testo (scansioni?)"
     print(json.dumps({"esito": esito, "metodo": metodo, "file": nf}))
+
+
+ACTOR = "nIBsoLkrJU9zeelw0"   # garapronta-fetcher su Apify
+
+
+def apify_scarica(tok, pagine):
+    """Lancia l'actor su Apify, aspetta (max 15 min) e scarica i file trovati. {pagina: [(nome, bytes)]}"""
+    A = "https://api.apify.com/v2"
+    req = urllib.request.Request(f"{A}/acts/{ACTOR}/runs?token={tok}&memory=1024&timeout=900",
+                                 data=json.dumps({"pages": pagine}).encode(),
+                                 headers={"content-type": "application/json"}, method="POST")
+    run = json.load(urllib.request.urlopen(req, timeout=60))["data"]
+    fine = time.time() + 960
+    while run["status"] in ("READY", "RUNNING") and time.time() < fine:
+        time.sleep(15)
+        run = json.load(urllib.request.urlopen(f"{A}/actor-runs/{run['id']}?token={tok}", timeout=60))["data"]
+    print(f"  run Apify {run['status']} · costo {run.get('usageTotalUsd', 0):.3f} $", flush=True)
+    items = json.load(urllib.request.urlopen(f"{A}/datasets/{run['defaultDatasetId']}/items?token={tok}&clean=1", timeout=60))
+    out = {}
+    for it in items:
+        files = []
+        for f in it.get("files") or []:
+            try:
+                data = urllib.request.urlopen(
+                    f"{A}/key-value-stores/{run['defaultKeyValueStoreId']}/records/{f['key']}?token={tok}", timeout=120).read()
+                files.append((f["nome"], data))
+            except Exception:
+                pass
+        out[it["page"]] = files
+        if not files:
+            print(f"  apify {it.get('esito', '?'):14} {urlparse(it['page']).netloc}", flush=True)
+    return out
 
 
 def main():
@@ -322,6 +351,23 @@ def main():
         return url, ris
     with ThreadPoolExecutor(max_workers=8) as ex:
         risultati = dict(ex.map(lancia, unici.items()))
+    # --- secondo giro: le pagine fallite passano dal programma su Apify (proxy italiano)
+    tok = os.environ.get("APIFY_TOKEN")
+    falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in
+               ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore")]
+    if tok and falliti:
+        print(f"\n== Apify (proxy italiano): riprovo {len(falliti)} pagine", flush=True)
+        try:
+            for url, files in apify_scarica(tok, falliti).items():
+                if not files:
+                    continue
+                cig = unici[url]
+                docs = salva_gara(files, f"{base}/{cig}")
+                es = "ok" if any(x["caratteri"] > 500 for x in docs) else "file senza testo (scansioni?)"
+                risultati[url] = {"esito": es, "metodo": "apify-IT", "file": len(files)}
+                print(f"  apify ok {len(files):2} file  {urlparse(url).netloc}", flush=True)
+        except Exception as e:
+            print(f"  Apify non disponibile: {e}", flush=True)
     esiti, per_piatt, rapporto = Counter(), {}, []
     for cig, url, tip in righe:
         r = risultati[url]
