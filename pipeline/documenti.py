@@ -268,7 +268,7 @@ def browser_start(url):
         ctx = b.new_context(user_agent=UA, locale="it-IT", accept_downloads=True)
         pg = ctx.new_page()
         try:
-            pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+            pg.goto(url, wait_until="domcontentloaded", timeout=120000)
             pg.wait_for_timeout(8000)
             cand = pg.locator("a").filter(has_text=re.compile(r"\.(pdf|p7m|zip|7z|docx?|odt|rtf)\s*$", re.I))
             nomi = []
@@ -279,7 +279,7 @@ def browser_start(url):
             nomi.sort(key=lambda x: lettori._prio(x[0]))
             t0 = time.time()
             for nome, i in nomi[:MAX_FILES]:
-                if time.time() - t0 > 150:
+                if time.time() - t0 > 170:
                     break
                 try:
                     with pg.expect_download(timeout=40000) as dl:
@@ -414,7 +414,7 @@ def lista(tsv, outdir):
         url, cig, tit = r[0], r[1], r[2]
         try:
             p = subprocess.run([sys.executable, __file__, "--una", url, f"{outdir}/{cig}", cig, tit],
-                               capture_output=True, text=True, timeout=200)
+                               capture_output=True, text=True, timeout=330 if "start.toscana" in url else 200)
             ris = json.loads((p.stdout.strip().splitlines() or ["{}"])[-1] or "{}")
         except Exception:
             ris = {}
