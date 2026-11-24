@@ -64,14 +64,14 @@ async def main():
         pages, info = inp.get("pages") or [], inp.get("info") or {}
         pc = await Actor.create_proxy_configuration(groups=["RESIDENTIAL"], country_code="IT")
         kv = await Actor.open_key_value_store()
-        sem = asyncio.Semaphore(10)
+        sem = asyncio.Semaphore(4)
 
         async def job(p):
             async with sem:
                 proxy = await pc.new_url(session_id=hashlib.md5(p.encode()).hexdigest()[:10])
                 cig, titolo = (info.get(p) or ["", ""])[:2]
                 try:
-                    esito, files = await asyncio.wait_for(asyncio.to_thread(una, p, cig, titolo, proxy), timeout=180)
+                    esito, files = await asyncio.wait_for(asyncio.to_thread(una, p, cig, titolo, proxy), timeout=300)
                 except asyncio.TimeoutError:
                     esito, files = "troppo lenta", []
                 rec = {"page": p, "esito": esito, "files": []}
