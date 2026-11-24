@@ -3,9 +3,9 @@
   "cig": "BDE184699C",
   "url": "https://surbo.tuttogare.it/gare/dettaglio.php?codice=517",
   "piattaforma": "TuttoGare",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 6
  },
  {
   "cig": "BDDFD49421",
@@ -27,7 +27,7 @@
   "cig": "BDE35F5881",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1072171",
   "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "errore TimeoutError",
+  "esito": "nessun file trovato",
   "metodo": "diretto",
   "file": 0
  },
@@ -43,9 +43,9 @@
   "cig": "BDE4A6239E",
   "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5317",
   "piattaforma": "gare.provincia.fr.it",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 4
  },
  {
   "cig": "BDE51F7561",
@@ -59,17 +59,17 @@
   "cig": "BDE400022B",
   "url": "https://fano.tuttogare.it/gare/dettaglio.php?codice=2357",
   "piattaforma": "TuttoGare",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 6
  },
  {
   "cig": "BDE378FAD8",
   "url": "https://comunebrindisi.tuttogare.it/gare/dettaglio.php?codice=1016",
   "piattaforma": "TuttoGare",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 12
  },
  {
   "cig": "BDE4C0A184",
@@ -83,7 +83,7 @@
   "cig": "BDE2268640",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1030011",
   "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "errore TimeoutError",
+  "esito": "nessun file trovato",
   "metodo": "diretto",
   "file": 0
  },
@@ -91,17 +91,17 @@
   "cig": "BDDF8CBF1B",
   "url": "https://comunemaidallpp.tuttogare.it/gare/dettaglio.php?codice=344",
   "piattaforma": "TuttoGare",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 9
  },
  {
   "cig": "BDE50FD712",
   "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
   "piattaforma": "Traspare",
-  "esito": "ok",
+  "esito": "bloccata (HTTPError)",
   "metodo": "diretto",
-  "file": 12
+  "file": 0
  },
  {
   "cig": "BDDBAD2AE6",
@@ -115,9 +115,9 @@
   "cig": "BDDDC4CB16",
   "url": "https://gare.comune.prato.it/gare/dettaglio.php?codice=5062",
   "piattaforma": "gare.comune.prato.it",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 13
  },
  {
   "cig": "BDCC5ACD5B",
@@ -147,7 +147,7 @@
   "cig": "BDE02DDE8A",
   "url": "https://cucunionevallesusa.traspare.com/announcements/1450",
   "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
+  "esito": "bloccata (HTTPError)",
   "metodo": "diretto",
   "file": 0
  },
@@ -211,9 +211,9 @@
   "cig": "BDD990AA58",
   "url": "https://appalti.consorziobonifica9ct.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=354",
   "piattaforma": "appalti.consorziobonifica9ct.lavoripubblici.sicilia.it",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 2
  },
  {
   "cig": "BDE45E7116",
