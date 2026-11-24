@@ -1,0 +1,14 @@
+name: Server italiano – diagnosi START e Intercent
+on:
+  workflow_dispatch:
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
+        run: |
+          sudo apt-get install -y -qq sshpass >/dev/null
+          sshpass -e scp -o StrictHostKeyChecking=no tools/vps_diagnosi.py root@$H:/opt/garapronta/
+          sshpass -e ssh -o StrictHostKeyChecking=no root@$H "cd /opt/garapronta && timeout 600 ./venv/bin/python vps_diagnosi.py"
