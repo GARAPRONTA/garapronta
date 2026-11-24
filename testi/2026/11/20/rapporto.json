@@ -99,9 +99,9 @@
   "cig": "BDE50FD712",
   "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "apify-IT",
+  "file": 8
  },
  {
   "cig": "BDDBAD2AE6",
