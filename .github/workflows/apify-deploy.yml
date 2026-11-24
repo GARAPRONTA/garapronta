@@ -1,7 +1,7 @@
 name: Apify – pubblica il programma di download
 on:
   push:
-    paths: ['apify/**', '.github/workflows/apify-deploy.yml']
+    paths: ['apify/**', 'pipeline/lettori.py', '.github/workflows/apify-deploy.yml']
   workflow_dispatch:
 jobs:
   deploy:
@@ -12,6 +12,7 @@ jobs:
         env: { T: '${{ secrets.APIFY_TOKEN }}' }
         run: |
           set -e
+          cp pipeline/lettori.py apify/lettori.py
           FILES=$(python3 - <<'PY'
           import json,os
           fs=[]

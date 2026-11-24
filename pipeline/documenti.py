@@ -176,84 +176,112 @@ def tipo_doc(nome):
 PRIORITA = ["disciplinare", "lettera_invito", "bando", "avviso", "capitolato", "elenco_prezzi", "computo", "altro", "modulistica", "dgue", "progetto"]
 
 
-def pagina_con_browser(url):
-    """Browser automatico per le pagine dinamiche: restituisce l'HTML dopo il caricamento."""
+import lettori
+
+
+def _get(url, method="GET", data=None, headers=None):
+    """get() per i lettori: sessione con cookie e referer, come un browser."""
+    h = {"user-agent": UA, "accept-language": "it-IT,it;q=0.9",
+         "accept": "text/html,application/xhtml+xml,application/pdf,application/json,*/*;q=0.8"}
+    if _referer[0]:
+        h["referer"] = _referer[0]
+    h.update(headers or {})
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_cookies))
+    req = urllib.request.Request(url, data=data, headers=h, method=method)
+    fine = time.time() + 90
+    try:
+        with opener.open(req, timeout=30) as r:
+            buf = bytearray()
+            while True:
+                pezzo = r.read(256 * 1024)
+                if not pezzo:
+                    break
+                buf += pezzo
+                if len(buf) > MAX_FILE or time.time() > fine:
+                    raise ValueError("file troppo grande o lento")
+            hd = {k.lower(): v for k, v in r.headers.items()}
+            if "text/html" in hd.get("content-type", ""):
+                _referer[0] = r.geturl()
+            return r.status, hd, bytes(buf), r.geturl()
+    except urllib.error.HTTPError as e:
+        return e.code, {k.lower(): v for k, v in (e.headers or {}).items()}, b"", url
+
+
+def browser_scarica(url):
+    """Browser automatico: per pagine dinamiche (es. MEPA). Legge i link dopo il caricamento e,
+    se non ce ne sono, clicca i documenti e cattura i download."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
-        return None
+        return [], []
+    files, links = [], []
     with sync_playwright() as p:
         b = p.chromium.launch()
-        pg = b.new_page(user_agent=UA, locale="it-IT")
+        ctx = b.new_context(user_agent=UA, locale="it-IT", accept_downloads=True)
+        pg = ctx.new_page()
         try:
-            pg.goto(url, wait_until="domcontentloaded", timeout=20000)
-            pg.wait_for_timeout(3000)
+            pg.goto(url, wait_until="domcontentloaded", timeout=30000)
+            pg.wait_for_timeout(5000)
+            for t in ("Documenti di gara", "Documentazione", "Documenti", "Allegati"):
+                try:
+                    pg.get_by_text(t, exact=True).first.click(timeout=2000)
+                    pg.wait_for_timeout(2500)
+                    break
+                except Exception:
+                    pass
             html = pg.content()
             for fr in pg.frames[1:]:
                 try:
                     html += fr.content()
                 except Exception:
                     pass
-            return html
+            links = lettori.link_file(html, pg.url)
+            if not links:
+                cand = pg.locator("text=/\\.(pdf|p7m|zip)\\s*$/i")
+                for i in range(min(cand.count(), 10)):
+                    try:
+                        with pg.expect_download(timeout=15000) as dl:
+                            cand.nth(i).click(timeout=5000)
+                        d = dl.value
+                        files.append((d.suggested_filename, open(d.path(), "rb").read()))
+                    except Exception:
+                        continue
         finally:
             b.close()
+    return links, files
 
 
-def gara(cig, url):
+def gara(cig, url, titolo=""):
     """Scarica i documenti di una gara. Restituisce (esito, metodo, files)."""
-    metodo, html, base = "diretto", None, url
-    for tentativo in ("diretto", "proxy"):
-        if tentativo == "proxy" and not _proxy_url:
-            break
-        try:
-            data, hdr, base = apri(url, proxy=(tentativo == "proxy"), max_bytes=8_000_000)
-            metodo = tentativo
-            if data[:4] == b"%PDF" or "pdf" in (hdr.get("content-type") or ""):
-                return "ok", metodo, [(nome_file(url, hdr), data)]
-            html = data.decode("utf-8", "ignore")
-            _referer[0] = base
-            break
-        except Exception as e:
-            ultimo = f"{type(e).__name__}"
-            continue
-    if html is None:
-        return f"bloccata ({ultimo})", metodo, []
-    links = link_file(html, base, url)
-    nota = any(test(url) for _, test, _ in PIATTAFORME)
-    if not links and not nota and time.time() < SCADENZA:
-        h2 = pagina_con_browser(url)
-        if h2:
-            links = link_file(h2, url, url)
-            if links:
-                metodo += "+browser"
-    if not links:
-        login = bool(re.search(r"login|accedi|spid|registrati", html, re.I))
-        return ("serve accesso" if login and len(html) < 15000 else "nessun file trovato"), metodo, []
+    metodo = "diretto"
+    try:
+        elementi = lettori.trova(url, cig, titolo, _get)
+    except PermissionError as e:
+        return f"bloccata ({e})", metodo, []
+    except Exception as e:
+        return f"bloccata ({type(e).__name__})", metodo, []
+    if not elementi:
+        links, fl = browser_scarica(url)
+        metodo = "browser"
+        if fl:
+            return "ok", metodo, fl[:MAX_FILES]
+        elementi = [("url", x) for x in links]
+    if not elementi:
+        return "nessun file trovato", metodo, []
     files, t0 = [], time.time()
-    for u in links[:MAX_FILES * 2]:
-        if len(files) >= MAX_FILES or time.time() - t0 > 120:
+    for el in elementi:
+        if len(files) >= MAX_FILES or time.time() - t0 > 150:
             break
+        if el[0] == "file":
+            files.append((el[1], el[2]))
+            continue
         try:
-            data, hdr, _ = apri(u, proxy=("proxy" in metodo))
-            ct = (hdr.get("content-type") or "").lower()
-            if "text/html" in ct and data[:4] != b"%PDF":
+            st, hd, data, _ = _get(el[1])
+            if st != 200 or ("text/html" in hd.get("content-type", "") and data[:4] != b"%PDF"):
                 continue
-            files.append((nome_file(u, hdr), data))
-            time.sleep(0.5)
+            files.append((nome_file(el[1], hd), data))
         except Exception:
             continue
-    if not files and _proxy_url and "proxy" not in metodo:
-        metodo += "+proxy-file"
-        for u in links[:MAX_FILES * 2]:
-            if len(files) >= MAX_FILES or time.time() - t0 > 200:
-                break
-            try:
-                data, hdr, _ = apri(u, proxy=True)
-                if "text/html" in (hdr.get("content-type") or "").lower() and data[:4] != b"%PDF":
-                    continue
-                files.append((nome_file(u, hdr), data))
-            except Exception:
-                continue
     return ("ok" if files else "link senza file"), metodo, files
 
 
@@ -279,11 +307,11 @@ def salva_gara(files, cart):
     return docs
 
 
-def una(url, cart):
+def una(url, cart, cig="", titolo=""):
     """Processo figlio: una sola pagina di gara, con tempo limitato dal processo padre."""
     global _proxy_url
     try:
-        esito, metodo, files = gara(None, url)
+        esito, metodo, files = gara(cig, url, titolo)
     except Exception as e:
         esito, metodo, files = f"errore {type(e).__name__}", "diretto", []
     nf = 0
@@ -298,11 +326,11 @@ def una(url, cart):
 ACTOR = "nIBsoLkrJU9zeelw0"   # garapronta-fetcher su Apify
 
 
-def apify_scarica(tok, pagine):
+def apify_scarica(tok, pagine, info=None):
     """Lancia l'actor su Apify, aspetta (max 15 min) e scarica i file trovati. {pagina: [(nome, bytes)]}"""
     A = "https://api.apify.com/v2"
     req = urllib.request.Request(f"{A}/acts/{ACTOR}/runs?token={tok}&memory=1024&timeout=900",
-                                 data=json.dumps({"pages": pagine}).encode(),
+                                 data=json.dumps({"pages": pagine, "info": info or {}}).encode(),
                                  headers={"content-type": "application/json"}, method="POST")
     run = json.load(urllib.request.urlopen(req, timeout=60))["data"]
     fine = time.time() + 960
@@ -331,13 +359,14 @@ def main():
     giorno = os.environ.get("DATA") or (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%d/%m/%Y")
     d = datetime.strptime(giorno, "%d/%m/%Y")
     avvisi = json.load(gzip.open(f"data/{d:%Y/%m/%d}.json.gz", "rt"))
-    righe = []
+    righe, titoli = [], {}
     for a in avvisi:
         if a["tipo"] != "avviso" or a["tipologia"] not in ("BANDI", "INDAGINI_DI_MERCATO_SOTTO_SOGLIA"):
             continue
         for it in a["items"]:
             if (it.get("natura") or "").lower() == "lavori" and a.get("link") and it.get("cig"):
                 righe.append((it["cig"], a["link"], a["tipologia"]))
+                titoli[it["cig"]] = (a.get("titolo") or it.get("descr") or "")[:200]
                 break
     righe = righe[: int(os.environ.get("MAX_GARE", "200"))]
     print(f"== {giorno}: {len(righe)} gare di lavori da leggere · proxy {'sì' if os.environ.get('APIFY_TOKEN') else 'no'}", flush=True)
@@ -352,7 +381,7 @@ def main():
         url, cig = item
         t = time.time()
         try:
-            r = subprocess.run([sys.executable, __file__, "--una", url, f"{base}/{cig}"],
+            r = subprocess.run([sys.executable, __file__, "--una", url, f"{base}/{cig}", cig, titoli.get(cig, "")],
                                capture_output=True, text=True, timeout=240)
             ris = json.loads((r.stdout.strip().splitlines() or ["{}"])[-1] or "{}") or {"esito": "errore", "metodo": "-", "file": 0}
         except subprocess.TimeoutExpired:
@@ -367,11 +396,11 @@ def main():
     # --- secondo giro: le pagine fallite passano dal programma su Apify (proxy italiano)
     tok = os.environ.get("APIFY_TOKEN")
     falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in
-               ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore")]
+               ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore", "file senza testo")]
     if tok and falliti:
         print(f"\n== Apify (proxy italiano): riprovo {len(falliti)} pagine", flush=True)
         try:
-            for url, files in apify_scarica(tok, falliti).items():
+            for url, files in apify_scarica(tok, falliti, {u: [unici[u], titoli.get(unici[u], "")] for u in falliti}).items():
                 if not files:
                     continue
                 cig = unici[url]
@@ -399,7 +428,7 @@ def main():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4 and sys.argv[1] == "--una":
-        una(sys.argv[2], sys.argv[3])
+    if len(sys.argv) >= 4 and sys.argv[1] == "--una":
+        una(sys.argv[2], sys.argv[3], *(sys.argv[4:6]))
     else:
         main()

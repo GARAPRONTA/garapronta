@@ -1,46 +1,12 @@
-"""Gira dentro Apify con il proxy italiano: apre le pagine di gara, trova i link ai documenti
-e li scarica nella stessa sessione. Salva i file nel key-value store e un riepilogo nel dataset."""
-import asyncio, base64, hashlib, re
-from html import unescape
-from urllib.parse import urljoin, urlparse, parse_qs, unquote
+"""Gira dentro Apify con il proxy italiano. Usa gli stessi lettori di GitHub (lettori.py, copiato al deploy)."""
+import asyncio, hashlib, re
+from urllib.parse import urlparse, parse_qs, unquote
+import base64
 import httpx
 from apify import Actor
+import lettori
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
-EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt")
-PAT = [r"/?allegati/open\.php\?[^\"'\s<>]+", r"[^\"'\s<>]*downloadDocumentoPubblico\.action[^\"'\s<>]*",
-       r"[^\"'\s<>]*fs_public_action\?do=download_document[^\"'\s<>]*"]
-
-
-def links(html, base):
-    html = unescape(html)
-    out = []
-    for p in PAT:
-        out += re.findall(p, html)
-    for h in re.findall(r"href=[\"']([^\"']+)[\"']", html, re.I):
-        hl = h.lower()
-        if (hl.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", hl)) \
-                and not re.search(r"(login|registra|password|javascript:|mailto:|verifica)", hl):
-            out.append(h)
-    def prio(h):
-        n = h.lower()
-        try:
-            q = parse_qs(urlparse(h).query)
-            if "filename" in q:
-                n += base64.b64decode(q["filename"][0]).decode("utf-8", "ignore").lower()
-        except Exception:
-            pass
-        for i, k in enumerate(["disciplinar", "invito", "bando", "avviso", "criteri", "capitolat", "elenco", "computo"]):
-            if k in n:
-                return i
-        return 20 if re.search(r"progett|elaborat|tavol|esecutiv|\.zip", n) else 10
-    out.sort(key=prio)
-    res, seen = [], set()
-    for t in out:
-        u = re.sub(r";jsessionid=[^?]+", "", urljoin(base, t.strip()))
-        if u not in seen and urlparse(u).scheme in ("http", "https"):
-            seen.add(u); res.append(u)
-    return res[:30]
 
 
 def nome(url, h):
@@ -57,45 +23,45 @@ def nome(url, h):
     return unquote(urlparse(url).path.rsplit("/", 1)[-1]) or "documento"
 
 
-async def una(page, proxy, kv):
-    rec = {"page": page, "esito": "", "files": []}
-    try:
-        async with httpx.AsyncClient(proxy=proxy, headers={"user-agent": UA, "accept-language": "it-IT,it;q=0.9"},
-                                     follow_redirects=True, timeout=httpx.Timeout(30, connect=15), verify=False) as c:
-            r = await c.get(page)
-            ct = r.headers.get("content-type", "")
-            if r.content[:4] == b"%PDF":
-                cand = [(page, r)]
-            else:
-                if r.status_code >= 400:
-                    rec["esito"] = f"HTTP {r.status_code}"; return rec
-                cand = []
-                for u in links(r.text, str(r.url)):
-                    if len(cand) >= 8:
-                        break
-                    try:
-                        f = await c.get(u, headers={"referer": str(r.url)})
-                        if "text/html" in f.headers.get("content-type", "") and f.content[:4] != b"%PDF":
-                            continue
-                        if len(f.content) > 15_000_000:
-                            continue
-                        cand.append((u, f))
-                    except Exception:
-                        continue
-            for u, f in cand:
-                key = hashlib.sha1(u.encode()).hexdigest()[:20]
-                await kv.set_value(key, f.content, content_type="application/octet-stream")
-                rec["files"].append({"url": u, "nome": nome(u, f.headers), "key": key, "kb": len(f.content) // 1024})
-            rec["esito"] = "ok" if rec["files"] else "nessun file"
-    except Exception as e:
-        rec["esito"] = f"errore {type(e).__name__}"
-    return rec
+def una(page, cig, titolo, proxy):
+    """Sincrona (in un thread): una sessione per gara, così cookie e referer restano coerenti."""
+    out, ref = [], [None]
+    with httpx.Client(proxy=proxy, follow_redirects=True, verify=False,
+                      timeout=httpx.Timeout(30, connect=15),
+                      headers={"user-agent": UA, "accept-language": "it-IT,it;q=0.9"}) as c:
+        def get(url, method="GET", data=None, headers=None):
+            h = dict(headers or {})
+            if ref[0]:
+                h.setdefault("referer", ref[0])
+            r = c.request(method, url, content=data, headers=h)
+            if len(r.content) > 15_000_000:
+                return 413, {}, b"", str(r.url)
+            hd = {k.lower(): v for k, v in r.headers.items()}
+            if "text/html" in hd.get("content-type", ""):
+                ref[0] = str(r.url)
+            return r.status_code, hd, r.content, str(r.url)
+        try:
+            elementi = lettori.trova(page, cig, titolo, get)
+        except Exception as e:
+            return f"errore {type(e).__name__}", []
+        for el in elementi:
+            if len(out) >= 8:
+                break
+            if el[0] == "file":
+                out.append((el[1], el[2])); continue
+            try:
+                st, hd, data, _ = get(el[1])
+                if st == 200 and data and not ("text/html" in hd.get("content-type", "") and data[:4] != b"%PDF"):
+                    out.append((nome(el[1], hd), data))
+            except Exception:
+                continue
+    return ("ok" if out else "nessun file"), out
 
 
 async def main():
     async with Actor:
         inp = await Actor.get_input() or {}
-        pages = inp.get("pages") or []
+        pages, info = inp.get("pages") or [], inp.get("info") or {}
         pc = await Actor.create_proxy_configuration(groups=["RESIDENTIAL"], country_code="IT")
         kv = await Actor.open_key_value_store()
         sem = asyncio.Semaphore(6)
@@ -103,7 +69,16 @@ async def main():
         async def job(p):
             async with sem:
                 proxy = await pc.new_url(session_id=hashlib.md5(p.encode()).hexdigest()[:10])
-                rec = await una(p, proxy, kv)
+                cig, titolo = (info.get(p) or ["", ""])[:2]
+                try:
+                    esito, files = await asyncio.wait_for(asyncio.to_thread(una, p, cig, titolo, proxy), timeout=240)
+                except asyncio.TimeoutError:
+                    esito, files = "troppo lenta", []
+                rec = {"page": p, "esito": esito, "files": []}
+                for n, data in files:
+                    key = hashlib.sha1((p + n).encode()).hexdigest()[:20]
+                    await kv.set_value(key, data, content_type="application/octet-stream")
+                    rec["files"].append({"nome": n, "key": key, "kb": len(data) // 1024})
                 await Actor.push_data(rec)
         await asyncio.gather(*(job(p) for p in pages))
 
