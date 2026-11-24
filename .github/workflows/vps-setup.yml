@@ -1,0 +1,32 @@
+name: Server italiano – installazione e test
+on:
+  workflow_dispatch:
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Controlla i secret
+        env: { H: '${{ secrets.VPS_HOST }}', P: '${{ secrets.VPS_PASSWORD }}' }
+        run: |
+          [ -n "$H" ] && [ -n "$P" ] || { echo "Mancano VPS_HOST o VPS_PASSWORD nei secret"; exit 1; }
+          sudo apt-get install -y -qq sshpass >/dev/null
+      - name: Installa Python, strumenti PDF e Chrome sul server
+        env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
+        run: |
+          S="sshpass -e ssh -o StrictHostKeyChecking=no -o ConnectTimeout=20 root@$H"
+          $S 'export DEBIAN_FRONTEND=noninteractive; apt-get update -qq && apt-get install -y -qq python3 python3-venv python3-pip poppler-utils openssl unattended-upgrades >/dev/null && echo pacchetti ok'
+          $S 'mkdir -p /opt/garapronta && cd /opt/garapronta && [ -d venv ] || python3 -m venv venv; ./venv/bin/pip install -q playwright httpx && ./venv/bin/python -m playwright install --with-deps chromium >/dev/null 2>&1 && echo chrome ok'
+          $S 'ufw allow 22/tcp >/dev/null 2>&1; ufw --force enable >/dev/null 2>&1; free -h | head -2; df -h / | tail -1'
+      - name: Copia i lettori e prova le piattaforme difficili dall'Italia
+        env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
+        run: |
+          sshpass -e scp -o StrictHostKeyChecking=no pipeline/lettori.py pipeline/documenti.py pipeline/garapronta.py pipeline/comuni_regioni.json root@$H:/opt/garapronta/
+          sshpass -e ssh -o StrictHostKeyChecking=no root@$H 'cd /opt/garapronta && for u in \
+            "https://start.toscana.it/tendering/tenders/048007-2026/view/detail/1" \
+            "https://suaprovinciaavellino.traspare.com/announcements/1279" \
+            "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77" \
+            "https://intercenter.regione.emilia-romagna.it/" ; do
+              timeout 300 ./venv/bin/python documenti.py --una "$u" /tmp/prova/$(echo $u | md5sum | cut -c1-8) "" "" | tail -1 | sed "s|^|$(echo $u | cut -d/ -f3): |"
+            done; curl -s -m 15 ipinfo.io/country'
