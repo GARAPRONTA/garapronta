@@ -369,7 +369,7 @@ def apify_scarica(tok, pagine, info=None, actor=ACTOR):
     while run["status"] in ("READY", "RUNNING") and time.time() < fine:
         time.sleep(15)
         run = json.load(urllib.request.urlopen(f"{A}/actor-runs/{run['id']}?token={tok}", timeout=60))["data"]
-    print(f"  run Apify {run['status']} · costo {run.get('usageTotalUsd', 0):.3f} $", flush=True)
+    print(f"  run Apify {run['id']} {run['status']} {run.get('statusMessage') or ''} · costo {run.get('usageTotalUsd', 0):.3f} $", flush=True)
     items = json.load(urllib.request.urlopen(f"{A}/datasets/{run['defaultDatasetId']}/items?token={tok}&clean=1", timeout=60))
     out = {}
     for it in items:
@@ -429,6 +429,8 @@ def main():
     tok = os.environ.get("APIFY_TOKEN")
     falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in
                ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore", "file senza testo")]
+    SOLO = ("traspare",)   # piattaforme dove il proxy Apify ha dato risultati
+    falliti = [u for u in falliti if any(k in u for k in SOLO)]
     if tok and falliti:
         print(f"\n== Apify (proxy italiano): riprovo {len(falliti)} pagine", flush=True)
         try:
@@ -444,7 +446,7 @@ def main():
             print(f"  Apify non disponibile: {e}", flush=True)
         # --- terzo giro: Chrome vero su Apify con indirizzo italiano (START, MEPA, piattaforme difficili)
         ancora = [u for u in falliti if risultati[u]["esito"] != "ok"]
-        if ancora:
+        if ancora and os.environ.get("APIFY_BROWSER") == "1":
             print(f"\n== Apify browser (Chrome + proxy italiano): riprovo {len(ancora)} pagine", flush=True)
             try:
                 bid = actor_id(tok, "garapronta-browser")

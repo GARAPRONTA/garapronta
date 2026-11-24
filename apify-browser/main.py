@@ -17,6 +17,7 @@ async def una(browser, proxy, page_url):
     pu = urlparse(proxy)
     ctx = await browser.new_context(user_agent=UA, locale="it-IT", accept_downloads=True, ignore_https_errors=True,
                                     proxy={"server": f"http://{pu.hostname}:{pu.port}", "username": unquote(pu.username), "password": unquote(pu.password)})
+    await ctx.route("**/*", lambda r: r.abort() if r.request.resource_type in ("image", "font", "media", "stylesheet") else r.continue_())
     pg = await ctx.new_page()
     files = []
     try:
