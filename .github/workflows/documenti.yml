@@ -29,7 +29,6 @@ jobs:
       - name: Scarica documenti e testi
         env:
           DATA: ${{ github.event.inputs.data || (github.event_name == 'push' && '20/11/2026') || '' }}
-          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
           SSHPASS: ${{ secrets.VPS_PASSWORD }}
         run: python pipeline/documenti.py

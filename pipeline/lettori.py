@@ -180,8 +180,28 @@ def cerca_cig(html, base, cig, titolo, get, profondita=2, max_pagine=12):
     return []
 
 
+def intercenter(url, get):
+    """Intercent-ER: la scheda del bando ha un'API JSON pubblica (++api++) con l'elenco degli allegati."""
+    m = re.search(r"BANDO_GARA_PORTALE@(\d+)", url)
+    if not m:
+        return []
+    st, h, body, fu = get(f"https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@{m.group(1)}")
+    if st >= 400 or "/++api++/" in fu:
+        return []
+    api = fu.replace("emilia-romagna.it/", "emilia-romagna.it/++api++/", 1)
+    st, h, body, _ = get(api, headers={"accept": "application/json"})
+    if st != 200:
+        return []
+    d = ((json.loads(body).get("@components") or {}).get("intercenter-data") or {}).get("data") or {}
+    alle = [a for a in d.get("allegati") or [] if a.get("url")]
+    alle.sort(key=lambda a: _prio((a.get("descrizione") or "") + " " + (a.get("nome") or "")))
+    return [("url", a["url"].replace(" ", "%20")) for a in alle[:15]]
+
+
 def trova(url, cig, titolo, get):
     """Restituisce i documenti da scaricare per una gara."""
+    if "intercenter.regione.emilia-romagna.it" in url and "BANDO_GARA_PORTALE@" in url:
+        return intercenter(url, get)
     if "start.toscana.it" in url and "/tenders/" in url:
         return start_toscana(url, get)
     st, h, body, fu = get(url)

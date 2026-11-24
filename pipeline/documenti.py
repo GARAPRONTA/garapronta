@@ -255,24 +255,42 @@ JS_START = lettori.JS_START
 
 
 def browser_start(url):
-    """START Toscana rifiuta le connessioni non-browser: uso il browser vero e le sue API pubbliche."""
-    m = re.search(r"/tenders/([0-9]{6}-[0-9]{4})", url)
-    if not m:
+    """START Toscana: apre la scheda con Chrome e scarica gli allegati pubblici cliccandoli, come un utente."""
+    if not re.search(r"/tenders/[0-9]{6}-[0-9]{4}", url):
         return []
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         return []
+    files = []
     with sync_playwright() as p:
         b = p.chromium.launch()
-        pg = b.new_page(user_agent=UA, locale="it-IT")
+        ctx = b.new_context(user_agent=UA, locale="it-IT", accept_downloads=True)
+        pg = ctx.new_page()
         try:
-            pg.goto(url, wait_until="domcontentloaded", timeout=40000)
-            pg.wait_for_timeout(3000)
-            res = pg.evaluate(JS_START, m.group(1))
-            return [(n, base64.b64decode(d)) for n, d in res]
+            pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+            pg.wait_for_timeout(8000)
+            cand = pg.locator("a").filter(has_text=re.compile(r"\.(pdf|p7m|zip|7z|docx?|odt|rtf)\s*$", re.I))
+            nomi = []
+            for i in range(min(cand.count(), 40)):
+                t = cand.nth(i).inner_text().strip()
+                if t and t not in [n for n, _ in nomi]:
+                    nomi.append((t, i))
+            nomi.sort(key=lambda x: lettori._prio(x[0]))
+            t0 = time.time()
+            for nome, i in nomi[:MAX_FILES]:
+                if time.time() - t0 > 150:
+                    break
+                try:
+                    with pg.expect_download(timeout=40000) as dl:
+                        cand.nth(i).click(timeout=5000)
+                    d = dl.value
+                    files.append((d.suggested_filename or nome, open(d.path(), "rb").read()))
+                except Exception:
+                    continue
         finally:
             b.close()
+    return files
 
 
 def gara(cig, url, titolo=""):
