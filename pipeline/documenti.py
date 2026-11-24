@@ -251,9 +251,55 @@ def browser_scarica(url):
     return links, files
 
 
+JS_START = """async (tid) => {
+  const j = async u => { const r = await fetch(u); return r.ok ? r.json() : null };
+  let tipo = 'open_procedure';
+  try { const t = await (await fetch('/tendering-api/tenders/tenderType/' + tid)).text(); if (t && t.length < 60) tipo = t.replace(/"/g,''); } catch(e) {}
+  const info = await j(`/tendering-api/tenders/${tipo}/${tid}/basic-info`);
+  if (!info) return [];
+  const pr = s => { s = s.toLowerCase(); const k = ['disciplinar','invito','bando','avviso','criteri','capitolat']; for (let i=0;i<k.length;i++) if (s.includes(k[i])) return i; return 10; };
+  const atts = (info.attachments||[]).filter(a => a.file && a.whoCanDownload === 'anyone' && !a.isDeleted)
+     .sort((a,b) => pr(((a.description||{}).it_IT||'')+a.file.fileName) - pr(((b.description||{}).it_IT||'')+b.file.fileName)).slice(0,10);
+  const out = [];
+  for (const a of atts) {
+    try {
+      const t = await j(`/tendering-api/tenders/${tipo}/${tid}/attachments/${a.id}/template`);
+      const r = await fetch(t.redirectUrl); const b = new Uint8Array(await r.arrayBuffer());
+      let s = ''; for (let i = 0; i < b.length; i += 32768) s += String.fromCharCode.apply(null, b.subarray(i, i + 32768));
+      out.push([a.file.fileName, btoa(s)]);
+    } catch(e) {}
+  }
+  return out;
+}"""
+
+
+def browser_start(url):
+    """START Toscana rifiuta le connessioni non-browser: uso il browser vero e le sue API pubbliche."""
+    m = re.search(r"/tenders/([0-9]{6}-[0-9]{4})", url)
+    if not m:
+        return []
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return []
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        pg = b.new_page(user_agent=UA, locale="it-IT")
+        try:
+            pg.goto(url, wait_until="domcontentloaded", timeout=40000)
+            pg.wait_for_timeout(3000)
+            res = pg.evaluate(JS_START, m.group(1))
+            return [(n, base64.b64decode(d)) for n, d in res]
+        finally:
+            b.close()
+
+
 def gara(cig, url, titolo=""):
     """Scarica i documenti di una gara. Restituisce (esito, metodo, files)."""
     metodo = "diretto"
+    if "start.toscana.it" in url:
+        fl = browser_start(url)
+        return ("ok" if fl else "nessun file trovato"), "browser-start", fl
     try:
         elementi = lettori.trova(url, cig, titolo, _get)
     except PermissionError as e:
@@ -329,11 +375,11 @@ ACTOR = "nIBsoLkrJU9zeelw0"   # garapronta-fetcher su Apify
 def apify_scarica(tok, pagine, info=None):
     """Lancia l'actor su Apify, aspetta (max 15 min) e scarica i file trovati. {pagina: [(nome, bytes)]}"""
     A = "https://api.apify.com/v2"
-    req = urllib.request.Request(f"{A}/acts/{ACTOR}/runs?token={tok}&memory=1024&timeout=900",
+    req = urllib.request.Request(f"{A}/acts/{ACTOR}/runs?token={tok}&memory=2048&timeout=1500",
                                  data=json.dumps({"pages": pagine, "info": info or {}}).encode(),
                                  headers={"content-type": "application/json"}, method="POST")
     run = json.load(urllib.request.urlopen(req, timeout=60))["data"]
-    fine = time.time() + 960
+    fine = time.time() + 1560
     while run["status"] in ("READY", "RUNNING") and time.time() < fine:
         time.sleep(15)
         run = json.load(urllib.request.urlopen(f"{A}/actor-runs/{run['id']}?token={tok}", timeout=60))["data"]
