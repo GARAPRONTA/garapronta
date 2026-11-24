@@ -1,0 +1,1 @@
+{ "actorSpecification": 1, "name": "garapronta-fetcher", "title": "GaraPronta – scarica documenti di gara", "version": "0.1", "dockerfile": "../Dockerfile" }
