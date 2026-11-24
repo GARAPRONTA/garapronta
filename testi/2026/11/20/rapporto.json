@@ -75,9 +75,9 @@
   "cig": "BDE4C0A184",
   "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@17518962",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
-  "esito": "ok",
-  "metodo": "browser",
-  "file": 2
+  "esito": "troppo lenta",
+  "metodo": "-",
+  "file": 0
  },
  {
   "cig": "BDE2268640",
@@ -99,9 +99,9 @@
   "cig": "BDE50FD712",
   "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
   "piattaforma": "Traspare",
-  "esito": "ok",
-  "metodo": "apify-IT",
-  "file": 8
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
  },
  {
   "cig": "BDDBAD2AE6",
@@ -155,7 +155,7 @@
   "cig": "BDE469D745",
   "url": "https://start.toscana.it/tendering/tenders/048007-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "bloccata (URLError)",
+  "esito": "errore TimeoutError",
   "metodo": "diretto",
   "file": 0
  },
@@ -227,8 +227,8 @@
   "cig": "BDE451649C",
   "url": "http://intercenter.regione.emilia-romagna.it/search_bandi?getId=BANDO_GARA_PORTALE@13429925",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
-  "esito": "link senza file",
-  "metodo": "browser",
+  "esito": "troppo lenta",
+  "metodo": "-",
   "file": 0
  },
  {
@@ -259,7 +259,7 @@
   "cig": "BDDDF5E3B9",
   "url": "https://start.toscana.it/tendering/tenders/047824-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "bloccata (URLError)",
+  "esito": "errore TimeoutError",
   "metodo": "diretto",
   "file": 0
  }
