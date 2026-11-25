@@ -207,6 +207,35 @@ with gzip.open(f"{OUT}/partner.json.gz", "wt", encoding="utf-8") as f:
               f, ensure_ascii=False, separators=(",", ":"))
 print("  partner: province", len(partner), "· imprese SOA valide", con.execute("select count(distinct cf_imp) from soa").fetchone(), flush=True)
 
+# ---- ribassi su gare simili: categoria + fascia d'importo + criterio, a diversi livelli di zona
+print("  criteri:", con.execute("SELECT criterio, count(*) FROM esiti GROUP BY 1 ORDER BY 2 DESC LIMIT 8").fetchall(), flush=True)
+con.execute("""CREATE OR REPLACE TABLE esiti2 AS SELECT *,
+  CASE WHEN importo < 150000 THEN 'f1' WHEN importo < 1000000 THEN 'f2' WHEN importo < 5382000 THEN 'f3' ELSE 'f4' END fascia,
+  CASE WHEN criterio ILIKE '%MINOR PREZZO%' OR criterio ILIKE '%PREZZO PI%BASSO%' THEN 'prezzo'
+       WHEN criterio ILIKE '%VANTAGGIOSA%' THEN 'oepv' END crit
+FROM esiti WHERE cat IS NOT NULL AND importo > 0""")
+simili = {}
+LIVELLI = [("E", "cf"), ("P", "provincia"), ("R", "regione"), ("I", "'IT'")]
+for sig, col in LIVELLI:
+    for extra in (", fascia, crit", ", fascia", ""):
+        filtro = "AND crit IS NOT NULL" if "crit" in extra else ""
+        q = f"""SELECT {col} k, cat{extra}, count(*) n, round(median(rib), 2), round(quantile_cont(rib, 0.25), 2),
+                       round(quantile_cont(rib, 0.75), 2), round(avg(coalesce(offerenti, offerte)), 1),
+                       list(struct_pack(d := strftime(data_agg, '%Y-%m'), i := round(coalesce(importo, 0)), r := round(rib, 2),
+                            o := coalesce(offerenti, offerte), v := left(coalesce(vincitori, ''), 70), g := left(coalesce(oggetto, ''), 90))
+                            ORDER BY data_agg DESC)[1:6]
+                FROM esiti2 WHERE {col} IS NOT NULL {filtro} GROUP BY ALL HAVING count(*) >= 3"""
+        for row in con.execute(q).fetchall():
+            row = list(row)
+            k, c = row[0], row[1]
+            dims = row[2:2 + extra.count(",")]
+            n, med, p25, p75, off, ult = row[2 + extra.count(","):]
+            chiave = "|".join([sig, str(k), c] + [str(x) for x in dims])
+            simili[chiave] = {"n": n, "med": med, "p25": p25, "p75": p75, "off": off,
+                              **({"ultime": ult} if sig == "E" else {})}
+ind["simili"] = simili
+print("  chiavi gare simili:", len(simili), flush=True)
+
 enti = {}
 for cf, nome, prov in con.execute("SELECT cf, any_value(ente), any_value(provincia) FROM lavori WHERE cf IS NOT NULL GROUP BY cf").fetchall():
     enti[norm(nome)] = {"cf": cf, "prov": prov}
