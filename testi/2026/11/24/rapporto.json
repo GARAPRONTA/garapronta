@@ -291,8 +291,8 @@
   "cig": "BDED597433",
   "url": "https://www.halleyweb.com/c018153/zf/index.php/bandi-gara/avvisi/avvisi",
   "piattaforma": "www.halleyweb.com",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
   "file": 0
  },
  {
