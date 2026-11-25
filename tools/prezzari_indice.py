@@ -55,7 +55,7 @@ def pulisci_xml(data):
     """Toglie i riferimenti a caratteri non validi in XML (es. &#1;) che bloccano la lettura."""
     def ok(m):
         v = m.group(1)
-        n = int(v[1:], 16) if v[:1] in "xX" else int(v)
+        n = int(v[1:], 16) if v[:1] in (b"x", b"X") else int(v)
         return m.group(0) if n in (9, 10, 13) or n >= 32 else b" "
     return re.sub(rb"&#(x?[0-9A-Fa-f]+);", ok, data)
 
