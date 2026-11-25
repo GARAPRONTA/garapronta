@@ -33,10 +33,13 @@ jobs:
         env:
           DATA: ${{ github.event.inputs.data }}
           MODE: schede
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: '5'
         run: |
+          python tools/enti_web.py
           python pipeline/garapronta.py
           git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
-          git add g && git commit -q -m "Schede gare $(TZ=Europe/Rome date +%F)" || true
+          git add g indici && git commit -q -m "Schede gare $(TZ=Europe/Rome date +%F)" || true
           for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q && break; sleep 7; done
           sleep 90   # tempo perché GitHub Pages pubblichi le schede prima che arrivino le email
       - name: Invia le email (con i resoconti, se pronti)

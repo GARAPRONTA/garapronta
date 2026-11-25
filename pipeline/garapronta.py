@@ -349,7 +349,7 @@ _IND = {}
 
 
 def _indici():
-    if not _IND:
+    if "r" not in _IND:
         try:
             _IND["r"] = json.load(gzip.open("indici/ribassi.json.gz", "rt"))
             _IND["e"] = json.load(gzip.open("indici/enti.json.gz", "rt"))
@@ -394,6 +394,149 @@ def storico(a, it):
             return out
     v = (R.get("italia") or {}).get(c)
     return {**v, "livello": "italia", "dove": "Italia", "cat": c} if v and v["n"] >= 10 else None
+
+
+# ---------------------------------------------------------------- mappa degli enti bersaglio
+MESI_IT = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+_PICCOLE = {"di", "del", "della", "dei", "degli", "delle", "e", "per", "la", "il", "lo", "le", "in", "a", "al", "alla", "da", "d", "l"}
+_SIGLE = {"ULSS", "ASL", "ATER", "ASP", "AUSL", "ASST", "ATS", "ANAS", "RFI", "ARPA", "INPS", "INAIL", "ATC", "ACER", "IACP", "ASM", "AMA", "ASL", "SPA", "SRL"}
+
+
+def titolo_ente(s):
+    out = []
+    for i, w in enumerate((s or "").split()):
+        lw = w.lower()
+        if w.upper() in _SIGLE or (len(w) <= 4 and "." in w):
+            out.append(w.upper())
+        elif i and lw in _PICCOLE:
+            out.append(lw)
+        else:
+            out.append("'".join(x[:1].upper() + x[1:] for x in lw.split("'")))
+    return " ".join(out)
+
+
+def _web():
+    if "w" not in _IND:
+        try:
+            _IND["w"] = json.load(gzip.open("indici/enti_web.json.gz", "rt"))
+        except Exception:
+            _IND["w"] = {}
+        try:
+            _IND["m"] = json.load(gzip.open("indici/mappa_enti.json.gz", "rt"))["regioni"]
+        except Exception:
+            _IND["m"] = {}
+    return _IND["w"], _IND["m"]
+
+
+def enti_bersaglio(reg, cats, n=40):
+    """Enti della regione che affidano lavori delle categorie date senza bando (diretti o su invito)."""
+    W, M = _web()
+    k = _nome(reg).replace(" ", "")
+    chiavi = [x for x in M if _nome(x).replace(" ", "") == k]
+    if "TRENTINO" in k:
+        chiavi = [x for x in M if "TRENTO" in x or "BOLZANO" in x]
+    tot = {}
+    for ch in chiavi:
+        for c in cats:
+            for e in M[ch].get(c.replace(" ", ""), []):
+                t = tot.setdefault(e["cf"], {**e, "cats": [], "dir": 0, "neg": 0, "val": 0, "imp": 0, "conv": 0, "top": 0})
+                t["cats"].append(c.replace(" ", ""))
+                for f in ("dir", "neg", "val", "imp", "conv"):
+                    t[f] += e.get(f) or 0
+                t["top"] = max(t["top"], e.get("top") or 0)
+    out = sorted(tot.values(), key=lambda e: -(e["dir"] + e["neg"]))[:n]
+    for e in out:
+        w = W.get(_nome(e["ente"])) or {}
+        e["piatt"], e["elenchi"] = w.get("piatt"), w.get("elenchi") or []
+    return out
+
+
+def frase_rotazione(e):
+    if not e.get("conv"):
+        return ""
+    quota = (e.get("top") or 0) / e["conv"]
+    if quota >= 0.4:
+        return f"un'impresa ha preso il {round(quota * 100)}% dei lavori"
+    return f"{e['imp']} imprese diverse, nessuna domina" if quota < 0.2 else f"{e['imp']} imprese diverse"
+
+
+def slug(s):
+    return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
+
+
+def url_mappa(reg, cats):
+    return f"{SITE}g/enti/{slug(reg)}-{slug('-'.join(c.replace(' ', '') for c in cats) or 'tutte')}.html"
+
+
+def sezione_enti(u):
+    """Blocco email: gli enti della tua regione che affidano i tuoi lavori senza bando."""
+    reg = u["regione"]
+    if reg.lower() in ("tutta italia", ""):
+        return ""
+    cats = [c for c in u["soa"] if c != "ALTRA"][:4] or ["OG 1", "OG 3"]
+    enti = enti_bersaglio(reg, cats, 5)
+    if not enti:
+        return ""
+    righe = ""
+    for e in enti:
+        extra = []
+        if e["elenchi"]:
+            extra.append(f'<a href="{html.escape(e["elenchi"][0]["link"] or SITE)}" style="color:#1f9d55;font-weight:600;text-decoration:none">Elenco imprese ›</a>')
+        if e["piatt"]:
+            extra.append(f'<a href="{html.escape(e["piatt"])}" style="color:{BLU};font-weight:600;text-decoration:none">Piattaforma gare ›</a>')
+        mese = f" · più attivo a {MESI_IT[int(e['mese']) - 1]}" if e.get("mese") else ""
+        righe += f"""<tr><td style="padding:12px 0;border-top:1px solid #f0f0f3">
+<div style="font-size:14px;font-weight:650;color:{INK}">{html.escape(titolo_ente(e['ente']))} <span style="font-weight:400;color:{INK3};font-size:12px">{html.escape(titolo_ente(e.get('prov') or ''))}</span></div>
+<div style="font-size:13px;color:{INK2};margin-top:3px">{e['dir'] + e['neg']} lavori senza bando in 3 anni ({e['dir']} diretti, {e['neg']} su invito) · {html.escape(frase_rotazione(e))}{mese}</div>
+<div style="font-size:13px;margin-top:5px">{' &nbsp;·&nbsp; '.join(extra)}</div></td></tr>"""
+    return titolo_sezione("Enti da conoscere", "Chi affida i tuoi lavori senza bando",
+                          f"{', '.join(c.replace(' ', '') for c in cats)} in {reg}, ultimi 3 anni. Farsi conoscere da questi enti è la strada per essere invitati.") + f"""
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:4px 22px 16px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{righe}</table>
+<div style="margin-top:12px"><a href="{url_mappa(reg, cats)}" style="font-size:14px;font-weight:600;color:{BLU};text-decoration:none">▸ Vedi tutti gli enti della tua zona</a></div>
+</td></tr></table>"""
+
+
+def pagina_mappa(reg, cats):
+    enti = enti_bersaglio(reg, cats, 40)
+    e = html.escape
+    cs = ", ".join(c.replace(" ", "") for c in cats)
+    righe = "".join(f"""<tr><td><b>{e(titolo_ente(x['ente']))}</b><small>{e(titolo_ente(x.get('prov') or ''))}</small></td>
+<td style="text-align:right"><b>{x['dir'] + x['neg']}</b><small>{x['dir']} diretti · {x['neg']} su invito</small></td>
+<td style="text-align:right">{euro(x['val']) if x.get('val') else '—'}</td>
+<td>{e(frase_rotazione(x))}{('<small>più attivo a ' + MESI_IT[int(x['mese']) - 1] + '</small>') if x.get('mese') else ''}</td>
+<td>{('<a href="' + e(x['elenchi'][0]['link'] or SITE) + '">Elenco imprese</a><br>') if x['elenchi'] else ''}{('<a href="' + e(x['piatt']) + '">Piattaforma gare</a>') if x['piatt'] else ''}</td></tr>""" for x in enti)
+    return f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enti che affidano lavori {e(cs)} in {e(reg)} · GaraPronta</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+<style>body{{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#1d1d1f;background:#f5f5f7;line-height:1.5}}
+.w{{max-width:980px;margin:0 auto;padding:0 18px 50px}} header{{padding:22px 0}} header a{{font-weight:650;color:#1d1d1f;text-decoration:none}}
+.card{{background:#fff;border:1px solid #e5e5ea;border-radius:26px;padding:26px;margin-bottom:16px;overflow-x:auto}} h1{{font-size:30px;letter-spacing:-.03em;line-height:1.15;margin:0 0 8px}}
+p{{color:#6e6e73;margin:0 0 6px}} table{{width:100%;border-collapse:collapse;min-width:720px}} th{{text-align:left;font-size:12px;color:#86868b;font-weight:500;padding:8px 10px 8px 0}}
+td{{font-size:14px;padding:11px 10px 11px 0;border-top:1px solid #f0f0f3;vertical-align:top}} small{{display:block;color:#86868b;font-size:12px}} a{{color:#007aff;font-weight:600;text-decoration:none}}
+.f{{font-size:12px;color:#86868b;text-align:center}}</style></head><body><div class="w">
+<header><a href="{SITE}">● GaraPronta</a></header>
+<div class="card"><h1>Chi affida lavori {e(cs)} senza bando in {e(reg)}</h1>
+<p>Gli enti che negli ultimi 3 anni hanno affidato più lavori di queste categorie con affidamento diretto o con procedura negoziata su invito. Sotto i 150.000 € l'ente sceglie l'impresa e deve ruotare gli inviti: iscriversi ai loro elenchi e alle loro piattaforme è il modo per essere chiamati.</p></div>
+<div class="card"><table><tr><th>Ente</th><th style="text-align:right">Lavori senza bando</th><th style="text-align:right">Valore</th><th>Rotazione</th><th>Dove iscriversi</th></tr>{righe}</table></div>
+<p class="f">Fonte: Banca dati nazionale dei contratti pubblici (ANAC, CC BY-SA 4.0), anni 2023-2025, e avvisi della Piattaforma di pubblicità legale ANAC. · <a href="{SITE}privacy.html" style="color:#86868b;font-weight:400">Privacy</a></p>
+</div></body></html>"""
+
+
+def scrivi_mappe(utenti):
+    os.makedirs("g/enti", exist_ok=True)
+    fatti = set()
+    for u in utenti:
+        reg = u["regione"]
+        if reg.lower() in ("tutta italia", ""):
+            continue
+        cats = [c for c in u["soa"] if c != "ALTRA"][:4] or ["OG 1", "OG 3"]
+        path = url_mappa(reg, cats).replace(SITE, "")
+        if path not in fatti:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(pagina_mappa(reg, cats))
+            fatti.add(path)
+    return len(fatti)
 
 
 def virgola(x):
@@ -665,6 +808,8 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
             "Esiti di gara", "Chi ha vinto ieri",
             f"{len(esiti)} gare aggiudicate nelle tue categorie" + (f" · ribasso mediano {str(med).replace('.', ',')}%" if med is not None else ""),
             esiti[:8], True, "Importo di aggiudicazione e ribasso rispetto alla base d'asta, dai dati ANAC."))
+    if datetime.now(timezone.utc).weekday() == 0 or os.environ.get("MAPPA") == "1":
+        blocchi.append(sezione_enti(u))
     blocchi.append(riepilogo_diretti(diretti, u))
     top = PER_ISCRITTO_EXTRA.get("diretti_top") or []
     if top:
@@ -717,6 +862,9 @@ def main():
         rp = f"resoconti/{dd2:%Y/%m/%d}.json"
         RESOCONTI = json.load(open(rp)) if os.path.exists(rp) else {}
         print(f"Schede web scritte: {scrivi_schede(avvisi)}")
+        key = os.environ.get("BREVO_API_KEY")
+        if key:
+            print(f"Mappe enti scritte: {scrivi_mappe(iscritti(key, os.environ.get('BREVO_LIST_ID', '5')))}")
         return
     rp = f"resoconti/{dd:%Y/%m/%d}.json"
     RESOCONTI = json.load(open(rp)) if os.path.exists(rp) else {}
