@@ -376,8 +376,39 @@ def pubblico(nome):
     return " + ".join("Impresa (dato rimosso su richiesta)" if x.upper() in RIMOZIONI else x for x in parti if x)
 
 
+FASCE = [(150_000, "f1", "sotto i 150.000 €"), (1_000_000, "f2", "tra 150.000 € e 1 milione"),
+         (5_382_000, "f3", "tra 1 e 5,4 milioni"), (10**12, "f4", "sopra la soglia europea")]
+
+
+def fascia(v):
+    for lim, k, txt in FASCE:
+        if (v or 0) < lim:
+            return k, txt
+    return "f4", FASCE[-1][2]
+
+
+def criterio(it):
+    """Prezzo più basso o offerta economicamente più vantaggiosa: dall'avviso o, se c'è, dal resoconto dei documenti."""
+    testi = [it.get("criterio") or ""]
+    res = RESOCONTI.get(it.get("cig") or "") or {}
+    testi += [p.get("v", "") for p in res.get("punti") or [] if (p.get("t") or "").lower().startswith("criterio")]
+    t = " ".join(testi).lower()
+    if re.search(r"prezzo pi[uù] basso|minor prezzo|massimo ribasso", t):
+        return "prezzo"
+    if re.search(r"vantaggios|oepv|qualit[aà]/prezzo|punteggio tecnico", t):
+        return "oepv"
+    return None
+
+
+def _reg_anac(it):
+    R, _ = _indici()
+    k = _nome(regione(it) or "").replace(" ", "")
+    return [x for x in (R.get("regione") or {}) if _nome(x).replace(" ", "") == k or ("TRENTINO" in k and ("TRENTO" in x or "BOLZANO" in x))]
+
+
 def storico(a, it):
-    """Ribassi vincenti per questa gara: stesso ente e categoria; se pochi dati, regione; poi Italia."""
+    """Ribassi vincenti in gare SIMILI: stessa categoria prevalente, stessa fascia d'importo e stesso criterio.
+    Si parte dalla zona più stretta (stesso ente) e si allarga a provincia, regione, Italia solo se i casi sono pochi."""
     R, E = _indici()
     if not R:
         return None
@@ -385,19 +416,36 @@ def storico(a, it):
     if not pv:
         return None
     c = pv.replace(" ", "")
+    S = R.get("simili") or {}
     ente = E.get(_nome(a.get("ente")))
-    s = (R.get("ente", {}).get(ente["cf"], {}).get(c) if ente else None)
-    if s and s["n"] >= 3:
-        return {**s, "livello": "ente", "dove": a.get("ente"), "cat": c}
-    reg = _nome(regione(it) or "")
-    for k, v in (R.get("regione") or {}).items():
-        if _nome(k).replace(" ", "") == reg.replace(" ", "") and c in v and v[c]["n"] >= 10:
-            out = {**v[c], "livello": "regione", "dove": regione(it), "cat": c}
-            if s:
-                out["ente_poche"] = s
-            return out
-    v = (R.get("italia") or {}).get(c)
-    return {**v, "livello": "italia", "dove": "Italia", "cat": c} if v and v["n"] >= 10 else None
+    cf, prov = (ente or {}).get("cf"), (ente or {}).get("prov")
+    regs = _reg_anac(it)
+    f, ftxt = fascia(it.get("valore"))
+    cr = criterio(it)
+    crtxt = {"prezzo": "al prezzo più basso", "oepv": "con offerta economicamente più vantaggiosa"}.get(cr, "")
+    tentativi = []
+    for sig, k, zona in [("E", cf, a.get("ente")), ("P", prov, f"in provincia di {titolo_ente(prov or '')}"),
+                         *[("R", r, f"in {regione(it)}") for r in regs[:1]], ("I", "IT", "in Italia")]:
+        if not k:
+            continue
+        if cr:
+            tentativi.append((f"{sig}|{k}|{c}|{f}|{cr}", sig, zona, True, True))
+        tentativi.append((f"{sig}|{k}|{c}|{f}", sig, zona, True, False))
+    # stesso ente anche senza fascia, prima di allargare alla regione
+    if cf:
+        tentativi.insert(2 if cr else 1, (f"E|{cf}|{c}", "E", a.get("ente"), False, False))
+    for chiave, sig, zona, con_f, con_c in tentativi:
+        x = S.get(chiave)
+        if x and x["n"] >= 6:
+            liv = {"E": "ente", "P": "provincia", "R": "regione", "I": "italia"}[sig]
+            descr = f"{x['n']} gare {c}" + (f" {ftxt}" if con_f else "") + (f" {crtxt}" if con_c else "") + f" {'di ' + zona if sig == 'E' else zona}"
+            ult = x.get("ultime") or (S.get(f"E|{cf}|{c}") or {}).get("ultime") or []
+            return {**x, "ultime": ult, "livello": liv, "dove": zona, "cat": c, "descr": descr.strip()}
+    # vecchio indice come ultima risorsa
+    s0 = (R.get("ente", {}).get(cf, {}).get(c) if cf else None)
+    if s0 and s0["n"] >= 3:
+        return {**s0, "livello": "ente", "dove": a.get("ente"), "cat": c, "descr": f"{s0['n']} gare {c} di {a.get('ente')}"}
+    return None
 
 
 # ---------------------------------------------------------------- mappa degli enti bersaglio
@@ -781,16 +829,16 @@ def blocco_storico(st):
     """Riquadro nell'email: quanto ribassa chi vince da questo ente."""
     if not st:
         return ""
-    dove = {"ente": "questo ente", "regione": f"in {st['dove']}", "italia": "in Italia"}[st["livello"]]
+    dove = {"ente": "questo ente", "italia": "in Italia"}.get(st["livello"], st["dove"])
     w1, w2 = max(2, min(98, round(st["p25"] / 40 * 100))), max(4, min(100, round(st["p75"] / 40 * 100)))
     off = f" · in media {round(st['off'])} offerte" if st.get("off") else ""
     return f"""<div style="margin-top:14px;background:#f5f5f7;border-radius:14px;padding:12px 14px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-<td style="font-size:12px;color:{INK2}">Ribasso che vince · {st['cat']} {dove}</td>
+<td style="font-size:12px;color:{INK2}">Ribasso che vince in gare simili</td>
 <td align="right" style="font-size:15px;font-weight:700;color:{INK}">{virgola(st['med'])}%</td></tr></table>
 <div style="position:relative;height:8px;background:#e3e3e8;border-radius:99px;margin:8px 0 6px">
 <div style="margin-left:{w1}%;width:{max(3, w2 - w1)}%;height:8px;background:{BLU};border-radius:99px"></div></div>
-<div style="font-size:11px;color:{INK3}">Metà delle gare vinte tra {virgola(st['p25'])}% e {virgola(st['p75'])}% · {st['n']} gare 2023-2025{off}</div></div>"""
+<div style="font-size:11px;color:{INK3}">{html.escape(st.get('descr', ''))}, 2023-2025 · metà vinte tra {virgola(st['p25'])}% e {virgola(st['p75'])}%{off}</div></div>"""
 
 
 def barra_ribasso(r):
@@ -988,13 +1036,13 @@ def pagina_gara(a, it, tipo):
     st = storico(a, it)
     blocco_st = ""
     if st:
-        dove = {"ente": e(a.get("ente") or "questo ente"), "regione": "in " + e(st["dove"]), "italia": "in Italia"}[st["livello"]]
+        dove = {"ente": e(a.get("ente") or "questo ente"), "italia": "in Italia"}.get(st["livello"], e(st["dove"] or ""))
         righe = "".join(f'<tr><td>{e(x["d"])}</td><td>{e(frase(x["g"]))}</td><td style="text-align:right">{euro(x["i"]) if x["i"] else "—"}</td>'
                         f'<td style="text-align:right"><b>{virgola(x["r"])}%</b></td><td style="text-align:right">{x["o"] or "—"}</td><td>{e(pubblico(x["v"]))}</td></tr>'
                         for x in (st.get("ultime") or (st.get("ente_poche") or {}).get("ultime") or []))
         tab = (f'<h2>Le ultime gare {st["cat"]} di {e(a.get("ente") or "questo ente")}</h2><div style="overflow-x:auto"><table class="u"><tr><th>Mese</th><th>Oggetto</th><th>Base</th><th>Ribasso</th><th>Offerte</th><th>Vincitore</th></tr>{righe}</table></div>') if righe else ""
         blocco_st = f"""<div class="card"><h2 style="margin-top:0;color:#007aff">Quanto si ribassa per vincere</h2>
-<div class="imp">{virgola(st['med'])}%</div><p class="uff">Ribasso mediano delle gare {st['cat']} vinte {dove} (2023-2025). Metà delle gare tra <b>{virgola(st['p25'])}%</b> e <b>{virgola(st['p75'])}%</b> · {st['n']} gare{(' · in media ' + str(round(st['off'])) + ' offerte') if st.get('off') else ''}.</p>
+<div class="imp">{virgola(st['med'])}%</div><p class="uff">Ribasso mediano di {e(st.get('descr', ''))} (2023-2025). Metà delle gare tra <b>{virgola(st['p25'])}%</b> e <b>{virgola(st['p75'])}%</b> · {st['n']} gare{(' · in media ' + str(round(st['off'])) + ' offerte') if st.get('off') else ''}.</p>
 {pag_resta(st, ac)}
 {tab}<p class="f" style="text-align:left;margin-top:12px">Dati di mercato dalla Banca dati nazionale dei contratti pubblici (ANAC, CC BY-SA 4.0). Non è un consiglio d'offerta: ogni gara ha il suo progetto e i suoi prezzi.</p></div>"""
     return f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
