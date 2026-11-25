@@ -1,0 +1,10 @@
+name: Ricerca fonti open data
+on:
+  workflow_dispatch:
+jobs:
+  r:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/fonti.py
