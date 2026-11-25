@@ -19,14 +19,20 @@ def prova(reg, urls):
     return False
 
 
-# piattaforma comune: /data/<anno>-<edizione>/<file>
-prova("Campania", ["https://gestione-prezzario.regione.campania.it/data/2026-0/2026_(XML).zip"])
-prova("Piemonte", ["https://gestione-prezzario.regione.piemonte.it/data/2026-1/2026_1_XML.zip"])
-prova("Sardegna", [f"https://prezzariogestione.regione.sardegna.it/data/{e}/{f}" for e in ("2026-0", "2026-1", "2026")
-                   for f in ("2026_(XML).zip", "2026_XML.zip", "2026_0_XML.zip", "2026_1_XML.zip")])
-# prezzari ancora in vigore di anni precedenti (proroghe)
-prova("Lazio", ["https://www.regione.lazio.it/sites/default/files/2023-05/Tariffa_2023_formato_open_DATA%20%281%29.zip"])
-
+# 3° giro: Umbria (edizione 2025 in vigore, Excel) e Valle d'Aosta (allegati 2026)
+U = "https://www.regione.umbria.it/documents/18/2335454/"
+prova("Umbria", [U + "Elenco+regionale+dei+prezzi+2025+-+Capitoli+da+1+a+13.xlsx/7a5c6cab-c19a-4bc2-b47a-b8dd4c0f188f"])
+prova("Umbria", [U + "Elenco+regionale+dei+prezzi+2025+-+Capitoli+da+14+a+21.xlsx/7430980b-2c21-4bb5-be9d-f0024871ae88"])
+for pk in range(126853, 126859):
+    dest = f"{D}/Valle_d_Aosta_{pk}"
+    r = subprocess.run(["curl", "-fsSL", "-A", UA, "-o", dest, f"https://www.regione.vda.it/allegato.aspx?pk={pk}"], timeout=600)
+    if r.returncode == 0:
+        tipo = subprocess.run(["file", "-b", dest], capture_output=True, text=True).stdout[:60]
+        est = ".xlsx" if "Excel 2007" in tipo or "Zip" in tipo else (".xls" if "Composite" in tipo else (".pdf" if "PDF" in tipo else ".bin"))
+        os.rename(dest, dest + est)
+        print(f"   Valle d'Aosta pk={pk}: {tipo} -> {est} · {os.path.getsize(dest + est) // 1024} KB", flush=True)
+import sys
+sys.exit(0)
 # applicazioni da usare con il browser, come farebbe una persona: Sardegna, Toscana, Veneto
 with sync_playwright() as p:
     b = p.chromium.launch()
