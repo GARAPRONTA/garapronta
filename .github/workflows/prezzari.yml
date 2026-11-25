@@ -1,15 +1,18 @@
 name: Prezzari regionali (server italiano)
 on:
   workflow_dispatch:
+    inputs:
+      passo: { description: 'cerca | scarica | indice', default: 'cerca' }
 jobs:
   p:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
+      - env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}', P: '${{ github.event.inputs.passo }}' }
         run: |
+          case "$P" in cerca|scarica|indice) ;; *) echo "passo non valido"; exit 1;; esac
           sudo apt-get install -y -qq sshpass >/dev/null
           O="-o StrictHostKeyChecking=no -o ServerAliveInterval=30"
           sshpass -e scp $O tools/prezzari_*.py root@$H:/opt/garapronta/
-          sshpass -e ssh $O root@$H "cd /opt/garapronta && timeout 2400 ./venv/bin/python -u prezzari_cerca.py"
+          sshpass -e ssh $O root@$H "cd /opt/garapronta && ./venv/bin/pip install -q openpyxl odfpy xlrd && timeout 2400 ./venv/bin/python -u prezzari_$P.py"
