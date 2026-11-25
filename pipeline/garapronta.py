@@ -388,7 +388,8 @@ _CODICI = re.compile(r"\s*[-–,;(]?\s*\b(?:CIG|CUP)\b\s*[:n.°]*\s*[A-Z0-9]{10,
 
 def pulito(t):
     """Oggetto della gara leggibile e completo: niente maiuscolo urlato, niente formule burocratiche, niente CIG/CUP."""
-    t = (t or "").replace('\\"', '"').replace("\\", "")
+    t = (t or "").replace('\\"', '"').replace("\\", "").replace("_", " ")
+    t = re.sub(r"\s*[\"“]?\s*importo (complessivo|totale|dell'intervento|lavori)[^\n]*$", "", t, flags=re.I)
     t = re.sub(r"\s+", " ", _CODICI.sub("", t)).strip(" .-–:;\"'“”_")
     t = frase(t)
     r = _PREFISSI.sub("", t, count=1).strip(" .-–:;\"'“”_")
