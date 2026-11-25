@@ -147,9 +147,9 @@
   "cig": "BDEA89F831",
   "url": "https://diocesisanmarcoscalea.traspare.com/announcements/10",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 4
  },
  {
   "cig": "BDEA17A2DC",
@@ -203,9 +203,9 @@
   "cig": "BDEE7A0644",
   "url": "https://montedoro.traspare.com/announcements/31150",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 9
  },
  {
   "cig": "BDEA522744",
@@ -275,9 +275,9 @@
   "cig": "B09356864C",
   "url": "https://portalegareuniupo.traspare.com/announcements/13",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 6
  },
  {
   "cig": "BDEE291998",
