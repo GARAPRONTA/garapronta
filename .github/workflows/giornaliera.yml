@@ -1,7 +1,7 @@
 name: GaraPronta giornaliera
 on:
   schedule:
-    - cron: '7 5 * * *'   # 06:07 ora italiana (inverno): scarica i dati del giorno prima
+    - cron: '17 3 * * *'   # 06:07 ora italiana (inverno): scarica i dati del giorno prima
   push:
     paths: ['pipeline/garapronta.py', '.github/workflows/giornaliera.yml']
   workflow_dispatch:
