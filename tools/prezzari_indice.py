@@ -111,7 +111,7 @@ per_reg = {}
 for f in sorted(glob.glob(f"{D}/*")):
     b = os.path.basename(f)
     reg = next((r for r in ("Friuli-Venezia Giulia", "Emilia-Romagna", "Valle d'Aosta") if b.startswith(re.sub(r"[^\w.\-]", "_", r))), b.split("_")[0])
-    if re.search(r"analisi|confronto|brevi|2024|2025", f, re.I):
+    if re.search(r"analisi|confronto|brevi|transcodifica|Allegato_D", f, re.I) or os.path.getsize(f) < 100_000:
         continue
     try:
         data = open(f, "rb").read()
@@ -127,8 +127,9 @@ for f in sorted(glob.glob(f"{D}/*")):
         print(f"{reg:24} {os.path.basename(f)[:60]:60} voci {n}", flush=True)
     except Exception as e:
         print(f"{reg:24} {os.path.basename(f)[:60]:60} ERRORE {type(e).__name__}: {str(e)[:120]}", flush=True)
+ANNO = {"Sicilia": 2024, "Lazio": 2023}   # prezzari prorogati, ancora in vigore nel 2026
 for reg, voci in per_reg.items():
     with gzip.open(f"{OUT}/{reg}.json.gz", "wt", encoding="utf-8") as fo:
-        json.dump({"regione": reg, "anno": 2026, "voci": voci}, fo, ensure_ascii=False, separators=(",", ":"))
+        json.dump({"regione": reg, "anno": ANNO.get(reg, 2026), "voci": voci}, fo, ensure_ascii=False, separators=(",", ":"))
     esempi = list(voci.items())[:3]
     print(f"== {reg}: {len(voci)} codici · es. {esempi}", flush=True)
