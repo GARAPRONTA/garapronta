@@ -117,6 +117,15 @@ def righe_file(nome, data):
         for x in (easy(data) if b"EASY:" in data[:2000] else six(data)):
             yield ("__SIX__",) + x
         return
+    if not re.search(r"\.(zip|xlsx|xls|ods|csv|xml)$", n) and data[:2] == b"PK":
+        try:
+            zipfile.ZipFile(io.BytesIO(data)).getinfo("[Content_Types].xml")
+            n += ".xlsx"
+        except KeyError:
+            n += ".zip"
+    if n.endswith(".zip"):
+        yield from righe_file(n, data)
+        return
     if n.endswith(".xlsx"):
         import openpyxl
         wb = openpyxl.load_workbook(io.BytesIO(data), read_only=True, data_only=True)
