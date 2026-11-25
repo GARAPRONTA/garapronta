@@ -103,7 +103,7 @@ def chiavi(cod):
     """Possibili forme del codice nel prezzario: senza prefisso regione/anno, con e senza separatori finali."""
     c = (cod or "").upper().replace(" ", "")
     out = [c]
-    m = re.match(r"^[A-Z]{2,6}[_.\-]?\d{2}[_.\-](.+)$", c)
+    m = re.match(r"^[A-Z]{2,6}[_.\-]?\d{2,3}[_.\-](.+)$", c)
     if m:
         out.append(m.group(1))
     for x in list(out):

@@ -16,8 +16,8 @@ for reg, u in EXTRA.items():
     if not os.path.exists(dest):
         subprocess.run(["curl", "-fsSL", "-k", "-A", UA, "-o", dest, u], timeout=600)
 
-COD = re.compile(r"^[A-Z0-9]{1,6}([._\-/ ][A-Z0-9]{1,8}){1,7}$", re.I)
-UM = re.compile(r"^(m|m2|m²|mq|m3|m³|mc|ml|kg|t|q|cad|cad\.|n|nr|n\.|a corpo|ora|h|ore|giorno|gg|l|lt|km|dm3|cm|mese|%|kw|cadauno|corpo|mt|tonn)\b", re.I)
+COD = re.compile(r"^[A-Z0-9]{1,7}([._\-/ ][A-Z0-9]{1,8}){1,9}$", re.I)
+UM = re.compile(r"^(?:1\s+)?(m|m2|m²|mq|m3|m³|mc|ml|kg|t|q|cad|cad\.|n|nr|n\.|a corpo|ora|h|ore|giorno|gg|l|lt|km|dm3|cm|mese|%|kw|cadauno|corpo|mt|tonn)\b", re.I)
 
 
 def numero(x):
@@ -37,7 +37,8 @@ def numero(x):
 def da_riga(cells):
     """Riconosce in una riga: codice (prima cella che sembra un codice), prezzo (ultimo numero plausibile dopo l'unità), unità, descrizione."""
     vals = [("" if c is None else str(c)).strip() for c in cells]
-    cod = next((v for v in vals[:4] if v and COD.match(v) and any(ch.isdigit() for ch in v)), None)
+    cand = [v for v in vals[:8] if v and COD.match(v) and any(ch.isdigit() for ch in v)]
+    cod = "|".join(cand) if cand else None
     if not cod:
         return None
     i_um = next((i for i, v in enumerate(vals) if v and len(v) <= 12 and UM.match(v)), None)
@@ -47,7 +48,27 @@ def da_riga(cells):
     if prezzo is None or prezzo > 5_000_000:
         return None
     descr = max((v for v in vals if v and v != cod and not UM.match(v) and numero(v) is None), key=len, default="")
-    return cod.upper().replace(" ", ""), prezzo, vals[i_um], descr[:90]
+    return cod, prezzo, re.sub(r"^1\s+", "", vals[i_um]), descr[:90]
+
+
+def six(data):
+    """Prezzari nello standard XML SIX: <prodotto prdId=...><prdDescrizione breve=.../><prdQuotazione valore=.../></prodotto>."""
+    import xml.etree.ElementTree as ET
+    um, out = {}, []
+    for ev, el in ET.iterparse(io.BytesIO(data), events=("end",)):
+        tag = el.tag.split("}")[-1]
+        if tag == "unitaDiMisura":
+            um[el.get("unitaDiMisuraId")] = el.get("simbolo") or el.get("udmId") or ""
+        elif tag == "prodotto":
+            q = next((c for c in el if c.tag.split("}")[-1] == "prdQuotazione"), None)
+            if q is not None and q.get("valore"):
+                d = next((c.get("breve") or c.get("estesa") or "" for c in el if c.tag.split("}")[-1] == "prdDescrizione"), "")
+                try:
+                    out.append((el.get("prdId", "").upper().rstrip(".-"), float(q.get("valore")), um.get(el.get("unitaDiMisuraId"), ""), d[:90]))
+                except ValueError:
+                    pass
+            el.clear()
+    return out
 
 
 def righe_file(nome, data):
@@ -55,8 +76,12 @@ def righe_file(nome, data):
     if n.endswith(".zip"):
         z = zipfile.ZipFile(io.BytesIO(data))
         for f in z.namelist():
-            if re.search(r"\.(xlsx|xls|csv|ods)$", f, re.I) and not re.search(r"analisi|confronto|conversione", f, re.I):
+            if re.search(r"\.(xlsx|xls|csv|ods|xml)$", f, re.I) and not re.search(r"analisi|confronto|conversione", f, re.I):
                 yield from righe_file(f, z.read(f))
+        return
+    if n.endswith(".xml") or data[:200].lstrip().startswith(b"<"):
+        for x in six(data):
+            yield ("__SIX__",) + x
         return
     if n.endswith(".xlsx"):
         import openpyxl
@@ -92,9 +117,12 @@ for f in sorted(glob.glob(f"{D}/*")):
         data = open(f, "rb").read()
         n = 0
         for r in righe_file(f, data):
-            x = da_riga(list(r))
+            x = tuple(r[1:]) if r and r[0] == "__SIX__" else da_riga(list(r))
             if x:
-                per_reg.setdefault(reg, {})[x[0]] = [x[1], x[2], x[3]]
+                for c in x[0].split("|"):
+                    c = c.upper().replace(" ", "").rstrip(".-")
+                    for k in {c, re.sub(r"^[A-Z]{2,6}[_.\-]?\d{2,3}[_.\-]", "", c)}:
+                        per_reg.setdefault(reg, {})[k] = [x[1], x[2], x[3]]
                 n += 1
         print(f"{reg:24} {os.path.basename(f)[:60]:60} voci {n}", flush=True)
     except Exception as e:
