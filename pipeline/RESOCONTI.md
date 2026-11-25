@@ -6,7 +6,13 @@ Output: `resoconti/AAAA/MM/GG.json` = oggetto { "<CIG>": {titolo, lavori, punti[
 
 Campi:
 - "titolo": titolo chiaro e COMPLETO in italiano normale (non maiuscolo), che dica cosa e dove: es. "Rifacimento della copertura della scuola primaria Rodari · Comune di Novara". Niente formule tipo "procedura aperta per l'affidamento dei lavori di". Non tagliare.
-- "lavori": 2-3 frasi semplici su COSA si fa concretamente, presi da capitolato, relazione tecnica o computo: lavorazioni principali, dove (edificio/via/frazione), durata. Es. "Rimozione del vecchio manto in eternit, nuova copertura in pannelli coibentati e lattonerie. Lavori su edificio scolastico occupato: si lavora d'estate. Durata 120 giorni." Se i documenti non lo dicono, ometti il campo.
+- "lavori": 2-3 frasi semplici su COSA si fa concretamente, presi da capitolato, relazione tecnica o computo: lavorazioni principali, dove (edificio/via/frazione), durata. Es. "Rimozione del vecchio manto in eternit, nuova copertura in pannelli coibentati e lattonerie. Lavori su edificio scolastico occupato: si lavora d'estate. Durata 120 giorni." Se i documenti non lo dicono, ometti il campo. Scrivilo SEMPRE quando c'è capitolato, relazione tecnica, computo o elenco prezzi.
+- "lavorazioni": elenco di 3-6 lavorazioni principali, RAGGRUPPATE PER TIPO di lavoro, con il peso sull'importo dei lavori:
+  [{"cosa": "Consolidamento parete rocciosa con tiranti e barre", "quota": 44}, {"cosa": "Rete metallica di rivestimento", "quota": 18}, ...].
+  Fonte: testi/AAAA/MM/GG/<CIG>/computo.json.gz (lista di documenti {nome, tipo, testo}; usa quello con tipo "computo", non il computo dei costi della sicurezza).
+  Somma gli importi delle voci dello stesso tipo (es. tutte le voci di scavo insieme, tutti gli infissi insieme) e dividi per il totale dei lavori; quote intere, in ordine decrescente.
+  Nomi brevi (max 6 parole) e concreti, come li direbbe un capocantiere: "Cappotto termico", "Infissi in PVC", "Impianto fotovoltaico", "Scavi e rinterri", "Asfaltatura".
+  Escludi oneri e costi della sicurezza. Se c'è solo capitolato o relazione e nessun importo, metti le lavorazioni senza "quota". Se non ci sono informazioni, ometti il campo.
 
 Regole:
 - Solo fatti scritti nei documenti. Se un'informazione non c'è, scrivi "Non indicato nei documenti". Mai inventare.

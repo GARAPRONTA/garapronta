@@ -966,6 +966,11 @@ def scheda(a, it, soa, tipo):
     if res and res.get("lavori"):
         cosa = (f'<div style="font-size:14px;color:{INK};line-height:1.5;margin:0 0 10px">'
                 f'<b style="color:{BLU}">Cosa si fa ·</b> {html.escape(res["lavori"])}</div>')
+    lav = lavorazioni(res, ac)
+    if lav:
+        cosa += (f'<div style="font-size:13px;color:{INK2};line-height:1.55;margin:0 0 10px">'
+                 f'<b style="color:{BLU}">Lavorazioni principali ·</b> {riga_lavorazioni(lav)}'
+                 + ('' if (res or {}).get("lavorazioni") else f' <span style="color:{INK2}">(% sull\'importo, dal computo)</span>') + '</div>')
     oggetto = (f'<div style="margin:0 0 12px"><a href="{html.escape(url_scheda(it))}" style="font-size:14px;font-weight:600;color:{BLU};text-decoration:none">'
                f'▸ Leggi la descrizione completa</a></div>')
     link = html.escape(a.get("link") or SITE)
@@ -1025,6 +1030,55 @@ def analisi_computo(it, giorno=None):
     return None
 
 
+_SICUREZZA = re.compile(r"sicurezza|apprestament|\bPSC\b|oneri", re.I)
+_PREFISSO = re.compile(r"^\s*(?:-\s*)?(?:(?:la\s+)?fornitura|f\.\s*e\s*p\.?|posa|realizzazione|esecuzione|installazione|messa)"
+                       r"(?:\s+(?:ed?|in opera|ed installazione|e posa|e messa|e installazione|in opera ed?|su\s+\w+(?:\s+\w+)?)){0,4}\s+(?:di|del|della|dei|delle|degli|d')?\s*-?\s*", re.I)
+
+
+def nome_voce(d):
+    """Nome breve di una voce di computo: 'Fornitura e posa in opera di INFISSO IN PVC...' -> 'Infisso in PVC...'."""
+    t = re.sub(r"\s+", " ", d or "").strip()
+    dove = re.search(r"\bsu\s+(?:parete|pareti|superfici\w*|copertur\w*|solai\w*|muratur\w*)(?:\s+\w+)?", t[:80], re.I)
+    for _ in range(2):
+        t = _PREFISSO.sub("", t, count=1)
+    t = re.split(r"\s[-–]\s|\.\s|;|:|\s\(|,|\s(?:da eseguir\w*|eseguit\w*|realizzat\w*|costituit\w*|parzialmente|in possesso|compres\w*|di qualsiasi|mediante|con\s)", t)[0].strip(" ,.-")
+    if len(t.split()) < 2 and dove:
+        t += " " + dove.group(0)
+    t = re.sub(r"^([A-ZÀ-Ü]{4,})\b", lambda m: m.group(1).capitalize(), t)
+    if t.isupper() or sum(c.isupper() for c in t[:30]) > 12:
+        t = t.lower()
+    t = re.sub(r"(?<=\s)(kw|pvc|ce|etics|ca|c\.a\.|hdpe|led|ups)\b", lambda m: m.group(1).upper(), t, flags=re.I)
+    if len(t) > 60:
+        t = t[:58].rsplit(" ", 1)[0] + "…"
+    return t[:1].upper() + t[1:]
+
+
+def lavorazioni(res, ac, n=5):
+    """Le lavorazioni principali con il loro peso sull'importo: dal resoconto (raggruppate per tipo) o, in mancanza, dal computo."""
+    out = []
+    for x in (res or {}).get("lavorazioni") or []:
+        if isinstance(x, dict) and x.get("cosa"):
+            out.append((x["cosa"], x.get("quota")))
+    if out:
+        return out[:n]
+    if ac and ac.get("top"):
+        for v in ac["top"]:
+            if _SICUREZZA.search(v["descr"][:200]):
+                continue
+            nome = nome_voce(v["descr"])
+            if nome and all(nome.lower() != o[0].lower() for o in out):
+                out.append((nome, v["quota"]))
+        return out[:min(n, 4)]
+    return []
+
+
+def riga_lavorazioni(lav, email=True):
+    if not lav:
+        return ""
+    pezzi = [f"{html.escape(c)}" + (f' <b>{round(q)}%</b>' if q else "") for c, q in lav]
+    return " · ".join(pezzi)
+
+
 def url_anac(a):
     """Avviso ufficiale sulla Piattaforma di pubblicità legale ANAC: funziona sempre, anche quando il link dell'ente no."""
     return f"https://pubblicitalegale.anticorruzione.it/bandi/{a['id']}" if a.get("id") else None
@@ -1081,6 +1135,16 @@ def pagina_gara(a, it, tipo):
                           'vicino all\'ente. Utili per un raggruppamento (RTI) o per l\'avvalimento.</p>' + "".join(sezioni) +
                           '<p class="f" style="text-align:left;margin-top:12px">Fonte: attestazioni SOA e aggiudicazioni 2023-2025 (ANAC, CC BY-SA 4.0).</p></div>')
     ac = analisi_computo(it)
+    lav = lavorazioni(res, ac, 6)
+    blocco_lav = ""
+    if lav:
+        righe = "".join(
+            f'<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;gap:12px;font-size:14px">'
+            f'<span>{e(c)}</span><b>{(virgola(q) + "%") if q else ""}</b></div>'
+            + (f'<div style="height:6px;background:#f0f0f3;border-radius:3px;margin-top:4px"><div style="height:6px;width:{min(100, q)}%;background:#007aff;border-radius:3px"></div></div>' if q else "")
+            + '</div>' for c, q in lav)
+        fonte = "letto dai documenti di gara" if res.get("lavorazioni") else "dalle voci più pesanti del computo metrico"
+        blocco_lav = f'<h2>Lavorazioni principali</h2><p class="uff" style="font-size:12px">% sull\'importo dei lavori · {fonte}</p>{righe}'
     blocco_comp = ""
     if ac:
         pz = ac["prezzari"][0] if ac["prezzari"] else None
@@ -1153,6 +1217,7 @@ table.u th{{width:auto;font-size:11px;padding:6px 8px 6px 0}} table.u td{{font-s
 <div class="imp">{euro(it.get("valore"))}</div>
 <span class="pill b">{"Indagine di mercato · candidati per essere invitato" if tipo == "indagine" else "Gara aperta"}</span><span class="pill">{e(" · ".join(it.get("cat") or []) or "categoria n.d.")}</span><span class="pill">Scadenza {e(scad)}</span>
 {f'<h2>Cosa si fa</h2><p>{e(res["lavori"])}</p>' if res.get("lavori") else ""}
+{blocco_lav}
 <h2>Oggetto ufficiale</h2><p class="uff">{e(ufficiale)}</p>
 {blocco_descr}
 <div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a>
