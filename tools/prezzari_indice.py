@@ -14,7 +14,7 @@ EXTRA = {
 for reg, u in EXTRA.items():
     dest = f"{D}/{reg}_{os.path.basename(u)}"
     if not os.path.exists(dest):
-        subprocess.run(["curl", "-fsSL", "-k", "-A", UA, "-o", dest, u], timeout=600)
+        subprocess.run(["curl", "-fsSL", "-A", UA, "-o", dest, u], timeout=600)
 
 COD = re.compile(r"^[A-Z0-9]{1,7}([._\-/ ][A-Z0-9]{1,8}){1,9}$", re.I)
 UM = re.compile(r"^(?:1\s+)?(m|m2|m²|mq|m3|m³|mc|ml|kg|t|q|cad|cad\.|n|nr|n\.|a corpo|ora|h|ore|giorno|gg|l|lt|km|dm3|cm|mese|%|kw|cadauno|corpo|mt|tonn)\b", re.I)
