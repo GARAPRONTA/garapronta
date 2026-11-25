@@ -895,8 +895,9 @@ def pagina_gara(a, it, tipo):
         if cf_:
             verso = "sotto" if cf_["diff"] < 0 else "sopra"
             colore = "#c2410c" if cf_["diff"] <= -3 else ("#1f9d55" if cf_["diff"] >= 3 else "#1d1d1f")
-            nota_pz += (f'<br><span style="color:{colore}">Confronto con il prezzario {e(pz["regione"])} 2026 in vigore: sulle {cf_["voci"]} voci confrontabili '
-                        f'({euro(cf_["importo"])}) i prezzi del progetto sono <b>{virgola(abs(cf_["diff"]))}% {verso}</b>.</span>') if pz else ""
+            giud = (f"in linea con il prezzario in vigore" if abs(cf_["diff"]) < 1 else f"<b>{virgola(abs(cf_['diff']))}% {verso}</b> il prezzario in vigore")
+            nota_pz += (f'<br><span style="color:{colore}">Confronto voce per voce: sulle {cf_["voci"]} voci confrontabili '
+                        f'({euro(cf_["importo"])}) i prezzi del progetto sono {giud}.</span>') if pz else ""
         nota_np = ""
         if ac["np_quota"] >= 15:
             nota_np = (f'<p style="margin-top:8px"><b>{ac["np_quota"]}% dell\'importo è in nuovi prezzi</b> (voci fuori prezzario, prezzate dal progettista con '

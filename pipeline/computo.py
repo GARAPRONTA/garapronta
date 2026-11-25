@@ -9,8 +9,8 @@ from collections import Counter
 
 NUM = r"\d{1,3}(?:[´'.’]\d{3})*(?:,\d+)?|\d+(?:,\d+)?"
 SOMMANO = re.compile(r"SOMMANO\s*\.*\s*(?P<um>[^\d\s][^\s]{0,12})?\s+(?P<n>(?:(?:" + NUM + r")\s+){1,3}(?:" + NUM + r"))\s*$", re.I)
-INIZIO = re.compile(r"^\s{0,4}(\d{1,4})\s{2,}(?=\S)")
-CODICE = re.compile(r"^[A-Z0-9][A-Za-z0-9_.\-/]{1,}$")
+INIZIO = re.compile(r"^\s{0,4}(\d{1,4}(?:\s*/\s*\d{1,4})?)\s{2,}(?=\S)")
+CODICE = re.compile(r"^[A-Z0-9][A-Za-z0-9_.\-/]*$")
 PREFISSO = re.compile(r"^([A-Z]{2,6})[_.\- ]?(\d{2})(?:[_.\-]|\b)")
 
 REGIONI = {"SAR": "Sardegna", "LOM": "Lombardia", "TOS": "Toscana", "VEN": "Veneto", "VE": "Veneto", "ER": "Emilia-Romagna",
@@ -48,22 +48,29 @@ def voci(testo):
             continue
         qta, prezzo, imp = (numeri[-3], numeri[-2], numeri[-1]) if len(numeri) >= 3 else (numeri[0], None, numeri[-1])
         # codice: frammenti all'inizio delle righe dopo il numero d'ordine
-        cod, descr, dentro = "", [], False
-        for b in blocco[-60:]:
-            if INIZIO.match(b):
-                cod, descr, dentro = "", [], True
+        cod, descr, dentro, ultimo_cod = "", [], False, False
+        for b in blocco[-400:]:
+            t = b.split()
+            m0 = INIZIO.match(b)
+            # una riga che inizia con poche cifre subito dopo un pezzo di codice è la coda del codice, non una nuova voce
+            if m0 and ultimo_cod and "/" not in m0.group(1) and len(t[0]) <= 3:
+                m0 = None
+            if m0:
+                cod, descr, dentro, ultimo_cod = "", [], True, False
                 descr.append(INIZIO.sub("", b, count=0).strip()[:200])
                 continue
             if not dentro:
                 continue
-            t = b.split()
             if t and not b[:1].isspace() and CODICE.match(t[0]) and (any(ch.isdigit() for ch in t[0]) or "NP" in t[0].upper()):
                 cod += t[0]
                 descr.append(" ".join(t[1:]))
+                ultimo_cod = True
             else:
                 descr.append(b.strip())
+                if b.strip():
+                    ultimo_cod = False
         d = re.sub(r"\s+", " ", " ".join(x for x in descr if x)).strip()
-        d = re.sub(r"^\d{1,4}\s+", "", d)
+        d = re.sub(r"^\d{1,4}(\s*/\s*\d{1,4})?\s+", "", d)
         out.append({"cod": cod, "descr": d[:160], "um": (m.group("um") or "").strip(), "qta": qta, "prezzo": prezzo, "imp": imp})
         blocco = []
     # scarta righe senza importo plausibile
