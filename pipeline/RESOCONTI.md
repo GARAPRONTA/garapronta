@@ -2,7 +2,11 @@
 
 Input: `testi/AAAA/MM/GG/<CIG>/testi.json.gz` = lista di documenti {nome, tipo, formato, caratteri, testo},
 già ordinati per importanza (disciplinare, lettera d'invito, bando, avviso, capitolato…).
-Output: `resoconti/AAAA/MM/GG.json` = oggetto { "<CIG>": {titolo, punti[], attenzione[]} } (vedi 2026/11/20.json come esempio).
+Output: `resoconti/AAAA/MM/GG.json` = oggetto { "<CIG>": {titolo, lavori, punti[], attenzione[]} } (vedi 2026/11/20.json come esempio).
+
+Campi:
+- "titolo": titolo chiaro e COMPLETO in italiano normale (non maiuscolo), che dica cosa e dove: es. "Rifacimento della copertura della scuola primaria Rodari · Comune di Novara". Niente formule tipo "procedura aperta per l'affidamento dei lavori di". Non tagliare.
+- "lavori": 2-3 frasi semplici su COSA si fa concretamente, presi da capitolato, relazione tecnica o computo: lavorazioni principali, dove (edificio/via/frazione), durata. Es. "Rimozione del vecchio manto in eternit, nuova copertura in pannelli coibentati e lattonerie. Lavori su edificio scolastico occupato: si lavora d'estate. Durata 120 giorni." Se i documenti non lo dicono, ometti il campo.
 
 Regole:
 - Solo fatti scritti nei documenti. Se un'informazione non c'è, scrivi "Non indicato nei documenti". Mai inventare.

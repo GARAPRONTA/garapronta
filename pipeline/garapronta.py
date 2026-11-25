@@ -11,6 +11,7 @@
 Variabili d'ambiente: BREVO_API_KEY (secret), BREVO_LIST_ID (default 5),
 DATA (gg/mm/aaaa, default ieri), LIVE=1 per inviare a tutti, DRY=1 per non inviare nulla.
 """
+import re
 import gzip, html, json, os, sys, time, urllib.request, urllib.error
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
@@ -133,7 +134,7 @@ def estrai(a):
         items.append({
             "cig": it.get("cig"),
             "natura": it.get("natura_principale"),
-            "descr": pulisci(it.get("descrizione"))[:300],
+            "descr": pulisci(it.get("descrizione"))[:1200],
             "cpv": trova(it.get("cpv"), "codice") if isinstance(it.get("cpv"), (list, dict)) else it.get("cpv"),
             "valore": num(it.get("valore_complessivo_stimato")) or num(it.get("valore_affidamento")),
             "vincente": num(it.get("valore_offerta_vincente")),
@@ -148,7 +149,7 @@ def estrai(a):
         "id": a.get("idAvviso"), "appalto": a.get("idAppalto"),
         "tipologia": a.get("tipologia"), "scheda": a.get("codiceScheda"), "tipo": a.get("tipo"),
         "pubblicato": a.get("dataPubblicazione"), "scadenza": a.get("dataScadenza"),
-        "titolo": pulisci((t.get("metadata") or {}).get("titolo"))[:300],
+        "titolo": pulisci((t.get("metadata") or {}).get("titolo"))[:1200],
         "ente": ente_bello(trova(A, "denominazione_amministrazione") or ""),
         "procedura": trova(B, "tipo_procedura_aggiudicazione"),
         "link": trova(B, "documenti_di_gara_link") or trova(C, "documenti_di_gara_link"),
@@ -320,6 +321,29 @@ def frase(t):
     return t
 
 
+_PREFISSI = re.compile(
+    r"^\s*(?:(?:procedura|gara)\s+(?:aperta|negoziata|ristretta|telematica)[^:]*?(?:per|relativa a|avente ad oggetto)\s+)?"
+    r"(?:l['’]\s*)?(?:affidamento|appalto|esecuzione|realizzazione)?\s*(?:dei|degli|del|delle|di)?\s*"
+    r"(?:lavori|opere|intervent[io])\s+(?:di|per|relativ[io] a)\s+", re.I)
+_CODICI = re.compile(r"\s*[-–,;(]?\s*\b(?:CIG|CUP)\b\s*[:n.°]*\s*[A-Z0-9]{10,15}\)?", re.I)
+
+
+def pulito(t):
+    """Oggetto della gara leggibile e completo: niente maiuscolo urlato, niente formule burocratiche, niente CIG/CUP."""
+    t = (t or "").replace('\\"', '"').replace("\\", "")
+    t = re.sub(r"\s+", " ", _CODICI.sub("", t)).strip(" .-–:;\"'“”_")
+    t = frase(t)
+    r = _PREFISSI.sub("", t, count=1).strip()
+    if len(r) > 12:
+        t = r[0].upper() + r[1:]
+    # nomi propri dopo via/viale/piazza…: "viale giulio cesare" -> "viale Giulio Cesare"
+    stop = r"(?:e|ed|di|del|della|dello|dei|degli|delle|nel|nella|in|a|al|alla|per|con|tra|da|anno|lotto|importo|cig|cup)\b"
+    nome = r"(?!" + stop + r")[a-zà-ù'’]+"
+    return re.sub(r"\b(via|viale|piazza|piazzale|corso|largo|vicolo|località|loc\.|frazione di|frazione|comune di)\s+(" + nome + r"(?: (?:" + nome + r"|della|delle|del|di)){0,3})",
+                  lambda m: m.group(1) + " " + " ".join(w if re.fullmatch(stop, w) else w[:1].upper() + w[1:] for w in m.group(2).split(" ")),
+                  t, flags=re.I)
+
+
 def barra_ribasso(r):
     w = max(8, min(100, round(r / 30 * 100)))
     return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px"><tr>
@@ -343,10 +367,20 @@ def scheda(a, it, soa, tipo):
     rib = ""
     if tipo == "bando":
         rib = barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
-    t = frase(a["titolo"] or it["descr"] or "Lavori")
-    titolo = html.escape(t[:130] + ("…" if len(t) > 130 else ""))
-    link = html.escape(a.get("link") or SITE)
     res = RESOCONTI.get(it.get("cig") or "")
+    ufficiale = pulito(a["titolo"] or it["descr"] or "Lavori")
+    descr = pulito(it.get("descr") or "")
+    if descr and descr.lower() not in ufficiale.lower() and ufficiale.lower() not in descr.lower():
+        ufficiale = f"{ufficiale} — {descr}"
+    breve_tit = (res or {}).get("titolo")
+    titolo = html.escape(breve_tit or ufficiale)
+    oggetto = (f'<div style="font-size:13px;color:{INK2};line-height:1.45;margin:-4px 0 12px">'
+               f'<span style="color:{INK3}">Oggetto ufficiale:</span> {html.escape(ufficiale)}</div>') if breve_tit else ""
+    cosa = ""
+    if res and res.get("lavori"):
+        cosa = (f'<div style="font-size:14px;color:{INK};line-height:1.5;margin:0 0 12px">'
+                f'<b style="color:{BLU}">Cosa si fa ·</b> {html.escape(res["lavori"])}</div>')
+    link = html.escape(a.get("link") or SITE)
     breve = ""
     if res and res.get("punti"):
         righe = "".join(
@@ -366,7 +400,7 @@ def scheda(a, it, soa, tipo):
 <tr><td style="padding:20px 22px;border-left:4px solid {accento};border-radius:22px">
 <div style="font-size:12px;color:{INK3};margin-bottom:6px">{html.escape((a['ente'] or '')[:70])}{(' · ' + html.escape(luogo)) if luogo else ''}</div>
 <div style="font-size:17px;font-weight:650;line-height:1.3;color:{INK};letter-spacing:-.01em;margin-bottom:12px">{titolo}</div>
-<table role="presentation" cellpadding="0" cellspacing="0"><tr>
+{oggetto}{cosa}<table role="presentation" cellpadding="0" cellspacing="0"><tr>
 <td style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:{INK};padding-right:14px">{euro(it.get('valore'))}</td>
 <td style="font-size:12px;color:{INK2}">{html.escape(cats)}</td></tr></table>
 <div style="margin-top:12px">{badge} &nbsp;{scad_pill(it.get('scadenza') or a.get('scadenza'))}</div>
@@ -410,8 +444,7 @@ def riepilogo_diretti(diretti, u):
 
 
 def riga_vincitore(a, it, con_ribasso):
-    t = frase(a.get("titolo") or it.get("descr") or "Lavori")
-    t = html.escape(t[:95] + ("…" if len(t) > 95 else ""))
+    t = html.escape(pulito(a.get("titolo") or it.get("descr") or "Lavori"))
     imp = html.escape(", ".join(imprese(it))[:90])
     rb = ribasso(it) if con_ribasso else None
     destra = (f'<div style="font-size:15px;font-weight:700;color:{INK}">{euro(it.get("vincente") or it.get("valore"))}</div>'
@@ -462,7 +495,7 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
         blocchi.append(titolo_sezione("Elenchi aperti", "Iscriviti e fatti chiamare", "Enti che stanno raccogliendo le imprese da invitare.") +
                        "".join(f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 12px;background:#fff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:18px 22px">
 <div style="font-size:15px;font-weight:650;color:{INK}">{html.escape(a['ente'][:70])}</div>
-<div style="font-size:13px;color:{INK2};margin:4px 0 12px">{html.escape(frase(a['titolo'] or it['descr'])[:140])}</div>
+<div style="font-size:13px;color:{INK2};margin:4px 0 12px">{html.escape(pulito(a['titolo'] or it['descr']))}</div>
 <a href="{html.escape(a.get('link') or SITE)}" style="color:{BLU};font-size:14px;font-weight:600;text-decoration:none">Come iscriversi →</a></td></tr></table>""" for a, it in elenchi))
     esiti = PER_ISCRITTO_EXTRA.get("esiti") or []
     if esiti:
