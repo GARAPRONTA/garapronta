@@ -19,7 +19,8 @@ from html import unescape
 from urllib.parse import urljoin, urlparse, parse_qs, unquote
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 GaraPronta"
-MAX_FILE = 100 * 1024 * 1024   # gli archivi di progetto possono essere grandi
+MAX_FILE = 100 * 1024 * 1024   # singolo documento
+MAX_ARCH = 300 * 1024 * 1024   # archivi di progetto (anche annidati: zip dentro zip)
 MAX_FILES = 15
 MAX_TESTO = 600_000          # caratteri salvati per gara
 EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt", ".xls", ".xlsx")
@@ -361,7 +362,8 @@ def espandi(files, livello=0):
             if arch == "zip":
                 with zipfile.ZipFile(io.BytesIO(data)) as z:
                     for i in z.infolist()[:200]:
-                        if not i.is_dir() and i.file_size < MAX_FILE and _utile(i.filename) and len(interni) < 40:
+                        lim = MAX_ARCH if i.filename.lower().endswith((".zip", ".7z", ".rar")) else MAX_FILE
+                        if not i.is_dir() and i.file_size < lim and _utile(i.filename) and len(interni) < 40:
                             interni.append((i.filename, z.read(i)))
             else:
                 with tempfile.TemporaryDirectory() as d:
@@ -372,7 +374,7 @@ def espandi(files, livello=0):
                         for f in fs:
                             if _utile(f) and len(interni) < 40:
                                 p = os.path.join(root, f)
-                                if os.path.getsize(p) < MAX_FILE:
+                                if os.path.getsize(p) < (MAX_ARCH if f.lower().endswith((".zip", ".7z", ".rar")) else MAX_FILE):
                                     interni.append((os.path.relpath(p, f"{d}/x"), open(p, "rb").read()))
         except Exception:
             out.append((nome, data))
