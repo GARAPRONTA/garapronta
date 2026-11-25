@@ -71,6 +71,8 @@ print(f"  CIG: {len(cig_csv)} file mensili", flush=True)
 agg = estrai(scarica("aggiudicazioni/filesystem/aggiudicazioni_csv.zip", forza=True))
 aggi = estrai(scarica("aggiudicatari/filesystem/aggiudicatari_csv.zip", forza=True))
 cat = estrai(scarica("categorie-opera/filesystem/categorie-opera_csv.zip", forza=True))
+att = scarica("attestazioni-soa-v2/filesystem/attestato_CKAN.csv", forza=True)
+att_cat = scarica("attestazioni-soa-v2/filesystem/categorie_rilasciate_CKAN.csv", forza=True)
 print(f"  scaricato in {time.time() - t0:.0f}s", flush=True)
 
 con = duckdb.connect(f"{D}/banca.duckdb")
@@ -176,6 +178,36 @@ for rg, c, cf, ente, prov, dir_, neg, tot, val, imp, conv, mese, top in con.exec
 with gzip.open(f"{OUT}/mappa_enti.json.gz", "wt", encoding="utf-8") as f:
     json.dump({"generato": str(date.today()), "anni": ANNI, "regioni": mappa}, f, ensure_ascii=False, separators=(",", ":"), default=str)
 print("  mappa enti: regioni", len(mappa), "· righe", sum(len(v) for r in mappa.values() for v in r.values()), flush=True)
+
+# ---- trova partner: imprese con attestazione SOA valida, per provincia e categoria, con le gare vinte
+OPZ2 = "delim=';', header=true, all_varchar=true, ignore_errors=true"
+print("  stati attestazioni:", con.execute(f"SELECT ATA_attestato_stato, count(*) FROM read_csv('{att}', {OPZ2}) GROUP BY 1 ORDER BY 2 DESC").fetchall(), flush=True)
+con.execute(f"""
+CREATE OR REPLACE TABLE soa AS
+SELECT a.ATA_impresa_codiceFiscale cf_imp, any_value(a.ATA_impresa_denominazione) nome, any_value(a.ATA_provincia_nome) prov,
+       replace(c.ATCR_categoria, ' ', '') cat, max(c.ATCR_classifica) classe
+FROM read_csv('{att}', {OPZ2}) a JOIN read_csv('{att_cat}', {OPZ2}) c ON c."_idAttestazione" = a."_idAttestazione"
+WHERE a.ATA_attestato_stato NOT ILIKE '%SCADUT%' AND a.ATA_attestato_stato NOT ILIKE '%SOSTITUIT%'
+  AND a.ATA_attestato_stato NOT ILIKE '%ANNULLAT%' AND a.ATA_attestato_stato NOT ILIKE '%DECADUT%'
+  AND a.ATA_attestato_stato NOT ILIKE '%REVOC%' AND a.ATA_attestato_stato NOT ILIKE '%SOSPES%'
+  AND try_strptime(a.ATA_attestato_dataScadenzaValiditaQuinquennale, '%Y-%m-%d') >= current_date
+GROUP BY 1, 4""")
+con.execute("""CREATE OR REPLACE TABLE vittorie AS
+SELECT v.cf_imp, count(*) n, count(*) FILTER (WHERE c.cat IS NOT NULL) n_cat
+FROM vinc_righe v JOIN agg a ON a.id = v.id GROUP BY 1""")
+con.execute("""CREATE OR REPLACE TABLE vitt_cat AS
+SELECT v.cf_imp, c.cat, count(*) n FROM vinc_righe v JOIN agg a ON a.id = v.id JOIN cat c ON c.cig = a.cig GROUP BY 1, 2""")
+partner = {}
+for prov, c, cf_imp, nome, classe, vt, vc in con.execute("""
+  SELECT s.prov, s.cat, s.cf_imp, s.nome, s.classe, coalesce(t.n, 0), coalesce(k.n, 0)
+  FROM soa s LEFT JOIN vittorie t USING (cf_imp) LEFT JOIN vitt_cat k ON k.cf_imp = s.cf_imp AND k.cat = s.cat
+  WHERE s.prov IS NOT NULL
+  QUALIFY row_number() OVER (PARTITION BY s.prov, s.cat ORDER BY coalesce(k.n, 0) DESC, coalesce(t.n, 0) DESC) <= 15""").fetchall():
+    partner.setdefault(prov, {}).setdefault(c, []).append({"cf": cf_imp, "nome": nome, "cl": classe, "v": vt, "vc": vc})
+with gzip.open(f"{OUT}/partner.json.gz", "wt", encoding="utf-8") as f:
+    json.dump({"generato": str(date.today()), "fonte": "ANAC attestazioni SOA e aggiudicatari (CC BY-SA 4.0)", "province": partner},
+              f, ensure_ascii=False, separators=(",", ":"))
+print("  partner: province", len(partner), "· imprese SOA valide", con.execute("select count(distinct cf_imp) from soa").fetchone(), flush=True)
 
 enti = {}
 for cf, nome, prov in con.execute("SELECT cf, any_value(ente), any_value(provincia) FROM lavori WHERE cf IS NOT NULL GROUP BY cf").fetchall():
