@@ -3,17 +3,23 @@
 set -u
 D=/opt/garapronta/anac; mkdir -p $D; cd $D
 B=https://dati.anticorruzione.it/opendata
-echo "== catalogo"
-curl -s -m 60 "$B/api/3/action/package_list" | head -c 4000; echo
-for f in aggiudicazioni/filesystem/aggiudicazioni_csv.zip aggiudicatari/filesystem/aggiudicatari_csv.zip cig-2026/filesystem/cig_csv_2026_09.zip; do
-  n=$(basename $f)
-  echo "== $n"
-  curl -fsL -m 900 --retry 3 -o $n "$B/download/dataset/$f" || { echo "ERRORE download"; continue; }
-  ls -la $n
-  for c in $(unzip -Z1 $n | head -3); do
-    echo "-- $c"
-    unzip -p $n "$c" | head -3 | cut -c1-2500
-    echo "righe: $(unzip -p $n "$c" | wc -l)"
-  done
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36"
+echo "== elenco dataset (pagine HTML del catalogo)"
+for p in 1 2 3 4; do curl -s -m 60 -A "$UA" "$B/dataset?page=$p" | grep -o 'href="/opendata/dataset/[a-z0-9-]*"' | sed 's/.*dataset\///;s/"//'; done | sort -u | tr '\n' ' '; echo
+echo "== risorse di alcuni dataset"
+for ds in categorie-opera cig-2026 cig-2025 stazioni-appaltanti attestazioni-soa-v2-filesystem-attestato-csv partecipanti lavorazioni; do
+  echo "-- $ds"; curl -s -m 60 -A "$UA" "$B/dataset/$ds" | grep -o 'https://dati.anticorruzione.it/opendata/download/[^"]*' | sort -u | head -8
 done
+prova() {  # $1 = percorso dopo /download/dataset/
+  n=$(basename "$1"); echo "== $n"
+  [ -s "$n" ] || curl -fsL -m 1200 --retry 2 -A "$UA" -o "$n" "$B/download/dataset/$1" || { echo "ERRORE download"; rm -f "$n"; return; }
+  ls -la "$n"
+  if [[ $n == *.zip ]]; then c=$(unzip -Z1 "$n" | head -1); unzip -p "$n" "$c" | head -3 | cut -c1-2000; echo "righe: $(unzip -p "$n" "$c" | wc -l)"
+  else head -3 "$n" | cut -c1-2000; echo "righe: $(wc -l < "$n")"; fi
+}
+prova categorie-opera/filesystem/categorie-opera_csv.zip
+prova cig-2025/filesystem/cig_csv_2025_10.zip
+prova attestazioni-soa-v2/filesystem/categorie_rilasciate_CKAN.csv
+prova attestazioni-soa-v2/filesystem/attestato_CKAN.csv
+prova stazioni-appaltanti/filesystem/stazioni-appaltanti_csv.zip
 df -h / | tail -1
