@@ -707,6 +707,72 @@ def aggiorna_seguiti(key):
     return len(cambi)
 
 
+# ---------------------------------------------------------------- quanto ti resta (stima del margine)
+SG, UTILE = 0.15, 0.10           # spese generali e utile d'impresa compresi nei prezzi del prezzario (all. I.7: 13-17% e 10%)
+RICARICO = (1 + SG) * (1 + UTILE)  # 1,265: prezzo di prezzario = costo vivo x 1,265
+
+
+def margine(rib, diff_prezzi=0.0):
+    """Margine stimato sui costi vivi con un ribasso dato. diff_prezzi = quanto i prezzi del progetto sono sopra/sotto il prezzario in vigore (%)."""
+    return ((1 - rib / 100) * (1 + diff_prezzi / 100) * RICARICO - 1) * 100
+
+
+def ribasso_pareggio(diff_prezzi=0.0):
+    return (1 - 1 / (RICARICO * (1 + diff_prezzi / 100))) * 100
+
+
+def resta(st, ac):
+    """Dati per il riquadro 'Quanto ti resta'."""
+    if not st:
+        return None
+    diff = (ac or {}).get("confronto", {}) or {}
+    d = diff.get("diff", 0.0) if diff else 0.0
+    return {"med": st["med"], "m_med": margine(st["med"], d), "m_p25": margine(st["p25"], d), "m_p75": margine(st["p75"], d),
+            "pareggio": ribasso_pareggio(d), "diff": d, "verificato": bool(diff), "dove": st["livello"]}
+
+
+def frase_resta(r):
+    m = r["m_med"]
+    if m < 0:
+        giudizio, col = "con il ribasso che vince di solito si lavora in perdita", "#c2410c"
+    elif m < 4:
+        giudizio, col = "gara molto tirata", "#c2410c"
+    elif m < 9:
+        giudizio, col = "margine stretto", "#b45309"
+    else:
+        giudizio, col = "margine buono", "#1f9d55"
+    return giudizio, col
+
+
+def pag_resta(st, ac):
+    r = resta(st, ac)
+    if not r:
+        return ""
+    giud, col = frase_resta(r)
+    righe = "".join(f'<tr><td>{lab}</td><td style="text-align:right">{virgola(rb)}%</td><td style="text-align:right;color:{"#c2410c" if m < 0 else "#1d1d1f"}"><b>{virgola(round(m, 1))}%</b></td></tr>'
+                    for lab, rb, m in [("Ribasso basso (un quarto delle gare vinte sotto)", st["p25"], r["m_p25"]),
+                                       ("Ribasso che vince di solito", st["med"], r["m_med"]),
+                                       ("Ribasso alto (un quarto delle gare vinte sopra)", st["p75"], r["m_p75"])])
+    nota = (f"I prezzi del progetto sono stati verificati voce per voce sul prezzario in vigore ({'in linea' if abs(r['diff']) < 1 else virgola(r['diff']) + '%'})."
+            if r["verificato"] else "Calcolo fatto supponendo che i prezzi del progetto siano quelli del prezzario regionale.")
+    return f"""<h2>Quanto ti resta</h2><p class="uff">Con il ribasso che vince di solito: <b style="color:{col}">{giud}</b>. Oltre il <b>{virgola(round(r['pareggio'], 1))}%</b> di ribasso si lavora in perdita.</p>
+<table class="u"><tr><th>Scenario</th><th style="text-align:right">Ribasso</th><th style="text-align:right">Margine stimato sui costi</th></tr>{righe}</table>
+<p class="f" style="text-align:left;margin-top:8px">I prezzi del prezzario comprendono circa il 15% di spese generali e il 10% di utile d'impresa (allegato I.7 del codice): il margine è calcolato sui costi vivi. {nota} I costi della manodopera e della sicurezza non soggetti a ribasso migliorano il risultato. Stima indicativa: il costo reale dipende dalla tua organizzazione.</p>"""
+
+
+def blocco_resta(r):
+    if not r:
+        return ""
+    giud, col = frase_resta(r)
+    nota = ("prezzi del progetto verificati sul prezzario in vigore" if r["verificato"] else "se i prezzi sono quelli del prezzario regionale")
+    return f"""<div style="margin-top:10px;background:#fbfbfd;border:1px solid #ececf0;border-radius:14px;padding:12px 14px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td style="font-size:12px;color:{INK2}">Quanto ti resta · stima</td>
+<td align="right" style="font-size:15px;font-weight:700;color:{col}">{virgola(round(r['m_med'], 1))}%</td></tr></table>
+<div style="font-size:12px;color:{INK};margin-top:4px">Con il ribasso che vince di solito ({virgola(r['med'])}%): <b style="color:{col}">{giud}</b>. Oltre il {virgola(round(r['pareggio'], 1))}% di ribasso si lavora in perdita.</div>
+<div style="font-size:11px;color:{INK3};margin-top:4px">Margine sui costi vivi, {nota}: i prezzi comprendono circa 15% di spese generali e 10% di utile. Stima indicativa, non un consiglio d'offerta.</div></div>"""
+
+
 def virgola(x):
     return str(x).replace(".", ",")
 
@@ -774,6 +840,7 @@ def scheda(a, it, soa, tipo):
     if tipo == "bando":
         st = storico(a, it)
         rib = blocco_storico(st) if st else barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
+        rib += blocco_resta(resta(st, ac))
     res = RESOCONTI.get(it.get("cig") or "")
     ufficiale = pulito(a["titolo"] or it["descr"] or "Lavori")
     if len(ufficiale) < 20 and (it.get("descr") or "").strip():   # titoli tipo "Lotto 1": meglio la descrizione
@@ -902,6 +969,14 @@ def pagina_gara(a, it, tipo):
         if ac["np_quota"] >= 15:
             nota_np = (f'<p style="margin-top:8px"><b>{ac["np_quota"]}% dell\'importo è in nuovi prezzi</b> (voci fuori prezzario, prezzate dal progettista con '
                        f'un\'analisi): è lì che si gioca il margine. Controlla l\'elenco prezzi e le analisi dei nuovi prezzi.</p>')
+        if ac.get("np_check"):
+            r_np = "".join(f'<tr><td>{e(frase(x["descr"]))}<small>{e(x["cod"])}</small></td><td style="text-align:right">{euro(x["prezzo"])}/{e(x["um"])}</td>'
+                           f'<td>{e(frase(x["simile"]))}<small>{e(x["simile_cod"])}</small></td><td style="text-align:right">{euro(x["simile_prezzo"])}</td>'
+                           f'<td style="text-align:right;color:{"#c2410c" if x["rapporto"] < 1 else "#1f9d55"}"><b>{"−" if x["rapporto"] < 1 else "+"}{round(abs(1 - x["rapporto"]) * 100)}%</b></td></tr>'
+                           for x in ac["np_check"])
+            nota_np += ('<h2>Nuovi prezzi da controllare</h2><p class="uff">Voci fuori prezzario confrontate con la voce più simile del prezzario in vigore. '
+                        'Un prezzo molto più basso può nascondere un costo non coperto; controlla l\'analisi del nuovo prezzo.</p>'
+                        f'<div style="overflow-x:auto"><table class="u"><tr><th>Nuovo prezzo</th><th>Prezzo</th><th>Voce simile del prezzario</th><th>Prezzo</th><th>Differenza</th></tr>{r_np}</table></div>')
         righe = "".join(f'<tr><td>{e(frase(v["descr"]) or "—")}<small>{e(v["cod"])}</small></td><td style="text-align:right">{virgola(round(v["qta"], 2)) if v["qta"] else ""} {e(v["um"])}</td>'
                         f'<td style="text-align:right">{euro(v["prezzo"]) if v["prezzo"] else ""}</td><td style="text-align:right"><b>{euro(v["imp"])}</b></td>'
                         f'<td style="text-align:right">{virgola(v["quota"])}%</td></tr>' for v in ac["top"][:6])
@@ -920,6 +995,7 @@ def pagina_gara(a, it, tipo):
         tab = (f'<h2>Le ultime gare {st["cat"]} di {e(a.get("ente") or "questo ente")}</h2><div style="overflow-x:auto"><table class="u"><tr><th>Mese</th><th>Oggetto</th><th>Base</th><th>Ribasso</th><th>Offerte</th><th>Vincitore</th></tr>{righe}</table></div>') if righe else ""
         blocco_st = f"""<div class="card"><h2 style="margin-top:0;color:#007aff">Quanto si ribassa per vincere</h2>
 <div class="imp">{virgola(st['med'])}%</div><p class="uff">Ribasso mediano delle gare {st['cat']} vinte {dove} (2023-2025). Metà delle gare tra <b>{virgola(st['p25'])}%</b> e <b>{virgola(st['p75'])}%</b> · {st['n']} gare{(' · in media ' + str(round(st['off'])) + ' offerte') if st.get('off') else ''}.</p>
+{pag_resta(st, ac)}
 {tab}<p class="f" style="text-align:left;margin-top:12px">Dati di mercato dalla Banca dati nazionale dei contratti pubblici (ANAC, CC BY-SA 4.0). Non è un consiglio d'offerta: ogni gara ha il suo progetto e i suoi prezzi.</p></div>"""
     return f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(titolo[:90])} · GaraPronta</title><meta name="robots" content="noindex">

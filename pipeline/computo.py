@@ -143,6 +143,63 @@ def confronto(vs, regione):
     return {"voci": n, "diff": round((tot_prog - tot_corr) / tot_corr * 100, 1), "importo": round(imp, 2)}
 
 
+_TOKEN = {}
+_STOP = {"della", "delle", "degli", "dello", "nella", "nelle", "sulla", "compreso", "compresa", "compresi", "ogni", "altro",
+         "opera", "opere", "fornitura", "posa", "lavori", "tipo", "secondo", "dimensioni", "spessore", "quanto", "fino",
+         "materiale", "materiali", "eseguito", "eseguita", "realizzato", "realizzata", "mediante", "anche", "come"}
+
+
+def _tok(t):
+    return {w[:6] for w in re.findall(r"[a-zà-ù]{4,}", (t or "").lower()) if w not in _STOP}
+
+
+def _um(u):
+    u = (u or "").lower().replace("²", "2").replace("³", "3").replace(".", "").strip()
+    return {"mq": "m2", "mc": "m3", "ml": "m", "cadauno": "cad", "n": "cad", "nr": "cad", "ore": "ora", "h": "ora"}.get(u, u)
+
+
+def simile(regione, descr, um):
+    """Voce del prezzario in vigore più simile per descrizione e unità di misura."""
+    P = prezzario_corrente(regione)
+    if not P:
+        return None
+    if regione not in _TOKEN:
+        visti, idx = set(), []
+        for k, v in P.items():
+            key = (v[0], v[2])
+            if key in visti:
+                continue
+            visti.add(key)
+            idx.append((k, v[0], _um(v[1]), _tok(v[2]), v[2]))
+        _TOKEN[regione] = idx
+    q, uq = _tok(descr), _um(um)
+    if len(q) < 3:
+        return None
+    best, bs = None, 0.0
+    for k, pr, u, toks, d in _TOKEN[regione]:
+        if u != uq or not toks:
+            continue
+        sc = len(q & toks) / len(q | toks)
+        if sc > bs:
+            best, bs = (k, pr, d), sc
+    return {"cod": best[0], "prezzo": best[1], "descr": best[2], "sim": round(bs, 2)} if best and bs >= 0.45 else None
+
+
+def controllo_np(vs, regione):
+    """Nuovi prezzi confrontati con la voce più simile del prezzario: segnala quelli molto più bassi o più alti."""
+    out = []
+    np_ = sorted([v for v in vs if nuovo_prezzo(v["cod"]) and v.get("prezzo")], key=lambda v: -v["imp"])[:12]
+    for v in np_:
+        s = simile(regione, v["descr"], v["um"])
+        if not s or not s["prezzo"]:
+            continue
+        r = v["prezzo"] / s["prezzo"]
+        if r < 0.85 or r > 1.25:
+            out.append({"descr": v["descr"], "cod": v["cod"], "um": v["um"], "prezzo": v["prezzo"], "imp": v["imp"],
+                        "simile": s["descr"], "simile_cod": s["cod"], "simile_prezzo": s["prezzo"], "rapporto": round(r, 2)})
+    return out[:5]
+
+
 def analisi(testo, anno_corrente=2026):
     vs = voci(testo)
     if len(vs) < 3:
@@ -166,6 +223,7 @@ def analisi(testo, anno_corrente=2026):
         "top3_quota": round(sum(v["imp"] for v in top[:3]) / tot * 100) if tot else 0,
         "prezzi_vecchi": vecchio,
         "confronto": confronto(vs, prez[0]["regione"] if prez else None),
+        "np_check": controllo_np(vs, prez[0]["regione"]) if prez else [],
     }
 
 

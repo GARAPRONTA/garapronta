@@ -21,6 +21,7 @@ jobs:
           if [ "$P" = indice ]; then
             mkdir -p indici/prezzari && sshpass -e scp $O "root@$H:/opt/garapronta/indici/prezzari/*.json.gz" indici/prezzari/
             git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
-            git add indici/prezzari && git commit -q -m "Prezzari regionali $(date -u +%F)" || exit 0
+            python3 tools/prezzi_web.py
+            git add indici/prezzari g/prezzi && git commit -q -m "Prezzari regionali $(date -u +%F)" || exit 0
             for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q && break; sleep 7; done
           fi

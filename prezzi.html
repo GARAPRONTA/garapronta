@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prezzi per i preventivi · prezzari regionali dei lavori pubblici · GaraPronta</title>
+<meta name="description" content="Cerca il prezzo di riferimento di qualsiasi lavorazione nei prezzari regionali in vigore: prezzo di prezzario e costo vivo stimato, per fare preventivi giusti negli affidamenti diretti.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1d1f;--ink2:#6e6e73;--ink3:#86868b;--blu:#007aff;--line:#e5e5ea}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#f5f5f7;line-height:1.5;-webkit-font-smoothing:antialiased;
+     background-image:radial-gradient(50% 40% at 10% 0%,#d9ebff 0%,transparent 70%),radial-gradient(40% 30% at 100% 10%,#efe6ff 0%,transparent 70%)}
+.w{max-width:1040px;margin:0 auto;padding:0 18px 60px}
+header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+header a{font-weight:650;color:var(--ink);text-decoration:none}
+.pill{display:inline-block;background:#e8f1ff;color:var(--blu);font-weight:600;font-size:13px;border-radius:99px;padding:6px 12px}
+h1{font-size:44px;letter-spacing:-.045em;line-height:1.04;margin:18px 0 12px}
+.sub{font-size:18px;color:var(--ink2);max-width:720px;margin:0 0 26px}
+.box{background:rgba(255,255,255,.8);backdrop-filter:blur(20px);border:1px solid #fff;border-radius:26px;padding:20px;box-shadow:0 10px 40px rgba(0,0,0,.05)}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+select,input{font:inherit;font-size:16px;border:1px solid var(--line);border-radius:14px;padding:13px 14px;background:#fff;color:var(--ink)}
+select{min-width:220px} input{flex:1;min-width:240px}
+.info{font-size:13px;color:var(--ink3);margin:12px 4px 0}
+table{width:100%;border-collapse:collapse;margin-top:16px}
+th{text-align:left;font-size:12px;color:var(--ink3);font-weight:500;padding:8px 10px 8px 0;border-bottom:1px solid var(--line)}
+td{font-size:14px;padding:11px 10px 11px 0;border-bottom:1px solid #f0f0f3;vertical-align:top}
+td.n{text-align:right;white-space:nowrap} td small{display:block;color:var(--ink3);font-size:11px}
+.v{font-weight:700} .c{color:var(--blu);font-weight:600}
+.nota{font-size:13px;color:var(--ink2);background:#f5f5f7;border-radius:16px;padding:14px 16px;margin-top:18px}
+.cta{margin-top:30px;text-align:center} .cta a{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;border-radius:99px;padding:13px 24px}
+@media(max-width:640px){h1{font-size:32px} td:nth-child(1){display:none}}
+</style>
+</head>
+<body>
+<div class="w">
+<header><a href="./">● GaraPronta</a><span class="pill">Strumento gratuito</span></header>
+<h1>Prezzi per i preventivi</h1>
+<p class="sub">Cerca qualsiasi lavorazione nei prezzari regionali dei lavori pubblici in vigore. Per ogni voce vedi il prezzo di prezzario e il costo vivo stimato, cioè senza spese generali e utile: la base per un preventivo giusto negli affidamenti diretti.</p>
+<div class="box">
+  <div class="row">
+    <select id="reg"><option value="">Scegli la regione…</option></select>
+    <input id="q" type="search" placeholder="Es. massetto, cappotto lana di roccia, scavo a sezione…" autocomplete="off">
+  </div>
+  <div class="info" id="info">Scegli una regione per iniziare.</div>
+  <table id="t" hidden><thead><tr><th>Codice</th><th>Lavorazione</th><th>U.M.</th><th style="text-align:right">Prezzo di prezzario</th><th style="text-align:right">Costo vivo stimato</th></tr></thead><tbody></tbody></table>
+  <div class="nota">I prezzi dei prezzari regionali comprendono circa il <b>15% di spese generali</b> e il <b>10% di utile d'impresa</b> (allegato I.7 del codice dei contratti). Il costo vivo stimato è il prezzo diviso per 1,265. È un riferimento indicativo: il costo reale dipende dalla tua organizzazione. Fonte: prezzari ufficiali delle Regioni, edizione in vigore.</div>
+</div>
+<div class="cta"><a href="./#iscriviti">Ricevi ogni mattina le gare della tua zona, con quanto ti resta in tasca</a></div>
+</div>
+<script>
+const fmt = v => v.toLocaleString("it-IT", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + " €";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+let dati = [], cache = {};
+const sel = document.getElementById("reg"), q = document.getElementById("q"), info = document.getElementById("info"),
+      tab = document.getElementById("t"), body = tab.querySelector("tbody");
+fetch("g/prezzi/regioni.json").then(r => r.json()).then(rs => {
+  rs.forEach(r => sel.insertAdjacentHTML("beforeend", `<option value="${r.slug}">${esc(r.nome)} · ${r.anno} (${r.voci.toLocaleString("it-IT")} voci)</option>`));
+  const qs = new URLSearchParams(location.search); if (qs.get("r")) { sel.value = qs.get("r"); carica(); }
+});
+async function carica() {
+  const s = sel.value; if (!s) return;
+  info.textContent = "Carico il prezzario…";
+  if (!cache[s]) {
+    const buf = await (await fetch(`g/prezzi/${s}.json.gz`)).arrayBuffer();
+    const u8 = new Uint8Array(buf);
+    const txt = (u8[0] === 0x1f && u8[1] === 0x8b)
+      ? await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"))).text()
+      : new TextDecoder().decode(u8);
+    cache[s] = JSON.parse(txt).map(x => [x[0], x[1], x[2], x[3], (x[0] + " " + x[1]).toLowerCase()]);
+  }
+  dati = cache[s]; cerca();
+}
+function cerca() {
+  if (!dati.length) return;
+  const parole = q.value.toLowerCase().split(/\s+/).filter(p => p.length > 1);
+  if (!parole.length) { info.textContent = `${dati.length.toLocaleString("it-IT")} voci pronte: scrivi cosa cerchi.`; tab.hidden = true; return; }
+  const ris = []; for (const x of dati) { if (parole.every(p => x[4].includes(p))) { ris.push(x); if (ris.length >= 150) break; } }
+  info.textContent = ris.length ? `${ris.length >= 150 ? "Prime 150" : ris.length} voci trovate` : "Nessuna voce: prova con meno parole.";
+  body.innerHTML = ris.map(x => `<tr><td><small>${esc(x[0])}</small></td><td>${esc(x[1])}</td><td>${esc(x[2])}</td><td class="n v">${fmt(x[3])}</td><td class="n c">${fmt(x[3] / 1.265)}</td></tr>`).join("");
+  tab.hidden = !ris.length;
+}
+sel.addEventListener("change", carica);
+let t0; q.addEventListener("input", () => { clearTimeout(t0); t0 = setTimeout(cerca, 150); });
+</script>
+</body>
+</html>
