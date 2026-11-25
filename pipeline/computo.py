@@ -84,6 +84,58 @@ def nuovo_prezzo(cod):
     return bool(re.search(r"(^|[._\-])N\.?P\.?(\d|[._\-]|$)|^NP|AN\.?P", c))
 
 
+_PREZZARI = {}
+
+
+def prezzario_corrente(regione):
+    """Indice del prezzario regionale in vigore (indici/prezzari/<Regione>.json.gz), se l'abbiamo."""
+    if regione not in _PREZZARI:
+        import gzip, json, os
+        f = os.path.join("indici", "prezzari", f"{regione}.json.gz")
+        try:
+            _PREZZARI[regione] = json.load(gzip.open(f, "rt"))["voci"] if os.path.exists(f) else None
+        except Exception:
+            _PREZZARI[regione] = None
+    return _PREZZARI[regione]
+
+
+def chiavi(cod):
+    """Possibili forme del codice nel prezzario: senza prefisso regione/anno, con e senza separatori finali."""
+    c = (cod or "").upper().replace(" ", "")
+    out = [c]
+    m = re.match(r"^[A-Z]{2,6}[_.\-]?\d{2}[_.\-](.+)$", c)
+    if m:
+        out.append(m.group(1))
+    for x in list(out):
+        out.append(x.rstrip(".-_"))
+    return list(dict.fromkeys(out))
+
+
+def confronto(vs, regione):
+    """Prezzi del progetto contro il prezzario in vigore, sulle voci con lo stesso codice."""
+    P = prezzario_corrente(regione) if regione else None
+    if not P:
+        return None
+    tot_prog = tot_corr = imp = 0.0
+    n = 0
+    for v in vs:
+        if not v.get("prezzo") or not v.get("qta"):
+            continue
+        k = next((k for k in chiavi(v["cod"]) if k in P), None)
+        if not k:
+            continue
+        pc = P[k][0]
+        if not pc or not (0.2 < v["prezzo"] / pc < 5):
+            continue
+        tot_prog += v["prezzo"] * v["qta"]
+        tot_corr += pc * v["qta"]
+        imp += v["imp"]
+        n += 1
+    if n < 3 or not tot_corr:
+        return None
+    return {"voci": n, "diff": round((tot_prog - tot_corr) / tot_corr * 100, 1), "importo": round(imp, 2)}
+
+
 def analisi(testo, anno_corrente=2026):
     vs = voci(testo)
     if len(vs) < 3:
@@ -106,6 +158,7 @@ def analisi(testo, anno_corrente=2026):
                  "imp": round(v["imp"], 2), "quota": round(v["imp"] / tot * 100, 1)} for v in top],
         "top3_quota": round(sum(v["imp"] for v in top[:3]) / tot * 100) if tot else 0,
         "prezzi_vecchi": vecchio,
+        "confronto": confronto(vs, prez[0]["regione"] if prez else None),
     }
 
 

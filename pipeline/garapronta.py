@@ -764,6 +764,9 @@ def scheda(a, it, soa, tipo):
             bits.append(f"{ac['np_quota']}% in nuovi prezzi")
         if pz and pz["anno"] < 2026:
             bits.append(f"prezzario {pz['regione']} {pz['anno']}: prezzi vecchi")
+        if ac.get("confronto") and abs(ac["confronto"]["diff"]) >= 2:
+            d_ = ac["confronto"]["diff"]
+            bits.append(f"prezzi {virgola(abs(d_))}% {'sotto' if d_ < 0 else 'sopra'} il prezzario 2026")
         rib_comp = (f'<div style="font-size:12px;color:{INK2};margin-top:10px">📊 <b>Computo</b> · ' + " · ".join(html.escape(b) for b in bits) +
                     f' <a href="{html.escape(url_scheda(it))}#computo" style="color:{BLU};text-decoration:none;font-weight:600">analisi ›</a></div>')
     else:
@@ -888,6 +891,12 @@ def pagina_gara(a, it, tipo):
                        f'sono di {2026 - pz["anno"]} anni fa, i costi reali oggi possono essere più alti. Margine da verificare bene.</span>')
         else:
             nota_pz = "Prezzario di riferimento non riconosciuto dai codici delle voci."
+        cf_ = ac.get("confronto")
+        if cf_:
+            verso = "sotto" if cf_["diff"] < 0 else "sopra"
+            colore = "#c2410c" if cf_["diff"] <= -3 else ("#1f9d55" if cf_["diff"] >= 3 else "#1d1d1f")
+            nota_pz += (f'<br><span style="color:{colore}">Confronto con il prezzario {e(pz["regione"])} 2026 in vigore: sulle {cf_["voci"]} voci confrontabili '
+                        f'({euro(cf_["importo"])}) i prezzi del progetto sono <b>{virgola(abs(cf_["diff"]))}% {verso}</b>.</span>') if pz else ""
         nota_np = ""
         if ac["np_quota"] >= 15:
             nota_np = (f'<p style="margin-top:8px"><b>{ac["np_quota"]}% dell\'importo è in nuovi prezzi</b> (voci fuori prezzario, prezzate dal progettista con '

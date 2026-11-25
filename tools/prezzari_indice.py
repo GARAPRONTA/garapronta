@@ -84,7 +84,8 @@ def righe_file(nome, data):
 
 per_reg = {}
 for f in sorted(glob.glob(f"{D}/*")):
-    reg = os.path.basename(f).split("_")[0].replace("-", " ").replace("Friuli Venezia Giulia", "Friuli-Venezia Giulia").replace("Emilia Romagna", "Emilia-Romagna")
+    b = os.path.basename(f)
+    reg = next((r for r in ("Friuli-Venezia Giulia", "Emilia-Romagna", "Valle d'Aosta") if b.startswith(re.sub(r"[^\w.\-]", "_", r))), b.split("_")[0])
     if re.search(r"analisi|confronto|brevi|2024|2025", f, re.I):
         continue
     try:
