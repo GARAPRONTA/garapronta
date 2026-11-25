@@ -316,7 +316,7 @@
   "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
-  "metodo": "diretto",
-  "file": 9
+  "metodo": "server-IT/diretto+cloud",
+  "file": 10
  }
 ]
