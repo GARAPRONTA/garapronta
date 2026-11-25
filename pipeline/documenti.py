@@ -22,7 +22,7 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 MAX_FILE = 100 * 1024 * 1024   # singolo documento
 MAX_ARCH = 300 * 1024 * 1024   # archivi di progetto (anche annidati: zip dentro zip)
 MAX_FILES = 15
-MAX_TESTO = 600_000          # caratteri salvati per gara
+MAX_TESTO = 900_000          # caratteri salvati per gara
 EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt", ".xls", ".xlsx")
 
 PIATTAFORME = [  # (nome, test sul dominio/percorso, pattern dei link ai file)
@@ -160,7 +160,7 @@ def testo_da(nome, data):
     return "altro", ""
 
 
-TIPI = [("relazione", r"relazione.{0,4}(tecnic|illustrativ|generale\b(?!.{0,4}calcol))|descrittiv|quadro esigenziale|\bdip\b|documento.{0,4}indirizzo"),
+TIPI = [("relazione", r"relazione[\s_.-]*(tecnic|illustrativ|descrittiv|generale(?![\s_.-]*di[\s_.-]*calcol))|quadro esigenziale|\bdip\b|documento.{0,4}indirizzo"),
         ("disciplinare", r"disciplinar"), ("lettera_invito", r"lettera.{0,5}invito|invito"),
         ("bando", r"bando"), ("avviso", r"avviso|manifestazion|indagine"), ("capitolato", r"capitolat|csa\b"),
         ("computo", r"computo|\bcme\b|metrico.?estim|stima.?lavori"), ("elenco_prezzi", r"elenco.{0,3}prezz"), ("dgue", r"dgue"),
@@ -412,19 +412,19 @@ def salva_gara(files, cart):
             x["testo"], x["doppio"] = "", True
         elif h:
             visti.add(h)
-    # due passate: prima un pezzo per ogni documento (così relazione e capitolato ci sono sempre),
-    # poi il resto del budget in ordine di importanza
-    PEZZO = 40_000
+    # budget per tipo: i documenti di gara interi, poi relazione e capitolato, il resto si divide quel che avanza
+    TETTO = {"disciplinare": 250_000, "lettera_invito": 250_000, "bando": 250_000, "avviso": 150_000,
+             "relazione": 100_000, "capitolato": 60_000}
     budget = MAX_TESTO
-    quota = [min(len(x["testo"]), PEZZO) for x in docs]
-    budget -= sum(quota)
-    if budget < 0:   # troppi documenti: taglio i pezzi in proporzione
-        f = MAX_TESTO / sum(quota)
-        quota, budget = [int(q * f) for q in quota], 0
+    quota = [0] * len(docs)
     for i, x in enumerate(docs):
-        extra = min(len(x["testo"]) - quota[i], budget)
-        quota[i] += extra
-        budget -= extra
+        if x["tipo"] in TETTO:
+            quota[i] = min(len(x["testo"]), TETTO[x["tipo"]], budget)
+            budget -= quota[i]
+    resto = [i for i, x in enumerate(docs) if x["tipo"] not in TETTO and x["testo"]]
+    for n, i in enumerate(resto):
+        quota[i] = min(len(docs[i]["testo"]), 40_000, budget // max(1, len(resto) - n))
+        budget -= quota[i]
     out = []
     for i, x in enumerate(docs):
         out.append({**x, "testo": x.pop("testo")[:quota[i]]})
