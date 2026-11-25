@@ -25,6 +25,8 @@ jobs:
           F="inviati/$(TZ=Europe/Rome date +%F)"
           echo "file=$F" >> $GITHUB_OUTPUT
           if [ -f "$F" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then echo "salta=1" >> $GITHUB_OUTPUT; echo "Email di oggi già inviata"; fi
+          ORA=$(TZ=Europe/Rome date +%-H)
+          if [ "${{ github.event_name }}" = "push" ] && { [ "$ORA" -lt 5 ] || [ "$ORA" -gt 13 ]; }; then echo "salta=1" >> $GITHUB_OUTPUT; echo "Resoconti della sera: le email partono al mattino"; fi
       - uses: actions/setup-python@v5
         if: steps.fatto.outputs.salta != '1'
         with: { python-version: '3.12' }

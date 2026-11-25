@@ -1387,9 +1387,17 @@ def invia(key, to, oggetto, corpo):
 
 
 # ---------------------------------------------------------------- main
+
+def giorno_default():
+    """Di sera (dalle 18 ora italiana) il giorno stesso, per il giro serale; altrimenti ieri."""
+    from zoneinfo import ZoneInfo
+    ora = datetime.now(ZoneInfo("Europe/Rome"))
+    return (ora if ora.hour >= 18 else ora - timedelta(days=1)).strftime("%d/%m/%Y")
+
+
 def main():
     global RESOCONTI
-    giorno = os.environ.get("DATA") or (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%d/%m/%Y")
+    giorno = os.environ.get("DATA") or giorno_default()
     modo = os.environ.get("MODE", "tutto")
     print(f"== Giorno {giorno} · modo {modo}")
     dd = datetime.strptime(giorno, "%d/%m/%Y")

@@ -2,11 +2,24 @@
 
 Input: `testi/AAAA/MM/GG/<CIG>/testi.json.gz` = lista di documenti {nome, tipo, formato, caratteri, testo},
 già ordinati per importanza (disciplinare, lettera d'invito, bando, avviso, capitolato…).
+Il lettore gira due volte: la sera (circa 23:15, sulle gare del giorno) e la mattina (circa 7:10, solo le gare arrivate dopo).
+Se il file del giorno esiste già, AGGIUNGI solo i CIG che mancano e non toccare quelli già scritti.
 Output: `resoconti/AAAA/MM/GG.json` = oggetto { "<CIG>": {titolo, lavori, punti[], attenzione[]} } (vedi 2026/11/20.json come esempio).
 
 Campi:
 - "titolo": titolo chiaro e COMPLETO in italiano normale (non maiuscolo), che dica cosa e dove: es. "Rifacimento della copertura della scuola primaria Rodari · Comune di Novara". Niente formule tipo "procedura aperta per l'affidamento dei lavori di". Non tagliare.
-- "lavori": 2-3 frasi semplici su COSA si fa concretamente, presi da capitolato, relazione tecnica o computo: lavorazioni principali, dove (edificio/via/frazione), durata. Es. "Rimozione del vecchio manto in eternit, nuova copertura in pannelli coibentati e lattonerie. Lavori su edificio scolastico occupato: si lavora d'estate. Durata 120 giorni." Se i documenti non lo dicono, ometti il campo. Scrivilo SEMPRE quando c'è capitolato, relazione tecnica, computo o elenco prezzi.
+- "lavori": la DESCRIZIONE DELL'INTERVENTO, 3-4 righe (60-100 parole), precisa e concreta, come la spiegherebbe il direttore tecnico
+  dell'impresa al capocantiere. Non ripetere l'oggetto della gara: spiega il lavoro vero. Ricavala leggendo relazione tecnica e illustrativa,
+  capitolato e computo metrico (computo.json.gz). Deve dire, quando i documenti lo riportano:
+  1) il problema da risolvere e dove esattamente (strada e km, edificio e piano, frazione, lunghezza del tratto);
+  2) come si fa: le fasi in ordine e le tecniche (es. disgaggio, perforazioni, getto, demolizione, posa), con i materiali principali;
+  3) le quantità che contano, prese dal computo (m², m, m³, n. pezzi, kg) — arrotondate;
+  4) condizioni di cantiere che pesano sul prezzo (strada aperta al traffico, lavori in quota o su fune, edificio occupato, accessi difficili) e la durata.
+  Esempio di forma (dati di fantasia, non copiarli): "Rifacimento della copertura della palestra della scuola media di via Roma, con
+  infiltrazioni diffuse. Si rimuove il vecchio manto in lamiera con bonifica dell'eternit sottostante (circa 900 m²), si posano pannelli
+  sandwich coibentati da 10 cm e nuove lattonerie, con linea vita in copertura. Ponteggio su tre lati e scuola aperta: lavori nei
+  mesi estivi. Durata 90 giorni."
+  Solo fatti dai documenti, nessuna cifra inventata. Se non ci sono capitolato, relazione o computo, usa bando/disciplinare e scrivi meno.
 - "lavorazioni": elenco di 3-6 lavorazioni principali, RAGGRUPPATE PER TIPO di lavoro, con il peso sull'importo dei lavori:
   [{"cosa": "Consolidamento parete rocciosa con tiranti e barre", "quota": 44}, {"cosa": "Rete metallica di rivestimento", "quota": 18}, ...].
   Fonte: testi/AAAA/MM/GG/<CIG>/computo.json.gz (lista di documenti {nome, tipo, testo}; usa quello con tipo "computo", non il computo dei costi della sicurezza).

@@ -602,8 +602,16 @@ def vps_giro(falliti, unici, titoli, base):
     return ok
 
 
+
+def giorno_default():
+    """Di sera (dalle 18 ora italiana) il giorno stesso, per il giro serale; altrimenti ieri."""
+    from zoneinfo import ZoneInfo
+    ora = datetime.now(ZoneInfo("Europe/Rome"))
+    return (ora if ora.hour >= 18 else ora - timedelta(days=1)).strftime("%d/%m/%Y")
+
+
 def main():
-    giorno = os.environ.get("DATA") or (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%d/%m/%Y")
+    giorno = os.environ.get("DATA") or giorno_default()
     d = datetime.strptime(giorno, "%d/%m/%Y")
     avvisi = json.load(gzip.open(f"data/{d:%Y/%m/%d}.json.gz", "rt"))
     righe, titoli = [], {}
@@ -618,6 +626,12 @@ def main():
     solo = {x.strip() for x in (os.environ.get("SOLO_CIG") or "").split(",") if x.strip()}
     if solo:
         righe = [r for r in righe if r[0] in solo]
+    base = f"testi/{d:%Y/%m/%d}"
+    gia_ok = set()
+    if not solo and os.path.exists(f"{base}/rapporto.json"):   # giro del mattino dopo quello serale: solo le gare nuove o fallite
+        gia_ok = {r["cig"] for r in json.load(open(f"{base}/rapporto.json")) if r.get("esito") == "ok"}
+        righe = [r for r in righe if r[0] not in gia_ok]
+        print(f"   {len(gia_ok)} gare già lette nel giro precedente", flush=True)
     righe = righe[: int(os.environ.get("MAX_GARE", "200"))]
     print(f"== {giorno}: {len(righe)} gare di lavori da leggere · proxy {'sì' if os.environ.get('APIFY_TOKEN') else 'no'}", flush=True)
     base = f"testi/{d:%Y/%m/%d}"
@@ -698,10 +712,16 @@ def main():
         per_piatt.setdefault(p, Counter())[e] += 1
         rapporto.append({"cig": cig, "url": url, "piattaforma": p, **r})
     os.makedirs(base, exist_ok=True)
-    if solo and os.path.exists(f"{base}/rapporto.json"):   # prova su poche gare: aggiorno solo quelle nel rapporto del giorno
-        vecchio = [r for r in json.load(open(f"{base}/rapporto.json")) if r["cig"] not in solo]
+    if (solo or gia_ok) and os.path.exists(f"{base}/rapporto.json"):   # tengo le gare già lette, aggiorno le altre
+        nuovi = {r["cig"] for r in rapporto}
+        vecchio = [r for r in json.load(open(f"{base}/rapporto.json")) if r["cig"] not in nuovi and (r["cig"] not in solo if solo else r["cig"] in gia_ok)]
         rapporto = vecchio + rapporto
+    os.makedirs(base, exist_ok=True)
     json.dump(rapporto, open(f"{base}/rapporto.json", "w"), ensure_ascii=False, indent=1)
+    if not solo:
+        from zoneinfo import ZoneInfo
+        giro = "mattina" if datetime.now(ZoneInfo("Europe/Rome")).hour < 18 else "sera"
+        open(f"{base}/giro_{giro}", "w").write(datetime.now(timezone.utc).isoformat())
     ok = esiti.get("ok", 0)
     print(f"\nCOPERTURA: {ok}/{len(righe)} gare con documenti ({ok / max(1, len(righe)) * 100:.0f}%)")
     print("Esiti:", dict(esiti))
