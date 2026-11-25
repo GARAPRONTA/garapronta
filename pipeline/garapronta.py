@@ -375,13 +375,15 @@ def scheda(a, it, soa, tipo):
     if descr and descr.lower() not in ufficiale.lower() and ufficiale.lower() not in descr.lower():
         ufficiale = f"{ufficiale} — {descr}"
     breve_tit = (res or {}).get("titolo")
-    titolo = html.escape(breve_tit or ufficiale)
-    oggetto = (f'<div style="font-size:13px;color:{INK2};line-height:1.45;margin:-4px 0 12px">'
-               f'<span style="color:{INK3}">Oggetto ufficiale:</span> {html.escape(ufficiale)}</div>') if breve_tit else ""
+    t = breve_tit or ufficiale
+    titolo = html.escape(t if len(t) <= 120 else t[:115].rsplit(" ", 1)[0] + "…")
+    oggetto = ""
     cosa = ""
     if res and res.get("lavori"):
-        cosa = (f'<div style="font-size:14px;color:{INK};line-height:1.5;margin:0 0 12px">'
+        cosa = (f'<div style="font-size:14px;color:{INK};line-height:1.5;margin:0 0 10px">'
                 f'<b style="color:{BLU}">Cosa si fa ·</b> {html.escape(res["lavori"])}</div>')
+    oggetto = (f'<div style="margin:0 0 12px"><a href="{html.escape(url_scheda(it))}" style="font-size:14px;font-weight:600;color:{BLU};text-decoration:none">'
+               f'▸ Leggi la descrizione completa</a></div>')
     link = html.escape(a.get("link") or SITE)
     breve = ""
     if res and res.get("punti"):
@@ -412,6 +414,76 @@ def scheda(a, it, soa, tipo):
 <td style="background:{BLU};border-radius:999px"><a href="{link}" style="display:inline-block;padding:10px 18px;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none">Apri i documenti</a></td>
 <td style="padding-left:12px;font-size:11px;color:{INK3}">CIG {html.escape(it.get('cig') or '')}</td></tr></table>
 </td></tr></table>"""
+
+
+def url_scheda(it):
+    return f"{SITE}g/{it.get('cig')}.html"
+
+
+def pagina_gara(a, it, tipo):
+    """Scheda web completa della gara (si apre da 'Leggi tutto' nell'email)."""
+    res = RESOCONTI.get(it.get("cig") or "") or {}
+    ufficiale = pulito(a.get("titolo") or it.get("descr") or "Lavori")
+    descr = pulito(it.get("descr") or "")
+    titolo = res.get("titolo") or ufficiale
+    luogo = " · ".join(x for x in [it.get("istat") and str(it["istat"]).title(), regione(it)] if x)
+    d, gg = giorni_a(it.get("scadenza") or a.get("scadenza") or "")
+    scad = f"{d:%d/%m/%Y %H:%M}" + (f" · tra {gg} giorni" if gg is not None and gg >= 0 else "") if d else "Non indicata"
+    e = html.escape
+    punti = "".join(f'<tr><th>{e(p.get("t",""))}</th><td>{e(p.get("v",""))}'
+                    f'{("<small>" + e(p["fonte"]) + "</small>") if p.get("fonte") else ""}</td></tr>'
+                    for p in res.get("punti") or [])
+    att = "".join(f"<li>{e(x)}</li>" for x in res.get("attenzione") or [])
+    blocco_descr = f'<h2>Descrizione</h2><p>{e(descr)}</p>' if descr and descr.lower() not in ufficiale.lower() else ""
+    return f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{e(titolo[:90])} · GaraPronta</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+<style>
+body{{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#1d1d1f;background:#f5f5f7;line-height:1.55;-webkit-font-smoothing:antialiased}}
+.w{{max-width:760px;margin:0 auto;padding:0 18px 50px}} header{{padding:22px 0}} header a{{font-weight:650;color:#1d1d1f;text-decoration:none}}
+.card{{background:#fff;border:1px solid #e5e5ea;border-radius:26px;padding:28px 26px;margin-bottom:16px}}
+.ente{{font-size:13px;color:#86868b}} h1{{font-size:28px;letter-spacing:-.03em;line-height:1.15;margin:6px 0 14px}}
+.imp{{font-size:34px;font-weight:700;letter-spacing:-.03em}} .pill{{display:inline-block;background:#f0f0f3;border-radius:99px;padding:6px 12px;font-size:13px;font-weight:600;margin:10px 6px 0 0}}
+.pill.b{{background:#e8f1ff;color:#007aff}} h2{{font-size:17px;margin:22px 0 6px}} p{{margin:0;font-size:15px}}
+.uff{{color:#6e6e73;font-size:14px}} table{{width:100%;border-collapse:collapse}} th{{text-align:left;vertical-align:top;font-size:13px;color:#6e6e73;font-weight:500;padding:9px 12px 9px 0;width:120px;border-top:1px solid #f0f0f3}}
+td{{font-size:14px;padding:9px 0;border-top:1px solid #f0f0f3}} small{{display:block;color:#86868b;font-size:11px;margin-top:2px}}
+.att li{{color:#c2410c;font-size:14px;margin:4px 0}} .btn{{display:inline-block;background:#007aff;color:#fff;text-decoration:none;font-weight:600;border-radius:99px;padding:12px 22px;margin-top:8px}}
+.f{{font-size:12px;color:#86868b;text-align:center}}
+</style></head><body><div class="w">
+<header><a href="{SITE}">● GaraPronta</a></header>
+<div class="card">
+<div class="ente">{e(a.get("ente") or "")}{(" · " + e(luogo)) if luogo else ""}</div>
+<h1>{e(titolo)}</h1>
+<div class="imp">{euro(it.get("valore"))}</div>
+<span class="pill b">{"Indagine di mercato · candidati per essere invitato" if tipo == "indagine" else "Gara aperta"}</span><span class="pill">{e(" · ".join(it.get("cat") or []) or "categoria n.d.")}</span><span class="pill">Scadenza {e(scad)}</span>
+{f'<h2>Cosa si fa</h2><p>{e(res["lavori"])}</p>' if res.get("lavori") else ""}
+<h2>Oggetto ufficiale</h2><p class="uff">{e(ufficiale)}</p>
+{blocco_descr}
+<div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a></div>
+</div>
+{f'<div class="card"><h2 style="margin-top:0;color:#007aff">In breve · letto dai documenti di gara</h2><table>{punti}</table>' + (f'<ul class="att">{att}</ul>' if att else "") + "</div>" if punti else ""}
+<div class="card"><table>
+<tr><th>Ente</th><td>{e(a.get("ente") or "")}</td></tr>
+<tr><th>CIG</th><td>{e(it.get("cig") or "")}</td></tr>
+<tr><th>Procedura</th><td>{e(a.get("procedura") or ("Indagine di mercato" if tipo == "indagine" else "Bando"))}</td></tr>
+<tr><th>Pubblicata</th><td>{e((a.get("pubblicato") or "")[:10])}</td></tr></table></div>
+<p class="f">Fonte: Piattaforma di pubblicità legale ANAC (CC BY 4.0). Il riassunto è letto in automatico dai documenti: controlla sempre i documenti ufficiali prima di partecipare. · <a href="{SITE}privacy.html" style="color:#86868b">Privacy</a></p>
+</div></body></html>"""
+
+
+def scrivi_schede(avvisi):
+    os.makedirs("g", exist_ok=True)
+    n = 0
+    for a in avvisi:
+        if a["tipo"] != "avviso" or a["tipologia"] not in ("BANDI", "INDAGINI_DI_MERCATO_SOTTO_SOGLIA"):
+            continue
+        for it in a["items"]:
+            if (it.get("natura") or "").lower() == "lavori" and it.get("cig"):
+                tipo = "indagine" if a["tipologia"].startswith("INDAGINI") else "bando"
+                with open(f"g/{it['cig']}.html", "w", encoding="utf-8") as f:
+                    f.write(pagina_gara(a, it, tipo))
+                n += 1
+    return n
 
 
 def titolo_sezione(eyebrow, titolo, sotto):
@@ -539,11 +611,12 @@ def invia(key, to, oggetto, corpo):
 
 # ---------------------------------------------------------------- main
 def main():
+    global RESOCONTI
     giorno = os.environ.get("DATA") or (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%d/%m/%Y")
     modo = os.environ.get("MODE", "tutto")
     print(f"== Giorno {giorno} · modo {modo}")
     dd = datetime.strptime(giorno, "%d/%m/%Y")
-    if modo == "invio" and os.path.exists(f"data/{dd:%Y/%m/%d}.json.gz"):
+    if modo in ("invio", "schede") and os.path.exists(f"data/{dd:%Y/%m/%d}.json.gz"):
         avvisi = json.load(gzip.open(f"data/{dd:%Y/%m/%d}.json.gz", "rt"))
         print(f"Letti {len(avvisi)} avvisi salvati")
     else:
@@ -553,7 +626,12 @@ def main():
         print(f"Scaricati {len(grezzi)} avvisi, salvati in {path}")
     if modo == "dati":
         return
-    global RESOCONTI
+    if modo == "schede":
+        dd2 = datetime.strptime(giorno, "%d/%m/%Y")
+        rp = f"resoconti/{dd2:%Y/%m/%d}.json"
+        RESOCONTI = json.load(open(rp)) if os.path.exists(rp) else {}
+        print(f"Schede web scritte: {scrivi_schede(avvisi)}")
+        return
     rp = f"resoconti/{dd:%Y/%m/%d}.json"
     RESOCONTI = json.load(open(rp)) if os.path.exists(rp) else {}
     print(f"Resoconti disponibili: {len(RESOCONTI)}")
