@@ -25,4 +25,4 @@ jobs:
         run: |
           git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
           git add data/ && git commit -q -m "Storico ANAC ${{ matrix.mese }}" || exit 0
-          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q && break; sleep $((RANDOM % 20 + 5)); done
+          for i in 1 2 3 4 5; do git pull -q --rebase -X theirs origin main && git push -q && break; sleep $((RANDOM % 20 + 5)); done
