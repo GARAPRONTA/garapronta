@@ -333,7 +333,7 @@ def pulito(t):
     t = (t or "").replace('\\"', '"').replace("\\", "")
     t = re.sub(r"\s+", " ", _CODICI.sub("", t)).strip(" .-–:;\"'“”_")
     t = frase(t)
-    r = _PREFISSI.sub("", t, count=1).strip()
+    r = _PREFISSI.sub("", t, count=1).strip(" .-–:;\"'“”_")
     if len(r) > 12:
         t = r[0].upper() + r[1:]
     # nomi propri dopo via/viale/piazza…: "viale giulio cesare" -> "viale Giulio Cesare"
@@ -369,6 +369,8 @@ def scheda(a, it, soa, tipo):
         rib = barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
     res = RESOCONTI.get(it.get("cig") or "")
     ufficiale = pulito(a["titolo"] or it["descr"] or "Lavori")
+    if len(ufficiale) < 20 and (it.get("descr") or "").strip():   # titoli tipo "Lotto 1": meglio la descrizione
+        ufficiale = pulito(it["descr"])
     descr = pulito(it.get("descr") or "")
     if descr and descr.lower() not in ufficiale.lower() and ufficiale.lower() not in descr.lower():
         ufficiale = f"{ufficiale} — {descr}"
