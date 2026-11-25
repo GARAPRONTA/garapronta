@@ -102,9 +102,11 @@ SELECT cig, id_aggiudicazione id, TRY_CAST(ribasso_aggiudicazione AS DOUBLE) rib
 FROM read_csv('{agg}', {OPZ})
 WHERE esito = 'AGGIUDICATA' AND cig IN (SELECT cig FROM lavori)""")
 con.execute(f"""
-CREATE OR REPLACE TABLE vinc AS
-SELECT id_aggiudicazione id, string_agg(DISTINCT denominazione, ' + ') vincitori
-FROM read_csv('{aggi}', {OPZ}) WHERE id_aggiudicazione IN (SELECT id FROM agg) GROUP BY id_aggiudicazione""")
+CREATE OR REPLACE TABLE vinc_righe AS
+SELECT id_aggiudicazione id, codice_fiscale cf_imp, denominazione
+FROM read_csv('{aggi}', {OPZ}) WHERE id_aggiudicazione IN (SELECT id FROM agg)""")
+con.execute("""CREATE OR REPLACE TABLE vinc AS
+SELECT id, string_agg(DISTINCT denominazione, ' + ') vincitori, min(cf_imp) cf_imp FROM vinc_righe GROUP BY id""")
 
 # Gare con concorrenza vera (no affidamenti diretti), ribasso plausibile
 con.execute("""
@@ -143,6 +145,38 @@ for row in stats("regione"):
 for row in stats("'IT'"):
     _, c, n, med, p25, p75, off, ult, ultime = row
     ind["italia"][c] = {"n": n, "med": med, "p25": p25, "p75": p75, "off": off}
+# ---- mappa degli enti bersaglio: chi affida lavori senza gara o con inviti, per regione e categoria
+con.execute("""
+CREATE OR REPLACE TABLE target AS
+WITH t AS (
+  SELECT l.cf, l.ente, l.provincia, l.regione, c.cat, l.importo, l.procedura, a.data_agg, l.data_pub, v.cf_imp,
+         CASE WHEN l.procedura ILIKE '%AFFIDAMENTO DIRETTO%' THEN 'diretto'
+              WHEN l.procedura ILIKE '%NEGOZIATA%' THEN 'negoziata' ELSE 'altro' END tipo
+  FROM lavori l JOIN cat c USING (cig) LEFT JOIN agg a USING (cig) LEFT JOIN vinc v ON v.id = a.id
+  WHERE l.cf IS NOT NULL AND c.cat IS NOT NULL)
+SELECT regione, cat, cf, any_value(ente) ente, any_value(provincia) prov,
+       count(*) FILTER (WHERE tipo = 'diretto') diretti, count(*) FILTER (WHERE tipo = 'negoziata') negoziate,
+       count(*) totale, round(sum(importo) FILTER (WHERE tipo IN ('diretto', 'negoziata'))) valore,
+       count(DISTINCT cf_imp) imprese, count(cf_imp) con_vincitore,
+       mode(month(coalesce(data_pub, data_agg))) FILTER (WHERE tipo IN ('diretto', 'negoziata')) mese_picco
+FROM t GROUP BY regione, cat, cf""")
+con.execute("""CREATE OR REPLACE TABLE conc AS
+SELECT cf, cat, max(n) top_n FROM (
+  SELECT l.cf, c.cat, v.cf_imp, count(*) n FROM lavori l JOIN cat c USING (cig) JOIN agg a USING (cig) JOIN vinc v ON v.id = a.id
+  WHERE v.cf_imp IS NOT NULL GROUP BY 1, 2, 3) GROUP BY 1, 2""")
+mappa = {}
+for rg, c, cf, ente, prov, dir_, neg, tot, val, imp, conv, mese, top in con.execute("""
+  SELECT t.regione, t.cat, t.cf, t.ente, t.prov, t.diretti, t.negoziate, t.totale, t.valore, t.imprese, t.con_vincitore,
+         t.mese_picco, k.top_n FROM target t LEFT JOIN conc k USING (cf, cat)
+  WHERE t.diretti + t.negoziate >= 2 ORDER BY t.diretti + t.negoziate DESC""").fetchall():
+    lst = mappa.setdefault(rg or "?", {}).setdefault(c, [])
+    if len(lst) < 40:
+        lst.append({"cf": cf, "ente": ente, "prov": prov, "dir": dir_, "neg": neg, "val": val, "imp": imp,
+                    "conv": conv, "top": top, "mese": mese})
+with gzip.open(f"{OUT}/mappa_enti.json.gz", "wt", encoding="utf-8") as f:
+    json.dump({"generato": str(date.today()), "anni": ANNI, "regioni": mappa}, f, ensure_ascii=False, separators=(",", ":"), default=str)
+print("  mappa enti: regioni", len(mappa), "· righe", sum(len(v) for r in mappa.values() for v in r.values()), flush=True)
+
 enti = {}
 for cf, nome, prov in con.execute("SELECT cf, any_value(ente), any_value(provincia) FROM lavori WHERE cf IS NOT NULL GROUP BY cf").fetchall():
     enti[norm(nome)] = {"cf": cf, "prov": prov}
