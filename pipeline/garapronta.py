@@ -214,7 +214,7 @@ def per_iscritto(avvisi, u):
     def cat_ok(it):
         return altro or not it["cat"] or soa & set(it["cat"])
 
-    bandi, indagini, elenchi, diretti = [], [], [], []
+    bandi, indagini, elenchi, diretti, esiti = [], [], [], [], []
     for a in avvisi:
         if a["tipo"] != "avviso":
             continue
@@ -232,6 +232,8 @@ def per_iscritto(avvisi, u):
                 elenchi.append(riga)
             elif a["tipologia"] == "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA":
                 diretti.append(riga)
+            elif a["tipologia"] == "RISULTATI" and it.get("aggiudicatari") and cat_ok(it):
+                esiti.append(riga)
     oggi = datetime.now(timezone.utc).date()
 
     def aperta(r):
@@ -244,7 +246,41 @@ def per_iscritto(avvisi, u):
     key = lambda r: -(r[1].get("valore") or 0)
     bandi = [r for r in bandi if aperta(r)]
     indagini = [r for r in indagini if aperta(r)]
+    PER_ISCRITTO_EXTRA["esiti"] = sorted(esiti, key=key)
+    # affidamenti diretti: prima quelli delle sue categorie, poi i più grandi
+    PER_ISCRITTO_EXTRA["diretti_top"] = sorted(
+        [r for r in diretti if r[1].get("aggiudicatari")],
+        key=lambda r: (0 if (r[1]["cat"] and not altro and soa & set(r[1]["cat"])) else 1, -(r[1].get("valore") or 0)))
     return sorted(bandi, key=key), sorted(indagini, key=key), elenchi[:5], diretti
+
+
+PER_ISCRITTO_EXTRA = {}
+
+# Imprese che hanno chiesto di non comparire (codice fiscale/P.IVA o nome, uno per riga)
+try:
+    RIMOZIONI = {l.strip().upper() for l in open(os.path.join(os.path.dirname(__file__), "rimozioni.txt"), encoding="utf-8")
+                 if l.strip() and not l.startswith("#")}
+except FileNotFoundError:
+    RIMOZIONI = set()
+
+
+def imprese(it):
+    """Nomi degli aggiudicatari, tranne chi ha chiesto la rimozione."""
+    out = []
+    for g in it.get("aggiudicatari") or []:
+        nome, cf = (g.get("nome") or "").strip(), (g.get("cf") or "").strip().upper()
+        if not nome:
+            continue
+        out.append("Impresa (dato rimosso su richiesta)" if cf in RIMOZIONI or nome.upper() in RIMOZIONI else nome)
+    return out
+
+
+def ribasso(it):
+    v, w = it.get("valore"), it.get("vincente")
+    if v and w and 0 < w < v:
+        r = (v - w) / v * 100
+        return round(r, 1) if r < 60 else None
+    return None
 
 
 RESOCONTI = {}
@@ -373,6 +409,29 @@ def riepilogo_diretti(diretti, u):
 </td></tr></table>"""
 
 
+def riga_vincitore(a, it, con_ribasso):
+    t = frase(a.get("titolo") or it.get("descr") or "Lavori")
+    t = html.escape(t[:95] + ("…" if len(t) > 95 else ""))
+    imp = html.escape(", ".join(imprese(it))[:90])
+    rb = ribasso(it) if con_ribasso else None
+    destra = (f'<div style="font-size:15px;font-weight:700;color:{INK}">{euro(it.get("vincente") or it.get("valore"))}</div>'
+              + (f'<div style="font-size:12px;font-weight:600;color:#1f9d55">−{str(rb).replace(".", ",")}%</div>' if rb is not None else ""))
+    return f"""<tr><td style="padding:12px 0;border-top:1px solid #f0f0f3" valign="top">
+<div style="font-size:12px;color:{INK3}">{html.escape((a.get('ente') or '')[:60])}{(' · ' + " ".join(it['cat'][:2])) if it.get('cat') else ''}</div>
+<div style="font-size:14px;color:{INK};margin:2px 0 4px;line-height:1.3">{t}</div>
+<div style="font-size:13px;font-weight:650;color:{BLU}">🏆 {imp}</div></td>
+<td align="right" valign="top" style="padding:12px 0 12px 12px;border-top:1px solid #f0f0f3;white-space:nowrap">{destra}</td></tr>"""
+
+
+def sezione_vincitori(titolo_e, titolo, sotto, righe, con_ribasso, nota=""):
+    if not righe:
+        return ""
+    corpo = "".join(riga_vincitore(a, it, con_ribasso) for a, it in righe)
+    return titolo_sezione(titolo_e, titolo, sotto) + f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:6px 22px 14px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{corpo}</table>
+{f'<div style="font-size:12px;color:{INK2};margin-top:8px;line-height:1.45">{nota}</div>' if nota else ''}</td></tr></table>"""
+
+
 def email_html(u, bandi, indagini, elenchi, diretti, giorno):
     soa = set(u["soa"])
     n = len(bandi) + len(indagini)
@@ -405,7 +464,21 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
 <div style="font-size:15px;font-weight:650;color:{INK}">{html.escape(a['ente'][:70])}</div>
 <div style="font-size:13px;color:{INK2};margin:4px 0 12px">{html.escape(frase(a['titolo'] or it['descr'])[:140])}</div>
 <a href="{html.escape(a.get('link') or SITE)}" style="color:{BLU};font-size:14px;font-weight:600;text-decoration:none">Come iscriversi →</a></td></tr></table>""" for a, it in elenchi))
+    esiti = PER_ISCRITTO_EXTRA.get("esiti") or []
+    if esiti:
+        rbs = [ribasso(it) for _, it in esiti if ribasso(it) is not None]
+        med = sorted(rbs)[len(rbs) // 2] if rbs else None
+        blocchi.append(sezione_vincitori(
+            "Esiti di gara", "Chi ha vinto ieri",
+            f"{len(esiti)} gare aggiudicate nelle tue categorie" + (f" · ribasso mediano {str(med).replace('.', ',')}%" if med is not None else ""),
+            esiti[:8], True, "Importo di aggiudicazione e ribasso rispetto alla base d'asta, dai dati ANAC."))
     blocchi.append(riepilogo_diretti(diretti, u))
+    top = PER_ISCRITTO_EXTRA.get("diretti_top") or []
+    if top:
+        blocchi.append(sezione_vincitori(
+            "Affidamenti diretti", "A chi sono andati i lavori",
+            "I più rilevanti per te, con l'impresa scelta dall'ente.", top[:8], False,
+            "Sotto i 150.000 € l'ente sceglie l'impresa e deve ruotare gli inviti: chi è iscritto ai suoi elenchi ha più occasioni di essere chiamato."))
     if not (indagini or bandi or elenchi):
         blocchi.insert(1, f'<div style="background:#fff;border-radius:22px;border:1px solid #ececf0;padding:18px 22px;margin-top:20px;font-size:14px;color:{INK}">Ieri nessuna gara nuova per le tue categorie nella tua zona. Ti scriviamo appena esce.</div>')
     corpo = f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"></head>
@@ -418,7 +491,7 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
 <table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td style="background:{INK};border-radius:999px"><a href="{SITE}" style="display:inline-block;padding:12px 22px;color:#fff;font-size:14px;font-weight:600;text-decoration:none">Modifica categorie e zona</a></td></tr></table></div>
 <div style="font-size:11px;color:{INK3};margin-top:26px;line-height:1.55;text-align:center">Fonte: Piattaforma di pubblicità legale ANAC (dati CC BY 4.0). Controlla sempre i requisiti sui documenti ufficiali.<br>
 Il ribasso tipico è la mediana dei ribassi vincenti in gare simili: è un dato di mercato, non un consiglio d'offerta.<br>
-Ricevi questa email perché ti sei iscritto a GaraPronta · <a href="mailto:garapronta@gmail.com?subject=Disiscrivimi" style="color:{INK3}">Disiscriviti</a></div>
+Ricevi questa email perché ti sei iscritto a GaraPronta · <a href="mailto:garapronta@gmail.com?subject=Disiscrivimi" style="color:{INK3}">Disiscriviti</a> · <a href="{SITE}privacy.html" style="color:{INK3}">Privacy</a></div>
 </td></tr></table></td></tr></table></body></html>"""
     return corpo, n
 

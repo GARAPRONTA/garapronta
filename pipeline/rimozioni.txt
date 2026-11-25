@@ -1,0 +1,2 @@
+# Imprese che hanno chiesto di non comparire nelle email di GaraPronta.
+# Una per riga: codice fiscale / partita IVA (preferito) oppure denominazione esatta.
