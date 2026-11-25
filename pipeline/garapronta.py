@@ -344,6 +344,78 @@ def pulito(t):
                   t, flags=re.I)
 
 
+# ---------------------------------------------------------------- motore "quanto offrire" (banca dati ANAC)
+_IND = {}
+
+
+def _indici():
+    if not _IND:
+        try:
+            _IND["r"] = json.load(gzip.open("indici/ribassi.json.gz", "rt"))
+            _IND["e"] = json.load(gzip.open("indici/enti.json.gz", "rt"))
+        except Exception:
+            _IND["r"], _IND["e"] = {}, {}
+    return _IND["r"], _IND["e"]
+
+
+def _nome(s):
+    s = (s or "").upper().replace("'", " ")
+    return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9 ]", " ", s)).strip()
+
+
+SOCIETA = re.compile(r"\b(S\.?\s?R\.?\s?L|S\.?\s?P\.?\s?A|S\.?\s?N\.?\s?C|S\.?\s?A\.?\s?S|SOC\.?|SOCIETA|COOP|CONSORZIO|CONSORTILE|S\.?C\.?A\.?R\.?L|SCARL|S\.?C\.?R\.?L|GROUP|SPA|SRL|SRLS|S\.?R\.?L\.?S|ONLUS|FONDAZIONE|ASSOCIAZIONE|RTI|ATI)\b", re.I)
+
+
+def pubblico(nome):
+    """Nei contenuti pubblici (schede web) solo nomi di societa', mai ditte individuali."""
+    parti = [x.strip() for x in (nome or "").split("+")]
+    return " + ".join(x if SOCIETA.search(x) else "impresa individuale" for x in parti if x)
+
+
+def storico(a, it):
+    """Ribassi vincenti per questa gara: stesso ente e categoria; se pochi dati, regione; poi Italia."""
+    R, E = _indici()
+    if not R:
+        return None
+    cats = [c.replace(" ", "") for c in it.get("cat") or []]
+    if not cats:
+        return None
+    c = cats[0]
+    ente = E.get(_nome(a.get("ente")))
+    s = (R.get("ente", {}).get(ente["cf"], {}).get(c) if ente else None)
+    if s and s["n"] >= 3:
+        return {**s, "livello": "ente", "dove": a.get("ente"), "cat": c}
+    reg = _nome(regione(it) or "")
+    for k, v in (R.get("regione") or {}).items():
+        if _nome(k).replace(" ", "") == reg.replace(" ", "") and c in v and v[c]["n"] >= 10:
+            out = {**v[c], "livello": "regione", "dove": regione(it), "cat": c}
+            if s:
+                out["ente_poche"] = s
+            return out
+    v = (R.get("italia") or {}).get(c)
+    return {**v, "livello": "italia", "dove": "Italia", "cat": c} if v and v["n"] >= 10 else None
+
+
+def virgola(x):
+    return str(x).replace(".", ",")
+
+
+def blocco_storico(st):
+    """Riquadro nell'email: quanto ribassa chi vince da questo ente."""
+    if not st:
+        return ""
+    dove = {"ente": "questo ente", "regione": f"in {st['dove']}", "italia": "in Italia"}[st["livello"]]
+    w1, w2 = max(2, min(98, round(st["p25"] / 40 * 100))), max(4, min(100, round(st["p75"] / 40 * 100)))
+    off = f" · in media {round(st['off'])} offerte" if st.get("off") else ""
+    return f"""<div style="margin-top:14px;background:#f5f5f7;border-radius:14px;padding:12px 14px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+<td style="font-size:12px;color:{INK2}">Ribasso che vince · {st['cat']} {dove}</td>
+<td align="right" style="font-size:15px;font-weight:700;color:{INK}">{virgola(st['med'])}%</td></tr></table>
+<div style="position:relative;height:8px;background:#e3e3e8;border-radius:99px;margin:8px 0 6px">
+<div style="margin-left:{w1}%;width:{max(3, w2 - w1)}%;height:8px;background:{BLU};border-radius:99px"></div></div>
+<div style="font-size:11px;color:{INK3}">Metà delle gare vinte tra {virgola(st['p25'])}% e {virgola(st['p75'])}% · {st['n']} gare 2023-2025{off}</div></div>"""
+
+
 def barra_ribasso(r):
     w = max(8, min(100, round(r / 30 * 100)))
     return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px"><tr>
@@ -366,7 +438,8 @@ def scheda(a, it, soa, tipo):
             accento = "#ff9f0a"
     rib = ""
     if tipo == "bando":
-        rib = barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
+        st = storico(a, it)
+        rib = blocco_storico(st) if st else barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
     res = RESOCONTI.get(it.get("cig") or "")
     ufficiale = pulito(a["titolo"] or it["descr"] or "Lavori")
     if len(ufficiale) < 20 and (it.get("descr") or "").strip():   # titoli tipo "Lotto 1": meglio la descrizione
@@ -435,6 +508,17 @@ def pagina_gara(a, it, tipo):
                     for p in res.get("punti") or [])
     att = "".join(f"<li>{e(x)}</li>" for x in res.get("attenzione") or [])
     blocco_descr = f'<h2>Descrizione</h2><p>{e(descr)}</p>' if descr and descr.lower() not in ufficiale.lower() else ""
+    st = storico(a, it)
+    blocco_st = ""
+    if st:
+        dove = {"ente": e(a.get("ente") or "questo ente"), "regione": "in " + e(st["dove"]), "italia": "in Italia"}[st["livello"]]
+        righe = "".join(f'<tr><td>{e(x["d"])}</td><td>{e(frase(x["g"]))}</td><td style="text-align:right">{euro(x["i"]) if x["i"] else "—"}</td>'
+                        f'<td style="text-align:right"><b>{virgola(x["r"])}%</b></td><td style="text-align:right">{x["o"] or "—"}</td><td>{e(pubblico(x["v"]))}</td></tr>'
+                        for x in (st.get("ultime") or (st.get("ente_poche") or {}).get("ultime") or []))
+        tab = (f'<h2>Le ultime gare {st["cat"]} di {e(a.get("ente") or "questo ente")}</h2><div style="overflow-x:auto"><table class="u"><tr><th>Mese</th><th>Oggetto</th><th>Base</th><th>Ribasso</th><th>Offerte</th><th>Vincitore</th></tr>{righe}</table></div>') if righe else ""
+        blocco_st = f"""<div class="card"><h2 style="margin-top:0;color:#007aff">Quanto si ribassa per vincere</h2>
+<div class="imp">{virgola(st['med'])}%</div><p class="uff">Ribasso mediano delle gare {st['cat']} vinte {dove} (2023-2025). Metà delle gare tra <b>{virgola(st['p25'])}%</b> e <b>{virgola(st['p75'])}%</b> · {st['n']} gare{(' · in media ' + str(round(st['off'])) + ' offerte') if st.get('off') else ''}.</p>
+{tab}<p class="f" style="text-align:left;margin-top:12px">Dati di mercato dalla Banca dati nazionale dei contratti pubblici (ANAC, CC BY-SA 4.0). Non è un consiglio d'offerta: ogni gara ha il suo progetto e i suoi prezzi.</p></div>"""
     return f"""<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(titolo[:90])} · GaraPronta</title><meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
@@ -449,6 +533,7 @@ body{{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",san
 td{{font-size:14px;padding:9px 0;border-top:1px solid #f0f0f3}} small{{display:block;color:#86868b;font-size:11px;margin-top:2px}}
 .att li{{color:#c2410c;font-size:14px;margin:4px 0}} .btn{{display:inline-block;background:#007aff;color:#fff;text-decoration:none;font-weight:600;border-radius:99px;padding:12px 22px;margin-top:8px}}
 .f{{font-size:12px;color:#86868b;text-align:center}}
+table.u th{{width:auto;font-size:11px;padding:6px 8px 6px 0}} table.u td{{font-size:12px;padding:7px 8px 7px 0;vertical-align:top}}
 </style></head><body><div class="w">
 <header><a href="{SITE}">● GaraPronta</a></header>
 <div class="card">
@@ -461,6 +546,7 @@ td{{font-size:14px;padding:9px 0;border-top:1px solid #f0f0f3}} small{{display:b
 {blocco_descr}
 <div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a></div>
 </div>
+{blocco_st}
 {f'<div class="card"><h2 style="margin-top:0;color:#007aff">In breve · letto dai documenti di gara</h2><table>{punti}</table>' + (f'<ul class="att">{att}</ul>' if att else "") + "</div>" if punti else ""}
 <div class="card"><table>
 <tr><th>Ente</th><td>{e(a.get("ente") or "")}</td></tr>
@@ -597,7 +683,7 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
 <div style="text-align:center;margin:34px 0 0">
 <table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td style="background:{INK};border-radius:999px"><a href="{SITE}" style="display:inline-block;padding:12px 22px;color:#fff;font-size:14px;font-weight:600;text-decoration:none">Modifica categorie e zona</a></td></tr></table></div>
 <div style="font-size:11px;color:{INK3};margin-top:26px;line-height:1.55;text-align:center">Fonte: Piattaforma di pubblicità legale ANAC (dati CC BY 4.0). Controlla sempre i requisiti sui documenti ufficiali.<br>
-Il ribasso tipico è la mediana dei ribassi vincenti in gare simili: è un dato di mercato, non un consiglio d'offerta.<br>
+Ribassi: mediana delle gare vinte 2023-2025, dalla Banca dati nazionale dei contratti pubblici (ANAC, CC BY-SA 4.0). È un dato di mercato, non un consiglio d'offerta.<br>
 Ricevi questa email perché ti sei iscritto a GaraPronta · <a href="mailto:garapronta@gmail.com?subject=Disiscrivimi" style="color:{INK3}">Disiscriviti</a> · <a href="{SITE}privacy.html" style="color:{INK3}">Privacy</a></div>
 </td></tr></table></td></tr></table></body></html>"""
     return corpo, n
