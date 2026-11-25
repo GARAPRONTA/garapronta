@@ -16,7 +16,7 @@ for reg, u in EXTRA.items():
     if not os.path.exists(dest):
         subprocess.run(["curl", "-fsSL", "-A", UA, "-o", dest, u], timeout=600)
 
-COD = re.compile(r"^[A-Z0-9]{1,7}([._\-/ ][A-Z0-9]{1,8}){1,9}$", re.I)
+COD = re.compile(r"^[A-Z0-9]{1,7}([._\-/][A-Z0-9]{1,8}){1,9}[.]?$", re.I)
 UM = re.compile(r"^(?:1\s+)?(m|m2|m²|mq|m3|m³|mc|ml|kg|t|q|cad|cad\.|n|nr|n\.|a corpo|ora|h|ore|giorno|gg|l|lt|km|dm3|cm|mese|%|kw|cadauno|corpo|mt|tonn)\b", re.I)
 
 
@@ -51,11 +51,45 @@ def da_riga(cells):
     return cod, prezzo, re.sub(r"^1\s+", "", vals[i_um]), descr[:90]
 
 
+def pulisci_xml(data):
+    """Toglie i riferimenti a caratteri non validi in XML (es. &#1;) che bloccano la lettura."""
+    def ok(m):
+        v = m.group(1)
+        n = int(v[1:], 16) if v[:1] in "xX" else int(v)
+        return m.group(0) if n in (9, 10, 13) or n >= 32 else b" "
+    return re.sub(rb"&#(x?[0-9A-Fa-f]+);", ok, data)
+
+
+def easy(data):
+    """Prezzari nel formato XML 'EASY' (piattaforma di Campania, Piemonte, Sardegna, Toscana):
+    <EASY:Articolo codice="..."> ... <EASY:um>..</EASY:um> <EASY:prezzo>553,49</EASY:prezzo> ..."""
+    import xml.etree.ElementTree as ET
+    out = []
+    for ev, el in ET.iterparse(io.BytesIO(pulisci_xml(data)), events=("end",)):
+        if el.tag.split("}")[-1] != "Articolo":
+            continue
+        cod = el.get("codice") or ""
+        um = prezzo = None
+        descr = ""
+        for c in el:
+            t = c.tag.split("}")[-1]
+            if t == "um":
+                um = (c.text or "").strip()
+            elif t == "prezzo":
+                prezzo = numero(c.text)
+            elif t in ("livello3", "livello4", "descrizione") and not descr:
+                descr = (c.get("descrizionebreve") or c.text or "").strip()
+        if cod and prezzo:
+            out.append((cod.upper().rstrip(".-"), prezzo, um or "", re.sub(r"\s+", " ", descr)[:90]))
+        el.clear()
+    return out
+
+
 def six(data):
     """Prezzari nello standard XML SIX: <prodotto prdId=...><prdDescrizione breve=.../><prdQuotazione valore=.../></prodotto>."""
     import xml.etree.ElementTree as ET
     um, out = {}, []
-    for ev, el in ET.iterparse(io.BytesIO(data), events=("end",)):
+    for ev, el in ET.iterparse(io.BytesIO(pulisci_xml(data)), events=("end",)):
         tag = el.tag.split("}")[-1]
         if tag == "unitaDiMisura":
             um[el.get("unitaDiMisuraId")] = el.get("simbolo") or el.get("udmId") or ""
@@ -80,7 +114,7 @@ def righe_file(nome, data):
                 yield from righe_file(f, z.read(f))
         return
     if n.endswith(".xml") or data[:200].lstrip().startswith(b"<"):
-        for x in six(data):
+        for x in (easy(data) if b"EASY:" in data[:2000] else six(data)):
             yield ("__SIX__",) + x
         return
     if n.endswith(".xlsx"):
