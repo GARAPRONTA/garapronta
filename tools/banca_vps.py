@@ -187,13 +187,11 @@ CREATE OR REPLACE TABLE soa AS
 SELECT a.ATA_impresa_codiceFiscale cf_imp, any_value(a.ATA_impresa_denominazione) nome, any_value(a.ATA_provincia_nome) prov,
        replace(c.ATCR_categoria, ' ', '') cat, max(c.ATCR_classifica) classe
 FROM read_csv('{att}', {OPZ2}) a JOIN read_csv('{att_cat}', {OPZ2}) c ON c."_idAttestazione" = a."_idAttestazione"
-WHERE a.ATA_attestato_stato NOT ILIKE '%SCADUT%' AND a.ATA_attestato_stato NOT ILIKE '%SOSTITUIT%'
-  AND a.ATA_attestato_stato NOT ILIKE '%ANNULLAT%' AND a.ATA_attestato_stato NOT ILIKE '%DECADUT%'
-  AND a.ATA_attestato_stato NOT ILIKE '%REVOC%' AND a.ATA_attestato_stato NOT ILIKE '%SOSPES%'
+WHERE a.ATA_attestato_stato = 'PUBBLICO'
   AND try_strptime(a.ATA_attestato_dataScadenzaValiditaQuinquennale, '%Y-%m-%d') >= current_date
 GROUP BY 1, 4""")
 con.execute("""CREATE OR REPLACE TABLE vittorie AS
-SELECT v.cf_imp, count(*) n, count(*) FILTER (WHERE c.cat IS NOT NULL) n_cat
+SELECT v.cf_imp, count(*) n
 FROM vinc_righe v JOIN agg a ON a.id = v.id GROUP BY 1""")
 con.execute("""CREATE OR REPLACE TABLE vitt_cat AS
 SELECT v.cf_imp, c.cat, count(*) n FROM vinc_righe v JOIN agg a ON a.id = v.id JOIN cat c ON c.cig = a.cig GROUP BY 1, 2""")
