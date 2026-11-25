@@ -1,0 +1,29 @@
+name: Banca dati ANAC (server italiano)
+on:
+  schedule:
+    - cron: '23 2 3 * *'   # il 3 di ogni mese: ANAC aggiorna i dataset a inizio mese
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: banca
+jobs:
+  banca:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Costruisci la banca dati sul server italiano
+        env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
+        run: |
+          sudo apt-get install -y -qq sshpass >/dev/null
+          O="-o StrictHostKeyChecking=no -o ServerAliveInterval=30 -o ServerAliveCountMax=20"
+          sshpass -e scp $O tools/banca_vps.py root@$H:/opt/garapronta/
+          sshpass -e ssh $O root@$H "cd /opt/garapronta && mkdir -p anac/tmp && ./venv/bin/pip install -q duckdb && timeout 9000 ./venv/bin/python -u banca_vps.py"
+          mkdir -p indici
+          sshpass -e scp $O "root@$H:/opt/garapronta/indici/*.json.gz" indici/
+          ls -la indici
+      - name: Salva gli indici
+        run: |
+          git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
+          git add indici && git commit -q -m "Indici ANAC $(date -u +%F)" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q && break; sleep 7; done
