@@ -476,10 +476,12 @@ def una(url, cart, cig="", titolo=""):
         esito, metodo, files = f"errore {type(e).__name__}", "diretto", []
     files = senza_doppi(files)
     # progetto su cloud esterno (link dentro un PDF di gara)
-    for u in link_esterni(files):
+    esterni, presi = link_esterni(files), 0
+    for u in esterni:
         try:
             files.append(scarica_esterno(u))
             metodo += "+cloud"
+            presi += 1
         except Exception:
             pass
     nf = 0
@@ -488,6 +490,8 @@ def una(url, cart, cig="", titolo=""):
         nf = len(files)
         if not any(x["caratteri"] > 500 for x in docs):
             esito = "file senza testo (scansioni?)"
+        elif esterni and not presi:
+            esito = "progetto su cloud da scaricare dall'Italia"   # lo riprova il server italiano
     print(json.dumps({"esito": esito, "metodo": metodo, "file": nf}))
 
 
@@ -537,7 +541,7 @@ def lista(tsv, outdir):
         url, cig, tit = r[0], r[1], r[2]
         try:
             p = subprocess.run([sys.executable, __file__, "--una", url, f"{outdir}/{cig}", cig, tit],
-                               capture_output=True, text=True, timeout=330 if "start.toscana" in url else 200)
+                               capture_output=True, text=True, timeout=420)
             ris = json.loads((p.stdout.strip().splitlines() or ["{}"])[-1] or "{}")
         except Exception:
             ris = {}
@@ -617,7 +621,8 @@ def main():
         return url, ris
     with ThreadPoolExecutor(max_workers=8) as ex:
         risultati = dict(ex.map(lancia, unici.items()))
-    DA_RIFARE = ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore", "file senza testo")
+    DA_RIFARE = ("bloccata", "link senza file", "nessun file trovato", "troppo lenta", "errore", "file senza testo",
+                 "progetto su cloud da scaricare dall'Italia")
     # --- secondo giro: server italiano (Aruba) con Chrome, gratis
     falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in DA_RIFARE]
     if falliti and os.environ.get("VPS_HOST") and os.environ.get("SSHPASS"):
