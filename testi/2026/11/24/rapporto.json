@@ -61,7 +61,7 @@
   "piattaforma": "sardegnacat.regione.sardegna.it",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 3
+  "file": 4
  },
  {
   "cig": "BDCA1D9D35",
@@ -291,8 +291,8 @@
   "cig": "BDED597433",
   "url": "https://www.halleyweb.com/c018153/zf/index.php/bandi-gara/avvisi/avvisi",
   "piattaforma": "www.halleyweb.com",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
   "file": 0
  },
  {
