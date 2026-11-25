@@ -19,7 +19,7 @@ from html import unescape
 from urllib.parse import urljoin, urlparse, parse_qs, unquote
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 GaraPronta"
-MAX_FILE = 30 * 1024 * 1024
+MAX_FILE = 100 * 1024 * 1024   # gli archivi di progetto possono essere grandi
 MAX_FILES = 15
 MAX_TESTO = 600_000          # caratteri salvati per gara
 EST = (".pdf", ".p7m", ".zip", ".doc", ".docx", ".rtf", ".odt", ".xls", ".xlsx")
@@ -166,7 +166,7 @@ TIPI = [("disciplinare", r"disciplinar"), ("lettera_invito", r"lettera.{0,5}invi
 
 
 def tipo_doc(nome):
-    n = nome.lower()
+    n = os.path.basename(nome).lower()
     for t, p in TIPI:
         if re.search(p, n):
             return t
@@ -330,10 +330,63 @@ def gara(cig, url, titolo=""):
     return ("ok" if files else "link senza file"), metodo, files
 
 
+UTILI = (".pdf", ".p7m", ".doc", ".docx", ".rtf", ".odt", ".zip", ".7z", ".rar")
+# negli archivi di progetto: niente tavole grafiche (lente da leggere e inutili per il resoconto)
+GRAFICI = re.compile(r"(^|[\W_])(tav|tavola|planimetri|pianta|piante|sezion|prospett|particolar|grafic|render|foto|dwg|layout|schema)", re.I)
+
+
+def _utile(nome):
+    b = os.path.basename(nome)
+    return b.lower().endswith(UTILI) and (not GRAFICI.search(b) or re.search(r"comput|prezz|stima|capitolat|relazion", b, re.I))
+
+
+def espandi(files, livello=0):
+    """Apre gli archivi (zip, 7z, rar) e restituisce i singoli documenti, con il nome 'archivio/percorso/file'.
+    Così computo metrico, elenco prezzi e stima manodopera dentro lo ZIP del progetto vengono riconosciuti."""
+    out = []
+    for nome, data in files:
+        n = nome.lower()
+        arch = None
+        if data[:2] == b"PK" and not n.endswith((".docx", ".xlsx", ".odt", ".ods")):
+            arch = "zip"
+        elif data[:6] == b"7z\xbc\xaf\x27\x1c" or n.endswith(".7z"):
+            arch = "7z"
+        elif data[:4] == b"Rar!" or n.endswith(".rar"):
+            arch = "rar"
+        if not arch or livello > 2:
+            out.append((nome, data))
+            continue
+        interni = []
+        try:
+            if arch == "zip":
+                with zipfile.ZipFile(io.BytesIO(data)) as z:
+                    for i in z.infolist()[:200]:
+                        if not i.is_dir() and i.file_size < MAX_FILE and _utile(i.filename) and len(interni) < 40:
+                            interni.append((i.filename, z.read(i)))
+            else:
+                with tempfile.TemporaryDirectory() as d:
+                    a = os.path.join(d, "a." + arch)
+                    open(a, "wb").write(data)
+                    subprocess.run(["7z", "x", "-y", f"-o{d}/x", a], capture_output=True, timeout=300)
+                    for root, _, fs in os.walk(f"{d}/x"):
+                        for f in fs:
+                            if _utile(f) and len(interni) < 40:
+                                p = os.path.join(root, f)
+                                if os.path.getsize(p) < MAX_FILE:
+                                    interni.append((os.path.relpath(p, f"{d}/x"), open(p, "rb").read()))
+        except Exception:
+            out.append((nome, data))
+            continue
+        base = os.path.basename(nome)
+        out += espandi([(f"{base}/{x}", b) for x, b in interni], livello + 1)
+    return out
+
+
 def salva_gara(files, cart):
     """Estrae i testi e salva testi.json.gz nella cartella della gara. Restituisce l'elenco dei documenti."""
     os.makedirs(cart, exist_ok=True)
     docs = []
+    files = espandi(files)
     for nome, data in files:
         try:
             formato, testo = testo_da(nome, data)
