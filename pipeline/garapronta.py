@@ -367,9 +367,9 @@ SOCIETA = re.compile(r"\b(S\.?\s?R\.?\s?L|S\.?\s?P\.?\s?A|S\.?\s?N\.?\s?C|S\.?\s
 
 
 def pubblico(nome):
-    """Nei contenuti pubblici (schede web) solo nomi di societa', mai ditte individuali."""
+    """Nomi delle imprese nelle pagine web: tutti, tranne chi ha chiesto la rimozione."""
     parti = [x.strip() for x in (nome or "").split("+")]
-    return " + ".join(x if SOCIETA.search(x) else "impresa individuale" for x in parti if x)
+    return " + ".join("Impresa (dato rimosso su richiesta)" if x.upper() in RIMOZIONI else x for x in parti if x)
 
 
 def storico(a, it):
@@ -571,6 +571,7 @@ def partner_per(a, cat, n=5):
         reg = _COMUNI.get(_norm(prov))
         altri = [x for pv, cats in P.items() if pv != prov and _COMUNI.get(_norm(pv)) == reg for x in cats.get(c, [])]
         out += sorted(altri, key=lambda x: (-x["vc"], -x["v"]))
+    out = [x for x in out if (x.get("cf") or "").upper() not in RIMOZIONI and (x.get("nome") or "").upper() not in RIMOZIONI]
     return out[:n], prov
 
 
@@ -707,8 +708,7 @@ def pagina_gara(a, it, tipo):
         blocco_partner = ('<div class="card" id="partner"><h2 style="margin-top:0;color:#007aff">Trova partner per le altre categorie</h2>'
                           '<p class="uff">Imprese con attestazione SOA in corso di validità nelle categorie richieste dalla gara oltre alla prevalente, '
                           'vicino all\'ente. Utili per un raggruppamento (RTI) o per l\'avvalimento.</p>' + "".join(sezioni) +
-                          '<p class="f" style="text-align:left;margin-top:12px">Fonte: attestazioni SOA e aggiudicazioni 2023-2025 (ANAC, CC BY-SA 4.0). '
-                          'Le ditte individuali non sono nominate sulle pagine pubbliche.</p></div>')
+                          '<p class="f" style="text-align:left;margin-top:12px">Fonte: attestazioni SOA e aggiudicazioni 2023-2025 (ANAC, CC BY-SA 4.0).</p></div>')
     st = storico(a, it)
     blocco_st = ""
     if st:
