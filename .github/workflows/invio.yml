@@ -11,9 +11,20 @@ concurrency: giornaliera
 jobs:
   invia:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      - name: Aspetta i resoconti (max 35 minuti)
+        # L'avvio pianificato di GitHub arriva anche con ~1 ora di ritardo: dati e documenti
+        # finiscono verso le 7:10 e i resoconti di Claude arrivano dopo. Se mancano, aspetta.
+        if: github.event_name == 'schedule'
+        run: |
+          F="resoconti/$(date -u -d yesterday +%Y/%m/%d).json"
+          for i in $(seq 1 7); do
+            [ -f "$F" ] && { echo "Resoconti pronti: $F"; exit 0; }
+            echo "Manca $F, riprovo tra 5 minuti ($i/7)"; sleep 300; git pull -q
+          done
+          echo "Resoconti non arrivati: invio senza resoconti"
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Invia le email (con i resoconti, se pronti)
