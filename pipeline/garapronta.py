@@ -997,6 +997,7 @@ def scheda(a, it, soa, tipo):
 {breve}
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:16px"><tr>
 <td style="background:{BLU};border-radius:999px"><a href="{link}" style="display:inline-block;padding:10px 18px;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none">Apri i documenti</a></td>
+<td style="padding-left:12px;font-size:12px"><a href="{html.escape(url_anac(a) or SITE)}" style="color:{INK2};text-decoration:none">Avviso ANAC ›</a></td>
 <td style="padding-left:12px;font-size:11px;color:{INK3}">CIG {html.escape(it.get('cig') or '')}</td></tr></table>
 </td></tr></table>"""
 
@@ -1022,6 +1023,28 @@ def analisi_computo(it, giorno=None):
                     migliore = a
         return migliore
     return None
+
+
+def url_anac(a):
+    """Avviso ufficiale sulla Piattaforma di pubblicità legale ANAC: funziona sempre, anche quando il link dell'ente no."""
+    return f"https://pubblicitalegale.anticorruzione.it/bandi/{a['id']}" if a.get("id") else None
+
+
+_RAPPORTI = {}
+
+
+def esito_documenti(it):
+    """Come è andato lo scarico dei documenti per questa gara (da testi/AAAA/MM/GG/rapporto.json)."""
+    import glob
+    if not _RAPPORTI:
+        for f in glob.glob("testi/*/*/*/rapporto.json"):
+            try:
+                for r in json.load(open(f)):
+                    _RAPPORTI[r["cig"]] = r
+            except Exception:
+                pass
+        _RAPPORTI["_"] = {}
+    return (_RAPPORTI.get(it.get("cig") or "") or {}).get("esito", "")
 
 
 def url_scheda(it):
@@ -1132,7 +1155,9 @@ table.u th{{width:auto;font-size:11px;padding:6px 8px 6px 0}} table.u td{{font-s
 {f'<h2>Cosa si fa</h2><p>{e(res["lavori"])}</p>' if res.get("lavori") else ""}
 <h2>Oggetto ufficiale</h2><p class="uff">{e(ufficiale)}</p>
 {blocco_descr}
-<div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a></div>
+<div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a>
+{f'<a class="btn" style="background:#f0f0f3;color:#1d1d1f;margin-left:8px" href="{e(url_anac(a))}">Avviso ufficiale ANAC</a>' if url_anac(a) else ''}</div>
+{('<p class="uff" style="margin-top:12px;color:#c2410c">Il link indicato dall\'ente non porta alla pagina della gara (o la gara non è ancora visibile sulla piattaforma). Usa l\'avviso ufficiale ANAC e, per i documenti, contatta l\'ente o riprova nei prossimi giorni: noi ricontrolliamo ogni mattina.</p>') if esito_documenti(it).startswith(("nessun file", "bloccata", "link senza")) else ''}
 </div>
 {blocco_st}
 {blocco_comp}
