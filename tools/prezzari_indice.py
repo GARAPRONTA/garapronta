@@ -150,6 +150,8 @@ def righe_file(nome, data):
         yield from csv.reader(io.StringIO(txt), delimiter=sep)
 
 
+for vecchio in glob.glob(f"{OUT}/*.json.gz"):
+    os.remove(vecchio)
 per_reg = {}
 for f in sorted(glob.glob(f"{D}/*")):
     b = os.path.basename(f)
@@ -174,6 +176,10 @@ for f in sorted(glob.glob(f"{D}/*")):
         print(f"{reg:24} {os.path.basename(f)[:60]:60} ERRORE {type(e).__name__}: {str(e)[:120]}", flush=True)
 ANNO = {"Sicilia": 2024, "Lazio": 2023, "Umbria": 2025}   # prezzari prorogati, ancora in vigore nel 2026
 for reg, voci in per_reg.items():
+    buone = sum(1 for k, v in voci.items() if v[2] and not re.fullmatch(r"[\d.]+", k))
+    if buone < 1000:
+        print(f"== {reg}: scartato, solo {buone} voci leggibili", flush=True)
+        continue
     with gzip.open(f"{OUT}/{reg}.json.gz", "wt", encoding="utf-8") as fo:
         json.dump({"regione": reg, "anno": ANNO.get(reg, 2026), "voci": voci}, fo, ensure_ascii=False, separators=(",", ":"))
     esempi = list(voci.items())[:3]

@@ -2,6 +2,8 @@
 import glob, gzip, json, os, re
 
 os.makedirs("g/prezzi", exist_ok=True)
+for vecchio in glob.glob("g/prezzi/*.json.gz"):
+    os.remove(vecchio)
 regioni = []
 for f in sorted(glob.glob("indici/prezzari/*.json.gz")):
     j = json.load(gzip.open(f, "rt"))
