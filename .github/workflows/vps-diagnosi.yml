@@ -7,10 +7,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: anche da GitHub (estero)
-        run: python3 tools/vps_diagnosi.py || true
       - env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
         run: |
           sudo apt-get install -y -qq sshpass >/dev/null
-          sshpass -e scp -o StrictHostKeyChecking=no tools/vps_diagnosi.py root@$H:/opt/garapronta/
+          sshpass -e scp -o StrictHostKeyChecking=no tools/vps_diagnosi.py pipeline/documenti.py pipeline/lettori.py root@$H:/opt/garapronta/
           sshpass -e ssh -o StrictHostKeyChecking=no root@$H "cd /opt/garapronta && timeout 600 ./venv/bin/python vps_diagnosi.py"

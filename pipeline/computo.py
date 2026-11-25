@@ -115,14 +115,26 @@ def chiavi(cod):
         out.append(m.group(1))
     for x in list(out):
         out.append(x.rstrip(".-_"))
+    out += [norm_cod(x) for x in list(out)]
     return list(dict.fromkeys(out))
+
+
+def norm_cod(c):
+    """Toglie gli zeri iniziali nei pezzi numerici: U.008.010.240.A (2025) == U.08.10.240.A (2026)."""
+    return ".".join(str(int(x)) if x.isdigit() else x for x in re.split(r"[._\-/]", (c or "").upper()) if x)
+
+
+_NORM = {}
 
 
 def confronto(vs, regione):
     """Prezzi del progetto contro il prezzario in vigore, sulle voci con lo stesso codice."""
-    P = prezzario_corrente(regione) if regione else None
-    if not P:
+    P0 = prezzario_corrente(regione) if regione else None
+    if not P0:
         return None
+    if regione not in _NORM:
+        _NORM[regione] = {**{norm_cod(k): v for k, v in P0.items()}, **P0}
+    P = _NORM[regione]
     tot_prog = tot_corr = imp = 0.0
     n = 0
     for v in vs:
