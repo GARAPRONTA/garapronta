@@ -12,7 +12,7 @@ Variabili d'ambiente: BREVO_API_KEY (secret), BREVO_LIST_ID (default 5),
 DATA (gg/mm/aaaa, default ieri), LIVE=1 per inviare a tutti, DRY=1 per non inviare nulla.
 """
 import re
-import gzip, html, json, os, sys, time, urllib.request, urllib.error
+import gzip, html, json, os, sys, time, urllib.parse, urllib.request, urllib.error
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 
@@ -177,7 +177,9 @@ def iscritti(key, lista):
             soa = [s.strip().upper().replace("OG", "OG ").replace("OS", "OS ").replace("  ", " ")
                    for s in (at.get("SOA") or "").split(",") if s.strip()]
             out.append({"email": c["email"], "soa": soa, "regione": (at.get("REGIONE") or "Tutta Italia").strip(),
-                        "settore": (at.get("SETTORE") or "Lavori edili").strip()})
+                        "settore": (at.get("SETTORE") or "Lavori edili").strip(),
+                        "enti": [x for x in (at.get("ENTI") or "").split(",") if x.strip()],
+                        "no_enti": [x for x in (at.get("ENTI_NO") or "").split(",") if x.strip()]})
         if len(cs) < 500:
             break
         off += 500
@@ -248,6 +250,8 @@ def per_iscritto(avvisi, u):
     bandi = [r for r in bandi if aperta(r)]
     indagini = [r for r in indagini if aperta(r)]
     PER_ISCRITTO_EXTRA["esiti"] = sorted(esiti, key=key)
+    PER_ISCRITTO_EXTRA["mov"] = movimenti_enti(avvisi, u)
+    PER_ISCRITTO_EXTRA["seguiti"] = set(seguiti(u))
     # affidamenti diretti: prima quelli delle sue categorie, poi i più grandi
     PER_ISCRITTO_EXTRA["diretti_top"] = sorted(
         [r for r in diretti if r[1].get("aggiudicatari")],
@@ -484,6 +488,7 @@ def sezione_enti(u):
             extra.append(f'<a href="{html.escape(e["elenchi"][0]["link"] or SITE)}" style="color:#1f9d55;font-weight:600;text-decoration:none">Elenco imprese ›</a>')
         if e["piatt"]:
             extra.append(f'<a href="{html.escape(e["piatt"])}" style="color:{BLU};font-weight:600;text-decoration:none">Piattaforma gare ›</a>')
+        extra.append(f'<a href="{html.escape(url_segui(e["cf"], e["ente"], off=True))}" style="color:{INK3};text-decoration:none">Non seguire</a>')
         mese = f" · più attivo a {MESI_IT[int(e['mese']) - 1]}" if e.get("mese") else ""
         righe += f"""<tr><td style="padding:12px 0;border-top:1px solid #f0f0f3">
 <div style="font-size:14px;font-weight:650;color:{INK}">{html.escape(titolo_ente(e['ente']))} <span style="font-weight:400;color:{INK3};font-size:12px">{html.escape(titolo_ente(e.get('prov') or ''))}</span></div>
@@ -493,7 +498,8 @@ def sezione_enti(u):
                           f"{', '.join(c.replace(' ', '') for c in cats)} in {reg}, ultimi 3 anni. Farsi conoscere da questi enti è la strada per essere invitati.") + f"""
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:4px 22px 16px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{righe}</table>
-<div style="margin-top:12px"><a href="{url_mappa(reg, cats)}" style="font-size:14px;font-weight:600;color:{BLU};text-decoration:none">▸ Vedi tutti gli enti della tua zona</a></div>
+<div style="font-size:12px;color:{INK2};margin-top:10px;line-height:1.45">Segui già i 15 enti principali della tua zona: ogni mattina ti diciamo cosa hanno fatto. Vuoi seguirne altri? Aprili dalla mappa completa.</div>
+<div style="margin-top:10px"><a href="{url_mappa(reg, cats)}" style="font-size:14px;font-weight:600;color:{BLU};text-decoration:none">▸ Vedi tutti gli enti della tua zona</a></div>
 </td></tr></table>"""
 
 
@@ -573,6 +579,132 @@ def partner_per(a, cat, n=5):
         out += sorted(altri, key=lambda x: (-x["vc"], -x["v"]))
     out = [x for x in out if (x.get("cf") or "").upper() not in RIMOZIONI and (x.get("nome") or "").upper() not in RIMOZIONI]
     return out[:n], prov
+
+
+# ---------------------------------------------------------------- segui i tuoi enti
+def url_segui(cf, nome, off=False):
+    from urllib.parse import quote
+    return f"{SITE}segui.html?{'off' if off else 'cf'}={cf}&n={quote(titolo_ente(nome))}"
+
+
+def seguiti(u):
+    """Enti seguiti: quelli scelti con 'Segui' + i 15 principali della mappa (tolti quelli smessi)."""
+    cf = list(dict.fromkeys(u.get("enti") or []))
+    if u["regione"].lower() not in ("tutta italia", ""):
+        cats = [c for c in u["soa"] if c != "ALTRA"][:4] or ["OG 1", "OG 3"]
+        cf += [e["cf"] for e in enti_bersaglio(u["regione"], cats, 15)]
+    no = set(u.get("no_enti") or [])
+    return [x for x in dict.fromkeys(cf) if x not in no]
+
+
+def movimenti_enti(avvisi, u):
+    """Cosa hanno fatto ieri gli enti seguiti: affidamenti, inviti, bandi, elenchi, preinformazioni, esiti (solo lavori)."""
+    R, E = _indici()
+    mio = set(seguiti(u))
+    if not mio:
+        return []
+    out = []
+    for a in avvisi:
+        if a.get("tipo") != "avviso":
+            continue
+        e = E.get(_nome(a.get("ente")))
+        if not e or e["cf"] not in mio or a["tipologia"] in ("MODIFICHE_CONTRATTUALI", "AFFIDAMENTI_IN_HOUSE", "SISTEMI_DI_QUALIFICAZIONE"):
+            continue
+        for it in a.get("items") or [{}]:
+            if (it.get("natura") or "").lower() != "lavori" and a["tipologia"] not in ("ELENCHI_OPERATORI_ECONOMICI",):
+                continue
+            out.append((a, it, e["cf"]))
+            break
+    ordine = {"ELENCHI_OPERATORI_ECONOMICI": 0, "INDAGINI_DI_MERCATO_SOTTO_SOGLIA": 1, "AVVISI_DI_PRE-INFORMAZIONE_INDITTIVI": 2,
+              "AVVISI_DI_PRE-INFORMAZIONE_INFORMATIVI": 2, "BANDI": 3, "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA": 4, "RISULTATI": 5}
+    return sorted(out, key=lambda x: (ordine.get(x[0]["tipologia"], 9), -(x[1].get("valore") or 0)))
+
+
+ETICHETTE = {
+    "ELENCHI_OPERATORI_ECONOMICI": ("Elenco imprese aperto", "#1f9d55", "#e7f6ee"),
+    "INDAGINI_DI_MERCATO_SOTTO_SOGLIA": ("Cerca imprese da invitare", BLU, "#e8f1ff"),
+    "AVVISI_DI_PRE-INFORMAZIONE_INDITTIVI": ("Gara in arrivo", "#7c3aed", "#f1eafe"),
+    "AVVISI_DI_PRE-INFORMAZIONE_INFORMATIVI": ("Gara in arrivo", "#7c3aed", "#f1eafe"),
+    "BANDI": ("Nuova gara", INK, "#f0f0f3"),
+    "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA": ("Affidato senza gara", "#c2410c", "#fdeee6"),
+    "RISULTATI": ("Esito", INK2, "#f0f0f3"),
+}
+
+
+def link_segui(a):
+    """'+ Segui' accanto all'ente nell'email, se l'iscritto non lo segue già."""
+    R, E = _indici()
+    e = E.get(_nome(a.get("ente")))
+    if not e or e["cf"] in (PER_ISCRITTO_EXTRA.get("seguiti") or set()):
+        return ""
+    return f' · <a href="{html.escape(url_segui(e["cf"], a.get("ente")))}" style="color:{BLU};text-decoration:none;font-weight:600">+ Segui</a>'
+
+
+def sezione_miei_enti(mov):
+    if not mov:
+        return ""
+    righe = ""
+    for a, it, cf in mov[:10]:
+        et, fg, bg = ETICHETTE.get(a["tipologia"], ("Avviso", INK2, "#f0f0f3"))
+        t = html.escape(pulito(a.get("titolo") or it.get("descr") or ""))
+        imp = ", ".join(imprese(it))
+        nota = ""
+        if a["tipologia"] == "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA" and imp:
+            nota = (f'<div style="font-size:12px;color:{INK2};margin-top:4px">Affidato a <b>{html.escape(imp)}</b>. '
+                    f'Per la rotazione, il prossimo affidamento simile dovrà andare a un\'altra impresa: fatti trovare pronto.</div>')
+        elif a["tipologia"] == "RISULTATI" and imp:
+            rb = ribasso(it)
+            nota = f'<div style="font-size:12px;color:{INK2};margin-top:4px">Vinto da <b>{html.escape(imp)}</b>{(" con il " + virgola(rb) + "% di ribasso") if rb is not None else ""}.</div>'
+        link = html.escape(url_scheda(it) if a["tipologia"] in ("BANDI", "INDAGINI_DI_MERCATO_SOTTO_SOGLIA") and it.get("cig") else (a.get("link") or SITE))
+        righe += f"""<tr><td style="padding:12px 0;border-top:1px solid #f0f0f3">
+<div>{pill(et, fg, bg)} <span style="font-size:12px;color:{INK3}">{html.escape(a.get('ente') or '')}</span></div>
+<div style="font-size:14px;color:{INK};margin-top:6px;line-height:1.35"><a href="{link}" style="color:{INK};text-decoration:none">{t}</a>
+{(' · <b>' + euro(it.get('valore')) + '</b>') if it.get('valore') else ''}</div>{nota}</td></tr>"""
+    return titolo_sezione("I tuoi enti", f"Cosa hanno fatto ieri i tuoi enti", "Gli enti che segui: quelli della tua mappa e quelli che hai scelto con «Segui».") + f"""
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:22px;border:2px solid {BLU}"><tr><td style="padding:4px 22px 14px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">{righe}</table></td></tr></table>"""
+
+
+def aggiorna_seguiti(key):
+    """Legge da Brevo i clic su 'Segui' / 'Smetti' nelle email e aggiorna gli attributi ENTI / ENTI_NO dei contatti."""
+    from urllib.parse import urlparse, parse_qs
+    for nome in ("ENTI", "ENTI_NO"):
+        try:
+            http_json(f"{BREVO}/contacts/attributes/normal/{nome}", data={"type": "text"}, headers={"api-key": key}, method="POST")
+        except Exception:
+            pass
+    try:
+        ev = http_json(f"{BREVO}/smtp/statistics/events?event=clicks&days=3&limit=2500&sort=asc", headers={"api-key": key}).get("events") or []
+    except Exception as e:
+        print("Clic Brevo non leggibili:", e)
+        return 0
+    cambi = {}
+    for x in ev:
+        link = x.get("link") or ""
+        if "segui.html" not in link:
+            continue
+        q = parse_qs(urlparse(link).query)
+        em = x.get("email")
+        if q.get("cf"):
+            cambi.setdefault(em, []).append(("+", q["cf"][0]))
+        elif q.get("off"):
+            cambi.setdefault(em, []).append(("-", q["off"][0]))
+    for em, ops in cambi.items():
+        try:
+            c = http_json(f"{BREVO}/contacts/{urllib.parse.quote(em)}", headers={"api-key": key})
+            at = c.get("attributes") or {}
+            si = [x for x in (at.get("ENTI") or "").split(",") if x]
+            no = [x for x in (at.get("ENTI_NO") or "").split(",") if x]
+            for op, cf in ops:
+                if op == "+":
+                    si = list(dict.fromkeys(si + [cf])); no = [x for x in no if x != cf]
+                else:
+                    no = list(dict.fromkeys(no + [cf])); si = [x for x in si if x != cf]
+            http_json(f"{BREVO}/contacts/{urllib.parse.quote(em)}", data={"attributes": {"ENTI": ",".join(si), "ENTI_NO": ",".join(no)}},
+                      headers={"api-key": key}, method="PUT")
+        except Exception as e:
+            print("  aggiornamento enti non riuscito per", em, e)
+    return len(cambi)
 
 
 def virgola(x):
@@ -662,7 +794,7 @@ def scheda(a, it, soa, tipo):
     luogo = " · ".join(x for x in [com, regione(it)] if x)
     return f"""<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 14px;background:#ffffff;border-radius:22px;border:1px solid #ececf0">
 <tr><td style="padding:20px 22px;border-left:4px solid {accento};border-radius:22px">
-<div style="font-size:12px;color:{INK3};margin-bottom:6px">{html.escape((a['ente'] or '')[:70])}{(' · ' + html.escape(luogo)) if luogo else ''}</div>
+<div style="font-size:12px;color:{INK3};margin-bottom:6px">{html.escape((a['ente'] or '')[:70])}{(' · ' + html.escape(luogo)) if luogo else ''}{link_segui(a)}</div>
 <div style="font-size:17px;font-weight:650;line-height:1.3;color:{INK};letter-spacing:-.01em;margin-bottom:12px">{titolo}</div>
 {oggetto}{cosa}<table role="presentation" cellpadding="0" cellspacing="0"><tr>
 <td style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:{INK};padding-right:14px">{euro(it.get('valore'))}</td>
@@ -844,7 +976,7 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
 {tile(len(indagini), "inviti a cui candidarti", BLU)}{tile(len(bandi), "gare aperte per te")}{tile(len(diretti), "lavori affidati senza gara")}
 </tr></table></td></tr></table>"""
-    blocchi = [head]
+    blocchi = [head, sezione_miei_enti(PER_ISCRITTO_EXTRA.get("mov") or [])]
     if indagini:
         blocchi.append(titolo_sezione("Fatti invitare", "Cercano imprese come la tua",
                                       "Candidati entro la scadenza per essere invitato alla gara.") +
@@ -934,6 +1066,7 @@ def main():
     if not key:
         print("Nessuna BREVO_API_KEY: mi fermo dopo il salvataggio.")
         return
+    print(f"Clic su Segui/Non seguire elaborati: {aggiorna_seguiti(key)}")
     utenti = iscritti(key, os.environ.get("BREVO_LIST_ID", "5"))
     live, dry = os.environ.get("LIVE") == "1", os.environ.get("DRY") == "1"
     print(f"Iscritti: {len(utenti)} · modalità {'LIVE' if live else 'PROVA (solo +test)'}{' · DRY' if dry else ''}")
