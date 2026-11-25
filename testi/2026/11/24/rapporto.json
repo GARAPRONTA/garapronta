@@ -296,14 +296,6 @@
   "file": 0
  },
  {
-  "cig": "BDEB9D9F6E",
-  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 15
- },
- {
   "cig": "BDED1B1C9D",
   "url": "https://start.toscana.it/tendering/tenders/047667-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
@@ -318,5 +310,13 @@
   "esito": "bloccata (HTTP 500)",
   "metodo": "diretto",
   "file": 0
+ },
+ {
+  "cig": "BDEB9D9F6E",
+  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
  }
 ]
