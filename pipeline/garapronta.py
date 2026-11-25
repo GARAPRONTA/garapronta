@@ -756,6 +756,18 @@ def scheda(a, it, soa, tipo):
                 badge += (f'<div style="font-size:12px;color:{INK2};margin-top:8px;line-height:1.5">🤝 Partner possibili in zona · '
                           + " · ".join(nomi) + f' <a href="{html.escape(url_scheda(it))}#partner" style="color:{BLU};text-decoration:none;font-weight:600">tutti ›</a></div>')
     rib = ""
+    ac = analisi_computo(it)
+    if ac:
+        pz = ac["prezzari"][0] if ac["prezzari"] else None
+        bits = [f"{ac['top3_quota']}% dell'importo in 3 lavorazioni"]
+        if ac["np_quota"] >= 15:
+            bits.append(f"{ac['np_quota']}% in nuovi prezzi")
+        if pz and pz["anno"] < 2026:
+            bits.append(f"prezzario {pz['regione']} {pz['anno']}: prezzi vecchi")
+        rib_comp = (f'<div style="font-size:12px;color:{INK2};margin-top:10px">📊 <b>Computo</b> · ' + " · ".join(html.escape(b) for b in bits) +
+                    f' <a href="{html.escape(url_scheda(it))}#computo" style="color:{BLU};text-decoration:none;font-weight:600">analisi ›</a></div>')
+    else:
+        rib_comp = ""
     if tipo == "bando":
         st = storico(a, it)
         rib = blocco_storico(st) if st else barra_ribasso(next((RIBASSO[c] for c in it["cat"] if c in RIBASSO), RIBASSO_TUTTI))
@@ -801,11 +813,35 @@ def scheda(a, it, soa, tipo):
 <td style="font-size:12px;color:{INK2}">{html.escape(cats)}</td></tr></table>
 <div style="margin-top:12px">{badge} &nbsp;{scad_pill(it.get('scadenza') or a.get('scadenza'))}</div>
 {rib}
+{rib_comp}
 {breve}
 <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:16px"><tr>
 <td style="background:{BLU};border-radius:999px"><a href="{link}" style="display:inline-block;padding:10px 18px;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none">Apri i documenti</a></td>
 <td style="padding-left:12px;font-size:11px;color:{INK3}">CIG {html.escape(it.get('cig') or '')}</td></tr></table>
 </td></tr></table>"""
+
+
+def analisi_computo(it, giorno=None):
+    """Analisi del computo metrico, se tra i documenti scaricati c'è (testi/AAAA/MM/GG/CIG/computo.json.gz)."""
+    import glob
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from computo import analisi
+    cig = it.get("cig")
+    if not cig:
+        return None
+    for f in sorted(glob.glob(f"testi/*/*/*/{cig}/computo.json.gz"), reverse=True)[:1]:
+        try:
+            docs = json.load(gzip.open(f, "rt"))
+        except Exception:
+            return None
+        migliore = None
+        for d in docs:
+            if d.get("tipo") == "computo" or re.search(r"comput|metrico", d.get("nome", ""), re.I):
+                a = analisi(d.get("testo") or "")
+                if a and (not migliore or a["voci"] > migliore["voci"]):
+                    migliore = a
+        return migliore
+    return None
 
 
 def url_scheda(it):
@@ -841,6 +877,29 @@ def pagina_gara(a, it, tipo):
                           '<p class="uff">Imprese con attestazione SOA in corso di validità nelle categorie richieste dalla gara oltre alla prevalente, '
                           'vicino all\'ente. Utili per un raggruppamento (RTI) o per l\'avvalimento.</p>' + "".join(sezioni) +
                           '<p class="f" style="text-align:left;margin-top:12px">Fonte: attestazioni SOA e aggiudicazioni 2023-2025 (ANAC, CC BY-SA 4.0).</p></div>')
+    ac = analisi_computo(it)
+    blocco_comp = ""
+    if ac:
+        pz = ac["prezzari"][0] if ac["prezzari"] else None
+        if pz and pz["anno"] >= 2026:
+            nota_pz = f'Prezzi dal prezzario <b>{e(pz["regione"])} {pz["anno"]}</b>, quello in vigore ({pz["quota"]}% dell\'importo).'
+        elif pz:
+            nota_pz = (f'<span style="color:#c2410c">Prezzi dal prezzario <b>{e(pz["regione"])} {pz["anno"]}</b> ({pz["quota"]}% dell\'importo): '
+                       f'sono di {2026 - pz["anno"]} anni fa, i costi reali oggi possono essere più alti. Margine da verificare bene.</span>')
+        else:
+            nota_pz = "Prezzario di riferimento non riconosciuto dai codici delle voci."
+        nota_np = ""
+        if ac["np_quota"] >= 15:
+            nota_np = (f'<p style="margin-top:8px"><b>{ac["np_quota"]}% dell\'importo è in nuovi prezzi</b> (voci fuori prezzario, prezzate dal progettista con '
+                       f'un\'analisi): è lì che si gioca il margine. Controlla l\'elenco prezzi e le analisi dei nuovi prezzi.</p>')
+        righe = "".join(f'<tr><td>{e(frase(v["descr"]) or "—")}<small>{e(v["cod"])}</small></td><td style="text-align:right">{virgola(round(v["qta"], 2)) if v["qta"] else ""} {e(v["um"])}</td>'
+                        f'<td style="text-align:right">{euro(v["prezzo"]) if v["prezzo"] else ""}</td><td style="text-align:right"><b>{euro(v["imp"])}</b></td>'
+                        f'<td style="text-align:right">{virgola(v["quota"])}%</td></tr>' for v in ac["top"][:6])
+        blocco_comp = f"""<div class="card" id="computo"><h2 style="margin-top:0;color:#007aff">Analisi del computo metrico</h2>
+<div class="imp">{euro(ac['totale'])}</div><p class="uff">{ac['voci']} voci lette dal computo metrico estimativo · le prime 3 lavorazioni valgono il <b>{ac['top3_quota']}%</b> dell'importo.</p>
+<p style="margin-top:8px">{nota_pz}</p>{nota_np}
+<h2>Dove sono i soldi</h2><div style="overflow-x:auto"><table class="u"><tr><th>Lavorazione</th><th>Quantità</th><th>Prezzo</th><th>Importo</th><th>Peso</th></tr>{righe}</table></div>
+<p class="f" style="text-align:left;margin-top:12px">Letto in automatico dal computo metrico pubblicato tra i documenti di gara: controlla sempre il documento originale.</p></div>"""
     st = storico(a, it)
     blocco_st = ""
     if st:
@@ -880,6 +939,7 @@ table.u th{{width:auto;font-size:11px;padding:6px 8px 6px 0}} table.u td{{font-s
 <div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a></div>
 </div>
 {blocco_st}
+{blocco_comp}
 {blocco_partner}
 {f'<div class="card"><h2 style="margin-top:0;color:#007aff">In breve · letto dai documenti di gara</h2><table>{punti}</table>' + (f'<ul class="att">{att}</ul>' if att else "") + "</div>" if punti else ""}
 <div class="card"><table>

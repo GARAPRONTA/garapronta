@@ -161,7 +161,7 @@ def testo_da(nome, data):
 
 TIPI = [("disciplinare", r"disciplinar"), ("lettera_invito", r"lettera.{0,5}invito|invito"),
         ("bando", r"bando"), ("avviso", r"avviso|manifestazion|indagine"), ("capitolato", r"capitolat|csa\b"),
-        ("computo", r"computo|cme"), ("elenco_prezzi", r"elenco.{0,3}prezz"), ("dgue", r"dgue"),
+        ("computo", r"computo|\bcme\b|metrico.?estim|stima.?lavori"), ("elenco_prezzi", r"elenco.{0,3}prezz"), ("dgue", r"dgue"),
         ("modulistica", r"modell|allegato|istanza|dichiaraz|modulo|offerta"), ("progetto", r"relazion|tavol|progett")]
 
 
@@ -342,6 +342,12 @@ def salva_gara(files, cart):
         docs.append({"nome": nome[:150], "tipo": tipo_doc(nome), "formato": formato,
                      "kb": len(data) // 1024, "caratteri": len(testo), "testo": testo})
     docs.sort(key=lambda x: PRIORITA.index(x["tipo"]))
+    # computo metrico ed elenco prezzi: testo intero a parte (servono all'analisi del margine)
+    comp = [{"nome": x["nome"], "tipo": x["tipo"], "testo": x["testo"][:3_000_000]} for x in docs
+            if x["tipo"] in ("computo", "elenco_prezzi") or re.search(r"manodopera|quadro.?econ", x["nome"], re.I)]
+    if comp:
+        with gzip.open(f"{cart}/computo.json.gz", "wt", encoding="utf-8") as f:
+            json.dump(comp, f, ensure_ascii=False)
     budget, out = MAX_TESTO, []
     for x in docs:
         t = x.pop("testo")[: max(0, budget)]
