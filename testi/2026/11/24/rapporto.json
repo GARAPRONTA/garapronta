@@ -67,8 +67,8 @@
   "cig": "BDCA1D9D35",
   "url": "https://drive.google.com/drive/folders/19f_wNY_wZvfTR-C8i-iJ1aFXm0uCKhy2?usp=drive_link",
   "piattaforma": "drive.google.com",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "troppo lenta",
+  "metodo": "-",
   "file": 0
  },
  {
@@ -147,9 +147,9 @@
   "cig": "BDEA89F831",
   "url": "https://diocesisanmarcoscalea.traspare.com/announcements/10",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 3
  },
  {
   "cig": "BDEA17A2DC",
@@ -173,7 +173,7 @@
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 10
+  "file": 9
  },
  {
   "cig": "BDEC8F89E3",
@@ -187,9 +187,9 @@
   "cig": "BDEE17928A",
   "url": "https://appalti.cittametropolitana.ct.it/PortaleAppalti/it/procedure/codice/G00878",
   "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
+  "esito": "bloccata (TimeoutError)",
   "metodo": "diretto",
-  "file": 11
+  "file": 0
  },
  {
   "cig": "BDEEF411F0",
@@ -203,9 +203,9 @@
   "cig": "BDEE7A0644",
   "url": "https://montedoro.traspare.com/announcements/31150",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 10
  },
  {
   "cig": "BDEA522744",
@@ -221,7 +221,7 @@
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 9
+  "file": 8
  },
  {
   "cig": "BDEDA54D30",
@@ -253,7 +253,7 @@
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 10
+  "file": 9
  },
  {
   "cig": "BDED97A94B",
@@ -275,9 +275,9 @@
   "cig": "B09356864C",
   "url": "https://portalegareuniupo.traspare.com/announcements/13",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 6
  },
  {
   "cig": "BDEE291998",
@@ -285,7 +285,7 @@
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 8
+  "file": 7
  },
  {
   "cig": "BDED597433",
@@ -294,6 +294,14 @@
   "esito": "bloccata (URLError)",
   "metodo": "diretto",
   "file": 0
+ },
+ {
+  "cig": "BDEB9D9F6E",
+  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto+cloud",
+  "file": 10
  },
  {
   "cig": "BDED1B1C9D",
@@ -310,13 +318,5 @@
   "esito": "bloccata (HTTP 500)",
   "metodo": "diretto",
   "file": 0
- },
- {
-  "cig": "BDEB9D9F6E",
-  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "server-IT/diretto+cloud",
-  "file": 10
  }
 ]
