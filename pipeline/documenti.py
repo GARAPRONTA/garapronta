@@ -411,6 +411,62 @@ def salva_gara(files, cart):
     return docs
 
 
+CONDIVISI = re.compile(r"https?://[^\s\"'<>]*?(?:/index\.php)?/s/[A-Za-z0-9]{8,}|https?://(?:www\.)?dropbox\.com/[^\s\"'<>]+|"
+                       r"https?://drive\.google\.com/[^\s\"'<>]+|https?://(?:[\w-]+\.)?sharepoint\.com/[^\s\"'<>]+", re.I)
+
+
+def link_esterni(files):
+    """Il progetto è spesso su un cloud dell'ente (Nextcloud/ownCloud, Google Drive, Dropbox) indicato in un PDF:
+    trova quei link nei documenti piccoli e restituisce gli URL di download diretto."""
+    out = []
+    for nome, data in files:
+        if len(data) > 3_000_000 or not (data[:4] == b"%PDF" or nome.lower().endswith((".pdf", ".p7m", ".txt", ".html"))):
+            continue
+        try:
+            _, t = testo_da(nome, data)
+        except Exception:
+            continue
+        for u in CONDIVISI.findall(t.replace("\n", " ")):
+            u = u.rstrip(".,;)")
+            if "/s/" in u and "drive.google" not in u:            # Nextcloud / ownCloud: cartella o file condiviso
+                out.append(u.split("?")[0].rstrip("/") + "/download")
+            elif "dropbox.com" in u:
+                out.append(re.sub(r"([?&])dl=0", r"\1dl=1", u) if "dl=" in u else u + ("&" if "?" in u else "?") + "dl=1")
+            elif "drive.google.com" in u:
+                m = re.search(r"/d/([\w-]{20,})|id=([\w-]{20,})", u)
+                if m and "/folders/" not in u:
+                    out.append(f"https://drive.google.com/uc?export=download&id={m.group(1) or m.group(2)}")
+    return list(dict.fromkeys(out))[:3]
+
+
+def scarica_esterno(u):
+    """Scarica un progetto da un link di condivisione pubblico (fino a 250 MB)."""
+    req = urllib.request.Request(u, headers={"user-agent": UA})
+    with urllib.request.urlopen(req, timeout=180) as r:
+        buf, fine = bytearray(), time.time() + 170
+        while True:
+            pz = r.read(1 << 20)
+            if not pz:
+                break
+            buf += pz
+            if len(buf) > 250 * 1024 * 1024 or time.time() > fine:
+                raise ValueError("troppo grande o lento")
+        cd = r.headers.get("content-disposition") or ""
+        m = re.search(r'filename\*?=(?:UTF-8\'\')?"?([^";]+)', cd)
+        nome = unquote(m.group(1)) if m else "progetto_esterno" + (".zip" if buf[:2] == b"PK" else "")
+        return nome, bytes(buf)
+
+
+def senza_doppi(files):
+    visti, out = set(), []
+    for nome, data in files:
+        k = (os.path.basename(nome).lower(), len(data))
+        if k not in visti:
+            visti.add(k)
+            out.append((nome, data))
+    return out
+
+
 def una(url, cart, cig="", titolo=""):
     """Processo figlio: una sola pagina di gara, con tempo limitato dal processo padre."""
     global _proxy_url
@@ -418,6 +474,14 @@ def una(url, cart, cig="", titolo=""):
         esito, metodo, files = gara(cig, url, titolo)
     except Exception as e:
         esito, metodo, files = f"errore {type(e).__name__}", "diretto", []
+    files = senza_doppi(files)
+    # progetto su cloud esterno (link dentro un PDF di gara)
+    for u in link_esterni(files):
+        try:
+            files.append(scarica_esterno(u))
+            metodo += "+cloud"
+        except Exception:
+            pass
     nf = 0
     if files:
         docs = salva_gara(files, cart)
@@ -525,6 +589,9 @@ def main():
                 righe.append((it["cig"], a["link"], a["tipologia"]))
                 titoli[it["cig"]] = (a.get("titolo") or it.get("descr") or "")[:200]
                 break
+    solo = {x.strip() for x in (os.environ.get("SOLO_CIG") or "").split(",") if x.strip()}
+    if solo:
+        righe = [r for r in righe if r[0] in solo]
     righe = righe[: int(os.environ.get("MAX_GARE", "200"))]
     print(f"== {giorno}: {len(righe)} gare di lavori da leggere · proxy {'sì' if os.environ.get('APIFY_TOKEN') else 'no'}", flush=True)
     base = f"testi/{d:%Y/%m/%d}"
@@ -604,6 +671,9 @@ def main():
         per_piatt.setdefault(p, Counter())[e] += 1
         rapporto.append({"cig": cig, "url": url, "piattaforma": p, **r})
     os.makedirs(base, exist_ok=True)
+    if solo and os.path.exists(f"{base}/rapporto.json"):   # prova su poche gare: aggiorno solo quelle nel rapporto del giorno
+        vecchio = [r for r in json.load(open(f"{base}/rapporto.json")) if r["cig"] not in solo]
+        rapporto = vecchio + rapporto
     json.dump(rapporto, open(f"{base}/rapporto.json", "w"), ensure_ascii=False, indent=1)
     ok = esiti.get("ok", 0)
     print(f"\nCOPERTURA: {ok}/{len(righe)} gare con documenti ({ok / max(1, len(righe)) * 100:.0f}%)")

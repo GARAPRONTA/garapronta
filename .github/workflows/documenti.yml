@@ -4,12 +4,13 @@ on:
     workflows: ["GaraPronta giornaliera"]
     branches: [main]
     types: [completed]
-  push:
-    paths: ['pipeline/documenti.py', '.github/workflows/documenti.yml']
   workflow_dispatch:
     inputs:
       data:
         description: 'Giorno (gg/mm/aaaa), vuoto = ieri'
+        required: false
+      solo:
+        description: 'Solo questi CIG (separati da virgola), per le prove'
         required: false
 permissions:
   contents: write
@@ -29,6 +30,7 @@ jobs:
       - name: Scarica documenti e testi
         env:
           DATA: ${{ github.event.inputs.data || (github.event_name == 'push' && '20/11/2026') || '' }}
+          SOLO_CIG: ${{ github.event.inputs.solo }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
           SSHPASS: ${{ secrets.VPS_PASSWORD }}
         run: python pipeline/documenti.py
