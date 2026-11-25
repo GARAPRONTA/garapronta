@@ -167,6 +167,38 @@ def salva(giorno, avvisi):
 
 
 # ---------------------------------------------------------------- 2. iscritti
+CLASSI = {"I": 258_000, "II": 516_000, "III": 1_033_000, "III-BIS": 1_500_000, "IV": 2_582_000, "IV-BIS": 3_500_000,
+          "V": 5_165_000, "VI": 10_329_000, "VII": 15_494_000, "VIII": 10**12}
+CONFINANTI = {
+    "Piemonte": ["Valle d'Aosta", "Lombardia", "Liguria", "Emilia-Romagna"], "Valle d'Aosta": ["Piemonte"],
+    "Lombardia": ["Piemonte", "Emilia-Romagna", "Veneto", "Trentino-Alto Adige"], "Trentino-Alto Adige": ["Lombardia", "Veneto"],
+    "Veneto": ["Lombardia", "Trentino-Alto Adige", "Friuli-Venezia Giulia", "Emilia-Romagna"], "Friuli-Venezia Giulia": ["Veneto"],
+    "Liguria": ["Piemonte", "Emilia-Romagna", "Toscana"], "Emilia-Romagna": ["Lombardia", "Veneto", "Toscana", "Marche", "Liguria", "Piemonte"],
+    "Toscana": ["Liguria", "Emilia-Romagna", "Umbria", "Marche", "Lazio"], "Umbria": ["Toscana", "Marche", "Lazio"],
+    "Marche": ["Emilia-Romagna", "Toscana", "Umbria", "Lazio", "Abruzzo"], "Lazio": ["Toscana", "Umbria", "Marche", "Abruzzo", "Molise", "Campania"],
+    "Abruzzo": ["Marche", "Lazio", "Molise"], "Molise": ["Abruzzo", "Lazio", "Campania", "Puglia"],
+    "Campania": ["Lazio", "Molise", "Puglia", "Basilicata"], "Puglia": ["Molise", "Campania", "Basilicata"],
+    "Basilicata": ["Campania", "Puglia", "Calabria"], "Calabria": ["Basilicata", "Sicilia"], "Sicilia": ["Calabria"], "Sardegna": [],
+}
+
+
+def leggi_soa(testo):
+    """'OG8-III, OS21, OS 12-B' -> (['OG 8', 'OS 21', 'OS 12-B'], {'OG 8': 'III'})"""
+    cats, classi = [], {}
+    for pezzo in re.split(r"[,;/]+", testo or ""):
+        t = pezzo.strip().upper().replace(" ", "")
+        m = re.match(r"^(OG|OS)(\d{1,2})(-?[AB])?(?:[-\s]*(VIII|VII|VI|V|IV-?BIS|IV|III-?BIS|III|II|I))?$", t)
+        if not m:
+            if t == "ALTRA":
+                cats.append("ALTRA")
+            continue
+        c = f"{m.group(1)} {int(m.group(2))}" + (("-" + m.group(3).strip("-")) if m.group(3) else "")
+        cats.append(c)
+        if m.group(4):
+            classi[c] = m.group(4).replace("BIS", "-BIS").replace("--", "-")
+    return cats, classi
+
+
 def iscritti(key, lista):
     out, off = [], 0
     while True:
@@ -174,9 +206,8 @@ def iscritti(key, lista):
         cs = j.get("contacts") or []
         for c in cs:
             at = c.get("attributes") or {}
-            soa = [s.strip().upper().replace("OG", "OG ").replace("OS", "OS ").replace("  ", " ")
-                   for s in (at.get("SOA") or "").split(",") if s.strip()]
-            out.append({"email": c["email"], "soa": soa, "regione": (at.get("REGIONE") or "Tutta Italia").strip(),
+            soa, classi = leggi_soa(at.get("SOA") or "")
+            out.append({"email": c["email"], "soa": soa, "classi": classi, "regione": (at.get("REGIONE") or "Tutta Italia").strip(),
                         "settore": (at.get("SETTORE") or "Lavori edili").strip(),
                         "enti": [x for x in (at.get("ENTI") or "").split(",") if x.strip()],
                         "no_enti": [x for x in (at.get("ENTI_NO") or "").split(",") if x.strip()]})
@@ -210,32 +241,43 @@ def per_iscritto(avvisi, u):
     tutta = u["regione"].lower() in ("tutta italia", "")
     soa = set(u["soa"])
     altro = "ALTRA" in soa or not soa
+    vicine = set(CONFINANTI.get(u["regione"], []))
 
-    def zona_ok(it):
-        return tutta or regione(it) == u["regione"]
+    def zona(it):
+        if tutta:
+            return "dentro"
+        r = regione(it)
+        return "dentro" if r == u["regione"] else ("vicina" if r in vicine else None)
 
     def cat_ok(it):
         return altro or not it["cat"] or soa & set(it["cat"])
 
-    bandi, indagini, elenchi, diretti, esiti = [], [], [], [], []
+    bandi, indagini, elenchi, diretti, esiti, cercano = [], [], [], [], [], []
     for a in avvisi:
         if a["tipo"] != "avviso":
             continue
         for it in a["items"]:
             if (it.get("natura") or "").lower() != "lavori" and a["tipologia"] != "ELENCHI_OPERATORI_ECONOMICI":
                 continue
-            if not zona_ok(it):
-                continue
+            z = zona(it)
             riga = (a, it)
+            # "cercano te": la tua categoria è tra le secondarie di una gara la cui prevalente non hai (anche fuori zona)
+            if (a["tipologia"] in ("BANDI", "INDAGINI_DI_MERCATO_SOTTO_SOGLIA") and not altro and it.get("cat")
+                    and prevalente(it) not in soa and soa & set(it["cat"]) and z in ("dentro", "vicina")):
+                cercano.append(riga)
+                continue
+            if not z:
+                continue
+            it["_zona"] = z
             if a["tipologia"] == "BANDI" and cat_ok(it):
                 bandi.append(riga)
             elif a["tipologia"] == "INDAGINI_DI_MERCATO_SOTTO_SOGLIA" and cat_ok(it):
                 indagini.append(riga)
-            elif a["tipologia"] == "ELENCHI_OPERATORI_ECONOMICI":
+            elif a["tipologia"] == "ELENCHI_OPERATORI_ECONOMICI" and z == "dentro":
                 elenchi.append(riga)
-            elif a["tipologia"] == "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA":
+            elif a["tipologia"] == "AFFIDAMENTI_DIRETTI_SOTTO_SOGLIA" and z == "dentro":
                 diretti.append(riga)
-            elif a["tipologia"] == "RISULTATI" and it.get("aggiudicatari") and cat_ok(it):
+            elif a["tipologia"] == "RISULTATI" and it.get("aggiudicatari") and cat_ok(it) and z == "dentro":
                 esiti.append(riga)
     oggi = datetime.now(timezone.utc).date()
 
@@ -246,10 +288,16 @@ def per_iscritto(avvisi, u):
             return datetime.fromisoformat(s.replace("Z", "+00:00")).date() >= oggi
         except Exception:
             return True
-    key = lambda r: -(r[1].get("valore") or 0)
+    key = lambda r: (0 if r[1].get("_zona") == "dentro" else 1, -(r[1].get("valore") or 0))
     bandi = [r for r in bandi if aperta(r)]
     indagini = [r for r in indagini if aperta(r)]
+    # le regioni vicine entrano solo se nella tua regione oggi c'è poco (sotto le 5 occasioni)
+    if len([r for r in bandi + indagini if r[1].get("_zona") == "dentro"]) >= 5:
+        bandi = [r for r in bandi if r[1].get("_zona") == "dentro"]
+        indagini = [r for r in indagini if r[1].get("_zona") == "dentro"]
     PER_ISCRITTO_EXTRA["esiti"] = sorted(esiti, key=key)
+    PER_ISCRITTO_EXTRA["cercano"] = sorted([r for r in cercano if aperta(r)], key=key)[:6]
+    PER_ISCRITTO_EXTRA["classi"] = u.get("classi") or {}
     PER_ISCRITTO_EXTRA["mov"] = movimenti_enti(avvisi, u)
     PER_ISCRITTO_EXTRA["seguiti"] = set(seguiti(u))
     # affidamenti diretti: prima quelli delle sue categorie, poi i più grandi
@@ -856,7 +904,10 @@ def scheda(a, it, soa, tipo):
         accento = BLU
     else:
         manca = [c for c in it["cat"] if c not in soa] if soa and "ALTRA" not in soa else []
-        if not manca:
+        cl = (PER_ISCRITTO_EXTRA.get("classi") or {}).get(prevalente(it) or "")
+        if not manca and cl and (it.get("valore") or 0) > CLASSI.get(cl, 10**12) * 1.2:
+            badge, accento = pill(f"Supera la tua classifica {cl}: serve un raggruppamento", "#c2410c", "#fdeee6"), "#ff9f0a"
+        elif not manca:
             badge, accento = pill("✓ Puoi partecipare", "#1f9d55", "#e7f6ee"), "#34c759"
         else:
             badge = pill(f"Ti serve un partner {', '.join(manca[:3])}{' +' if len(manca) > 3 else ''}", "#c2410c", "#fdeee6")
@@ -929,7 +980,7 @@ def scheda(a, it, soa, tipo):
 {oggetto}{cosa}<table role="presentation" cellpadding="0" cellspacing="0"><tr>
 <td style="font-size:26px;font-weight:700;letter-spacing:-.03em;color:{INK};padding-right:14px">{euro(it.get('valore'))}</td>
 <td style="font-size:12px;color:{INK2}">{html.escape(cats)}</td></tr></table>
-<div style="margin-top:12px">{badge} &nbsp;{scad_pill(it.get('scadenza') or a.get('scadenza'))}</div>
+<div style="margin-top:12px">{badge} &nbsp;{scad_pill(it.get('scadenza') or a.get('scadenza'))}{(' &nbsp;' + pill('Regione vicina · ' + html.escape(regione(it) or ''), INK2, '#f0f0f3')) if it.get('_zona') == 'vicina' else ''}</div>
 {rib}
 {rib_comp}
 {breve}
@@ -1185,6 +1236,15 @@ def email_html(u, bandi, indagini, elenchi, diretti, giorno):
 <div style="font-size:15px;font-weight:650;color:{INK}">{html.escape(a['ente'][:70])}</div>
 <div style="font-size:13px;color:{INK2};margin:4px 0 12px">{html.escape(pulito(a['titolo'] or it['descr']))}</div>
 <a href="{html.escape(a.get('link') or SITE)}" style="color:{BLU};font-size:14px;font-weight:600;text-decoration:none">Come iscriversi →</a></td></tr></table>""" for a, it in elenchi))
+    cerc = PER_ISCRITTO_EXTRA.get("cercano") or []
+    if cerc:
+        righe_c = "".join(f"""<tr><td style="padding:12px 0;border-top:1px solid #f0f0f3">
+<div style="font-size:12px;color:{INK3}">{html.escape(a.get('ente') or '')} · {html.escape(regione(it) or '')}</div>
+<div style="font-size:14px;color:{INK};margin:3px 0"><a href="{html.escape(url_scheda(it))}" style="color:{INK};text-decoration:none">{html.escape(pulito(a.get('titolo') or it.get('descr') or ''))}</a></div>
+<div style="font-size:12px;color:{INK2}">{euro(it.get('valore'))} · prevalente <b>{html.escape((prevalente(it) or '').replace(' ', ''))}</b> · serve anche <b style="color:{BLU}">{html.escape(', '.join(c.replace(' ', '') for c in it['cat'] if c in set(u['soa'])))}</b></div></td></tr>""" for a, it in cerc)
+        blocchi.append(titolo_sezione("Cercano proprio te", "Gare dove serve la tua specializzazione",
+                                      "La tua categoria è richiesta come secondaria: le imprese che partecipano devono avere un partner come te (raggruppamento o subappalto qualificato).") +
+                       f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:22px;border:1px solid #ececf0"><tr><td style="padding:4px 22px 14px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">{righe_c}</table></td></tr></table>')
     esiti = PER_ISCRITTO_EXTRA.get("esiti") or []
     if esiti:
         rbs = [ribasso(it) for _, it in esiti if ribasso(it) is not None]
