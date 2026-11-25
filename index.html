@@ -456,15 +456,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <div class="field" id="soaField">
           <span class="lbl">Le tue categorie SOA <span class="hint">· tocca per scegliere</span></span>
           <div class="soa" id="soa"></div>
+          <button type="button" class="hint" id="soaAll" style="background:none;border:0;padding:6px 0;color:var(--accent);font:inherit;font-weight:600;cursor:pointer">Mostra tutte le categorie</button>
+          <div id="cls" style="display:grid;gap:8px;margin-top:8px"></div>
+        </div>
+        <div class="field">
+          <span class="lbl">Dove lavori <span class="hint">· fino a 3 regioni</span></span>
+          <div class="soa" id="regs"></div>
         </div>
         <div class="two">
-          <div class="field">
-            <label for="reg">Regione</label>
-            <select class="inp" id="reg">
-              <option value="">Scegli…</option>
-              <option>Tutta Italia</option><option>Abruzzo</option><option>Basilicata</option><option>Calabria</option><option>Campania</option><option>Emilia-Romagna</option><option>Friuli-Venezia Giulia</option><option>Lazio</option><option>Liguria</option><option>Lombardia</option><option>Marche</option><option>Molise</option><option>Piemonte</option><option>Puglia</option><option>Sardegna</option><option>Sicilia</option><option>Toscana</option><option>Trentino-Alto Adige</option><option>Umbria</option><option>Valle d'Aosta</option><option>Veneto</option>
-            </select>
-          </div>
           <div class="field">
             <label for="mail">Email dell'impresa</label>
             <input class="inp" id="mail" type="email" placeholder="ufficio@impresa.it" autocomplete="email">
@@ -597,10 +596,28 @@ if(!reduce) setInterval(()=>{const c=demo[Math.floor(Math.random()*demo.length)]
 
 /* modulo: invia a Brevo (lista Prova Gratuita) */
 const BREVO_FORM='https://dc9bd8f3.sibforms.com/serve/MUIFAIBB0bSAoL1j9Fh1gMLuSGrnAkCEgMSWThxpBn_ZBx9aHV4mWlf49-KTkOqNg_B7W4HnxKbHOKQF032ezSmjeh9VZIUp4vzgLLpFdE7E4v_CoaaaNSpXzuTU6KTqL8f7sw1NGAoWsASxjBYHyXLO2Ikwkk0VDfSKouBm7BkvAw3dcOoo-H2iQ3U-7bCB87FpwJ061ULKj5P9jw==';
-const SOA=['OG 1','OG 2','OG 3','OG 6','OG 8','OG 10','OG 11','OS 3','OS 6','OS 21','OS 24','OS 28','OS 30','Altra'];
-const soaBox=document.getElementById('soa');const picked=new Set();
-SOA.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=s;
-  b.onclick=()=>{picked.has(s)?picked.delete(s):picked.add(s);b.classList.toggle('on')};soaBox.append(b)});
+const PRINC=['OG 1','OG 2','OG 3','OG 6','OG 8','OG 10','OG 11','OS 3','OS 6','OS 21','OS 24','OS 28','OS 30'];
+const TUTTE=['OG 1','OG 2','OG 3','OG 4','OG 5','OG 6','OG 7','OG 8','OG 9','OG 10','OG 11','OG 12','OG 13',
+ 'OS 1','OS 2-A','OS 2-B','OS 3','OS 4','OS 5','OS 6','OS 7','OS 8','OS 9','OS 10','OS 11','OS 12-A','OS 12-B','OS 13','OS 14','OS 15','OS 16','OS 17',
+ 'OS 18-A','OS 18-B','OS 19','OS 20-A','OS 20-B','OS 21','OS 22','OS 23','OS 24','OS 25','OS 26','OS 27','OS 28','OS 29','OS 30','OS 31','OS 32','OS 33','OS 34','OS 35'];
+const CLASSI=['','I','II','III','III-bis','IV','IV-bis','V','VI','VII','VIII'];
+const soaBox=document.getElementById('soa'),clsBox=document.getElementById('cls');const picked=new Set();const classe={};
+function chipSoa(s){const b=document.createElement('button');b.type='button';b.className='chip'+(picked.has(s)?' on':'');b.textContent=s;
+  b.onclick=()=>{picked.has(s)?picked.delete(s):picked.add(s);b.classList.toggle('on');disegnaClassi()};return b}
+function disegnaSoa(lista){soaBox.innerHTML='';lista.forEach(s=>soaBox.append(chipSoa(s)))}
+function disegnaClassi(){clsBox.innerHTML='';[...picked].filter(s=>s!=='Altra').forEach(s=>{
+  const r=document.createElement('label');r.style.cssText='display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:14px';
+  r.innerHTML='<span><b>'+s+'</b> · classifica</span>';const sel=document.createElement('select');sel.className='inp';sel.style.cssText='max-width:150px;padding:8px 10px';
+  CLASSI.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c||'non so';if((classe[s]||'')===c)o.selected=true;sel.append(o)});
+  sel.onchange=()=>classe[s]=sel.value;r.append(sel);clsBox.append(r)})}
+disegnaSoa(PRINC.concat(['Altra']));
+document.getElementById('soaAll').onclick=e=>{disegnaSoa(TUTTE.concat(['Altra']));e.target.style.display='none'};
+const REGIONI=['Tutta Italia','Abruzzo','Basilicata','Calabria','Campania','Emilia-Romagna','Friuli-Venezia Giulia','Lazio','Liguria','Lombardia','Marche','Molise','Piemonte','Puglia','Sardegna','Sicilia','Toscana','Trentino-Alto Adige','Umbria',"Valle d'Aosta",'Veneto'];
+const regBox=document.getElementById('regs');const regPick=new Set();
+REGIONI.forEach(r=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=r;
+  b.onclick=()=>{if(r==='Tutta Italia'){regPick.clear();regPick.add(r)}else{regPick.delete('Tutta Italia');
+      if(regPick.has(r))regPick.delete(r);else if(regPick.size<3)regPick.add(r)}
+    [...regBox.children].forEach(c=>c.classList.toggle('on',regPick.has(c.textContent)))};regBox.append(b)});
 const sSel=document.getElementById('sett'),soaF=document.getElementById('soaField');
 const sBtn=document.querySelector('#form button[type=submit]');
 sSel.addEventListener('change',()=>{const ed=sSel.value==='Lavori edili';soaF.style.display=ed?'':'none';
@@ -641,14 +658,14 @@ document.getElementById('form').addEventListener('submit',e=>{
   const err=document.getElementById('err'),mail=document.getElementById('mail').value.trim();
   const sett=document.getElementById('sett').value, edile=sett==='Lavori edili';
   if(edile&&!picked.size) return err.textContent='Scegli almeno una categoria SOA.';
-  if(!document.getElementById('reg').value) return err.textContent='Scegli una regione.';
+  if(!regPick.size) return err.textContent='Scegli almeno una regione.';
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) return err.textContent='Controlla l\'indirizzo email.';
   if(!document.getElementById('priv').checked) return err.textContent='Serve il consenso per inviarti le email.';
   err.textContent='';
   const btn=e.target.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Invio…';
   const fd=new FormData();
-  fd.append('EMAIL',mail);fd.append('SOA',edile?[...picked].join(', '):'');fd.append('SETTORE',sett);
-  fd.append('REGIONE',document.getElementById('reg').value);
+  fd.append('EMAIL',mail);fd.append('SOA',edile?[...picked].map(s=>s+(classe[s]?'-'+classe[s]:'')).join(', '):'');fd.append('SETTORE',sett);
+  fd.append('REGIONE',[...regPick].join(', '));
   fd.append('email_address_check','');fd.append('locale','it');
   fetch(BREVO_FORM,{method:'POST',body:fd,mode:'no-cors'})
     .then(()=>{

@@ -182,6 +182,11 @@ CONFINANTI = {
 }
 
 
+def regioni_di(u):
+    """Una o più regioni dal profilo: 'Abruzzo, Lazio' -> ['Abruzzo', 'Lazio']."""
+    return [x.strip() for x in re.split(r"[,;/]+", u.get("regione") or "") if x.strip() and x.strip().lower() != "tutta italia"]
+
+
 def leggi_soa(testo):
     """'OG8-III, OS21, OS 12-B' -> (['OG 8', 'OS 21', 'OS 12-B'], {'OG 8': 'III'})"""
     cats, classi = [], {}
@@ -241,13 +246,14 @@ def per_iscritto(avvisi, u):
     tutta = u["regione"].lower() in ("tutta italia", "")
     soa = set(u["soa"])
     altro = "ALTRA" in soa or not soa
-    vicine = set(CONFINANTI.get(u["regione"], []))
+    regs = set(regioni_di(u))
+    vicine = {v for r in regs for v in CONFINANTI.get(r, [])} - regs
 
     def zona(it):
         if tutta:
             return "dentro"
         r = regione(it)
-        return "dentro" if r == u["regione"] else ("vicina" if r in vicine else None)
+        return "dentro" if r in regs else ("vicina" if r in vicine else None)
 
     def cat_ok(it):
         return altro or not it["cat"] or soa & set(it["cat"])
@@ -531,10 +537,14 @@ def _web():
 def enti_bersaglio(reg, cats, n=40):
     """Enti della regione che affidano lavori delle categorie date senza bando (diretti o su invito)."""
     W, M = _web()
-    k = _nome(reg).replace(" ", "")
-    chiavi = [x for x in M if _nome(x).replace(" ", "") == k]
-    if "TRENTINO" in k:
-        chiavi = [x for x in M if "TRENTO" in x or "BOLZANO" in x]
+    chiavi = []
+    for r in re.split(r"[,;/]+", reg or ""):
+        k = _nome(r).replace(" ", "")
+        if not k:
+            continue
+        chiavi += [x for x in M if _nome(x).replace(" ", "") == k]
+        if "TRENTINO" in k:
+            chiavi += [x for x in M if "TRENTO" in x or "BOLZANO" in x]
     tot = {}
     for ch in chiavi:
         for c in cats:
