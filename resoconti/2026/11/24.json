@@ -867,6 +867,29 @@
    "Sotto 45 punti tecnici su 90 si è esclusi.",
    "Il prezzo vale solo 10 punti su 100: conta l'offerta tecnica.",
    "Contributo ANAC di 18 € è condizione di ammissibilità."
+  ],
+  "lavori": "Messa in sicurezza della parete rocciosa lungo la SP 37 tra Castelli e Arsita, vicino al Fosso Gravone (circa 1.235 m di quota), da cui si staccano massi che finiscono sulla carreggiata. Su circa 540 m² di parete si tolgono vegetazione e blocchi instabili (disgaggio con rocciatori), poi si consolida con circa 640 m di chiodature (barre GEWI Ø32 lunghe 5 m in fori Ø80 iniettati di malta cementizia) e rete metallica a doppia torsione con funi in acciaio su circa 590 m². Si ricostruisce anche il muretto di sottoscarpa ammalorato, circa 25 m in c.a. rivestito in pietra locale. Lavori su parete subverticale accanto alla strada; durata prevista 120 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Chiodature e tiranti con barre in acciaio",
+    "quota": 45
+   },
+   {
+    "cosa": "Rete metallica e funi di rivestimento",
+    "quota": 29
+   },
+   {
+    "cosa": "Muretto di sottoscarpa in c.a. e pietra",
+    "quota": 14
+   },
+   {
+    "cosa": "Pulizia parete, disgaggio e taglio alberi",
+    "quota": 10
+   },
+   {
+    "cosa": "Trasporti e smaltimento",
+    "quota": 2
+   }
   ]
  }
 }
