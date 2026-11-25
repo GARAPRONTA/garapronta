@@ -160,7 +160,8 @@ def testo_da(nome, data):
     return "altro", ""
 
 
-TIPI = [("disciplinare", r"disciplinar"), ("lettera_invito", r"lettera.{0,5}invito|invito"),
+TIPI = [("relazione", r"relazione.{0,4}(tecnic|illustrativ|generale\b(?!.{0,4}calcol))|descrittiv|quadro esigenziale|\bdip\b|documento.{0,4}indirizzo"),
+        ("disciplinare", r"disciplinar"), ("lettera_invito", r"lettera.{0,5}invito|invito"),
         ("bando", r"bando"), ("avviso", r"avviso|manifestazion|indagine"), ("capitolato", r"capitolat|csa\b"),
         ("computo", r"computo|\bcme\b|metrico.?estim|stima.?lavori"), ("elenco_prezzi", r"elenco.{0,3}prezz"), ("dgue", r"dgue"),
         ("modulistica", r"modell|allegato|istanza|dichiaraz|modulo|offerta"), ("progetto", r"relazion|tavol|progett")]
@@ -174,7 +175,7 @@ def tipo_doc(nome):
     return "altro"
 
 
-PRIORITA = ["disciplinare", "lettera_invito", "bando", "avviso", "capitolato", "elenco_prezzi", "computo", "altro", "modulistica", "dgue", "progetto"]
+PRIORITA = ["disciplinare", "lettera_invito", "bando", "avviso", "relazione", "capitolato", "elenco_prezzi", "computo", "altro", "modulistica", "dgue", "progetto"]
 
 
 import lettori
@@ -403,11 +404,30 @@ def salva_gara(files, cart):
     if comp:
         with gzip.open(f"{cart}/computo.json.gz", "wt", encoding="utf-8") as f:
             json.dump(comp, f, ensure_ascii=False)
-    budget, out = MAX_TESTO, []
+    # stesso testo due volte (file firmato .p7m e copia in chiaro): lo tengo una volta sola
+    visti = set()
     for x in docs:
-        t = x.pop("testo")[: max(0, budget)]
-        budget -= len(t)
-        out.append({**x, "testo": t})
+        h = hash(x["testo"][:5000]) if len(x["testo"]) > 200 else None
+        if h in visti:
+            x["testo"], x["doppio"] = "", True
+        elif h:
+            visti.add(h)
+    # due passate: prima un pezzo per ogni documento (così relazione e capitolato ci sono sempre),
+    # poi il resto del budget in ordine di importanza
+    PEZZO = 40_000
+    budget = MAX_TESTO
+    quota = [min(len(x["testo"]), PEZZO) for x in docs]
+    budget -= sum(quota)
+    if budget < 0:   # troppi documenti: taglio i pezzi in proporzione
+        f = MAX_TESTO / sum(quota)
+        quota, budget = [int(q * f) for q in quota], 0
+    for i, x in enumerate(docs):
+        extra = min(len(x["testo"]) - quota[i], budget)
+        quota[i] += extra
+        budget -= extra
+    out = []
+    for i, x in enumerate(docs):
+        out.append({**x, "testo": x.pop("testo")[:quota[i]]})
     with gzip.open(f"{cart}/testi.json.gz", "wt", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False)
     return docs
