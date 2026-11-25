@@ -61,7 +61,7 @@
   "piattaforma": "TuttoGare",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 6
+  "file": 7
  },
  {
   "cig": "BDE378FAD8",
@@ -117,7 +117,7 @@
   "piattaforma": "gare.comune.prato.it",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 13
+  "file": 15
  },
  {
   "cig": "BDCC5ACD5B",
@@ -235,9 +235,9 @@
   "cig": "BDE543818A",
   "url": "https://saludecio.tuttogare.it/gare/dettaglio.php?codice=231",
   "piattaforma": "TuttoGare",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 2
  },
  {
   "cig": "BDE4225736",
