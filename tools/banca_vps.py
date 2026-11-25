@@ -84,7 +84,7 @@ CREATE OR REPLACE TABLE lavori AS
 SELECT cig, any_value(cf_amministrazione_appaltante) cf, any_value(denominazione_amministrazione_appaltante) ente,
        any_value(provincia) provincia, any_value(TRY_CAST(importo_lotto AS DOUBLE)) importo,
        any_value(tipo_scelta_contraente) procedura, any_value(TRY_CAST(data_pubblicazione AS DATE)) data_pub,
-       any_value(oggetto_lotto) oggetto
+       any_value(oggetto_lotto) oggetto, any_value(replace(sezione_regionale, 'SEZIONE REGIONALE ', '')) regione
 FROM read_csv([{lista}], {OPZ}, union_by_name=true)
 WHERE oggetto_principale_contratto = 'LAVORI'
 GROUP BY cig""")
@@ -109,7 +109,7 @@ FROM read_csv('{aggi}', {OPZ}) WHERE id_aggiudicazione IN (SELECT id FROM agg) G
 # Gare con concorrenza vera (no affidamenti diretti), ribasso plausibile
 con.execute("""
 CREATE OR REPLACE TABLE esiti AS
-SELECT l.cig, l.cf, l.ente, l.provincia, c.cat, l.importo, l.procedura, l.oggetto, a.rib, a.offerte, a.offerenti,
+SELECT l.cig, l.cf, l.ente, l.provincia, l.regione, c.cat, l.importo, l.procedura, l.oggetto, a.rib, a.offerte, a.offerenti,
        a.invitate, a.imp_agg, a.data_agg, a.criterio, v.vincitori
 FROM agg a JOIN lavori l USING (cig) LEFT JOIN cat c USING (cig) LEFT JOIN vinc v ON v.id = a.id
 WHERE a.rib > 0 AND a.rib < 60 AND l.procedura NOT ILIKE '%AFFIDAMENTO DIRETTO%'""")
@@ -130,13 +130,19 @@ def stats(chiave):
 
 print("== indici", flush=True)
 ind = {"generato": str(date.today()), "fonte": "ANAC open data (CC BY-SA 4.0): cig, categorie-opera, aggiudicazioni, aggiudicatari",
-       "anni": ANNI, "ente": {}, "provincia": {}}
+       "anni": ANNI, "ente": {}, "provincia": {}, "regione": {}, "italia": {}}
 for row in stats("cf"):
     cf, c, n, med, p25, p75, off, ult, ultime = row
     ind["ente"].setdefault(cf, {})[c] = {"n": n, "med": med, "p25": p25, "p75": p75, "off": off, "ultime": ultime}
 for row in stats("provincia"):
     pr, c, n, med, p25, p75, off, ult, ultime = row
     ind["provincia"].setdefault(pr, {})[c] = {"n": n, "med": med, "p25": p25, "p75": p75, "off": off}
+for row in stats("regione"):
+    rg, c, n, med, p25, p75, off, ult, ultime = row
+    ind["regione"].setdefault(rg, {})[c] = {"n": n, "med": med, "p25": p25, "p75": p75, "off": off}
+for row in stats("'IT'"):
+    _, c, n, med, p25, p75, off, ult, ultime = row
+    ind["italia"][c] = {"n": n, "med": med, "p25": p25, "p75": p75, "off": off}
 enti = {}
 for cf, nome, prov in con.execute("SELECT cf, any_value(ente), any_value(provincia) FROM lavori WHERE cf IS NOT NULL GROUP BY cf").fetchall():
     enti[norm(nome)] = {"cf": cf, "prov": prov}
