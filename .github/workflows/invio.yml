@@ -1,33 +1,35 @@
 name: GaraPronta invio email
 on:
+  push:
+    paths: ['resoconti/**']   # parte appena Claude ha scritto i resoconti del giorno
   schedule:
-    - cron: '37 6 * * *'   # 07:37 ora italiana (inverno): dopo dati, documenti e resoconti
+    - cron: '37 7 * * *'      # paracadute: 08:37 ora italiana, se i resoconti non sono arrivati
   workflow_dispatch:
     inputs:
       data:
         description: 'Giorno (gg/mm/aaaa), vuoto = ieri'
         required: false
-concurrency: giornaliera
+permissions:
+  contents: write
+concurrency: invio
 jobs:
   invia:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Aspetta i resoconti (max 35 minuti)
-        # L'avvio pianificato di GitHub arriva anche con ~1 ora di ritardo: dati e documenti
-        # finiscono verso le 7:10 e i resoconti di Claude arrivano dopo. Se mancano, aspetta.
-        if: github.event_name == 'schedule'
+      - name: Già inviata oggi?
+        id: fatto
         run: |
-          F="resoconti/$(date -u -d yesterday +%Y/%m/%d).json"
-          for i in $(seq 1 7); do
-            [ -f "$F" ] && { echo "Resoconti pronti: $F"; exit 0; }
-            echo "Manca $F, riprovo tra 5 minuti ($i/7)"; sleep 300; git pull -q
-          done
-          echo "Resoconti non arrivati: invio senza resoconti"
+          git pull -q
+          F="inviati/$(TZ=Europe/Rome date +%F)"
+          echo "file=$F" >> $GITHUB_OUTPUT
+          if [ -f "$F" ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then echo "salta=1" >> $GITHUB_OUTPUT; echo "Email di oggi già inviata"; fi
       - uses: actions/setup-python@v5
+        if: steps.fatto.outputs.salta != '1'
         with: { python-version: '3.12' }
       - name: Invia le email (con i resoconti, se pronti)
+        if: steps.fatto.outputs.salta != '1'
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_LIST_ID: '5'
@@ -35,5 +37,13 @@ jobs:
           LIVE: '0'   # PROVA: scrive solo agli indirizzi con +test
           MODE: invio
         run: python pipeline/garapronta.py
+      - name: Segna come inviata
+        if: steps.fatto.outputs.salta != '1'
+        run: |
+          mkdir -p inviati && date -u +%FT%TZ > "${{ steps.fatto.outputs.file }}"
+          git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
+          git add inviati && git commit -q -m "Email inviate $(TZ=Europe/Rome date +%F)" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q && break; sleep 7; done
       - uses: actions/upload-artifact@v4
+        if: steps.fatto.outputs.salta != '1'
         with: { name: anteprime, path: anteprime/, retention-days: 7 }
