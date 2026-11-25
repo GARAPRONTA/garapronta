@@ -1,38 +1,47 @@
-"""Sul server italiano: cosa mostrano le pagine dei prezzari che non hanno dato file."""
-import re
+"""Sul server italiano: piattaforma prezzari 'apillppv2' (Toscana, Campania, Sardegna, Piemonte) e Veneto."""
+import json, urllib.request
 from playwright.sync_api import sync_playwright
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-P = {
- "Veneto": "https://www.regione.veneto.it/web/lavori-pubblici/prezzario-regionale",
- "Toscana": "https://prezzariollpp.regione.toscana.it/2026/firenze",
- "Campania": "https://prezzario.regione.campania.it/",
- "Sardegna": "https://prezzario.regione.sardegna.it/prezzario/",
- "Lazio": "https://www.regione.lazio.it/cittadini/lavori-pubblici-infrastrutture/tariffa-prezzi-lavori-pubblici",
- "Sicilia": "https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/assessorato-infrastrutture-mobilita/dipartimento-regionale-tecnico/commissione-regionale-prezziario/prezziario-unico-regionale-per-lavori-pubblici/prezziario-vigente",
- "Piemonte": "https://prezzario.regione.piemonte.it/2026",
- "Calabria": "https://www.regione.calabria.it/edilizia-infrastrutture-difesa-del-suolo-e-mobilita/prezzario-regionale-oo-pp/",
-}
+API = {"Toscana": "https://www308.regione.toscana.it/api/apillppv2-years-v2",
+       "Campania": "https://gestione-prezzario.regione.campania.it/api/apillppv2-years-v2",
+       "Sardegna": "https://prezzariogestione.regione.sardegna.it/api/apillppv2-years-v2",
+       "Piemonte": "https://gestione-prezzario.regione.piemonte.it/api/apillppv2-years-v2"}
+for reg, u in API.items():
+    try:
+        j = urllib.request.urlopen(urllib.request.Request(u, headers={"user-agent": UA}), timeout=60).read().decode()
+        print(f"## {reg} anni:", j[:900])
+    except Exception as e:
+        print(reg, "ERR", e)
 with sync_playwright() as p:
     b = p.chromium.launch()
-    for reg, u in P.items():
-        pg = b.new_page(user_agent=UA, locale="it-IT")
-        xhr = []
-        pg.on("response", lambda r: xhr.append((r.status, r.url[:150])) if r.request.resource_type in ("xhr", "fetch") else None)
+    for reg, u in [("Toscana", "https://prezzariollpp.regione.toscana.it/2026/firenze"),
+                   ("Campania", "https://prezzario.regione.campania.it/2026"),
+                   ("Sardegna", "https://prezzario.regione.sardegna.it/2026"),
+                   ("Veneto", "https://prezzario.regione.veneto.it/?anno=2026")]:
+        ctx = b.new_context(user_agent=UA, locale="it-IT", accept_downloads=True)
+        pg = ctx.new_page(); req = []
+        pg.on("request", lambda r: req.append(r.method + " " + r.url[:200]) if r.resource_type in ("xhr", "fetch", "document") else None)
         try:
-            r = pg.goto(u, wait_until="networkidle", timeout=60000); st = r.status if r else None
+            pg.goto(u, wait_until="networkidle", timeout=60000)
         except Exception as e:
-            st = type(e).__name__
-        pg.wait_for_timeout(4000)
-        print(f"\n## {reg} · {st} · {pg.title()[:80]}")
+            print(reg, "goto", e)
+        pg.wait_for_timeout(3000)
+        print(f"\n## {reg} {pg.url} · {pg.title()}")
+        print("   testo:", pg.inner_text("body")[:400].replace("\n", " | "))
+        n0 = len(req)
         try:
-            print("   testo:", pg.inner_text("body")[:700].replace("\n", " | "))
-        except Exception:
-            pass
-        links = pg.eval_on_selector_all("a", "as => as.map(a => [(a.innerText||'').trim().slice(0,60), a.href])")
-        print("   link con 2026/xml/xls/ods/csv:")
-        for t, h in links:
-            if re.search(r"2026|xml|xls|ods|csv|zip|download|scarica", t + h, re.I):
-                print("     ", t.replace("\n", " "), "|", h[:170])
-        print("   xhr:", xhr[:12])
-        pg.close()
+            pg.get_by_text("SCARICA", exact=False).first.click(timeout=5000)
+            pg.wait_for_timeout(3000)
+            print("   dopo SCARICA:", pg.inner_text("body")[:600].replace("\n", " | "))
+            for t in ("XML", "Xml", "CSV", "Excel", "XLS"):
+                try:
+                    with pg.expect_download(timeout=60000) as dl:
+                        pg.get_by_text(t, exact=False).first.click(timeout=4000)
+                    print("   DOWNLOAD", t, dl.value.suggested_filename, dl.value.url[:200]); break
+                except Exception as e:
+                    print("   no", t, type(e).__name__)
+        except Exception as e:
+            print("   SCARICA non trovato", type(e).__name__)
+        print("   richieste:", req[n0:n0 + 15])
+        ctx.close()
     b.close()
