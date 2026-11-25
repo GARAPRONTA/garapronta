@@ -377,10 +377,10 @@ def storico(a, it):
     R, E = _indici()
     if not R:
         return None
-    cats = [c.replace(" ", "") for c in it.get("cat") or []]
-    if not cats:
+    pv = prevalente(it)
+    if not pv:
         return None
-    c = cats[0]
+    c = pv.replace(" ", "")
     ente = E.get(_nome(a.get("ente")))
     s = (R.get("ente", {}).get(ente["cf"], {}).get(c) if ente else None)
     if s and s["n"] >= 3:
@@ -539,6 +539,41 @@ def scrivi_mappe(utenti):
     return len(fatti)
 
 
+# ---------------------------------------------------------------- trova partner (attestazioni SOA ANAC)
+def _partner_idx():
+    if "p" not in _IND:
+        try:
+            _IND["p"] = json.load(gzip.open("indici/partner.json.gz", "rt"))["province"]
+        except Exception:
+            _IND["p"] = {}
+    return _IND["p"]
+
+
+def prevalente(it):
+    """Categoria prevalente: nei dati PVL l'ordine non è garantito; le OG sono quasi sempre la prevalente."""
+    cats = it.get("cat") or []
+    return next((c for c in cats if c.replace(" ", "").startswith("OG")), cats[0] if cats else None)
+
+
+def provincia_ente(a):
+    R, E = _indici()
+    e = E.get(_nome(a.get("ente")))
+    return e["prov"] if e else None
+
+
+def partner_per(a, cat, n=5):
+    """Imprese con SOA valida nella categoria, nella provincia dell'ente (poi nella regione), ordinate per gare vinte."""
+    P = _partner_idx()
+    c = cat.replace(" ", "")
+    prov = provincia_ente(a)
+    out = list((P.get(prov) or {}).get(c, [])) if prov else []
+    if len(out) < n and prov:
+        reg = _COMUNI.get(_norm(prov))
+        altri = [x for pv, cats in P.items() if pv != prov and _COMUNI.get(_norm(pv)) == reg for x in cats.get(c, [])]
+        out += sorted(altri, key=lambda x: (-x["vc"], -x["v"]))
+    return out[:n], prov
+
+
 def virgola(x):
     return str(x).replace(".", ",")
 
@@ -579,6 +614,14 @@ def scheda(a, it, soa, tipo):
         else:
             badge = pill(f"Ti serve un partner {', '.join(manca[:3])}{' +' if len(manca) > 3 else ''}", "#c2410c", "#fdeee6")
             accento = "#ff9f0a"
+            nomi = []
+            for c in manca[:2]:
+                ps, _ = partner_per(a, c, 3)
+                if ps:
+                    nomi.append(f"<b>{c.replace(' ', '')}</b>: " + ", ".join(html.escape(titolo_ente(p['nome'])) for p in ps))
+            if nomi:
+                badge += (f'<div style="font-size:12px;color:{INK2};margin-top:8px;line-height:1.5">🤝 Partner possibili in zona · '
+                          + " · ".join(nomi) + f' <a href="{html.escape(url_scheda(it))}#partner" style="color:{BLU};text-decoration:none;font-weight:600">tutti ›</a></div>')
     rib = ""
     if tipo == "bando":
         st = storico(a, it)
@@ -651,6 +694,21 @@ def pagina_gara(a, it, tipo):
                     for p in res.get("punti") or [])
     att = "".join(f"<li>{e(x)}</li>" for x in res.get("attenzione") or [])
     blocco_descr = f'<h2>Descrizione</h2><p>{e(descr)}</p>' if descr and descr.lower() not in ufficiale.lower() else ""
+    blocco_partner = ""
+    sezioni = []
+    for c in [x for x in (it.get("cat") or []) if x != prevalente(it)][:4]:
+        ps, prov = partner_per(a, c, 8)
+        if ps:
+            r = "".join(f'<tr><td>{e(titolo_ente(pubblico(p["nome"])))}</td><td>{e(p["cl"] or "")}</td>'
+                        f'<td style="text-align:right">{p["vc"]}</td><td style="text-align:right">{p["v"]}</td></tr>' for p in ps)
+            sezioni.append(f'<h2>{e(c.replace(" ", ""))}{(" · provincia di " + e(titolo_ente(prov))) if prov else ""}</h2>'
+                           f'<table class="u"><tr><th>Impresa</th><th>Classifica</th><th>Gare {e(c.replace(" ", ""))} vinte</th><th>Gare vinte in tutto</th></tr>{r}</table>')
+    if sezioni:
+        blocco_partner = ('<div class="card" id="partner"><h2 style="margin-top:0;color:#007aff">Trova partner per le altre categorie</h2>'
+                          '<p class="uff">Imprese con attestazione SOA in corso di validità nelle categorie richieste dalla gara oltre alla prevalente, '
+                          'vicino all\'ente. Utili per un raggruppamento (RTI) o per l\'avvalimento.</p>' + "".join(sezioni) +
+                          '<p class="f" style="text-align:left;margin-top:12px">Fonte: attestazioni SOA e aggiudicazioni 2023-2025 (ANAC, CC BY-SA 4.0). '
+                          'Le ditte individuali non sono nominate sulle pagine pubbliche.</p></div>')
     st = storico(a, it)
     blocco_st = ""
     if st:
@@ -690,6 +748,7 @@ table.u th{{width:auto;font-size:11px;padding:6px 8px 6px 0}} table.u td{{font-s
 <div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a></div>
 </div>
 {blocco_st}
+{blocco_partner}
 {f'<div class="card"><h2 style="margin-top:0;color:#007aff">In breve · letto dai documenti di gara</h2><table>{punti}</table>' + (f'<ul class="att">{att}</ul>' if att else "") + "</div>" if punti else ""}
 <div class="card"><table>
 <tr><th>Ente</th><td>{e(a.get("ente") or "")}</td></tr>
