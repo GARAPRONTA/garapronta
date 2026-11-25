@@ -51,8 +51,8 @@
   "cig": "BDE51F7561",
   "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77",
   "piattaforma": "www.acquistinretepa.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
   "file": 0
  },
  {
@@ -83,9 +83,9 @@
   "cig": "BDE2268640",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1030011",
   "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
  },
  {
   "cig": "BDDF8CBF1B",
@@ -109,7 +109,7 @@
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 8
+  "file": 10
  },
  {
   "cig": "BDDDC4CB16",
