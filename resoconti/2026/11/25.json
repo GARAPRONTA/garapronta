@@ -1,0 +1,1036 @@
+{
+ "BDF5B9CCDF": {
+  "titolo": "Riqualificazione e messa in sicurezza dell'edificio delle scuole elementari e medie · Comune di Bolotana (NU)",
+  "lavori": "Interventi sull'edificio scolastico di Bolotana, con infiltrazioni dal tetto al secondo piano (laboratorio d'arte e vano scala) e umidità di risalita nelle aule del piano terra. Si smonta e rifà il manto di copertura in tegole su circa 200 m² con rimozione della vecchia guaina bituminosa; si mettono a norma i parapetti delle scale esterne (oggi alti 75 cm), si sistemano il piazzale, le pavimentazioni dell'infanzia, i lucernai della sala giochi, le cassette idranti e si installano scaldacqua nei bagni. Lavori a misura, durata 120 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Rifacimento manto di copertura"
+   },
+   {
+    "cosa": "Parapetti a norma scale esterne"
+   },
+   {
+    "cosa": "Bonifica umidità di risalita"
+   },
+   {
+    "cosa": "Sistemazione piazzale esterno"
+   },
+   {
+    "cosa": "Pavimentazioni e lucernai interni"
+   },
+   {
+    "cosa": "Scaldacqua e cassette idranti"
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "180.000 € (159.788 € a base di gara + 20.212 € sicurezza) · manodopera 58.311 € · a misura · durata 120 giorni",
+    "fonte": "Bando §8, §10 · Disciplinare §4.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "Categoria unica OG1 classifica I",
+    "fonte": "Disciplinare §4.1 (tabella)"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OG1 subappaltabile in quota non maggioritaria",
+    "fonte": "Disciplinare §4.1 (tabella)"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §11 (testo non disponibile)"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §10 (testo non disponibile)"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso (massimo ribasso)",
+    "fonte": "Bando §14 · Disciplinare §1"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 10 giorni prima della scadenza, solo dalla piattaforma Sardegna CAT; i quesiti tecnici vanno mandati anche al Comune di Bolotana",
+    "fonte": "Disciplinare §3.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Non indicato nei documenti",
+    "fonte": "Bando §15"
+   }
+  ],
+  "attenzione": [
+   "Gara gestita dalla CUC della Comunità Montana Nuorese su Sardegna CAT: serve SPID e firma digitale.",
+   "Prezzi aggiornati solo oltre il 5% di variazione dei costi, per l'80% dell'eccedenza."
+  ]
+ },
+ "BDE9F6AF20": {
+  "titolo": "Accordo quadro quadriennale per la manutenzione edile degli immobili dell'ASL Lanciano-Vasto-Chieti",
+  "lavori": "Accordo quadro con un solo operatore per 4 anni: lavori di manutenzione edile su tutti gli immobili in uso all'ASL Lanciano-Vasto-Chieti (oltre 100 fabbricati tra ospedali, ambulatori, RSA e depositi, elencati nella tabella siti), ordinati di volta in volta con contratti attuativi a prezzi del prezziario Regione Abruzzo. Comprende il servizio di pronto intervento tecnico con centrale operativa e sistema informativo. Lavori spesso in strutture sanitarie in funzione; per il pronto intervento in emergenza si deve intervenire entro due ore, pena 50 €/ora.",
+  "lavorazioni": [
+   {
+    "cosa": "Manutenzione edile immobili ASL",
+    "quota": 93
+   },
+   {
+    "cosa": "Servizi di pronto intervento tecnico",
+    "quota": 7
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "8.416.312 € in 4 anni (7.800.000 € lavori + 616.312 € servizi di pronto intervento) · manodopera stimata 3.200.000 € · oneri sicurezza fissati per ogni contratto attuativo",
+    "fonte": "Disciplinare art. 3, art. 4.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG1 classifica VI · avvalimento ammesso",
+    "fonte": "Disciplinare art. 7.2, art. 8"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso solo se indicato in offerta; non si può subappaltare la prevalente esecuzione delle lavorazioni OG1",
+    "fonte": "Disciplinare art. 9"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Obbligatorio, pena esclusione · da prenotare sulla piattaforma entro la data indicata nei documenti di gara",
+    "fonte": "Disciplinare art. 12"
+   },
+   {
+    "t": "Garanzia",
+    "v": "154.134 € (2% compreso il quinto d'obbligo) · riduzioni art. 106 c. 8 del Codice",
+    "fonte": "Disciplinare art. 11"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa: tecnica 75, prezzo 25",
+    "fonte": "Disciplinare art. 19"
+   },
+   {
+    "t": "Punti facili",
+    "v": "Solo 5 punti tabellari con le certificazioni: ISO 14001/EMAS 2 · ISO 45001 1 · ISO 37001 1 · parità di genere 1",
+    "fonte": "Disciplinare art. 19.1 (criterio 8)"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 14 giorni prima della scadenza, sulla piattaforma GIADA",
+    "fonte": "Disciplinare art. 2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare"
+   }
+  ],
+  "attenzione": [
+   "Senza sopralluogo si è esclusi.",
+   "Il punteggio tecnico (75) è quasi tutto discrezionale: esperienze in strutture sanitarie, gestione delle squadre, sicurezza.",
+   "Serve una classifica alta: OG1 VI."
+  ]
+ },
+ "BDF61DE6E4": {
+  "titolo": "Accordo quadro triennale con due imprese per la manutenzione di strade, reti e sottoservizi · Comune di Sant'Antonio Abate (NA)",
+  "lavori": "Accordo quadro di 3 anni con due imprese (60% dei lavori alla prima, 40% alla seconda) per la manutenzione delle strade su tutto il territorio comunale (circa 7,9 km²). Lavori su chiamata: rimozione di fanghi e detriti dopo le piogge, fresatura e rifacimento del manto d'asfalto, chiusura di buche e voragini, trattamenti superficiali, marciapiedi, cordoli e cunette, muri di sostegno, caditoie e pozzetti, riparazioni della rete idrica, pulizia delle strade da erbe e sterpaglie e segnaletica orizzontale e verticale.",
+  "lavorazioni": [
+   {
+    "cosa": "Asfaltature e fresature"
+   },
+   {
+    "cosa": "Chiusura buche e voragini"
+   },
+   {
+    "cosa": "Marciapiedi, cordoli e cunette"
+   },
+   {
+    "cosa": "Caditoie e rete idrica"
+   },
+   {
+    "cosa": "Segnaletica stradale"
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "564.000 € in 3 anni (550.000 € a base di gara + 11.000 € sicurezza + 3.000 € oneri di discarica) · manodopera 165.000 €",
+    "fonte": "Bando-disciplinare §4"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG3 classifica II (o superiore)",
+    "fonte": "Bando-disciplinare §4, §5"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Solo se indicato in offerta con la quota; vietato il subappalto integrale",
+    "fonte": "Bando-disciplinare §5"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Obbligatorio, da fare in autonomia · l'attestato di presa visione va allegato all'offerta",
+    "fonte": "Bando-disciplinare §7 lett. g"
+   },
+   {
+    "t": "Garanzia",
+    "v": "11.280 € (2%) · ridotta del 50% con certificazione di qualità o per micro, piccole e medie imprese (non cumulabili)",
+    "fonte": "Bando-disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa: tecnica 90 (urgenze 30, materiali e decoro 25, organizzazione cantiere 20, sicurezza e ambiente 10, assistenza 5), prezzo 10 · soglia minima 65 punti tecnici",
+    "fonte": "Bando-disciplinare §6"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 16/12/2026 sulla piattaforma Maggioli · risposte entro il 18/12/2026",
+    "fonte": "Bando-disciplinare §3"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 21/12/2026 ore 10:00",
+    "fonte": "Bando-disciplinare §7"
+   }
+  ],
+  "attenzione": [
+   "Sotto i 65 punti tecnici l'offerta economica non viene aperta.",
+   "Il prezzo vale solo 10 punti su 100: decide l'offerta tecnica.",
+   "Accordo quadro: nessun diritto a ricevere lavori se il Comune non firma i contratti attuativi."
+  ]
+ },
+ "BDF080A5FE": {
+  "titolo": "Percorsi accessibili tra Ibla e Ragusa Centro e nodo di interscambio della fermata Carmine (stralcio 3) · Comune di Ragusa",
+  "lavori": "Riqualificazione delle strade del centro storico di Ragusa a monte di Corso Italia (Corso Italia, via Matteotti, via Diaz, via San Vito, via Odierna, via De Stefano, via Scuole, via Ecce Homo, via Rapisardi), con marciapiedi stretti, basole consumate e dislivelli. Si bocciardano circa 4.400 m² di basole in pietra di Modica, si revisionano circa 1.100 m² di basolato e zanelle e 860 m di dentelli, si posano circa 1.400 m² di marciapiedi in masselli e 26 rampe di raccordo; fresatura (circa 11.300 m²) e riasfaltatura delle strade, nuova segnaletica. Lavori per fasi e tratti brevi, con negozi e residenti serviti. Durata 150 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Basolato in pietra di Modica",
+    "quota": 48
+   },
+   {
+    "cosa": "Fresatura e asfaltatura",
+    "quota": 29
+   },
+   {
+    "cosa": "Marciapiedi in masselli e rampe",
+    "quota": 11
+   },
+   {
+    "cosa": "Lavori in economia e noli",
+    "quota": 5
+   },
+   {
+    "cosa": "Demolizioni e trasporti a discarica",
+    "quota": 4
+   },
+   {
+    "cosa": "Segnaletica stradale",
+    "quota": 2
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "999.987 € compresi 29.893 € sicurezza · manodopera 286.242 € · valore con quinto d'obbligo 1.199.984 € · durata 150 giorni",
+    "fonte": "Bando §3, §3.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG3 classifica III-bis · avvalimento ammesso per OG3",
+    "fonte": "Bando §3, §7"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Solo se indicato in offerta · vietato il subappalto della prevalente esecuzione OG3 · almeno il 20% del subappalto a PMI",
+    "fonte": "Bando §3, §8"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non obbligatorio (basta prendere visione degli elaborati)",
+    "fonte": "Bando §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non richiesta",
+    "fonte": "Bando §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso con esclusione automatica delle offerte anomale (metodo A) se almeno 5 offerte · inversione procedimentale",
+    "fonte": "Bando §17"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 6 giorni prima della scadenza, sulla piattaforma",
+    "fonte": "Bando §2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 15/12/2026 ore 09:00 · prima seduta 15/12/2026 ore 09:05",
+    "fonte": "Bando §13, §19"
+   }
+  ],
+  "attenzione": [
+   "Esclusione automatica delle offerte anomale: ribassi troppo alti escono subito.",
+   "Contributo ANAC di 165 € da pagare: è condizione di ammissibilità.",
+   "Quasi metà dell'importo è lavorazione della pietra calcarea a mano nel centro storico."
+  ]
+ },
+ "BDF631685C": {
+  "titolo": "Manutenzione ordinaria e straordinaria delle piste ciclabili esistenti · Comune di Palermo – indagine di mercato",
+  "lavori": "Manutenzione ordinaria e straordinaria delle ciclovie già esistenti nel territorio di Palermo: conservazione, ripristino e miglioramento della funzionalità e sicurezza dei percorsi ciclabili. Circa tre quarti dell'importo sono opere stradali (pavimentazioni e opere complementari, OG3) e un quarto è segnaletica stradale non luminosa (OS10). Progetto, capitolato e durata saranno forniti solo con la lettera d'invito.",
+  "lavorazioni": [
+   {
+    "cosa": "Opere stradali su piste ciclabili",
+    "quota": 76
+   },
+   {
+    "cosa": "Segnaletica stradale non luminosa",
+    "quota": 24
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "345.855 € (329.567 € a base di gara + 16.288 € sicurezza) · manodopera 76.634 €",
+    "fonte": "Avviso §4"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG3 classifica I (262.155 €) + OS10 classifica I (83.699 €), oppure solo OG3 adeguata a 345.855 € con subappalto necessario della OS10",
+    "fonte": "Avviso §5, §7.3"
+   },
+   {
+    "t": "Criterio",
+    "v": "Sarà indicato nella lettera d'invito",
+    "fonte": "Avviso §6"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Solo via PEC a trasportopubblicodimassa@cert.comune.palermo.it con Modello A e Modello B (lavori analoghi degli ultimi 10 anni), firmati digitalmente",
+    "fonte": "Avviso §10"
+   },
+   {
+    "t": "Scadenza",
+    "v": "Entro il 4/11/2026 ore 12:00",
+    "fonte": "Avviso §10"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "Almeno 5; se i candidati sono di più si scelgono con punteggio: 10 punti per ogni lavoro analogo (piste ciclabili max 40, pavimentazioni max 30, segnaletica max 30)",
+    "fonte": "Avviso §6, §9"
+   }
+  ],
+  "attenzione": [
+   "La scadenza scritta nell'avviso (4/11/2026) risulta già passata: conviene verificare subito con il Comune.",
+   "Contano solo i lavori analoghi descritti bene nel Modello B: ogni lavoro vale 10 punti.",
+   "PEC con oggetto diverso o oltre il termine = candidatura non considerata."
+  ]
+ },
+ "BDF0FA2A3A": {
+  "titolo": "Manutenzione straordinaria della cucina e dei locali annessi di Palazzo Arsenale a Torino · 1° Reparto Infrastrutture Esercito – indagine di mercato",
+  "lavori": "Rifacimento della cucina e dei locali annessi di Palazzo Arsenale a Torino, edificio tutelato del Ministero della Difesa. Lavori impiantistici e di restauro: impianti idrico-sanitari e di cucina con nuove attrezzature (circa 1,6 milioni), opere di restauro su bene vincolato (circa 1,6 milioni), impianti elettrici (0,7 milioni) e di climatizzazione (0,5 milioni), con smontaggio e recupero dei gas refrigeranti dalle celle frigorifere esistenti. Durata 210 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Impianti idrici e cucina",
+    "quota": 36
+   },
+   {
+    "cosa": "Restauro edificio tutelato",
+    "quota": 36
+   },
+   {
+    "cosa": "Impianti elettrici",
+    "quota": 16
+   },
+   {
+    "cosa": "Impianti di climatizzazione",
+    "quota": 12
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "4.387.831 € compresi 69.738 € sicurezza · manodopera 1.111.710 € · durata 210 giorni",
+    "fonte": "Avviso, Dati principali"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OS3 classifica V con subappalto qualificante di OG2, OS30, OS28 · oppure OS3 III-bis + OG2 III-bis + OS30 III + OS28 II",
+    "fonte": "Avviso, Requisiti"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OS3 (prevalente) fino al 49,99% · OG2, OS30, OS28 fino al 100%",
+    "fonte": "Avviso, Dati principali (tabella)"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso con esclusione automatica delle offerte anomale (metodo A) se almeno 5 offerte",
+    "fonte": "Avviso, Dati principali"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Sul portale Maggioli del Reparto (procedura G00081): Mod. 1 firmato digitalmente + attestazione SOA; se posseduti, abilitazione DM 37/2008, certificazione gas fluorurati, qualifiche PES/PAV",
+    "fonte": "Avviso, Come partecipare"
+   },
+   {
+    "t": "Scadenza",
+    "v": "Entro il 9/12/2026 ore 10:00",
+    "fonte": "Avviso, Come partecipare"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "Da 10 a 20; in caso di molti candidati precedenza a chi ha abilitazione DM 37/2008, certificazione F-gas e personale PES/PAV, poi sorteggio",
+    "fonte": "Avviso, Selezione degli OO.EE."
+   }
+  ],
+  "attenzione": [
+   "Allegare ISO o certificazioni non richieste negli spazi delle certificazioni = esclusione della candidatura.",
+   "Non è invitato chi ha già con questo Reparto una gara non aggiudicata o un lavoro in corso sopra il milione di euro.",
+   "Se le attrezzature frigorifere previste non sono più vendibili, vanno fornite equivalenti con gas consentiti senza costi in più."
+  ]
+ },
+ "BDF17C947B": {
+  "titolo": "Restauro, consolidamento e valorizzazione del sito archeologico di Sant'Elia Speleota · Comune di Melicuccà (RC)",
+  "lavori": "Conservazione, stabilizzazione e restauro del sito archeologico di Sant'Elia Speleota a Melicuccà, con riqualificazione estetica e funzionale e potenziamento della fruizione. L'importo si divide tra restauro su bene tutelato (circa 560.000 €), opere di protezione con barriere paramassi (circa 416.000 €) e scavi archeologici (circa 71.000 €). Lavori a misura, durata 450 giorni. Relazione, capitolato e computo non sono tra i documenti disponibili.",
+  "lavorazioni": [
+   {
+    "cosa": "Restauro bene tutelato",
+    "quota": 54
+   },
+   {
+    "cosa": "Barriere paramassi",
+    "quota": 40
+   },
+   {
+    "cosa": "Scavi archeologici",
+    "quota": 7
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "1.046.691 € (1.027.321 € a base di gara + 19.370 € sicurezza) · manodopera 416.593 € · a misura · durata 450 giorni",
+    "fonte": "Disciplinare Premesse, §3, §3.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG2 classifica III (prevalente, 560.024 €) · OS12-B classifica II (415.879 €) · OS25 classifica I (70.788 €)",
+    "fonte": "Disciplinare §6.2"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso solo se dichiarato nel DGUE · vietata la prevalente esecuzione della categoria prevalente",
+    "fonte": "Disciplinare §8"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non previsto (si può fare in autonomia, senza attestato)",
+    "fonte": "Disciplinare §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "20.934 € (2%) intestata al Comune di Melicuccà · riduzioni art. 106 c. 8",
+    "fonte": "Disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso · esclusione automatica delle offerte anomale con almeno 5 offerte · inversione procedimentale",
+    "fonte": "Disciplinare Premesse, §18, §19.1"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro 10 giorni dalla pubblicazione sul portale ANAC, dalla piattaforma",
+    "fonte": "Disciplinare §1.5"
+   },
+   {
+    "t": "Offerta",
+    "v": "Non indicato nei documenti · prima seduta il giorno dopo la scadenza",
+    "fonte": "Disciplinare §19.1"
+   }
+  ],
+  "attenzione": [
+   "Garanzia provvisoria a pena di esclusione.",
+   "Servono tre qualificazioni diverse, compresa la OS12-B per le barriere paramassi.",
+   "Ribassi oltre la soglia di anomalia esclusi in automatico."
+  ]
+ },
+ "BDF3CD67BF": {
+  "titolo": "Manutenzione straordinaria dell'argine destro alla foce del Rio Girasole e disostruzione del ponte sulla SS 125 · Lotzorai e Girasole (Regione Sardegna)",
+  "lavori": "Tratto finale dell'argine destro del Rio Girasole vicino alla foce, tra Lotzorai e Girasole, dove gabbioni e un tratto di terre armate sono stati danneggiati dall'erosione della corrente. Si ripristinano gabbionate e terramesh con circa 1.550 t di scogli, si asporta il materiale terroso sotto le arcate del ponte della SS 125 per allargare la luce di deflusso (scavi circa 1.800 m³, trasporto circa 3.800 m³ con caratterizzazione e conferimento a discarica), si pulisce la vegetazione su circa 7.400 m² e si ripristina il controfosso al piede dell'argine con nuova condotta e sifone. Lavori in alveo, durata 103 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Scogliere e gabbioni",
+    "quota": 37
+   },
+   {
+    "cosa": "Scavi e movimenti terra",
+    "quota": 24
+   },
+   {
+    "cosa": "Analisi e conferimento a discarica",
+    "quota": 18
+   },
+   {
+    "cosa": "Ripristino controfosso e condotta",
+    "quota": 9
+   },
+   {
+    "cosa": "Pulizia vegetazione arginale",
+    "quota": 8
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "205.367 € (195.367 € a base di gara + 10.000 € sicurezza) · valore con quinto d'obbligo 246.440 € · a misura · durata 103 giorni",
+    "fonte": "Determina indizione n. 1200/2026 · Capitolato"
+   },
+   {
+    "t": "Requisiti",
+    "v": "Categoria unica OG8 (opere fluviali) · nessun requisito aggiuntivo oltre la qualificazione",
+    "fonte": "Capitolato · Determina indizione"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare non disponibile"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare non disponibile"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare non disponibile"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso · esclusione automatica delle offerte anomale con almeno 5 offerte · inversione procedimentale",
+    "fonte": "Determina indizione n. 1200/2026"
+   },
+   {
+    "t": "Offerta",
+    "v": "Non indicato nei documenti · gara su Sardegna CAT (Centrale regionale di committenza)",
+    "fonte": "Determina indizione n. 1200/2026"
+   }
+  ],
+  "attenzione": [
+   "Il disciplinare di gara non è tra i documenti scaricati: scadenza, garanzia e sopralluogo vanno letti su Sardegna CAT.",
+   "Ribassi oltre la soglia di anomalia esclusi in automatico."
+  ]
+ },
+ "BDF1660A91": {
+  "titolo": "Messa a dimora di nuovi alberi contro isola di calore e polveri sottili · Comune di Padova",
+  "lavori": "Piantagione di nuovi alberi in diverse zone del territorio comunale di Padova, secondo i CAM Verde, per ridurre l'isola di calore e le polveri sottili. Il lavoro comprende scavo delle buche, fertilizzazione, messa a dimora con tutoraggio e protezione della pianta, e la cura dopo l'impianto con irrigazioni di soccorso. Si lavora anche in cantieri stradali con traffico aperto e in aree difficili da raggiungere con i mezzi. Numero di alberi e quantità non indicati nei testi disponibili (manca il computo). Durata 365 giorni.",
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "684.424 € (680.068 € a base di gara, di cui 207.540 € manodopera, + 4.356 € sicurezza) · 821.308 € con l'aumento del quinto · durata 365 giorni",
+    "fonte": "Disciplinare §3, §3.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OS24 adeguata a 821.308 € · abilitazione di manutentore del verde · iscrizione Albo gestori ambientali cat. 2-bis (altrimenti va subappaltata)",
+    "fonte": "Disciplinare §3, §6.1, §6.2"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Solo se indicato in offerta, altrimenti vietato · non si può subappaltare la parte prevalente della OS24 · almeno 20% dei subappalti a PMI",
+    "fonte": "Disciplinare §8"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non obbligatorio",
+    "fonte": "Disciplinare §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non richiesta",
+    "fonte": "Disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa: tecnica 90, prezzo 10 (ribasso sull'elenco prezzi) · soglia minima tecnica 50 punti",
+    "fonte": "Disciplinare §18, §18.1"
+   },
+   {
+    "t": "Punti facili",
+    "v": "Mezzi d'opera a basso impatto 20 · formazione ETW/ISA e manutentore del verde 10 · ISO 14001/EMAS, ISO 45001, SA 8000, UNI/PdR 125 1 punto ciascuno · assunzioni oltre le soglie 1",
+    "fonte": "Allegato Tabella criteri"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 10 giorni prima della scadenza, da \"Comunicazioni procedura\" su Sintel",
+    "fonte": "Disciplinare §2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 31/12/2026 ore 12:00 su Sintel (ARIA Lombardia)",
+    "fonte": "Disciplinare §13"
+   }
+  ],
+  "attenzione": [
+   "Sotto 50 punti tecnici su 90 si è esclusi.",
+   "Il prezzo vale solo 10 punti: 35 punti tabellari si prendono con mezzi, formazione e certificazioni.",
+   "Relazioni tecniche massimo 4 facciate per criterio: le pagine in più non vengono lette."
+  ]
+ },
+ "BDF167C1AF": {
+  "titolo": "Messa in sicurezza e riqualificazione del litorale nord di Marina di Casalabate · Comune di Squinzano (LE)",
+  "lavori": "Le dune del litorale nord di Casalabate sono erose dal vento, dal mare e dal calpestio. Si ricostruisce il cordone dunale con tecniche di ingegneria naturalistica: circa 2.080 m di viminate e 935 m di palizzate in legno, biostuoie in cocco (circa 3.750 m²) e piantumazione di specie autoctone. Per regolare gli accessi si posano passerelle pedonali sopraelevate in legno (circa 1.330 m larghe 2,40 m e 645 m larghe 1,70 m). Nei tratti più esposti si protegge il piede con scogli calcarei (circa 2.700 t); nella zona Canuta si riqualifica il waterfront con pavimentazioni, verde, 32 nuovi punti luce e barriera stradale. Durata 540 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Passerelle pedonali in legno",
+    "quota": 60
+   },
+   {
+    "cosa": "Biostuoie e piantumazioni dunali",
+    "quota": 8
+   },
+   {
+    "cosa": "Palizzate, viminate e staccionate",
+    "quota": 8
+   },
+   {
+    "cosa": "Illuminazione pubblica",
+    "quota": 5
+   },
+   {
+    "cosa": "Scogliera in massi calcarei",
+    "quota": 5
+   },
+   {
+    "cosa": "Barriera stradale di sicurezza",
+    "quota": 2
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "2.354.710 € (2.329.710 € lavori a corpo, manodopera 741.102 € inclusa, + 25.000 € sicurezza) · durata 540 giorni",
+    "fonte": "Disciplinare §4, §4.1.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG13 classifica IV (prevalente) · scorporabili OS24 cl. I (qualificazione obbligatoria), OG10 cl. I, OS12-A cl. I · nessun altro requisito economico o tecnico · avvalimento ammesso",
+    "fonte": "Disciplinare §7.1-7.3, §8"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OS24, OG10 e OS12-A subappaltabili nei limiti dell'art. 119 e dell'Allegato II.12",
+    "fonte": "Disciplinare §7.1"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Tra i modelli c'è la dichiarazione di avvenuto sopralluogo; regole e date non indicate nei testi disponibili",
+    "fonte": "Disciplinare §3.1"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare (testo non disponibile)"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta economicamente più vantaggiosa (qualità/prezzo) · punteggi non indicati nei testi disponibili",
+    "fonte": "Disciplinare §1"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 2/12/2026 ore 12:00, dalla sezione Chiarimenti della piattaforma TuttoGare",
+    "fonte": "Disciplinare §3.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 9/12/2026 ore 12:00",
+    "fonte": "Disciplinare §3.2"
+   }
+  ],
+  "attenzione": [
+   "Serve la OG13 in classifica IV: è il requisito che seleziona davvero.",
+   "La OS24 è a qualificazione obbligatoria: senza SOA va subappaltata o coperta in raggruppamento.",
+   "Il disciplinare scaricato è incompleto: punteggi, garanzia e sopralluogo vanno controllati sul documento originale."
+  ]
+ },
+ "BDF1AA1D3C": {
+  "titolo": "Risanamento delle Rughe di Santa Maria nel centro storico · Comune di Melicuccà (RC)",
+  "lavori": "Le Rughe di Santa Maria sono vicoli in pendenza del centro storico di Melicuccà (via Coletta, vico Arena e traverse, via Trappeto Borgia, via Pentimalli e altri), con edifici in gran parte abbandonati e sottoservizi vecchi o mancanti. Si demoliscono le vecchie pavimentazioni, si scava e si rifanno fognatura e acque piovane (circa 280 m in PVC e 270 m in PP corrugato, pozzetti, griglie, 25 allacci) e rete idrica con 19 allacci; poi si ripavimenta in pietra e lastre (circa 1.200 m²) con cordoli e si aggiunge l'illuminazione a mensola. Vicoli stretti, quartiere abitato e roccia granitica possibile sotto i detriti. Durata 360 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Pavimentazioni in pietra e cordoli",
+    "quota": 49
+   },
+   {
+    "cosa": "Fognatura, acque piovane e rete idrica",
+    "quota": 32
+   },
+   {
+    "cosa": "Demolizioni, scavi, sottofondi e calcestruzzi",
+    "quota": 16
+   },
+   {
+    "cosa": "Illuminazione pubblica",
+    "quota": 3
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "441.940 € (358.679 € soggetti a ribasso + 76.429 € manodopera + 6.832 € sicurezza) · a misura · durata 360 giorni",
+    "fonte": "Disciplinare §3, §3.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG3 classifica II (prevalente, 287.106 €) · scorporabili OG6 classifica I (143.093 €) e OG10 classifica I (11.741 €)",
+    "fonte": "Disciplinare §6.2"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso secondo l'art. 119, solo se indicato nel DGUE, altrimenti vietato · non si può subappaltare la parte prevalente della OG3",
+    "fonte": "Disciplinare §6.2, §8"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non previsto, si può fare in autonomia (nessun attestato)",
+    "fonte": "Disciplinare §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "8.839 € (2%) a favore del Comune di Melicuccà · riduzioni del 30% con ISO 9001 o del 50% per micro, piccole e medie imprese (non cumulabili)",
+    "fonte": "Disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso · esclusione automatica delle offerte anomale con almeno 5 offerte",
+    "fonte": "Disciplinare, Premesse e §18"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro 10 giorni dalla pubblicazione sul portale ANAC, con \"Richiedi chiarimento\" sulla piattaforma TuttoGare",
+    "fonte": "Disciplinare §1.5"
+   },
+   {
+    "t": "Offerta",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare"
+   }
+  ],
+  "attenzione": [
+   "Garanzia provvisoria obbligatoria a pena di esclusione; firmata da un garante non autorizzato = esclusione non sanabile.",
+   "Chiarimenti solo nei primi 10 giorni dalla pubblicazione, non a ridosso della scadenza.",
+   "Con 5 o più offerte quelle sopra la soglia di anomalia sono escluse in automatico."
+  ]
+ },
+ "BDF4535037": {
+  "titolo": "Efficientamento energetico del Conservatorio di musica A. Scontrino in via Sceusa · Trapani (Libero Consorzio Comunale di Trapani)",
+  "lavori": "Nel Conservatorio di via Francesco Sceusa a Trapani (edificio in c.a. di tre piani, circa 3.500 m² in pianta), oggi servito da un vecchio generatore e da split, si realizza un impianto centralizzato di riscaldamento e raffrescamento VRF: 6 unità esterne in copertura, 69 unità interne a cassetta e 13 altre unità interne, circa 3.900 m di tubazioni in rame, quadri e controllo centralizzato. Per far passare gli impianti si smontano e rifanno i controsoffitti (circa 2.100 m²). Sulla copertura piana si installa un fotovoltaico da 98 kW (196 moduli su zavorre, 5 inverter). Serve l'autogru. Durata 150 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Unità VRF esterne e interne",
+    "quota": 37
+   },
+   {
+    "cosa": "Impianto fotovoltaico 98 kW",
+    "quota": 22
+   },
+   {
+    "cosa": "Linee frigorifere, cavi e quadri",
+    "quota": 20
+   },
+   {
+    "cosa": "Controsoffitti nuovi",
+    "quota": 18
+   },
+   {
+    "cosa": "Demolizioni e rimozioni",
+    "quota": 4
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "690.104 € (679.674 € a base d'asta, di cui 97.344 € manodopera, + 10.430 € sicurezza) · fino a 828.125 € con il quinto d'obbligo · durata 150 giorni",
+    "fonte": "Bando sez. II"
+   },
+   {
+    "t": "Requisiti",
+    "v": "OS28 classifica II (prevalente) · scorporabili OG9 classifica I e OS7 classifica I",
+    "fonte": "Bando sez. II"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Previsto anche il subappalto qualificante (obbligatorio per chi non ha le categorie scorporabili); limiti non indicati nei testi disponibili",
+    "fonte": "Disciplinare §8, §8.1 (indice)"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §11 (testo non disponibile)"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §10 (testo non disponibile)"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso, con inversione procedimentale · esclusione automatica delle offerte anomale con almeno 5 offerte",
+    "fonte": "Bando sez. IV"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 10 giorni prima della scadenza, solo dalla piattaforma Maggioli della Provincia di Trapani",
+    "fonte": "Disciplinare §2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 28/12/2026 ore 10:00 · prima seduta 28/12/2026 ore 10:30",
+    "fonte": "Bando sez. IV · Disciplinare, frontespizio"
+   }
+  ],
+  "attenzione": [
+   "La qualificazione si calcola sull'importo con il quinto (828.125 €): serve OS28 almeno in classifica II.",
+   "Con 5 o più offerte quelle sopra la soglia di anomalia sono escluse in automatico.",
+   "Il disciplinare scaricato è incompleto: garanzia, sopralluogo e subappalto vanno controllati sul documento originale."
+  ]
+ },
+ "BDF57F26D1": {
+  "titolo": "Sistemazione di via Eleonora nel centro storico · Comune di Gavoi (NU)",
+  "lavori": "Via Eleonora, nel centro storico di Gavoi, ha lastroni in granito lesionati e con dislivelli, rattoppi in cemento e un deflusso delle acque piovane che non funziona (ristagni e infiltrazioni). Si rimuove la pavimentazione in pietra (circa 940 m²), si scava e si rifanno tutti i sottoservizi: fognatura con 30 allacci, rete idrica con 30 allacci e cassette contatori, raccolta acque meteoriche con condotta DN 250, linee e 20 punti luce dell'illuminazione pubblica. Poi si ripavimenta (circa 560 m²) secondo la tipologia A del Piano del centro storico: basoli in granito recuperati su due file, acciottolato centrale e cantonetti laterali. Durata 262 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Pavimentazione in granito e acciottolato",
+    "quota": 39
+   },
+   {
+    "cosa": "Demolizioni, scavi, rinterri e calcestruzzi",
+    "quota": 24
+   },
+   {
+    "cosa": "Fognatura e allacci",
+    "quota": 14
+   },
+   {
+    "cosa": "Illuminazione pubblica",
+    "quota": 10
+   },
+   {
+    "cosa": "Raccolta acque meteoriche",
+    "quota": 7
+   },
+   {
+    "cosa": "Rete idrica e allacci",
+    "quota": 6
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "517.753 € (499.971 € a base di gara, di cui 108.085 € manodopera, + 17.782 € sicurezza) · a misura · durata 262 giorni",
+    "fonte": "Bando §8, §10 · Disciplinare §4.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "Categoria prevalente OG3 classe I (292.391 €) · scorporabili OG6 classe I (145.278 €) e OG10 classe I (62.302 €)",
+    "fonte": "Disciplinare §4.1 (tabella lavorazioni)"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OG3: quota non maggioritaria · OG6 e OG10: subappaltabili al 100%",
+    "fonte": "Disciplinare §4.1 (tabella lavorazioni)"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §11 (testo non disponibile)"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §10 (testo non disponibile)"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso (massimo ribasso)",
+    "fonte": "Bando §14 · Disciplinare §1"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 10 giorni prima della scadenza, solo per iscritto sulla piattaforma CAT Sardegna; le domande tecniche vanno mandate anche al Comune di Gavoi",
+    "fonte": "Disciplinare §3.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 10/12/2026 ore 8:59 su CAT Sardegna · apertura 10/12/2026 ore 9:00",
+    "fonte": "Bando §15, §17"
+   }
+  ],
+  "attenzione": [
+   "Il ribasso si calcola anche sulla manodopera, che però non si può ribassare senza giustificarlo.",
+   "Le domande tecniche sul progetto vanno inviate sia alla Centrale di committenza sia al Comune.",
+   "Il disciplinare scaricato è incompleto: garanzia, sopralluogo e requisiti di dettaglio vanno controllati sul documento originale."
+  ]
+ },
+ "BDF5AB80BC": {
+  "titolo": "Manutenzione straordinaria della S.P. 37 tra Castelli e Rigopiano (Montagne Italiane) · Provincia di Teramo",
+  "lavori": "Sul tratto di circa 7 km della SP 37 nel territorio di Arsita, tra la sede CAI di Castelli e la zona della Baita della Sceriffa, cadono massi sulla carreggiata, l'asfalto è degradato e le barriere sono danneggiate o non conformi. Sulla parete rocciosa si pulisce la vegetazione e si disgaggia (circa 575 m²), poi si eseguono circa 500 m di tiranti in roccia con barre in acciaio e si posa rete metallica con geocomposito e funi (circa 630 m²); si installa una barriera paramassi da 750 kJ (circa 270 m²). Sulla strada si rifanno binder e tappetino su circa 4.700 m², si sostituiscono barriere (classe N2 e H2 bordo ponte) e segnaletica. Area in parco nazionale e vincolo paesaggistico.",
+  "lavorazioni": [
+   {
+    "cosa": "Asfaltatura (binder e tappetino)",
+    "quota": 35
+   },
+   {
+    "cosa": "Barriera paramassi 750 kJ",
+    "quota": 19
+   },
+   {
+    "cosa": "Barriere stradali di sicurezza",
+    "quota": 13
+   },
+   {
+    "cosa": "Tiranti in roccia e barre",
+    "quota": 13
+   },
+   {
+    "cosa": "Rete, geocomposito e funi in parete",
+    "quota": 12
+   },
+   {
+    "cosa": "Pulizia parete e disgaggio",
+    "quota": 4
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "451.512 € (443.098 € a base di gara, di cui 74.388 € manodopera, + 8.414 € sicurezza) · a misura · durata non indicata nei testi disponibili",
+    "fonte": "Capitolato art. 1.4 · Quadro economico D.01"
+   },
+   {
+    "t": "Requisiti",
+    "v": "OG3 classifica I (232.328 €) e OS21 classifica I (219.184 €), entrambe sopra il 15%",
+    "fonte": "Capitolato art. 1.4"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Le categorie diverse dalla prevalente sono scorporabili e subappaltabili previa autorizzazione; percentuali non indicate nei testi disponibili",
+    "fonte": "Capitolato art. 1.4"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §11 (testo non disponibile)"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare §10 (testo non disponibile)"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta economicamente più vantaggiosa (qualità/prezzo), con inversione procedimentale · punteggi non indicati nei testi disponibili",
+    "fonte": "Disciplinare, frontespizio e §00"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 10 giorni prima della scadenza, solo dalla sezione Chiarimenti della piattaforma appalti.provincia.teramo.it",
+    "fonte": "Disciplinare §2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Non indicato nei documenti",
+    "fonte": "Disciplinare (testo non disponibile)"
+   }
+  ],
+  "attenzione": [
+   "Servono due categorie: OG3 e OS21 (opere strutturali speciali per tiranti e paramassi).",
+   "Costi della manodopera e oneri aziendali per la sicurezza vanno indicati nell'offerta, a pena di esclusione.",
+   "Il disciplinare scaricato è incompleto: scadenza, punteggi, garanzia e sopralluogo vanno controllati sul documento originale."
+  ]
+ },
+ "BDF63135E3": {
+  "titolo": "Manutenzione straordinaria e messa in sicurezza di viale Rinascita e della strada ex Nato · Comune di San Nicolò d'Arcidano (OR)",
+  "lavori": "Due interventi. Su viale Rinascita si potano siepi e alberi, si tolgono ceppaie e piante malate, si ridisegnano aiuole e cordonate per avere marciapiedi liberi di almeno 1 m, si rifanno le cunette in calcestruzzo ammalorate (circa 445 m²) e si realizza un passaggio pedonale rialzato (circa 150 m²); vicino alla scuola dell'infanzia si apre la carreggiata per circa 40 m (scavo circa 180 m³) e si crea un bypass sul collettore delle acque piovane. Sulla strada ex Nato, percorsa da mezzi agricoli, si demolisce l'asfalto fessurato (circa 550 m²) e si rifà la pavimentazione con binder e usura. Durata 120 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Rifacimento asfalto strada ex Nato",
+    "quota": 31
+   },
+   {
+    "cosa": "Collettore acque piovane e bypass",
+    "quota": 22
+   },
+   {
+    "cosa": "Rifacimento cunette in calcestruzzo",
+    "quota": 22
+   },
+   {
+    "cosa": "Passaggio pedonale rialzato",
+    "quota": 11
+   },
+   {
+    "cosa": "Aiuole, cordonate e marciapiedi",
+    "quota": 6
+   },
+   {
+    "cosa": "Potature, abbattimenti e sfalci",
+    "quota": 5
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "207.478 € (204.707 € lavori a corpo, manodopera 39.756 € inclusa, + 2.771 € sicurezza) · durata 120 giorni, con premio di accelerazione",
+    "fonte": "Disciplinare §3.3, §3.7"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG3 classifica I o superiore",
+    "fonte": "Disciplinare §7.1"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso secondo l'art. 119, solo se indicato in offerta · OG3 da eseguire in prevalenza dall'impresa · vietato il subappalto a cascata",
+    "fonte": "Disciplinare §9"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non obbligatorio",
+    "fonte": "Disciplinare §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non richiesta",
+    "fonte": "Disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso (ribasso percentuale), con inversione procedimentale · esclusione automatica delle offerte anomale con almeno 5 offerte (metodo A)",
+    "fonte": "Disciplinare §1.2"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 18/12/2026 ore 10:00, dalla piattaforma SardegnaCAT",
+    "fonte": "Disciplinare §2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 23/12/2026 ore 9:30 su SardegnaCAT",
+    "fonte": "Disciplinare §12"
+   }
+  ],
+  "attenzione": [
+   "Con 5 o più offerte quelle sopra la soglia di anomalia sono escluse in automatico: non esagerare col ribasso.",
+   "Se non indichi in offerta cosa vuoi subappaltare, il subappalto non verrà autorizzato.",
+   "Lavori in pieno centro abitato e davanti a una scuola dell'infanzia: serve organizzare bene il cantiere."
+  ]
+ }
+}
