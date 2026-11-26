@@ -1,0 +1,218 @@
+[
+ {
+  "cig": "BDFB5DA541",
+  "url": "https://uniacque.acquistitelematici.it/tender/2302",
+  "piattaforma": "uniacque.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDFAAA7754",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125902",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDFB75C3CB",
+  "url": "https://www.comune.cedegolo.bs.it/Pages/Bandi/procedure/digara/?id=365715",
+  "piattaforma": "www.comune.cedegolo.bs.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BDFA177267",
+  "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=49",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFA774379",
+  "url": "https://cmdrc.tuttogare.it/gare/dettaglio.php?codice=462",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDF93DFA9B",
+  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03571",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDFBBFB409",
+  "url": "https://sua-mbcmm.acquistitelematici.it/tender/741",
+  "piattaforma": "sua-mbcmm.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDFC51EE3A",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18847251",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDF9129DE5",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=227019598",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 3
+ },
+ {
+  "cig": "BDF5AAC6D3",
+  "url": "https://start.toscana.it/tendering/tenders/049221-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF737E251",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18842969",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDF68F50AF",
+  "url": "https://www.ats-brianza.it",
+  "piattaforma": "www.ats-brianza.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDF97C6304",
+  "url": "https://acquistionline.trenord.it",
+  "piattaforma": "acquistionline.trenord.it",
+  "esito": "link senza file",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BCEC107BE9",
+  "url": "https://www.ariaspa.it/wps/portal/Aria/",
+  "piattaforma": "www.ariaspa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDF7751A34",
+  "url": "https://iltrivulzio.it/trasparenza/procedure/gare/gare-anno-2025/bandi-di-gara-in-corso-2026",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDF99CE023",
+  "url": "https://start.toscana.it/tendering/tenders/048578-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF6D1AC3C",
+  "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF8046E71",
+  "url": "https://milomb-camcom.acquistitelematici.it/tender/3453",
+  "piattaforma": "milomb-camcom.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDF7772571",
+  "url": "https://provinciadilatina.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01328",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDF6AAFD6B",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDF69D6A59",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFA780D5D",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1100196",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDFC0D227E",
+  "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFC7E04D9",
+  "url": "https://unionecomunimonviso.tuttogare.it/gare/dettaglio.php?codice=400",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDFA9C5CD2",
+  "url": "https://provinciadilatina.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01368",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDF018EC1C",
+  "url": "http://eprocurement.gruppofs.it",
+  "piattaforma": "eprocurement.gruppofs.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF223E59C",
+  "url": "https://appalti.ater.umbria.it/PortaleAppalti/it/procedure/codice/G01927",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ }
+]
