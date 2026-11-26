@@ -1,35 +1,11 @@
 [
  {
-  "cig": "BDF282113B",
-  "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
-  "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDEDA3A7BD",
-  "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
-  "piattaforma": "app.albofornitori.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDF5B9CCDF",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1089264",
   "piattaforma": "sardegnacat.regione.sardegna.it",
   "esito": "ok",
   "metodo": "diretto",
   "file": 9
- },
- {
-  "cig": "BDF4826D98",
-  "url": "https://cucdellagodiocchito.traspare.com/announcements/332",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDE9F6AF20",
@@ -48,14 +24,6 @@
   "file": 8
  },
  {
-  "cig": "BDF5C60E9D",
-  "url": "https://start.toscana.it/tendering/tenders/049143-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDF080A5FE",
   "url": "https://appalti.ragusa.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=2998",
   "piattaforma": "appalti.ragusa.lavoripubblici.sicilia.it",
@@ -64,36 +32,12 @@
   "file": 15
  },
  {
-  "cig": "BDF0795571",
-  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
-  "piattaforma": "www.sintel.regione.lombardia.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDF631685C",
   "url": "https://portaleappalti.comune.palermo.it/PortaleAppalti/it/procedure/codice/G06014",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
   "file": 5
- },
- {
-  "cig": "BDF18B24C2",
-  "url": "https://trasparenza.comune.cremona.it/bandi-gara-contratti/atti-amministrazioni-aggiudicatrici-enti-aggiudicatori-distintamente-ogni-procedura?sf=3130",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDEA04A7FC",
-  "url": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/61205",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDF17C947B",
@@ -110,6 +54,126 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 6
+ },
+ {
+  "cig": "BDF0FA2A3A",
+  "url": "https://infrastrutture-torino.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00081",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDF57F26D1",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1096730",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDF5AB80BC",
+  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03567",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto+cloud",
+  "file": 10
+ },
+ {
+  "cig": "BDF167C1AF",
+  "url": "https://cucnordsalento.tuttogare.it/gare/dettaglio.php?codice=152",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDF1660A91",
+  "url": "https://www.comune.padova.it/node/105182",
+  "piattaforma": "www.comune.padova.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 3
+ },
+ {
+  "cig": "BDF63135E3",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1095210",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 10
+ },
+ {
+  "cig": "BDF4535037",
+  "url": "https://gare-provincia-trapani.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00362",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 10
+ },
+ {
+  "cig": "BDF1AA1D3C",
+  "url": "https://cucversanteionico.tuttogare.it/gare/dettaglio.php?codice=405",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDF282113B",
+  "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDEDA3A7BD",
+  "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "piattaforma": "app.albofornitori.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDF4826D98",
+  "url": "https://cucdellagodiocchito.traspare.com/announcements/332",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF5C60E9D",
+  "url": "https://start.toscana.it/tendering/tenders/049143-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF0795571",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDF18B24C2",
+  "url": "https://trasparenza.comune.cremona.it/bandi-gara-contratti/atti-amministrazioni-aggiudicatrici-enti-aggiudicatori-distintamente-ogni-procedura?sf=3130",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDEA04A7FC",
+  "url": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/61205",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
  },
  {
   "cig": "BDF4F8A6EE",
@@ -136,14 +200,6 @@
   "file": 0
  },
  {
-  "cig": "BDF0FA2A3A",
-  "url": "https://infrastrutture-torino.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00081",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 2
- },
- {
   "cig": "BDF0BE32D8",
   "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016",
   "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
@@ -160,22 +216,6 @@
   "file": 4
  },
  {
-  "cig": "BDF57F26D1",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1096730",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 9
- },
- {
-  "cig": "BDF5AB80BC",
-  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03567",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "server-IT/diretto+cloud",
-  "file": 10
- },
- {
   "cig": "BDF50EA968",
   "url": "https://www.ariaspa.it",
   "piattaforma": "www.ariaspa.it",
@@ -184,28 +224,12 @@
   "file": 0
  },
  {
-  "cig": "BDF167C1AF",
-  "url": "https://cucnordsalento.tuttogare.it/gare/dettaglio.php?codice=152",
-  "piattaforma": "TuttoGare",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 13
- },
- {
   "cig": "BDF5B38A5A",
   "url": "https://comunedicosenza.traspare.com/announcements/1077",
   "piattaforma": "Traspare",
   "esito": "bloccata (HTTP 403)",
   "metodo": "diretto",
   "file": 0
- },
- {
-  "cig": "BDF1660A91",
-  "url": "https://www.comune.padova.it/node/105182",
-  "piattaforma": "www.comune.padova.it",
-  "esito": "ok",
-  "metodo": "browser",
-  "file": 3
  },
  {
   "cig": "BDF55DEFC9",
@@ -224,14 +248,6 @@
   "file": 0
  },
  {
-  "cig": "BDF63135E3",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1095210",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "ok",
-  "metodo": "browser",
-  "file": 10
- },
- {
   "cig": "BDEAE35445",
   "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/880751a639bbbd4e",
   "piattaforma": "www.acquistinretepa.it",
@@ -246,21 +262,5 @@
   "esito": "nessun file trovato",
   "metodo": "browser",
   "file": 0
- },
- {
-  "cig": "BDF4535037",
-  "url": "https://gare-provincia-trapani.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00362",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "diretto+cloud",
-  "file": 10
- },
- {
-  "cig": "BDF1AA1D3C",
-  "url": "https://cucversanteionico.tuttogare.it/gare/dettaglio.php?codice=405",
-  "piattaforma": "TuttoGare",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 8
  }
 ]
