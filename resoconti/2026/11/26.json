@@ -1,0 +1,764 @@
+{
+ "BDF737E251": {
+  "titolo": "Nuovo impianto di climatizzazione della sala vasche della piscina comunale di Lugo · Comune di Lugo (Unione dei Comuni della Bassa Romagna)",
+  "lavori": "Sostituzione dell'impianto di climatizzazione e ricambio aria di vasche, tribune e ingresso della piscina comunale di Lugo (piazzale Veterani dello Sport). All'esterno, sul retro, si gettano le platee in c.a. e si montano un pipe-rack in acciaio zincato (circa 5.900 kg) e due UTA gemelle con recupero di calore. Dentro si smonta il vecchio impianto e si posano circa 320 m di canali in tessuto microforato e circa 1.500 m² di condotte in lamiera e pannello sandwich, con regolazione collegata alla supervisione. Lavori interni nella chiusura estiva a vasche vuote, con piattaforma sopra le vasche e ponteggi. Durata 152 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Unità trattamento aria (2 UTA)",
+    "quota": 44
+   },
+   {
+    "cosa": "Canali e condotte aria",
+    "quota": 36
+   },
+   {
+    "cosa": "Platee e pipe-rack in acciaio",
+    "quota": 8
+   },
+   {
+    "cosa": "Staffaggi e flange",
+    "quota": 7
+   },
+   {
+    "cosa": "Regolazione e telegestione",
+    "quota": 4
+   },
+   {
+    "cosa": "Tubazioni e valvole idrauliche",
+    "quota": 1
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "715.823 € (670.223 € a ribasso, di cui 133.689 € manodopera, + 45.600 € sicurezza) · a misura · durata 152 giorni",
+    "fonte": "Bando §3.2, §3.3, §3.5, §4"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OS 28 classifica III (vale anche OG 11) · certificazione di qualità · avvalimento vietato per la OS 28 (ammesso solo premiale)",
+    "fonte": "Bando §3.2, §3.4, §11"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OS 28 subappaltabile fino al 49,9%: la parte prevalente la esegue l'impresa",
+    "fonte": "Bando §3.4"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Obbligatorio a pena di esclusione, solo il 10 o il 17 dicembre 2026, con tecnico del Comune · prenotazione al tel. 0545 299464 o email venturinis@comune.lugo.ra.it",
+    "fonte": "Bando §6"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non richiesta la garanzia provvisoria (procedura aperta sotto soglia)",
+    "fonte": "Bando §8"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa: tecnica 80 (edilizia e impiantistica 40, organizzazione del cantiere 30, tempi 9, parità di genere 1), prezzo 20 (ribasso % sull'elenco prezzi)",
+    "fonte": "Bando §12, §17.3"
+   },
+   {
+    "t": "Punti facili",
+    "v": "Certificazione parità di genere: 1 punto se allegata · riduzione dei giorni di lavoro: fino a 9 punti con formula",
+    "fonte": "Bando §12"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro l'8/01/2027 ore 12:00, solo su SATER",
+    "fonte": "Bando §5.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 18/01/2027 ore 13:00 su SATER · apertura 19/01/2027 ore 8:00",
+    "fonte": "Bando §7.1, §7.3"
+   }
+  ],
+  "attenzione": [
+   "Sopralluogo solo in due date (10 e 17 dicembre): senza attestato si è esclusi.",
+   "Niente avvalimento per la OS 28: serve la propria SOA OS 28 (o OG 11) classifica III.",
+   "Relazione tecnica max 10 facciate A4 più 10 elaborati, senza alcun dato economico, pena esclusione."
+  ]
+ },
+ "BDFA780D5D": {
+  "titolo": "Forestazione urbana di viale Colombo e via Marconi · Comune di Quartu Sant'Elena",
+  "lavori": "Rinnovo delle alberature di via Marconi (tra via Bizet e piazza Matteotti) e di viale Colombo fino alle saline, con lecci malati e 124 formelle vuote. Si abbattono 62 alberi, soprattutto lecci, si potano 16 esemplari e si estirpano 100 ceppaie con testa fresante su escavatore gommato, dopo rilievo georadar dei sottoservizi in 186 punti. Si piantano 165 jacarande (circonferenza 18/20 cm) e 21 oleandri o ibischi, con pali tutori, drenaggio, ammendanti e tubo per irrigare, più manutenzione dopo il trapianto. Alcune formelle asfaltate vanno riaperte con nuove cordonate. Strade a traffico intenso. Durata 120 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Fornitura alberi e arbusti",
+    "quota": 51
+   },
+   {
+    "cosa": "Messa a dimora alberi",
+    "quota": 22
+   },
+   {
+    "cosa": "Abbattimenti, potature e ceppaie",
+    "quota": 17
+   },
+   {
+    "cosa": "Manutenzione post trapianto",
+    "quota": 7
+   },
+   {
+    "cosa": "Rilievo georadar sottoservizi",
+    "quota": 3
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "202.000 € (197.000 € a ribasso, di cui 34.188 € manodopera, + 5.000 € sicurezza) · valore appalto 300.000 € con 98.000 € per variazioni in corso d'opera · a misura · durata 120 giorni",
+    "fonte": "Avviso, Oggetto e importo · Durata"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OS 24 classifica I o superiore · iscrizione a SardegnaCAT entro il 10/12/2026",
+    "fonte": "Avviso, Requisiti di partecipazione"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OS 24 subappaltabile fino al 49,99%",
+    "fonte": "Avviso, tabella lavorazioni"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso",
+    "fonte": "Avviso, Criterio di aggiudicazione"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Domanda (Allegato A) firmata digitalmente e Allegato B lavori svolti, nella Busta di qualifica della RDI su SardegnaCAT, file separati non zippati",
+    "fonte": "Avviso, Modalità di presentazione"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 2 giorni lavorativi prima della scadenza, con la Messaggistica di SardegnaCAT",
+    "fonte": "Avviso, Pubblicazione"
+   },
+   {
+    "t": "Scadenza",
+    "v": "10/12/2026 ore 10:00 · apertura istanze stesso giorno ore 10:30",
+    "fonte": "Avviso, Modalità di presentazione"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "5: se le candidature sono di più, conta 1 punto per ogni lavoro OS 24 di forestazione o viali alberati da almeno 202.000 € con collaudo o CRE",
+    "fonte": "Avviso, Fase successiva"
+   }
+  ],
+  "attenzione": [
+   "Consegna dei lavori entro 15 giorni dall'aggiudicazione, anche d'urgenza, per la stagione delle piante.",
+   "Senza Allegato B si prendono zero punti e quasi certamente non si è invitati.",
+   "Valgono solo lavori OS 24 analoghi con certificato di regolare esecuzione o collaudo già emesso."
+  ]
+ },
+ "BDFC7E04D9": {
+  "titolo": "Viabilità multifunzionale Pasturel – rifugio Bertorello, primo lotto (Green Community Terre del Monviso) · Unione Montana dei Comuni del Monviso",
+  "lavori": "Nuova pista carrabile nei boschi dell'alto bacino del Croesio, tra Sanfront e Paesana, dalla località Pasturel al rifugio Bertorello: sistemazione del ramo L2 (816 m) e nuovo tracciato sui sentieri dei rami L3 (1.865 m) e L4 (1.096 m). Si tagliano gli alberi in fascia di 6 m, si scavano circa 8.800 m³ in trincea, si demoliscono circa 280 m³ di roccia e si costruiscono muri e scogliere in massi a secco (circa 1.470 m³), guadi sui combali, tombini in cls (120 m) e canalette (170 m), più inerbimenti. Sul ramo L6 fresatura e stabilizzazione del fondo (6.250 m²). Durata 180 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Scavi, tagli e apertura pista",
+    "quota": 41
+   },
+   {
+    "cosa": "Muri e scogliere in massi",
+    "quota": 30
+   },
+   {
+    "cosa": "Fondo stradale ramo L6",
+    "quota": 13
+   },
+   {
+    "cosa": "Opere in cemento armato",
+    "quota": 7
+   },
+   {
+    "cosa": "Tombini e canalette",
+    "quota": 5
+   },
+   {
+    "cosa": "Inerbimenti e ingegneria naturalistica",
+    "quota": 5
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "400.000 € (398.500 € a ribasso + 1.500 € sicurezza) · a misura · durata 180 giorni",
+    "fonte": "Avviso art. 3, art. 4"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG 3 classifica II (o RTI o avvalimento) · patente a crediti se la SOA è sotto la III classifica",
+    "fonte": "Avviso art. 5"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Massimo 49,99% della OG 3",
+    "fonte": "Avviso art. 5"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Obbligatorio già per candidarsi, entro il 4/12/2026 · appuntamento a segreteria@unionemonviso.it o tel. 0175/94273",
+    "fonte": "Avviso art. 6"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso con esclusione automatica delle offerte anomale (metodo A) se almeno 5 offerte",
+    "fonte": "Avviso art. 3"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Su TuttoGare: Allegato A firmato digitalmente, documento, SOA, patente a crediti, certificati ISO e CEL",
+    "fonte": "Avviso art. 9"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 4/12/2026, solo dalla piattaforma TuttoGare",
+    "fonte": "Avviso art. 10"
+   },
+   {
+    "t": "Scadenza",
+    "v": "8/12/2026 ore 10:00",
+    "fonte": "Avviso, intestazione"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "5 (più eventuali pari merito) · graduatoria: microimpresa 10, piccola/media 9, grande 6 · ISO 14001 6, ISO 45001 6, ISO 37001 3",
+    "fonte": "Avviso art. 7"
+   }
+  ],
+  "attenzione": [
+   "Senza sopralluogo entro il 4 dicembre la candidatura non è ammessa.",
+   "In questa fase non c'è soccorso istruttorio: documenti mancanti non si integrano.",
+   "Le ISO valgono solo se allegate in copia."
+  ]
+ },
+ "BDF9129DE5": {
+  "titolo": "Ristrutturazione con efficientamento energetico del Centro Civico di via Garibaldi 1 · Comune di Passirano",
+  "lavori": "Ristrutturazione con efficientamento energetico del Centro Civico di via Garibaldi 1 a Passirano, edificio sottoposto a tutela (categoria prevalente OG 2 restauro). Il lavoro si divide tra restauro edile (circa 271.000 €), impianti termici e di condizionamento (circa 262.000 €), finiture in legno, plastica, metallo e vetro (circa 230.000 €) e impianti elettrici e speciali (circa 114.000 €). Il progetto esecutivo è solo su un link esterno, non incluso nei documenti letti. Durata 195 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Restauro edile (OG 2)",
+    "quota": 31
+   },
+   {
+    "cosa": "Impianti termici e condizionamento",
+    "quota": 30
+   },
+   {
+    "cosa": "Finiture lignee, metalliche e vetrose",
+    "quota": 26
+   },
+   {
+    "cosa": "Impianti elettrici",
+    "quota": 13
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "877.030 € (845.910 € a ribasso, di cui 188.430 € manodopera, + 31.120 € sicurezza) · durata 195 giorni",
+    "fonte": "Avviso §5, §7"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG 2 cl. I (prevalente, senza avvalimento) · OS 28 cl. I, OS 6 cl. I, OS 30 cl. I (in proprio o RTI, avvalimento ammesso) · iscrizione all'elenco fornitori Sintel",
+    "fonte": "Avviso §5, §9.3, §9.4"
+   },
+   {
+    "t": "Subappalto",
+    "v": "OG 2 fino al 49,9% · OS 28, OS 6 e OS 30 fino al 100%",
+    "fonte": "Avviso §5, §6"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa; punteggi non indicati nei documenti",
+    "fonte": "Avviso §8"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Modello richiesta firmato digitalmente su Sintel, con valore economico fittizio 1",
+    "fonte": "Avviso §11"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 30/11/2026 ore 12:00, con Comunicazioni procedura su Sintel",
+    "fonte": "Avviso §11"
+   },
+   {
+    "t": "Scadenza",
+    "v": "4/12/2026 ore 9:00",
+    "fonte": "Avviso §11"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "5: se di più, conta in ordine almeno 3 lavori OG 2 analoghi nel quinquennio per importo totale non inferiore alla base d'asta, poi addetti e attrezzature, poi ISO 9001 e 14001",
+    "fonte": "Avviso §10"
+   }
+  ],
+  "attenzione": [
+   "Tempi stretti: avviso di soli 10 giorni, la negoziata va avviata entro il 10/12/2026 per il contributo regionale.",
+   "Senza iscrizione all'elenco fornitori Sintel non si viene invitati.",
+   "Il progetto si scarica solo da un link esterno indicato nei documenti."
+  ]
+ },
+ "BDF7772571": {
+  "titolo": "Parcheggio in zona San Domenico in via dei Domenicani, centro storico alto (mobilità sostenibile, lotto III) · Comune di Terracina",
+  "lavori": "Realizzazione del parcheggio per auto in zona San Domenico, in via dei Domenicani, nel centro storico alto di Terracina: terzo lotto di un programma integrato per la mobilità sostenibile. Lavori a corpo, tutti in categoria OG 3 strade, nel rispetto dei CAM per le infrastrutture stradali. I documenti disponibili non descrivono fasi, materiali e quantità. Durata 114 giorni.",
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "343.616 € (328.002 € a base d'asta, di cui 78.653 € manodopera, + 15.614 € sicurezza) · a corpo · durata 114 giorni",
+    "fonte": "Avviso §5, §8"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG 3 classifica II · White List della Prefettura (o domanda presentata) · patente a crediti con SOA I o II · RTI e avvalimento ammessi",
+    "fonte": "Avviso §10"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Non l'intera opera né la parte prevalente della OG 3",
+    "fonte": "Avviso §6"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Obbligatorio, sarà richiesto nella lettera d'invito",
+    "fonte": "Avviso §7"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso con esclusione automatica delle offerte anomale (metodo A)",
+    "fonte": "Avviso §9"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Allegato A firmato digitalmente, sulla piattaforma della Provincia di Latina (PortaleAppalti)",
+    "fonte": "Avviso §13"
+   },
+   {
+    "t": "Scadenza",
+    "v": "Indicata solo sulla piattaforma; avviso pubblicato per 15 giorni",
+    "fonte": "Avviso, Premessa · §13"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "Almeno 5 · graduatoria su 100: lavori analoghi su parcheggi o aree di sosta da almeno 343.616 € (1 = 15, 2 = 30, 3 o più = 45), dipendenti fino a 20, tecnici e operai di cantiere fino a 20, ISO 9001 e 14001 fino a 15",
+    "fonte": "Avviso §11"
+   }
+  ],
+  "attenzione": [
+   "Chi si candida da solo potrà poi entrare in RTI solo come mandataria e usare l'avvalimento solo come ausiliata.",
+   "Documenti mancanti per i criteri = punti non dati, senza integrazioni.",
+   "Imprese con più di 50 dipendenti escluse se non consegnano il rapporto sul personale maschile e femminile."
+  ]
+ },
+ "BDFB75C3CB": {
+  "titolo": "Regimazione idraulica della valle di Muralto e sistemazione dei versanti della frazione Grevo dopo frana e allagamento del 2020 · Comune di Cedegolo",
+  "lavori": "Interventi per ridurre il pericolo di frana e allagamento sull'abitato di Grevo, colpito nel giugno 2020: riassetto del reticolo idrografico della valle di Muralto con opere di regimazione idraulica e sistemazione dei versanti della frazione. Lavori in categoria OG 8. Nei documenti disponibili (solo il modello di domanda) non ci sono quantità, importi né durata.",
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Modello richiesta"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG 8 (classifica non indicata), avvalimento ammesso · iscrizione all'elenco fornitori Sintel per il Comune di Cedegolo",
+    "fonte": "Modello richiesta punti 5, 6"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Presa visione facoltativa già in candidatura, con l'ufficio tecnico: vale 20 punti · in gara il sopralluogo sarà comunque richiesto",
+    "fonte": "Modello richiesta punto 7 e tabella criteri"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Modello richiesta firmato digitalmente su Sintel, con autovalutazione dei punteggi e documenti di prova",
+    "fonte": "Modello richiesta punto 9"
+   },
+   {
+    "t": "Scadenza",
+    "v": "Non indicato nei documenti",
+    "fonte": "Modello richiesta"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "5 · graduatoria: sopralluogo facoltativo 20, White List 5, nessuna annotazione nel Casellario ANAC negli ultimi 3 anni 10, 5 punti per ogni opera pubblica OG 8 da almeno 284.000 € iniziata e finita nel 2023-2025",
+    "fonte": "Modello richiesta punto 9 e tabella criteri"
+   }
+  ],
+  "attenzione": [
+   "Se il punteggio autodichiarato supera di 20 punti o più quello verificato, si finisce in coda alla graduatoria.",
+   "Dati o allegati mancanti per un criterio = punti persi, senza soccorso istruttorio.",
+   "Il testo dell'avviso non è tra i documenti: importo e scadenza vanno verificati su Sintel."
+  ]
+ },
+ "BDFB5DA541": {
+  "titolo": "Manutenzione e costruzione reti di acquedotto e fognatura, allacciamenti, ripristini stradali e pronto intervento, zona A.1 Isola Bergamasca, Val San Martino e Valle Imagna · Uniacque S.p.A.",
+  "lavori": "Appalto di manutenzione delle reti idriche e fognarie della zona A.1 (Isola Bergamasca, Val San Martino e Valle Imagna): manutenzione ordinaria e straordinaria e costruzione di reti, allacciamenti di acquedotto e fognatura, ripristino delle pavimentazioni stradali manomesse, manutenzioni edili su impianti e strutture, più reperibilità e pronto intervento. Lavori su ordini gestiti da un portale web, con tablet per ogni squadra, 365 giorni l'anno e squadra sul posto entro 1 ora dalla chiamata; serve un magazzino nell'area indicata dal capitolato. Possibili lavori in ambienti confinati. Durata non indicata nei documenti disponibili.",
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "2.500.000 € (costi della manodopera stimati 915.800 €) · ribasso unico sull'elenco prezzi lavori 2026",
+    "fonte": "Allegato A §11.12 · Allegato E"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG 6 classifica V o superiore (in RTI classifica adeguata alla propria quota) · patente a crediti se la SOA è sotto la III",
+    "fonte": "Allegato A §10"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Obbligatorio per i lavori in ambienti confinati se mancano i requisiti e per i rifiuti se non si è iscritti all'Albo gestori ambientali cat. 2bis · quota massima non indicata",
+    "fonte": "Allegato A §11.14, §11.15"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti · prima del contratto Uniacque verifica sul posto magazzino, personale e mezzi",
+    "fonte": "Allegato A §11.6"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Importo non indicato nei documenti (garanzia provvisoria prevista)",
+    "fonte": "Allegato A §11.6"
+   },
+   {
+    "t": "Criterio",
+    "v": "Non indicato nei documenti (l'offerta economica è un ribasso unico; si cita anche un'offerta tecnica)",
+    "fonte": "Allegato E · Allegato A §11.6"
+   },
+   {
+    "t": "Offerta",
+    "v": "Scadenza non indicata nei documenti · offerta vincolante 180 giorni",
+    "fonte": "Allegato E"
+   }
+  ],
+  "attenzione": [
+   "Costi della manodopera o oneri della sicurezza non indicati o pari a zero = esclusione.",
+   "Se la verifica del magazzino e delle dotazioni va male: revoca dell'aggiudicazione ed escussione della garanzia.",
+   "Tra i documenti mancano bando e disciplinare: scadenza, criterio e garanzia vanno verificati in piattaforma."
+  ]
+ },
+ "BDFAAA7754": {
+  "titolo": "Nuova palestra scolastica con campo polifunzionale e spogliatoi per l'Istituto comprensivo di via Brunelleschi · Comune di Mentana",
+  "lavori": "Costruzione di una nuova palestra scolastica con campo sportivo polifunzionale, spogliatoi e spazi per il pubblico, a servizio del nuovo Istituto comprensivo di via Brunelleschi a Mentana (RM) e usata anche per l'attività agonistica dilettantistica. In gara c'è solo lo stralcio 1 del progetto esecutivo: la tribuna (stralcio 2) e l'area parco con recinzioni (stralcio 3) sono escluse. Il lavoro comprende opere edili, strutture in legno e impianti tecnologici, nel rispetto dei CAM. Cantiere in contesto urbano. Corrispettivo a corpo, durata 418 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Opere edili (OG1)",
+    "quota": 56
+   },
+   {
+    "cosa": "Strutture in legno",
+    "quota": 26
+   },
+   {
+    "cosa": "Impianti tecnologici",
+    "quota": 18
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "4.141.098 € (3.968.106 € a ribasso, manodopera 1.552.392 € compresa, + 172.992 € sicurezza) · a corpo · durata 418 giorni",
+    "fonte": "Disciplinare §4 · §4.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG1 classifica IV + OS32 classifica III + OG11 classifica III · avvalimento ammesso",
+    "fonte": "Disciplinare §4 · §7.2 · §8"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso (art. 119), ma la parte prevalente della OG1 va eseguita in proprio · almeno 20% del subappalto a PMI",
+    "fonte": "Disciplinare §9"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Obbligatorio ma senza attestato: area pubblica, si dichiara nella domanda di essere stati sul posto",
+    "fonte": "Disciplinare §4.4"
+   },
+   {
+    "t": "Garanzia",
+    "v": "82.822 € (2%) · riduzioni art. 106 c. 8 ammesse · cauzione o fideiussione, a pena di esclusione",
+    "fonte": "Disciplinare §11"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa: tecnica 80, prezzo 20 · sbarramento a 35 punti tecnici · nessuna riparametrazione",
+    "fonte": "Disciplinare §18 · §18.4"
+   },
+   {
+    "t": "Punti facili",
+    "v": "Nessun criterio tabellare · solo riduzione dei tempi (4 punti, a formula); il resto è discrezionale",
+    "fonte": "Disciplinare §18.1 · §18.2"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Almeno 10 giorni prima della scadenza, solo dalla piattaforma ASMECOMM",
+    "fonte": "Disciplinare §3.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 21/12/2026 ore 9:00 · prima seduta 21/12/2026 ore 11:00",
+    "fonte": "Disciplinare §13 · §20"
+   }
+  ],
+  "attenzione": [
+   "La base d'asta contiene già un pre-ribasso del 18% sui lavori al netto della manodopera.",
+   "Sotto 35 punti tecnici su 80 si è esclusi; la formula del prezzo (esponente 0,1) dà punteggi vicini anche a ribassi diversi.",
+   "Relazione tecnica massimo 10 fogli fronte-retro e 2 tavole A0: le pagine in più non vengono valutate."
+  ]
+ },
+ "BDFA774379": {
+  "titolo": "Recupero del torrente coperto e realizzazione di un centro polifunzionale sotterraneo per eventi culturali · Comune di Platì (gara della Città Metropolitana di Reggio Calabria)",
+  "lavori": "Recupero di una struttura sotterranea coperta sul torrente coperto di Platì (RC), oggi attraversata da acque nere, da trasformare in centro polifunzionale per eventi culturali e artistici. Si fanno bonifica e consolidamento del canalone sotterraneo con incordolatura delle feritoie, strutture complementari nell'area della scalinata, sistemazioni di superficie in via Morabito e negli slarghi, recupero di un edificio servizi con capriate, solaio e scala in legno, impianto elettrico, illuminazione pubblica, videosorveglianza e verde. Lavori a misura, durata 360 giorni, con premio se si finisce in anticipo.",
+  "lavorazioni": [
+   {
+    "cosa": "Opere edili e consolidamento (OG1)",
+    "quota": 74
+   },
+   {
+    "cosa": "Opere stradali di superficie (OG3)",
+    "quota": 14
+   },
+   {
+    "cosa": "Impianti elettrici interni",
+    "quota": 7
+   },
+   {
+    "cosa": "Illuminazione pubblica",
+    "quota": 3
+   },
+   {
+    "cosa": "Verde e arredo urbano",
+    "quota": 2
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "1.539.523 € (1.506.481 € a misura, manodopera 482.801 € compresa, + 33.042 € sicurezza) · premio di accelerazione fino a 10.392 € · durata 360 giorni",
+    "fonte": "Bando-disciplinare §3"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG1 classifica III-bis con certificazione qualità ISO 9000 · OG3 classifica I (o RTI/subappalto) · OS30, OG10, OS24 con SOA o requisiti art. 28 All. II.12 · avvalimento ammesso",
+    "fonte": "Bando-disciplinare §3 · §6.2 · §7"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso (art. 119) solo se indicato nella domanda, altrimenti vietato · almeno 20% a PMI",
+    "fonte": "Bando-disciplinare §8"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non previsto sopralluogo assistito",
+    "fonte": "Bando-disciplinare §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non richiesta",
+    "fonte": "Bando-disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso (ribasso sull'importo compresa manodopera) · esclusione automatica delle anomale con 5 o più offerte, metodo A",
+    "fonte": "Bando-disciplinare Premesse · §16 · §23"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 07/12/2026 ore 12:00, dalla piattaforma TuttoGare",
+    "fonte": "Bando-disciplinare §2.2"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 14/12/2026 ore 9:00 (termini ridotti) · prima seduta 14/12/2026 ore 9:30 · contributo ANAC 165 €",
+    "fonte": "Bando-disciplinare §12 · §13 · §19"
+   }
+  ],
+  "attenzione": [
+   "Se manca una categoria obbligatoria e non si dichiara il subappalto (o RTI/avvalimento) si è esclusi.",
+   "Con la OG1 in classifica III-bis serve la certificazione di qualità ISO 9000.",
+   "Documenti poco coerenti: il disciplinare parla di due \"macrolotti\" ma il lotto è unico, e il verbale di validazione scrive OS10 invece di OG10."
+  ]
+ },
+ "BDF93DFA9B": {
+  "titolo": "Messa in sicurezza delle scarpate contro le frane di crollo sulla SP 63 di Forca di Valle · Provincia di Teramo",
+  "lavori": "Messa in sicurezza delle scarpate lungo la strada provinciale n. 63 di Forca di Valle, in provincia di Teramo, esposta a frane di crollo, con presìdi attivi e passivi contro la caduta di materiale sulla strada. I documenti di gara non descrivono le singole lavorazioni né le quantità: il progetto esecutivo, validato il 16/07/2026, si scarica solo da un link esterno. Lavori a misura, tutti in categoria OG3, finanziati con contributo della protezione civile regionale. Durata 180 giorni dalla consegna.",
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "381.686 € (371.150 € a misura, manodopera 50.222 € compresa, + 10.536 € sicurezza) · durata 180 giorni",
+    "fonte": "Bando-disciplinare §3 · §3.1"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG3 classifica II (unica categoria) · avvalimento ammesso",
+    "fonte": "Bando-disciplinare §6.2 · §7"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso nei limiti di legge (tabella: 50%), solo se indicato nel DGUE, altrimenti vietato",
+    "fonte": "Bando-disciplinare §3 · §8"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non obbligatorio, si può fare in autonomia",
+    "fonte": "Bando-disciplinare §11"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non richiesta",
+    "fonte": "Bando-disciplinare §10"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso (ribasso unico) con inversione procedimentale · esclusione automatica delle anomale con 5 o più offerte, metodo A",
+    "fonte": "Bando-disciplinare §16 · §17 · §19"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 04/12/2026 ore 10:00, dalla piattaforma",
+    "fonte": "Bando-disciplinare §13 (timing di gara)"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro l'11/12/2026 ore 9:00 · apertura 11/12/2026 ore 12:00 · contributo ANAC 33 €",
+    "fonte": "Bando-disciplinare §12 · §13"
+   }
+  ],
+  "attenzione": [
+   "Bisogna impegnarsi, a pena di esclusione, a riservare il 30% delle assunzioni ai giovani (Allegato A e D).",
+   "Il progetto esecutivo è solo su link esterno: scaricarlo subito per fare il prezzo.",
+   "Contributo ANAC non pagato e non regolarizzato = offerta inammissibile."
+  ]
+ },
+ "BDFC51EE3A": {
+  "titolo": "Indagine di mercato per il rifacimento dell'isola ecologica · Comune di Albareto",
+  "lavori": "Riqualificazione dell'isola ecologica comunale di Albareto (PR), l'area di raccolta e conferimento dei rifiuti. Si costruisce una nuova tettoia con struttura portante in acciaio, si rifanno le pavimentazioni del piazzale in calcestruzzo e in conglomerato bituminoso, si adeguano e spostano le linee di scarico e la raccolta delle acque, si posa un box prefabbricato per ufficio, si realizzano nuovi stalli per i rifiuti con paratie in cemento armato e si rifà l'illuminazione. Quantità da definire nel progetto esecutivo. Durata 160 giorni.",
+  "lavorazioni": [
+   {
+    "cosa": "Tettoia in acciaio"
+   },
+   {
+    "cosa": "Pavimentazioni in calcestruzzo e asfalto"
+   },
+   {
+    "cosa": "Linee di scarico e raccolta acque"
+   },
+   {
+    "cosa": "Paratie in cemento armato"
+   },
+   {
+    "cosa": "Box prefabbricato ufficio"
+   },
+   {
+    "cosa": "Impianto di illuminazione"
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "280.883 € (di cui 1.325 € sicurezza; manodopera 55.863 €) · durata 160 giorni · lavori da avviare entro l'8/2/2027",
+    "fonte": "Avviso art. 2-3 · Determina n. 125/2026"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG1 classifica I o superiore (se confermata nella gara) · categorie indicative OG1, OS18-A, OS30, OS3, forse OG3 · iscrizione white list (basta la domanda), per RTI tutti",
+    "fonte": "Avviso art. 4 · art. 7"
+   },
+   {
+    "t": "Come candidarsi",
+    "v": "Solo su piattaforma SATER: domanda sullo schema allegato, SOA, white list e scheda dei lavori degli ultimi 10 anni (committente, importo, periodo, lavorazioni)",
+    "fonte": "Avviso art. 7 · art. 8"
+   },
+   {
+    "t": "Scadenza",
+    "v": "Entro il 03/12/2026 ore 9:00",
+    "fonte": "Avviso art. 8"
+   },
+   {
+    "t": "N. imprese invitate",
+    "v": "5, scelte con graduatoria se le candidature sono più di 5: lavori analoghi da almeno 60.000 € (10 punti l'uno, max 50) + tettoie in acciaio 20, piazzali in cls/asfalto 20, reti di scarico 10 · poi gara al prezzo più basso",
+    "fonte": "Avviso art. 6"
+   }
+  ],
+  "attenzione": [
+   "Avviso pubblicato solo 7 giorni: la scadenza è molto vicina.",
+   "Se mancano committente, importo, periodo o lavorazioni di un lavoro, quel lavoro non prende punti.",
+   "Candidature via PEC, posta o a mano non sono valide."
+  ]
+ },
+ "BDF223E59C": {
+  "titolo": "Accordo quadro per la manutenzione e il recupero degli alloggi popolari in tutta l'Umbria · ATER Umbria",
+  "lavori": "Accordo quadro con un massimo di 16 imprese per pronto intervento, manutenzione ordinaria e straordinaria e ripristino di alloggi ERP sfitti o abitati, pertinenze e parti comuni del patrimonio ATER in tutta l'Umbria. Lavori tipici: pavimenti, rivestimenti, intonaci e tinteggiature, rifacimento bagni, sostituzione di serramenti e portoncini, rifacimento di impianti elettrici, idrico-sanitari, gas e termici, bonifiche. Previsti circa 276 alloggi FESR (143 edifici), circa 200 del Piano Casa e 138 con fondi ATER e regionali. Contratti applicativi fino a 615.000 €, urgenze entro 24 ore. Durata 36 mesi più 12.",
+  "lavorazioni": [
+   {
+    "cosa": "Pavimenti, rivestimenti e intonaci"
+   },
+   {
+    "cosa": "Tinteggiature"
+   },
+   {
+    "cosa": "Rifacimento servizi igienici"
+   },
+   {
+    "cosa": "Serramenti e portoncini"
+   },
+   {
+    "cosa": "Impianti elettrici, idrici, gas e termici"
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "41.379.310 € di lavori (39.931.034 € a misura + 1.448.276 € sicurezza), comprese proroga di 12 mesi e opzione +30% · base 36 mesi 30.172.414 € · valore globale 48.000.000 €",
+    "fonte": "Disciplinare (oggetto) · Relazione §5 · Schema accordo quadro art. 3"
+   },
+   {
+    "t": "Requisiti",
+    "v": "SOA OG1 classifica II · avvalimento: Non indicato nei documenti",
+    "fonte": "Relazione §4"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Ammesso (art. 119) · OG1 al massimo 50% per ogni contratto applicativo · subappalto a cascata della OG1 vietato",
+    "fonte": "Schema accordo quadro art. 7.7"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "—"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Provvisoria: Non indicato nei documenti · definitiva fino al 2% sull'accordo quadro e 10% su ogni contratto applicativo",
+    "fonte": "Schema accordo quadro art. 9"
+   },
+   {
+    "t": "Criterio",
+    "v": "Offerta più vantaggiosa: tecnica 70, prezzo 30 · struttura organizzativa 25, esperienze analoghe 25, ambiente-sicurezza-sistemi di gestione 10, organizzazione e tempi di intervento 10",
+    "fonte": "Relazione §4"
+   },
+   {
+    "t": "Chiarimenti",
+    "v": "Entro il 29/12/2026 ore 12:00 · risposte pubblicate il 05/01/2027",
+    "fonte": "Disciplinare telematico (fasi di gara)"
+   },
+   {
+    "t": "Offerta",
+    "v": "Entro il 13/01/2027 ore 12:00 · apertura documentazione 14/01/2027 ore 9:30",
+    "fonte": "Disciplinare telematico (fasi di gara)"
+   }
+  ],
+  "attenzione": [
+   "Nessun volume minimo garantito: ATER non è obbligata ad affidare lavori.",
+   "Nei rilanci per i singoli contratti il ribasso non può essere più basso di quello offerto in gara.",
+   "Tre mancate prese in carico in un trimestre sono inadempimento; penale 1 per mille al giorno di ritardo."
+  ]
+ }
+}
