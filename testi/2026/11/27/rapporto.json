@@ -1,0 +1,258 @@
+[
+ {
+  "cig": "BDFDE60626",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18746443",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDF804C368",
+  "url": "https://trasparenza.porto.trieste.it/page/10/bandi-di-gara-e-contratti.html",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDFFE68501",
+  "url": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFE77B9BF",
+  "url": "https://www.comune.borno.bs.it/Pages/Bandi/procedure/digara/?id=365739",
+  "piattaforma": "www.comune.borno.bs.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BE01543168",
+  "url": "https://peccioli.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/10621828",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFA961A4D",
+  "url": "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interventi-di-manutenzione-straordinaria-e-di-ripristino-funzionale-dei-conglomerati-bituminosi",
+  "piattaforma": "www.fvgstrade.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE0086B80E",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1085612",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BE0286180E",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=126138",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ },
+ {
+  "cig": "BDFC9AF2EE",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125235",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BE0285B31C",
+  "url": "https://cuc-pantelleria.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G03291",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BE021C53C7",
+  "url": "https://start.toscana.it/tendering/tenders/032775-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BE00789D8C",
+  "url": "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658",
+  "piattaforma": "sac3.halleysac.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE00F3E9B9",
+  "url": "https://smlc.traspare.com/announcements/1663",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BE00B5A3CE",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1097965",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BE013165C0",
+  "url": "https://appalti.ragusa.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=3013",
+  "piattaforma": "appalti.ragusa.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDEA5594A8",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFF2C175A",
+  "url": "https://comune-mugnano-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00036",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDF74434E2",
+  "url": "https://appalti-comune-alghero.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01290",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 10
+ },
+ {
+  "cig": "BE0194E782",
+  "url": "https://www.cittametropolitana.mi.it/_cmmi_ext/amministrazione-trasparente/scheda/?id=AT3966 ",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE00E35F08",
+  "url": "https://bandi.sanluigi.piemonte.it/",
+  "piattaforma": "bandi.sanluigi.piemonte.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDFCAFB4E7",
+  "url": "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BE011E05EE",
+  "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "piattaforma": "app.albofornitori.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE00CE274A",
+  "url": "https://bagnolodelsalento.tuttogare.it/gare/dettaglio.php?codice=160",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BE024E14A8",
+  "url": "https://comuneditrinitapoli.tuttogare.it/gare/dettaglio.php?codice=57",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BE001856B5",
+  "url": "https://appalti.comune.campobasso.it/PortaleAppalti/it/procedure/codice/G01409",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BD8B91B68A",
+  "url": "https://eappalti.regione.fvg.it/",
+  "piattaforma": "eappalti.regione.fvg.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE029B0C80",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/29cade40f39ca284",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE01A204CF",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18768144",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BE000B7CB4",
+  "url": "https://start.toscana.it/tendering/tenders/049730-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF80BCFD1",
+  "url": "https://sestofiorentino.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/5777083",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BE007E37D3",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=126093",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BE00C58569",
+  "url": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ }
+]
