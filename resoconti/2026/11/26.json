@@ -760,5 +760,61 @@
    "Nei rilanci per i singoli contratti il ribasso non può essere più basso di quello offerto in gara.",
    "Tre mancate prese in carico in un trimestre sono inadempimento; penale 1 per mille al giorno di ritardo."
   ]
+ },
+ "BDF7751A34": {
+  "titolo": "Accordo quadro di 4 anni per la manutenzione ordinaria e straordinaria, edile e impiantistica, degli immobili istituzionali · ASP Istituti Milanesi Martinitt e Stelline e Pio Albergo Trivulzio (Milano)",
+  "lavori": "Accordo quadro di 48 mesi con un solo operatore, lotto unico, per i lavori di manutenzione edilizia e impiantistica degli immobili istituzionali dell'Azienda, oggi affidati a Multi Manutenzione Srl con contratto in scadenza il 30/11/2026. Comprende la manutenzione ordinaria periodica programmata, la manutenzione correttiva su richiesta a guasto e gli interventi d'urgenza su chiamata in reperibilità (3 milioni €), più la manutenzione straordinaria (1,9 milioni €). Tutto contabilizzato a misura con i prezzi del Prezziario regionale Lombardia 2026. I documenti scaricati non descrivono edifici e quantità.",
+  "lavorazioni": [
+   {
+    "cosa": "Manutenzione ordinaria, a guasto e urgenze",
+    "quota": 61
+   },
+   {
+    "cosa": "Manutenzione straordinaria",
+    "quota": 39
+   }
+  ],
+  "punti": [
+   {
+    "t": "Importo",
+    "v": "4.940.000 € (4.900.000 € a ribasso + 40.000 € sicurezza da interferenza), di cui 1.191.424 € manodopera · 48 mesi, a misura · valore globale 8.171.583 € con quinto d'obbligo, proroga 5 mesi e rinnovo 12 mesi",
+    "fonte": "Determinazione AAEP2026073, premesse e punto 3"
+   },
+   {
+    "t": "Requisiti",
+    "v": "Non indicato nei documenti",
+    "fonte": "Determinazione AAEP2026073"
+   },
+   {
+    "t": "Subappalto",
+    "v": "Non indicato nei documenti",
+    "fonte": "Determinazione AAEP2026073"
+   },
+   {
+    "t": "Sopralluogo",
+    "v": "Non indicato nei documenti",
+    "fonte": "Determinazione AAEP2026073"
+   },
+   {
+    "t": "Garanzia",
+    "v": "Non indicato nei documenti",
+    "fonte": "Determinazione AAEP2026073"
+   },
+   {
+    "t": "Criterio",
+    "v": "Prezzo più basso: ribasso percentuale unico su tutti i prezzi del Prezziario regionale Lavori Pubblici Lombardia ed. 1/2026 (in subordine Prezziario DEI Recupero Ristrutturazione Manutenzione 1° sem. 2026)",
+    "fonte": "Determinazione AAEP2026073, premesse e punto 1"
+   },
+   {
+    "t": "Offerta",
+    "v": "Procedura aperta telematica su piattaforma Sintel · scadenza non indicata nei documenti",
+    "fonte": "Determinazione AAEP2026073, punto 1"
+   }
+  ],
+  "attenzione": [
+   "Tra i documenti scaricati c'è solo la determina di indizione: disciplinare e capitolato vanno letti sulla piattaforma Sintel.",
+   "È un accordo quadro a misura: l'importo è un tetto massimo, i lavori arrivano a chiamata.",
+   "Il contratto uscente era stato aggiudicato con un ribasso del 30,11%."
+  ]
  }
 }
