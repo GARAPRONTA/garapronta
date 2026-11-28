@@ -1,0 +1,226 @@
+[
+ {
+  "cig": "BD96E63F9F",
+  "url": "https://acquisti.stradeanas.it",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA589968A",
+  "url": "https://portalegare.cittametropolitanaroma.it/portalegare/index.php/bandi",
+  "piattaforma": "portalegare.cittametropolitanaroma.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA8B6C78E",
+  "url": "https://appalti-ast5ap.sanita.marche.it/PortaleAppalti/it/procedure/codice/G01819",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDA7B34538",
+  "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03208",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDA5721043",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_94b90d92-3f19-4944-149c4-84d8ba2dc154",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA233FF97",
+  "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "piattaforma": "app.albofornitori.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA4F9DC83",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA8A421A5",
+  "url": "https://irsapsicilia.traspare.com/announcements/198",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA5071B76",
+  "url": "https://www.comune.padova.it/node/105117",
+  "piattaforma": "www.comune.padova.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 6
+ },
+ {
+  "cig": "BD99F9ACA6",
+  "url": "https://eappalti.regione.fvg.it/esop/guest/go/opportunity/detail?opportunityId=26006",
+  "piattaforma": "eappalti.regione.fvg.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA7AD1386",
+  "url": "https://appalti.cittametropolitana.me.it/PortaleAppalti/it/procedure/codice/G00525",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BD457E343E",
+  "url": "https://www.sintel.regione.lombardia.it",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA16319B1",
+  "url": "https://cuccomunevastogirardi.tuttogare.it/gare/dettaglio.php?codice=766",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDA4C184FE",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=110154",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDA7EA29C3",
+  "url": "https://cucunionevalledeltorbido.tuttogare.it/gare/dettaglio.php?codice=85",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDA83F6F5D",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA7A38543",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18274738",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDA4771E23",
+  "url": "https://e-procurement.unionenet.it/PortaleAppalti/it/procedure/codice/G01780",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA4D0ACB0",
+  "url": "https://empolesevaldelsa.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/5760121?p_auth=Gkul2EiX&p_p_state=pop_up",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDA8DE51EE",
+  "url": "https://appalti-cmmontilattari.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00141",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 12
+ },
+ {
+  "cig": "BDA9A0DA06",
+  "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03209",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDA66896F2",
+  "url": "https://provincia-benevento.acquistitelematici.it/tender/1310",
+  "piattaforma": "provincia-benevento.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDA9B00290",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=123385",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDA81969A2",
+  "url": "https://appalti.provincia.alessandria.it/PortaleAppalti/it/procedure/codice/G02456",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDA8331CCC",
+  "url": "https://start.toscana.it/tendering/tenders/045086-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 15
+ },
+ {
+  "cig": "BDA9266968",
+  "url": "https://cbns.tuttogare.it/gare/dettaglio.php?codice=666",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDA98C073A",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=123448",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDA573C689",
+  "url": "https://www.unina.it/it/w/2/tl/2026_cp",
+  "piattaforma": "www.unina.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ }
+]
