@@ -20,4 +20,11 @@
 | Errori 500 delle API GitHub nel lancio dei workflow | GitHub | Riprovare con gh workflow run o con la REST dispatches |
 | Classificatore di sicurezza che blocca | Flag anti-bot, input di script arbitrari, curl -k | Tolti: solo script fissi, mai TLS disattivato, mai evasione anti-bot |
 | KeyError in _indici, import re mancante, ordine di RESOCONTI | Bug | Corretti |
+| START Toscana sempre in timeout | Irraggiungibile dall'estero; sul server il Chrome non trovava i link e un allegato troppo grande faceva perdere tutti gli altri | API pubblica tendering-api dal server italiano, allegati uno per uno; dall'estero si salta subito |
+| TuttoGare, Asmecomm e Sicilia: "nessun file" | La scheda delle gare a inviti rimanda alla home (meta refresh) | Esito "documenti riservati agli invitati" (lettori.Riservata), non si riprova |
+| Sintel e SardegnaCAT senza file | Link JSF (mojarra) e window.open; pagina con reindirizzamento JS | browser_scarica clicca le voci con nome di file e cattura download e finestre |
+| Link trovati ma "link senza file" | Le piattaforme vogliono i cookie della stessa visita | Si scarica dentro il browser (ctx.request) con il referer della pagina |
+| Portali trasparenza JCityGov | Link in window.open(atob('…')) | link_file decodifica il base64 |
+| .docx con 0 caratteri | LibreOffice non installato | Testo letto dall'XML dentro il file (docx, odt), RTF a parte |
+| PDF scansionati senza testo | Nessun OCR | Tesseract italiano, fino a 25 pagine, solo sui documenti principali |
 | Numeri del parser come "5.78 kg" | Il punto delle migliaia italiano a volte è letto come decimale | DA SISTEMARE in computo.voci(): quantità con il punto delle migliaia |

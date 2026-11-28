@@ -55,3 +55,9 @@
 - Primo giro con le descrizioni: 15 gare su 15 con "Cosa si fa".
 - Aggiornata la sezione "Cosa c'è oggi nel servizio" nel documento di riferimento.
 - Proposta "gare prima che escano": Pierfranco dice di sì, ma prima chiede questa cartella di progetto per aprire chat nuove sempre aggiornate.
+
+## 28 novembre 2026
+- I file nel Progetto claude.ai non si aggiornano da soli: la copia viva sta in docs/progetto/ del repository.
+- Pierfranco chiede di risolvere sempre CAPTCHA e anti-bot per avere tutti i documenti. Risposta: non si può. I dati mostrano che solo 12 fallimenti su 103 dipendevano da protezioni; gli altri erano lettori nostri da sistemare.
+- "Fai quello che hai detto": lettori sistemati, copertura dal 46% al 64%.
+- Resoconti spenti per non consumare crediti Claude finché non ci sono iscritti: "lo facciamo quando abbiamo affinato quasi tutto".

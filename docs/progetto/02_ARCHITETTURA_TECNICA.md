@@ -12,10 +12,10 @@
 |---|---|---|
 | 21:47 | GitHub, giornaliera.yml | Scarica dalla PVL ANAC gli avvisi del giorno stesso (data/AAAA/MM/GG.json.gz) |
 | subito dopo | GitHub, documenti.yml (parte dopo giornaliera) | Scarica e legge i documenti di tutte le gare di lavori; se una piattaforma blocca, riprova dal VPS; scrive testi/AAAA/MM/GG/ e il file giro_sera |
-| 23:13 | Attività programmata Claude "resoconti della sera" | Scrive resoconti/AAAA/MM/GG.json; sopra le 8 gare divide il lavoro tra più agenti |
+| 23:13 | Attività programmata Claude "resoconti della sera" (SPENTA dal 28/11) | Scrive resoconti/AAAA/MM/GG.json; sopra le 8 gare divide il lavoro tra più agenti |
 | 06:07 | GitHub, giornaliera.yml | Scarica gli avvisi completi di ieri |
 | subito dopo | documenti.yml | Legge solo le gare nuove o fallite la sera; scrive il file giro_mattina |
-| 07:03 | Attività programmata Claude "resoconti del mattino" | Aggiunge solo i CIG mancanti e scrive sempre resoconti/AAAA/MM/GG.mattino |
+| 07:03 | Attività programmata Claude "resoconti del mattino" (SPENTA dal 28/11) | Aggiunge solo i CIG mancanti e scrive sempre resoconti/AAAA/MM/GG.mattino |
 | al push dei resoconti | GitHub, invio.yml | Pubblica le schede web e manda le email; poi scrive il segnaposto inviati/AAAA-MM-GG |
 | 08:37 | invio.yml | Invio di riserva, se i resoconti non sono arrivati |
 
@@ -33,6 +33,7 @@
 - **prezzari.yml:** passi cerca, scarica, indice, ispeziona, web. Costruisce l'indice dei prezzari regionali e le pagine prezzi.
 - **storico.yml:** storico di 12 mesi per le statistiche regionali.
 - **vps-setup.yml:** installa sul VPS p7zip-full, DuckDB e il resto.
+- **diag-pagine.yml:** salva l'HTML di pagine di esempio da GitHub e dal server italiano (tools/diag_pagine.py) per capire dove stanno i documenti.
 - **vps-prova.yml, vps-diagnosi.yml:** diagnosi con script fissi (tools/vps_diagnosi.py). Non si accettano script arbitrari come input.
 - **vps-anac.yml, ricerca-fonti.yml, brevo-check.yml:** utilità.
 - **apify-deploy.yml:** non più usato.

@@ -1,6 +1,6 @@
 # GaraPronta — stato attuale
 
-Aggiornato al 26 novembre 2026.
+Aggiornato al 28 novembre 2026.
 
 ## In una frase
 Il servizio gira da solo ogni giorno e manda un'email completa di gare, analisi e dati. Non incassa ancora: mancano dominio, partita IVA e account social, tutte cose che deve fare Pierfranco.
@@ -19,6 +19,21 @@ Il servizio gira da solo ogni giorno e manda un'email completa di gare, analisi 
 - 15 resoconti scritti, tutti con la descrizione "Cosa si fa" in 3-4 righe e 14 con le lavorazioni.
 - Email inviate alle 07:11.
 
+## Novità del 28 novembre
+- **Resoconti di Claude SPENTI** (decisione di Pierfranco: consumano crediti Claude e non ci sono ancora iscritti veri). Le due attività programmate (mattino 07:03 e sera 23:13) sono disattivate, non cancellate: si riaccendono quando il servizio è affinato e si parte. Il resto del giro (dati, documenti, schede, email di prova) continua senza usare crediti Claude.
+- **Copertura documenti dal 46% al 64%** (123 gare su 191 dal 20 al 27/11), 69% sulle gare pubbliche. Fatto con lettori migliori, senza aggirare nessuna protezione:
+  - START Toscana via API dal server italiano (tutte le gare START ora lette);
+  - browser "come una persona": scelta cookie più riservata, link scaricati nella stessa visita, clic sui file per Sintel e SardegnaCAT;
+  - link in base64 dei portali trasparenza JCityGov;
+  - testo da Word, OpenOffice e RTF senza LibreOffice;
+  - OCR italiano per i PDF scansionati;
+  - gare a inviti riconosciute (12 gare): scheda e documenti visibili solo agli invitati, e la scheda web lo spiega.
+- **Cosa resta fuori:**
+  - Traspare (circa 10) e MEPA (5): bloccano i programmi, serve l'autorizzazione (email già scritte);
+  - link dell'ente alla home di ARIA/Sintel (circa 6): si può cercare la gara per CIG;
+  - JAGGAER di Anas, Acea e FS (5): errori 500;
+  - Maggioli che non risponde (5).
+
 ## Cosa funziona oggi (dettagli nei file 02 e 03)
 - Lettura quotidiana di tutte le gare di lavori d'Italia (circa 26-40 al giorno), con documenti, computo, resoconto e scheda web.
 - Email personalizzata per regione, categorie e classifica SOA, con ribassi, margine, partner, enti da seguire, esiti e affidamenti diretti.
@@ -34,6 +49,7 @@ Il servizio gira da solo ogni giorno e manda un'email completa di gare, analisi 
 - Due email già scritte per chiedere l'accesso a Traspare e Consip (MEPA), non inviate: per ora si è scelto il solo link.
 
 ## Prossimo lavoro tecnico deciso
+0. Altri lettori: ricerca per CIG su ARIA/Sintel, JAGGAER (Anas, Acea, FS), Maggioli che non risponde. Traspare e MEPA solo con autorizzazione.
 1. **"Gare prima che escano"** (leva 3 della visione). Proposta del 26/11; Pierfranco ha chiesto di fermarsi un attimo per preparare questa cartella. Il piano:
    - studiare le fonti: programmi triennali sul portale MIT Servizio Contratti Pubblici e su 10 portali regionali (Basilicata, Bolzano, Emilia-Romagna, Friuli-Venezia Giulia, Liguria, Lombardia, Marche, Toscana, Trento, Valle d'Aosta);
    - costruire una banca dei lavori programmati (CUI, descrizione, importo, anno, priorità, CUP);

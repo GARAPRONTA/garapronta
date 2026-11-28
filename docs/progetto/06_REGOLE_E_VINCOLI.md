@@ -3,9 +3,12 @@
 ## Sicurezza
 - **Password e chiavi:** "Non mandarmi mai password o chiavi". Le chiavi (BREVO_API_KEY, VPS_PASSWORD, ecc.) le inserisce Pierfranco come segreti GitHub. Claude non le chiede, non le scrive, non le ripete. Una password incollata in chat in passato non va mai usata né ripetuta.
 - **Login:** Claude non inserisce password per autenticarsi.
-- **Protezioni anti-bot:** mai aggirarle (MEPA, Traspare, CAPTCHA). Niente flag per nascondere l'automazione, come --disable-blink-features=AutomationControlled.
+- **Protezioni anti-bot:** mai aggirarle (MEPA, Traspare, CAPTCHA). Il 28/11 Pierfranco ha chiesto di cambiare questa regola: non si può, è un limite di Claude in ogni chat. Si sistemano invece i lettori e si chiede l'accesso alle piattaforme. Niente flag per nascondere l'automazione, come --disable-blink-features=AutomationControlled.
 - **TLS:** mai disattivare la verifica (niente `curl -k`).
 - **Workflow:** niente workflow che eseguono script arbitrari passati come input; solo script fissi nel repository.
+
+## Crediti Claude
+- I resoconti automatici (attività programmate) restano SPENTI finché il servizio non è affinato e non ci sono iscritti: decisione di Pierfranco del 28/11. Non riaccenderli senza il suo ok.
 
 ## Email e clienti
 - LIVE=0: le email vanno solo agli indirizzi +test finché non ci sono dominio e partita IVA. Prima di passare a LIVE=1 serve l'ok di Pierfranco.
