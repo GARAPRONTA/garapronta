@@ -1,0 +1,26 @@
+{
+ "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391",
+  "byte": 1978,
+  "secondi": 0.3,
+  "tipo": "text/html"
+ },
+ "chrome": {
+  "commit_s": 1.6,
+  "attesa_s": 65.2,
+  "url_finale": "https://webs.rete.toscana.it/sitat-app/rest/gestione-trasparenza-ms/v1/public/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391",
+  "link": [],
+  "pulsanti": [],
+  "rete": [
+   "GET https://webs.rete.toscana.it/sitat/trasparenza/",
+   "GET https://webs.rete.toscana.it/sitat/trasparenza/chunk-6RK4UCKV.js",
+   "GET https://webs.rete.toscana.it/sitat/trasparenza/polyfills-5CFQRCPP.js",
+   "GET https://webs.rete.toscana.it/sitat/trasparenza/main-XFZ26DQJ.js",
+   "GET https://webs.rete.toscana.it/sitat/trasparenza/content/assets/config.json",
+   "GET https://webs.rete.toscana.it/sitat-app/rest/gestione-trasparenza-ms/v1/public/getConfigControlloDati",
+   "GET https://webs.rete.toscana.it/sitat-app/rest/gestione-trasparenza-ms/v1/public/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391"
+  ]
+ }
+}
