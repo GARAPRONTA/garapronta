@@ -1,0 +1,250 @@
+{
+ "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
+ "diretto": {
+  "errore": "HTTPError: HTTP Error 401: Unauthorized",
+  "secondi": 0.6
+ },
+ "chrome": {
+  "commit_s": 10.7,
+  "attesa_s": 113.7,
+  "url_finale": "https://acquisti.stradeanas.it/esop/toolkit/opportunity/ns/26304/detail.si?isOnModification=false&_ncp=1795868414615.3109896-2",
+  "link": [
+   [
+    "Vai a : Contenuto principale",
+    "#cntDetail",
+    null
+   ],
+   [
+    "Vai a : Azioni Disponibili",
+    "#mainTB_shortcut",
+    null
+   ],
+   [
+    "",
+    "#fh",
+    null
+   ],
+   [
+    "Accessibilità",
+    "#fh",
+    null
+   ],
+   [
+    "Informativa sulla privacy del servizio JAGGAER",
+    "#fh",
+    null
+   ],
+   [
+    "Dettaglio Bando",
+    "#fh",
+    null
+   ],
+   [
+    "Avviso Pubblicato",
+    "#cntDetail",
+    null
+   ],
+   [
+    "Codice",
+    "/esop/toolkit/opportunity/ns/26304/detail.si?orderBy=rfxReferenceCode",
+    "stopEventPropagation(event);"
+   ],
+   [
+    "Titolo",
+    "/esop/toolkit/opportunity/ns/26304/detail.si?orderBy=rfxTitle",
+    "stopEventPropagation(event);"
+   ],
+   [
+    "Scadenza Per La Presentazione Delle Domande Di Partecipazione/Offerta",
+    "/esop/toolkit/opportunity/ns/26304/detail.si?orderBy=rfxCloseDate",
+    "stopEventPropagation(event);"
+   ],
+   [
+    "https://acquisti.stradeanas.it/",
+    "#fh",
+    "javascript:openLink('https://acquisti.stradeanas.it/',event);return false;stopEventPropagation(event);"
+   ],
+   [
+    "Allegato 1 - 1 bis.pdf",
+    "/esop/toolkit/DownloadProxy/63058110?verify=15&oid=178181044&fileId=36917010",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "Allegato 1 - Lettera ufficiale di invio ...",
+    "/esop/toolkit/DownloadProxy/63058111?verify=15&oid=178181045&fileId=36917011",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "Allegato 1 bis - Dichiarazione Fornitor...",
+    "/esop/toolkit/DownloadProxy/63058112?verify=15&oid=178181046&fileId=36917012",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "Allegato 2 - Dichiarazione Stato di Fami...",
+    "/esop/toolkit/DownloadProxy/63058113?verify=15&oid=178181047&fileId=36917013",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "Allegato 3 - Modulo offerta economica.pd...",
+    "/esop/toolkit/DownloadProxy/63058114?verify=15&oid=178181048&fileId=36917014",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "Allegato 4 - Dettaglio costi della manod...",
+    "/esop/toolkit/DownloadProxy/63058116?verify=15&oid=178181049&fileId=36917015",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "BANDO ANLAV004-26 PROT..pdf",
+    "/esop/toolkit/DownloadProxy/63135723?verify=15&oid=178281325&fileId=36961277",
+    "javascript:markTimeBeforeUnload();"
+   ],
+   [
+    "Disciplinare ANLAV004-26 PROT..pdf",
+    "/esop/toolkit/DownloadProxy/63135726?verify=15&oid=178281326&fileId=36961278",
+    "javascript:markTimeBeforeUnload();"
+   ]
+  ],
+  "pulsanti": [
+   "Continua il caricamento della pagina in background",
+   "Accedi o Registrati per partecipare",
+   "Dettaglio Bando",
+   "Dettaglio Annuncio",
+   "Lotti Pubblicati",
+   "Informazioni sulla Organizzazione del Buyer",
+   "Allegati dell'Avviso",
+   "Pagina Iniziale",
+   "Chiudi",
+   "Annulla",
+   "Conferma",
+   "<< Precedente",
+   "Successiva >>",
+   "Chiudi",
+   "Download",
+   "Chiudi"
+  ],
+  "rete": [
+   "GET https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
+   "GET https://acquisti.stradeanas.it/esop/toolkit/opportunity/initFromGo/detail.si?opportunityId=26304&_ncp=1795868414006.3109896-1",
+   "GET https://acquisti.stradeanas.it/esop/toolkit/opportunity/ns/26304/detail.si?isOnModification=false&_ncp=1795868414615.3109896-2",
+   "GET https://acquisti.stradeanas.it/esop/guest/stylesheet/default.jsp",
+   "GET https://acquisti.stradeanas.it/esop/guest/stylesheet/custom.jsp",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/dojo.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dojoext_wrapper.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/esop.jsp?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/template.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/list.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/forms.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/dialog.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/overlay.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/style.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/progress.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/util.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/window.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/debounce.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/html.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/string.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/date.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/main.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/Tooltip.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/NodeList-fx.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/NodeList-traverse.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/dnd/Moveable.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/store/Memory.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/widget/SearchComboBox.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/searchmenu.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/a11y-aria.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/fx.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojox/data/QueryReadStore.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/registry.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojox/layout/ResizeHandle.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/a11y.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/focus.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/Dialog.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/widget/DialogResizable.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/widget/ConfirmDialog.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/i18n.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/number.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojox/html/entities.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/decimal/decimal.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/ProgressBar.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/parser.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_base/manager.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/place.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_Widget.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_TemplatedMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/BackgroundIframe.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/text.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/touch.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/dnd/common.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/dnd/Mover.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/store/util/QueryResults.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/store/util/SimpleQueryEngine.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/ComboBox.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/widget/_SearchComboBoxMenu.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojox/main.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/data/util/sorter.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_WidgetsInTemplateMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/Stateful.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/dnd/TimedMoveable.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_CssStateMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_FormMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_DialogMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/DialogUnderlay.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/layout/ContentPane.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/layout/utils.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/a11yclick.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/nls/dhb.config.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/nls/js.progress.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/nls/mdl.searchcombobox.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/nls/js.a11y.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/nls/common.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/nls/mdl.dialog.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/cldr/nls/number.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/regexp.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/_base/url.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/promise/all.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/date/stamp.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/json5.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/Viewport.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_WidgetBase.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_OnDijitClickMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_FocusMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/uacss.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/hccss.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/cache.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_AttachMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/dnd/autoscroll.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/request.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/ValidationTextBox.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/ComboBoxMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_ComboBoxMenu.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_Container.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/layout/_ContentPaneResizeMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/nls/loading.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/json5/parse.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/Destroyable.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/hccss.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/TextBox.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/nls/validate.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/request/default.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_AutoCompleterMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/_HasDropDown.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_ComboBoxMenuMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_ListMouseMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/json5/util.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_FormValueWidget.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_TextBoxMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_ListBase.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/DataList.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_SearchMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/nls/ComboBox.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/popup.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojo/json5/unicode.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_FormWidget.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_FormValueMixin.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dojoext/toast.js?dcb=26.3.0.0.186",
+   "GET https://acquisti.stradeanas.it/esop/guest/js/dj/dijit/form/_FormWidgetMixin.js?dcb=26.3.0.0.186"
+  ]
+ }
+}

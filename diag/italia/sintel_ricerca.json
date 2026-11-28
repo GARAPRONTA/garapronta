@@ -1,0 +1,472 @@
+{
+ "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "byte": 79875,
+  "secondi": 0.6,
+  "tipo": "text/html;charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 3.6,
+  "attesa_s": 31.4,
+  "url_finale": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "link": [
+   [
+    "Salta al contenuto principale",
+    "#content",
+    null
+   ],
+   [
+    "",
+    "https://www.ariaspa.it",
+    null
+   ],
+   [
+    "",
+    "https://www.regione.lombardia.it",
+    null
+   ],
+   [
+    "",
+    "https://www.ariaspa.it",
+    null
+   ],
+   [
+    "",
+    "https://www.regione.lombardia.it",
+    null
+   ],
+   [
+    "",
+    "https://www.ariaspa.it",
+    null
+   ],
+   [
+    "Chi Siamo",
+    "#",
+    null
+   ],
+   [
+    "Azienda",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda",
+    null
+   ],
+   [
+    "Storia",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda/storia",
+    null
+   ],
+   [
+    "Statuto e governance",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda/statuto-e-governance",
+    null
+   ],
+   [
+    "Certificazioni",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda/certificazioni",
+    null
+   ],
+   [
+    "Codice etico e di comportamento",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda/codice-etico-e-di-comportamento",
+    null
+   ],
+   [
+    "Privacy",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda/privacy",
+    null
+   ],
+   [
+    "Organizzazione",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/organizzazione",
+    null
+   ],
+   [
+    "Persone",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/organizzazione/persone",
+    null
+   ],
+   [
+    "Lavora con noi",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/organizzazione/lavora-con-noi",
+    null
+   ],
+   [
+    "Comunicazione",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/comunicazione",
+    null
+   ],
+   [
+    "Notizie ed\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\teventi",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/comunicazione/notizie-ed-eventi",
+    null
+   ],
+   [
+    "Video gallery",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/comunicazione/video-gallery",
+    null
+   ],
+   [
+    "Newsletter",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/comunicazione/newsletter",
+    null
+   ],
+   [
+    "Comunicati\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tstampa",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/comunicazione/comunicati-stampa",
+    null
+   ],
+   [
+    "Contatti",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/contatti",
+    null
+   ],
+   [
+    "La sede",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/contatti/la-sede",
+    null
+   ],
+   [
+    "Contact center",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/contatti/contact-center",
+    null
+   ],
+   [
+    "Cosa Facciamo",
+    "#",
+    null
+   ],
+   [
+    "Acquisti",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/acquisti",
+    null
+   ],
+   [
+    "Soggetto aggregatore",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/acquisti/soggetto-aggregatore",
+    null
+   ],
+   [
+    "Pianificazione e programmazione",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/acquisti/pianificazione-e-programmazione",
+    null
+   ],
+   [
+    "Appalti innovativi",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/acquisti/appalti-innovativi",
+    null
+   ],
+   [
+    "Innovazione digitale",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/innovazione-digitale",
+    null
+   ],
+   [
+    "Servizi e soluzioni digitali",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/innovazione-digitale/servizi-e-soluzioni-digitali",
+    null
+   ],
+   [
+    "Frontiere Tecnologiche",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/innovazione-digitale/frontiere-tecnologiche",
+    null
+   ],
+   [
+    "Certificazione digitale",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/innovazione-digitale/certificazione-digitale",
+    null
+   ],
+   [
+    "Progetti Europei",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/innovazione-digitale/progetti-europei",
+    null
+   ],
+   [
+    "Infrastrutture",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture",
+    null
+   ],
+   [
+    "Infrastrutture sanitarie",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture/infrastrutture-sanitarie",
+    null
+   ],
+   [
+    "Infrastrutture Civili, ambientali e patrimoniali",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture/infrastrutture-civili-patrimoniali-ambientali",
+    null
+   ],
+   [
+    "Infrastrutture Viarie e Concessioni",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture/infrastrutture-viarie-concessioni",
+    null
+   ],
+   [
+    "Servizio di gestione del patrimonio",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture/servizio-di-gestione-del-patrimonio",
+    null
+   ],
+   [
+    "Spazi istituzionali in concessione",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture/spazi-istituzionali-in-concessione",
+    null
+   ],
+   [
+    "Concessioni autostradali lombarde",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture/concessioni-autostradali-lombarde",
+    null
+   ],
+   [
+    "Energia",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/energia",
+    null
+   ],
+   [
+    "Cened - Certificazione energetica",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/energia/cened-certificazione-energetica",
+    null
+   ],
+   [
+    "Curit - Catasto impianti termici",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/energia/curit-catasto-impianti-termici",
+    null
+   ],
+   [
+    "Servizi di Energy Management",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/energia/servizi-energy-management",
+    null
+   ],
+   [
+    "Pianificazione energetica",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/energia/pianificazione-energetica",
+    null
+   ],
+   [
+    "Bandi e Convenzioni",
+    "#",
+    null
+   ],
+   [
+    "Bandi di gara",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara",
+    null
+   ],
+   [
+    "I nostri Bandi di gara",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara/i-nostri-bandi-di-gara",
+    null
+   ],
+   [
+    "Avvisi sui bandi",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara/avvisi-sui-bandi",
+    null
+   ],
+   [
+    "Bandi sulla piattaforma Sintel",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara/bandi-sulla-piattaforma-sintel",
+    null
+   ],
+   [
+    "Aste di vendita immobili",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara/aste-di-vendita-immobili",
+    null
+   ],
+   [
+    "Convenzioni",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/convenzioni",
+    null
+   ],
+   [
+    "Le nostre Convenzioni",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/convenzioni/acquisti-in-convenzione",
+    null
+   ],
+   [
+    "Avvisi sulle Convenzioni",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/convenzioni/avvisi-sulle-convenzioni",
+    null
+   ],
+   [
+    "Convenzioni di altri Enti",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/convenzioni/altri-enti",
+    null
+   ],
+   [
+    "E-procurement",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement",
+    null
+   ],
+   [
+    "Piattaforma Sintel",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/piattaforma-sintel",
+    null
+   ],
+   [
+    "Negozio Elettronico NECA",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/negozio-elettronico-neca",
+    null
+   ],
+   [
+    "Strumenti di Supporto",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/strumenti-di-supporto",
+    null
+   ],
+   [
+    "Avvisi di servizio",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/avvisi-di-servizio",
+    null
+   ],
+   [
+    "Progetti",
+    "#",
+    null
+   ],
+   [
+    "Procurement",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/procurement",
+    null
+   ],
+   [
+    "Appalti innovativi",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/procurement/appalti-innovativi",
+    null
+   ],
+   [
+    "Digital",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/digital",
+    null
+   ],
+   [
+    "Polo Strategico Nazionale",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/digital/polo-strategico-nazionale",
+    null
+   ],
+   [
+    "Sperimentazione Blockchain",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/digital/sperimentazione-blockchain",
+    null
+   ],
+   [
+    "Intelligenza Artificiale",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/digital/intelligenza-artificiale",
+    null
+   ],
+   [
+    "Open Innovation",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/digital/open-innovation",
+    null
+   ],
+   [
+    "Infrastrutture ed Energia",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/infrastrutture-ed-energia",
+    null
+   ],
+   [
+    "Città della Salute e della Ricerca",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/infrastrutture-ed-energia/citta-della-salute-e-della-ricerca",
+    null
+   ],
+   [
+    "Villa Reale e Parco di Monza",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/infrastrutture-ed-energia/villa-reale-e-parco-di-monza",
+    null
+   ],
+   [
+    "Snodo di Bergamo sulla A4",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/infrastrutture-ed-energia/snodo-di-bergamo-sulla-a4",
+    null
+   ],
+   [
+    "Progetti trasversali",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/progetti-trasversali",
+    null
+   ],
+   [
+    "Covid-19",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/progetti-trasversali/covid-19",
+    null
+   ],
+   [
+    "Public Procurement 4.0",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/progetti-trasversali/public-procurement-4",
+    null
+   ],
+   [
+    "Centri di Competenza",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/progetti-trasversali/centri-di-competenza",
+    null
+   ],
+   [
+    "Home",
+    "http://www.ariaspa.it",
+    null
+   ],
+   [
+    "Bandi di gara",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Mostra/nascondi navigazione\n\t\t\t\t\t\t\t\t\tMENU",
+   "Mostra/nascondi navigazione",
+   "SEDE LEGALE",
+   "TIPO",
+   "STATO",
+   "AMBITO DELLA PROCEDURA",
+   "Cancella",
+   "Applica"
+  ],
+  "rete": [
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/primefaces.js.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/primefaces.css.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-burger.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-close.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/img/loghi/aria_LOGO.png.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/img/loghi/REGIONE_LOGO.png.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-chevron-down.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/arrow.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-facebook.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-twitter.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-linkedin.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/jquery/jquery-3.2.1.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/bootstrap-3.3.7/dist/js/bootstrap.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/jqueryui/jquery-ui-1.12.1/jquery-ui-non-AMD.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/js/custom.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/js/jquery.accordion.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/js/jquery.e-calendar.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/js/jquery.dataTables.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/js/jquery.tooltipster.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/bootstrap-validator/dist/validator.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/swiper/dist/js/swiper.jquery.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/sticky-kit/dist/sticky-kit.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/i18next/i18next-no-AMD.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/i18next/i18nextXHRBackend-no-AMD.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/i18next/jquery-i18next-no-AMD.min.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/handlebars/handlebars-v4.0.5-no-AMD.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/moment/moment-with-locales-no-AMD.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/T2/functions.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/formfunctions.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/T2/tema.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/form.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/swipersliders.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-contenuti.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-custom.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-lingua.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-menu.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-ricerca.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-handlebars.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-altre-attivita.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-datepicker.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-forms.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-like.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/gestore-popup.js",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/custom/caricamento-pagina.js",
+   "GET http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
+  ]
+ }
+}

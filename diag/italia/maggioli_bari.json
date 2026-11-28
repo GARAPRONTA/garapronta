@@ -1,0 +1,402 @@
+{
+ "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013",
+ "diretto": {
+  "errore": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>",
+  "secondi": 0.0
+ },
+ "chrome": {
+  "commit_s": 3.2,
+  "attesa_s": 8.4,
+  "url_finale": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=L26013",
+  "link": [
+   [
+    "fun",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/do/funopen.action",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Vai alla pagina iniziale",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Vai alla pagina di aiuto alla navigazione",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp",
+    null
+   ],
+   [
+    "Vai alla mappa del sito",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppcommon_site_map.wp",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione standard",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?font=normal",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione grande",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?font=big",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione molto grande",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?font=verybig",
+    null
+   ],
+   [
+    "Passa alla visualizzazione grafica",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?skin=normal",
+    null
+   ],
+   [
+    "Passa alla visualizzazione solo testo",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?skin=text",
+    null
+   ],
+   [
+    "Passa alla visualizzazione in alto contrasto e solo testo",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?skin=highcontrast",
+    null
+   ],
+   [
+    "Salta alla ricerca di contenuti",
+    "#searchform",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "",
+    "https://www.comune.bari.it/bandi-di-gara-e-contratti",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "A",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?font=normal",
+    null
+   ],
+   [
+    "A",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?font=big",
+    null
+   ],
+   [
+    "A",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?font=verybig",
+    null
+   ],
+   [
+    "GRAFICA",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?skin=normal",
+    null
+   ],
+   [
+    "TESTO",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?skin=text",
+    null
+   ],
+   [
+    "ALTO CONTRASTO",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?skin=highcontrast",
+    null
+   ],
+   [
+    "TORNA ALL'INIZIO",
+    "#pagestart",
+    null
+   ],
+   [
+    "Home",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Lotti",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/viewLotti.action&currentFrame=7&codice=L26013&ext=",
+    null
+   ],
+   [
+    "Dati aperti BDNCP",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/viewBDNCP.action&currentFrame=7&codice=L26013&ext=",
+    null
+   ],
+   [
+    "Altri atti e documenti",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/viewAttiDocumenti.action&currentFrame=7&codice=L26013&ext=",
+    null
+   ],
+   [
+    "Documento di gara unico europeo (DGUE)",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95812&idprg=",
+    null
+   ],
+   [
+    "[Apri con m-dgue]",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/DGUE/sendTokenToDgue.action&currentFrame=7&iddocdig=95812&codice=L26013",
+    null
+   ],
+   [
+    "PRESENTAZIONE OFFERTE TELEMATICHE 2025",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95815&idprg=",
+    null
+   ],
+   [
+    "AGG Linee guida compilazione DGUE REG 6212 del 30-06-2023",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95816&idprg=",
+    null
+   ],
+   [
+    "MANUALE OPERATORE ECONOMICO E DGUE",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95817&idprg=",
+    null
+   ],
+   [
+    "PROTOCOLLO DI LEGALITA' PREFETTURA E COMUNE DI BARI",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95818&idprg=",
+    null
+   ],
+   [
+    "LINEE GUIDA COMPILAZIONE DGUE",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95819&idprg=",
+    null
+   ],
+   [
+    "Delibera ANAC n 598 del 30-12-2024",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95820&idprg=",
+    null
+   ],
+   [
+    "DELIBERAZIONE DI GIUNTA COMUNALE N. 765 DEL 03 11 2026",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95821&idprg=",
+    null
+   ],
+   [
+    "L26013 - CSA E ATTI TECNICO AMMINISTRATIVI DD DI INDIZIONE",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95822&idprg=",
+    null
+   ],
+   [
+    "L26013 BANDO DI GARA",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95973&idprg=",
+    null
+   ],
+   [
+    "ISTANZA DI PARTECIPAZIONE E AUTODICHIARAZIONI EX ARTT. 46 E 47 DPR 445/2000",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95863&idprg=",
+    null
+   ],
+   [
+    "L26013 DICHIARAZIONE DI EQUIVALENZA TUTELE NORMATIVE E ECONOMICHE CCNL",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?codice=L26013&id=95862&idprg=",
+    null
+   ],
+   [
+    "P2_16 - Bando di gara - settori ordinari",
+    "https://pubblicitalegale.anticorruzione.it/bandi/c11c31aa-21f8-4dc5-8190-840c082c09da",
+    null
+   ],
+   [
+    "Documento di gara unico europeo (DGUE)",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=90049216C8F91E3A7A4B1ECCB3E8C8A8?id=95812",
+    null
+   ],
+   [
+    "Torna alla lista",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/listAllInCorso.action&currentFrame=7",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Accedi - Registrati",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_auth.wp",
+    null
+   ],
+   [
+    "Istruzioni e manuali",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_doc_istruzioni.wp",
+    null
+   ],
+   [
+    "Protocollo d'intesa per la legalità",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_doc_norme_tecniche.wp",
+    null
+   ],
+   [
+    "Regolamento",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_doc_regolamento.wp",
+    null
+   ],
+   [
+    "Assistenza operatori economici",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_doc_assistenza_tecnica.wp",
+    null
+   ],
+   [
+    "News",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_doc_news.wp",
+    null
+   ],
+   [
+    "Verifica documenti",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_doc_verifica_doc.wp",
+    null
+   ],
+   [
+    "Avvisi, comunicazioni e atti di carattere generale",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_avvisi_atti_doc_gen.wp",
+    null
+   ],
+   [
+    "Avvisi di avvio consultazione",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_avvisi_avvio_consult.wp",
+    null
+   ],
+   [
+    "Avvisi pubblici",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_avvisi_lista.wp",
+    null
+   ],
+   [
+    "Gare e procedure",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_bandi_lista.wp",
+    null
+   ],
+   [
+    "Avvisi di aggiudicazione, esiti e affidamenti",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+    null
+   ],
+   [
+    "Riepilogo contratti - Link BDNCP",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_ammtrasp_contratti.wp",
+    null
+   ],
+   [
+    "Riepilogo somme urgenze",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_somme_urgenze_lista.wp",
+    null
+   ],
+   [
+    "Varianti in corso d'opera",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_varianti_corso_opera.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_oper_ec_bandi_avvisi.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione archiviati",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_op_ec_bandi_archiviati.wp",
+    null
+   ],
+   [
+    "Prospetti annuali (art. 1 c. 32 L.190 del 6/11/2012)",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_ammtrasp_anticorr.wp",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Accessibilità",
+    "ppgare_doc_accessibilita.wp",
+    null
+   ],
+   [
+    "Credits",
+    "ppgare_doc_credits.wp",
+    null
+   ],
+   [
+    "Cookies",
+    "ppgare_cookies.wp",
+    null
+   ],
+   [
+    "Mappa sito",
+    "ppcommon_site_map.wp",
+    null
+   ],
+   [
+    "Dichiarazione accessibilità AGID",
+    "https://form.agid.gov.it/view/f7c3aff0-954e-11f0-a0b7-ad7b4ba57cad",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Ok",
+   "Clicca per iniziare"
+  ],
+  "rete": [
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=L26013",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/resources/static/js/jquery-3.7.1.min.js",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/resources/static/js/jquery.alphanum.js",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/resources/static/js/jquery.character.js",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/resources/static/js/jquery-ui-1.13.2.min.js",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/resources/static/js/captcha/widget.module.min.js",
+   "GET https://portaleappalti.comune.bari.it/PortaleAppalti/resources/static/js/ppgare/viewComunicazioni.js",
+   "GET blob:https://portaleappalti.comune.bari.it/ca530943-ce7d-4b19-9b90-9b745f0e2144",
+   "GET blob:https://portaleappalti.comune.bari.it/cf6a48a1-eb15-4872-a232-d7b33ca6ac34",
+   "GET blob:https://portaleappalti.comune.bari.it/482d325f-285a-436e-96f9-cfae64ca9a4e",
+   "GET blob:https://portaleappalti.comune.bari.it/b1b4320a-50d6-4f40-9831-9ef3fe1c5ddc"
+  ]
+ }
+}

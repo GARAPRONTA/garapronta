@@ -1,0 +1,328 @@
+{
+ "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "byte": 1632,
+  "secondi": 0.3,
+  "tipo": "text/html;charset=ISO-8859-1"
+ },
+ "chrome": {
+  "commit_s": 0.5,
+  "attesa_s": 19.2,
+  "url_finale": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "link": [
+   [
+    "Elenco bandi e avvisi in corso servizi",
+    null,
+    null
+   ],
+   [
+    "Elenco bandi e avvisi scaduti servizi",
+    null,
+    null
+   ],
+   [
+    "Elenco bandi e avvisi in corso lavori",
+    null,
+    null
+   ],
+   [
+    "Elenco bandi e avvisi scaduti lavori",
+    null,
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "http://www.net4market.com/",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Login",
+   "Altri metodi di autenticazione (SPID/Altro)"
+  ],
+  "rete": [
+   "GET https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+   "GET https://app.albofornitori.it/alboeproc/alboeproc/alboeproc.nocache.js",
+   "GET https://fonts.googleapis.com/css?family=Open+Sans",
+   "GET https://app.albofornitori.it/alboeproc/alboeproc/AE1BF019CFDA2001D0428140E9587B7D.cache.js",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/SessioneRemoteService",
+   "GET https://www.google.com/jsapi?callback=__gwt_AjaxLoader_onLoad",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/SessioneRemoteService",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/SessioneRemoteService",
+   "GET https://app.albofornitori.it/alboeproc/fileDownload?idImmagine=2&comportamento=preview&fileDownloadManagerId=IMMAGINE",
+   "GET https://app.albofornitori.it/alboeproc/fileDownload?idImmagine=1&comportamento=preview&fileDownloadManagerId=IMMAGINE",
+   "GET https://www.gstatic.com/charts/loader.js?callback=__gwt_AjaxLoader_onLoad",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioDatiPubblici",
+   "GET https://www.gstatic.com/charts/51/loader.js",
+   "GET https://app.albofornitori.it/alboeproc_utils/getDataCorrente.php?callback=callbackDataCorrente&callback=__gwt_jsonp__.P0.onSuccess",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "GET https://www.gstatic.com/charts/51/i18n/jsapi_compiled_i18n_default_module__it.js",
+   "GET https://www.gstatic.com/charts/51/i18n/jsapi_compiled_i18n_graphics_module__it.js",
+   "GET https://www.gstatic.com/charts/51/i18n/jsapi_compiled_i18n_ui_module__it.js",
+   "GET https://www.gstatic.com/charts/51/i18n/jsapi_compiled_i18n_fw_module__it.js",
+   "GET https://www.gstatic.com/charts/51/third_party/dygraphs/dygraph-tickers-combined.js",
+   "GET https://www.gstatic.com/charts/51/i18n/jsapi_compiled_i18n_timeline_module__it.js",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico",
+   "POST https://app.albofornitori.it/alboeproc/alboeproc/servizioGarePubblico"
+  ]
+ }
+}

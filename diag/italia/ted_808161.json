@@ -1,0 +1,19 @@
+{
+ "url": "https://ted.europa.eu/it/notice/808161-2026/xml",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://ted.europa.eu/it/notice/808161-2026/xml",
+  "byte": 47897,
+  "secondi": 0.3,
+  "tipo": "application/xml"
+ },
+ "chrome": {
+  "errore": "Error: Page.goto: Download is starting\nCall log:\n  - navigating to \"https://ted.europa.eu/it/notice/808161-2026/xml\", waiting until \"commit\"\n",
+  "url_finale": "about:blank",
+  "link": [],
+  "pulsanti": [],
+  "rete": [
+   "GET https://ted.europa.eu/it/notice/808161-2026/xml"
+  ]
+ }
+}

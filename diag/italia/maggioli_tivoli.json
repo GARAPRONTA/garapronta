@@ -1,0 +1,508 @@
+{
+ "url": "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267",
+ "diretto": {
+  "errore": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>",
+  "secondi": 0.0
+ },
+ "chrome": {
+  "commit_s": 0.6,
+  "attesa_s": 5.8,
+  "url_finale": "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=G00267",
+  "link": [
+   [
+    "fun",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/do/funopen.action",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Vai alla pagina iniziale",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Vai alla pagina di aiuto alla navigazione",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp",
+    null
+   ],
+   [
+    "Vai alla mappa del sito",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppcommon_site_map.wp",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione standard",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?font=normal",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione grande",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?font=big",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione molto grande",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?font=verybig",
+    null
+   ],
+   [
+    "Passa alla visualizzazione grafica",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?skin=normal",
+    null
+   ],
+   [
+    "Passa alla visualizzazione solo testo",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?skin=text",
+    null
+   ],
+   [
+    "Passa alla visualizzazione in alto contrasto e solo testo",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?skin=highcontrast",
+    null
+   ],
+   [
+    "Salta alla ricerca di contenuti",
+    "#searchform",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "",
+    "/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Torna All'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta Al Menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Torna All'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "A",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?font=normal",
+    null
+   ],
+   [
+    "A",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?font=big",
+    null
+   ],
+   [
+    "A",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?font=verybig",
+    null
+   ],
+   [
+    "Grafica",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?skin=normal",
+    null
+   ],
+   [
+    "Testo",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?skin=text",
+    null
+   ],
+   [
+    "Alto Contrasto",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?skin=highcontrast",
+    null
+   ],
+   [
+    "Torna All'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Home",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Accedi - Registrati",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_auth.wp",
+    null
+   ],
+   [
+    "Accesso area riservata",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_accesso_area_riserv.wp",
+    null
+   ],
+   [
+    "Istruzioni e manuali",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_istruzioni.wp",
+    null
+   ],
+   [
+    "Assistenza operatori economici",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_assistenza_tecnica.wp",
+    null
+   ],
+   [
+    "News",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_news.wp",
+    null
+   ],
+   [
+    "Verifica documenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_verifica_doc.wp",
+    null
+   ],
+   [
+    "Avvisi, comunicazioni e atti di carattere generale",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_avvisi_atti_doc_gen.wp",
+    null
+   ],
+   [
+    "Avvisi di avvio consultazione",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_avvisi_avvio_consult.wp",
+    null
+   ],
+   [
+    "Avvisi pubblici",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_avvisi_lista.wp",
+    null
+   ],
+   [
+    "Gare e procedure",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_bandi_lista.wp",
+    null
+   ],
+   [
+    "Avvisi di aggiudicazione, esiti e affidamenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_esiti_lista.wp",
+    null
+   ],
+   [
+    "Riepilogo contratti - Link BDNCP",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_ammtrasp_contratti.wp",
+    null
+   ],
+   [
+    "Varianti in corso d'opera",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_varianti_corso_opera.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_oper_ec_bandi_avvisi.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione archiviati",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_op_ec_bandi_archiviati.wp",
+    null
+   ],
+   [
+    "Esiti affidamenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_oper_ec_esiti_aff.wp",
+    null
+   ],
+   [
+    "Prospetti annuali (art. 1 c. 32 L.190 del 6/11/2012)",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_ammtrasp_anticorr.wp",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Lotti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/viewLotti.action&currentFrame=7&codice=G00267&ext=",
+    null
+   ],
+   [
+    "Dati aperti BDNCP",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/viewBDNCP.action&currentFrame=7&codice=G00267&ext=",
+    null
+   ],
+   [
+    "Altri atti e documenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/viewAttiDocumenti.action&currentFrame=7&codice=G00267&ext=",
+    null
+   ],
+   [
+    "DISCIPLINARE DI GARA",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?codice=G00267&id=11931&idprg=",
+    null
+   ],
+   [
+    "CODICE DI COMPORTAMENTO",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?codice=G00267&id=11932&idprg=",
+    null
+   ],
+   [
+    "PROTOCOLLO DI LEGALITA",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?codice=G00267&id=11933&idprg=",
+    null
+   ],
+   [
+    "Progetto esecutivo",
+    "https://drive.google.com/drive/folders/1wdgojGVeO7Gv7xQzZJN_j8wx5urtLtEG?usp=sharing",
+    null
+   ],
+   [
+    "Guida per l'iscrizione ad un Elenco Operatori - Guida per la presentazione di un'offerta telematica - Guida per la creaz",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_istruzioni.wp",
+    null
+   ],
+   [
+    "Documento di gara unico europeo (DGUE)",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?codice=G00267&id=11953&idprg=",
+    null
+   ],
+   [
+    "[Apri con m-dgue]",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/DGUE/sendTokenToDgue.action&currentFrame=7&iddocdig=11953&codice=G00267",
+    null
+   ],
+   [
+    "DOMANDA DI PARTECIPAZIONE",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11936",
+    null
+   ],
+   [
+    "DICHIARAZIONE FAMILIARI CONVIVENTI",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11937",
+    null
+   ],
+   [
+    "AUTOCERTIFICAZIONE COMUNICAZIONE ANTIMAFIA",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11938",
+    null
+   ],
+   [
+    "Autodichiarazione identificazione del titolare effettivo nell ambito degli interventi",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11939",
+    null
+   ],
+   [
+    "DICHIARAZIONI INTEGRATIVE",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11940",
+    null
+   ],
+   [
+    "AUTODICHIARAZIONE ASSENZA CONFLITTO DI INTERESSI",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11941",
+    null
+   ],
+   [
+    "ATTESTAZIONE SOPRALLUOGO",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11942",
+    null
+   ],
+   [
+    "Dichiarazione tracciabilita flussi finanziari",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11943",
+    null
+   ],
+   [
+    "Dichiarazioni avvalimento",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11944",
+    null
+   ],
+   [
+    "Garanzia provvisoria e dichiarazione di riduzione",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11946",
+    null
+   ],
+   [
+    "Codice di comportamento irmato per presa conoscenza",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11947",
+    null
+   ],
+   [
+    "Protocollo di legalità firmato per presa conoscenza",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11948",
+    null
+   ],
+   [
+    "Documento di gara unico europeo (DGUE)",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11953",
+    null
+   ],
+   [
+    "Offerta economica",
+    "/PortaleAppalti/do/FrontEnd/DocDig/downloadDocumentoPubblico.action;jsessionid=7A24B2F43E8AAA9ACC284C20E229B177?id=11952",
+    null
+   ],
+   [
+    "Torna alla lista",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/listAllInCorso.action&currentFrame=7",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Accessibilità",
+    "ppgare_doc_accessibilita.wp",
+    null
+   ],
+   [
+    "Credits",
+    "ppgare_doc_credits.wp",
+    null
+   ],
+   [
+    "Cookies",
+    "ppgare_cookies.wp",
+    null
+   ],
+   [
+    "Mappa sito",
+    "ppcommon_site_map.wp",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Accedi - Registrati",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_auth.wp",
+    null
+   ],
+   [
+    "Accesso area riservata",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_accesso_area_riserv.wp",
+    null
+   ],
+   [
+    "Istruzioni e manuali",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_istruzioni.wp",
+    null
+   ],
+   [
+    "Assistenza operatori economici",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_assistenza_tecnica.wp",
+    null
+   ],
+   [
+    "News",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_news.wp",
+    null
+   ],
+   [
+    "Verifica documenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_doc_verifica_doc.wp",
+    null
+   ],
+   [
+    "Avvisi, comunicazioni e atti di carattere generale",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_avvisi_atti_doc_gen.wp",
+    null
+   ],
+   [
+    "Avvisi di avvio consultazione",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_avvisi_avvio_consult.wp",
+    null
+   ],
+   [
+    "Avvisi pubblici",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_avvisi_lista.wp",
+    null
+   ],
+   [
+    "Gare e procedure",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_bandi_lista.wp",
+    null
+   ],
+   [
+    "Avvisi di aggiudicazione, esiti e affidamenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_esiti_lista.wp",
+    null
+   ],
+   [
+    "Riepilogo contratti - Link BDNCP",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_ammtrasp_contratti.wp",
+    null
+   ],
+   [
+    "Varianti in corso d'opera",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_varianti_corso_opera.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_oper_ec_bandi_avvisi.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione archiviati",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_op_ec_bandi_archiviati.wp",
+    null
+   ],
+   [
+    "Esiti affidamenti",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_oper_ec_esiti_aff.wp",
+    null
+   ],
+   [
+    "Prospetti annuali (art. 1 c. 32 L.190 del 6/11/2012)",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_ammtrasp_anticorr.wp",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Ok",
+   "Clicca per iniziare"
+  ],
+  "rete": [
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=G00267",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/jquery-3.7.1.min.js",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/jquery.alphanum.js",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/jquery.character.js",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/resizeBalloon.js",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/jquery-ui-1.13.2.min.js",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/captcha/widget.module.min.js",
+   "GET https://cuc-comunitamontanativoli.org/PortaleAppalti/resources/static/js/ppgare/viewComunicazioni.js",
+   "GET blob:https://cuc-comunitamontanativoli.org/5ef7bd8c-ad3d-4eae-9221-fe4452dddbe8",
+   "GET blob:https://cuc-comunitamontanativoli.org/22fc205b-cfd3-4e75-aa94-17484cee8b4c",
+   "GET blob:https://cuc-comunitamontanativoli.org/6dab083a-9cf6-4b4b-9fd6-0600acfa1767",
+   "GET blob:https://cuc-comunitamontanativoli.org/57e9e77e-4ffe-48d1-8004-52ec722b7f4c"
+  ]
+ }
+}

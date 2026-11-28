@@ -1,0 +1,24 @@
+{
+ "url": "https://ted.europa.eu/it/notice/808161-2026/xml",
+ "diretto": {
+  "status": 202,
+  "url_finale": "https://ted.europa.eu/it/notice/808161-2026/xml",
+  "byte": 0,
+  "secondi": 0.1,
+  "tipo": "text/html; charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 0.0,
+  "attesa_s": 60.1,
+  "url_finale": "https://ted.europa.eu/it/notice/808161-2026/xml",
+  "link": [],
+  "pulsanti": [],
+  "rete": [
+   "GET https://ted.europa.eu/it/notice/808161-2026/xml",
+   "GET https://9f484e0e443e.67a65909.us-east-1.token.awswaf.com/9f484e0e443e/8306d5dcc62f/40dda1711506/challenge.js",
+   "GET https://9f484e0e443e.67a65909.us-east-1.token.awswaf.com/9f484e0e443e/8306d5dcc62f/40dda1711506/inputs?client=browser",
+   "POST https://9f484e0e443e.67a65909.us-east-1.token.awswaf.com/9f484e0e443e/8306d5dcc62f/40dda1711506/mp_verify?region=us-east-1",
+   "GET https://ted.europa.eu/it/notice/808161-2026/xml"
+  ]
+ }
+}

@@ -1,0 +1,206 @@
+{
+ "url": "https://eappalti.regione.fvg.it/",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://eappalti.regione.fvg.it/",
+  "byte": 113,
+  "secondi": 0.4,
+  "tipo": "text/html"
+ },
+ "chrome": {
+  "commit_s": 0.3,
+  "attesa_s": 5.3,
+  "url_finale": "https://eappalti.regione.fvg.it/web/index.html",
+  "link": [
+   [
+    "",
+    "http://www.regione.fvg.it",
+    null
+   ],
+   [
+    "",
+    "/web/index.html",
+    null
+   ],
+   [
+    "HOME",
+    "index.html",
+    null
+   ],
+   [
+    "SERVIZI PER OE",
+    "#",
+    null
+   ],
+   [
+    "Bandi e avvisi",
+    "/esop/guest/go/public/opportunity/current",
+    null
+   ],
+   [
+    "Registrazione al portale per Operatori Economici",
+    "/esop/guest/go/public/registration?locale=it_IT",
+    null
+   ],
+   [
+    "Albo Operatori Economici",
+    "albo_fornitori.html",
+    null
+   ],
+   [
+    "INFORMAZIONI",
+    "#",
+    null
+   ],
+   [
+    "Chi siamo",
+    "#",
+    null
+   ],
+   [
+    "CUC",
+    "https://cucsa.regione.fvg.it/",
+    null
+   ],
+   [
+    "ARCS",
+    "https://arcs.sanita.fvg.it/it/",
+    null
+   ],
+   [
+    "Insiel",
+    "https://www.insiel.it/cms/",
+    null
+   ],
+   [
+    "Normativa",
+    "normativa.html",
+    null
+   ],
+   [
+    "Regolamento",
+    "regolamento.html",
+    null
+   ],
+   [
+    "AREA MULTIMEDIALE",
+    "#",
+    null
+   ],
+   [
+    "Videopillole",
+    "videopillole.html",
+    null
+   ],
+   [
+    "Video on Demand",
+    "video.html",
+    null
+   ],
+   [
+    "Webinar",
+    "webinar.html",
+    null
+   ],
+   [
+    "ITA",
+    "../web/index.html",
+    null
+   ],
+   [
+    "ENG",
+    "../web_en/index.html",
+    null
+   ],
+   [
+    "ita",
+    "../web/index.html",
+    null
+   ],
+   [
+    "eng",
+    "#",
+    null
+   ],
+   [
+    "Accesso Fornitori",
+    "/esop/guest/go/public/login/supplier?locale=it_IT",
+    null
+   ],
+   [
+    "Accesso utenti interni",
+    "/esop/guest/go/public/login/internal?locale=it_IT",
+    null
+   ],
+   [
+    "» Registrazione al portale per Operatori Economici",
+    "/esop/guest/go/public/registration?locale=it_IT",
+    null
+   ],
+   [
+    "» Bandi e avvisi",
+    "/esop/guest/go/public/opportunity/current?locale=it_IT&customLoginPage=/web/index.html",
+    null
+   ],
+   [
+    "» Albo Operatori Economici",
+    "albo_fornitori.html",
+    null
+   ],
+   [
+    "supporto.eappalti@appalti.regione.fvg.it",
+    "mailto:supporto.eappalti@appalti.regione.fvg.it",
+    null
+   ],
+   [
+    "informativa privacy",
+    "http://www.regione.fvg.it/rafvg/cms/RAFVG/informativacookie/",
+    null
+   ],
+   [
+    "cookie",
+    "#",
+    null
+   ],
+   [
+    "note legali",
+    "http://www.regione.fvg.it/rafvg/cms/RAFVG/notaInformativa/",
+    null
+   ],
+   [
+    "dichiarazione di accessibilità",
+    "https://form.agid.gov.it/view/94469445-ff08-4904-b1ee-e3317f46f681/",
+    null
+   ],
+   [
+    "feedback",
+    "mailto:accessibile.rafvg@regione.fvg.it",
+    null
+   ],
+   [
+    "requisiti minimi di sistema",
+    "/esop/common-host/public/browserenv/requirements.jsp?locale=it_IT",
+    null
+   ],
+   [
+    "",
+    "http://www.insiel.it/",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Toggle navigation    menu",
+   "SERVIZI PER OE",
+   "INFORMAZIONI",
+   "AREA MULTIMEDIALE"
+  ],
+  "rete": [
+   "GET https://eappalti.regione.fvg.it/",
+   "GET https://eappalti.regione.fvg.it/web/index.html",
+   "GET https://eappalti.regione.fvg.it/js/jquery-3.1.1.js",
+   "GET https://eappalti.regione.fvg.it/js/bootstrap.min.js",
+   "GET https://eappalti.regione.fvg.it/js/owl.carousel.js",
+   "GET https://eappalti.regione.fvg.it/js/main.js"
+  ]
+ }
+}

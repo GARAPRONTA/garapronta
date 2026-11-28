@@ -1,0 +1,661 @@
+{
+ "url": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+ "diretto": {
+  "status": 200,
+  "url_finale": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+  "byte": 127433,
+  "secondi": 0.5,
+  "tipo": "text/html; charset=utf-8"
+ },
+ "chrome": {
+  "commit_s": 0.4,
+  "attesa_s": 5.6,
+  "url_finale": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+  "link": [
+   [
+    "OK",
+    "",
+    null
+   ],
+   [
+    "Disabilita Cookies",
+    "",
+    null
+   ],
+   [
+    "Info sulla Privacy",
+    "/tno-a/empulia/Empulia/SitePages/Privacy.aspx#cookie-estesa",
+    null
+   ],
+   [
+    "Attiva modalità di accessibilità",
+    "#",
+    "SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;"
+   ],
+   [
+    "Disattiva modalità di accessibilità",
+    "#",
+    "SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;"
+   ],
+   [
+    "Ignora comandi barra multifunzione",
+    "javascript:;",
+    "javascript:this.href='#startNavigation';"
+   ],
+   [
+    "Torna a contenuto principale",
+    "javascript:;",
+    "javascript:this.href='#mainContent';"
+   ],
+   [
+    "",
+    "javascript:;",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "Accesso",
+    "http://www.empulia.it/tno-a/empulia/_layouts/Authenticate.aspx?Source=%2Ftno%2Da%2Fempulia%2FSitePages%2FHome%2Easpx",
+    null
+   ],
+   [
+    "",
+    "/tno-a/empulia",
+    null
+   ],
+   [
+    "",
+    "https://www.innova.puglia.it/",
+    null
+   ],
+   [
+    "ELENCO PEC",
+    "/tno-a/empulia/Empulia/SitePages/Elenco%20PEC.aspx",
+    null
+   ],
+   [
+    "FEED",
+    "/tno-a/empulia/Empulia/SitePages/Feed%20Rss.aspx",
+    null
+   ],
+   [
+    "",
+    "http://europa.eu/index_it.htm",
+    null
+   ],
+   [
+    "",
+    "http://www.regione.puglia.it",
+    null
+   ],
+   [
+    "A",
+    "#",
+    null
+   ],
+   [
+    "A",
+    "#",
+    null
+   ],
+   [
+    "A",
+    "#",
+    null
+   ],
+   [
+    "Accessibilità",
+    "/tno-a/empulia/Empulia/SitePages/Accessibilità.aspx",
+    null
+   ],
+   [
+    "Login",
+    "http://www.empulia.it/bandi/SitePages/LOGIN.aspx",
+    null
+   ],
+   [
+    "Registrati",
+    "/tno-a/empulia/Empulia/SitePages/Registrazione%20alla%20nuova%20piattaforma%20EmPULIA.aspx",
+    null
+   ],
+   [
+    "Mappa del sito",
+    "/tno-a/empulia/Empulia/SitePages/Mappa%20del%20sito.aspx",
+    null
+   ],
+   [
+    "",
+    "javascript:S3031AEBB_Submit()",
+    null
+   ],
+   [
+    "HOME",
+    "/tno-a/empulia",
+    null
+   ],
+   [
+    "COS'È EMPULIA",
+    "/tno-a/empulia/Empulia/SitePages/Cos'è%20EmPULIA.aspx",
+    null
+   ],
+   [
+    "OPERATORI ECONOMICI",
+    "/tno-a/empulia/Empulia/SitePages/Operatori%20Economici.aspx",
+    null
+   ],
+   [
+    "ENTI",
+    "/tno-a/empulia/Empulia/SitePages/Enti.aspx",
+    null
+   ],
+   [
+    "HELP DESK",
+    "/tno-a/empulia/Empulia/SitePages/Help%20Desk.aspx",
+    null
+   ],
+   [
+    "helpdesk@empulia.it",
+    "mailto:helpdesk@empulia.it",
+    null
+   ],
+   [
+    "assistenza.empulia@pec.rupar.puglia.it",
+    "mailto:assistenza.empulia@pec.rupar.puglia.it",
+    null
+   ],
+   [
+    "Helpdesk",
+    "/tno-a/empulia/Empulia/SitePages/Help%20Desk.aspx",
+    null
+   ],
+   [
+    "Contatti",
+    "/tno-a/empulia/Empulia/SitePages/Contatti.aspx",
+    null
+   ],
+   [
+    "ALBO\nFORNITORI",
+    "/tno-a/empulia/Empulia/SitePages/Albo%20Fornitori.aspx",
+    null
+   ],
+   [
+    "BANDI\nDI GARA",
+    "/tno-a/empulia/Empulia/SitePages/Bandi%20di%20gara.aspx",
+    null
+   ],
+   [
+    "NEGOZIO\nELETTRONICO",
+    "/tno-a/empulia/Empulia/SitePages/Negozio%20Elettronico.aspx",
+    null
+   ],
+   [
+    "SISTEMA DINAMICO\nDI ACQUISIZIONE",
+    "/tno-a/empulia/Empulia/SitePages/Sistema%20dinamico%20di%20acquisizione.aspx",
+    null
+   ],
+   [
+    "ACCORDI\nQUADRO",
+    "/tno-a/empulia/Empulia/SitePages/Accordi%20Quadro.aspx",
+    null
+   ],
+   [
+    "CONSULTAZIONI\nPRELIMINARI\nDI MERCATO",
+    "/tno-a/empulia/Empulia/SitePages/Consultazioni%20preliminari%20di%20mercato.aspx",
+    null
+   ],
+   [
+    "TELEMEDICINA",
+    "/tno-a/empulia/Empulia/SitePages/Telemedicina.aspx",
+    null
+   ],
+   [
+    "CONTATTI",
+    "/tno-a/empulia/Empulia/SitePages/Contatti.aspx",
+    null
+   ],
+   [
+    "GUIDE PRATICHE",
+    "/tno-a/empulia/Empulia/SitePages/Guide%20pratiche.aspx",
+    null
+   ],
+   [
+    "FAQ",
+    "/tno-a/empulia/Empulia/SitePages/FAQ.aspx",
+    null
+   ],
+   [
+    "DISCIPLINA DI UTILIZZO",
+    "/tno-a/empulia/Empulia/SitePages/Disciplina%20di%20utilizzo.aspx",
+    null
+   ],
+   [
+    "MODULISTICA",
+    "/tno-a/empulia/Empulia/SitePages/Modulistica.aspx",
+    null
+   ],
+   [
+    "NORMATIVA",
+    "/tno-a/empulia/Empulia/SitePages/Normativa.aspx",
+    null
+   ],
+   [
+    "LINK",
+    "/tno-a/empulia/Empulia/SitePages/Link%20Istituzionali.aspx",
+    null
+   ],
+   [
+    "GLOSSARIO",
+    "/tno-a/empulia/Empulia/SitePages/Glossario.aspx",
+    null
+   ],
+   [
+    "EVENTI",
+    "/tno-a/empulia/SitePages/Eventi.aspx",
+    null
+   ],
+   [
+    "ARCHIVIO NEWS",
+    "/tno-a/empulia/SitePages/Archivio%20News.aspx",
+    null
+   ],
+   [
+    "ELENCO INIZIATIVE DEL\nSOGGETTO AGGREGATORE",
+    "/tno-a/empulia/Empulia/SitePages/Elenco%20Iniziative.aspx",
+    null
+   ],
+   [
+    "",
+    "http://www.innova.puglia.it",
+    null
+   ],
+   [
+    "EmPULIA",
+    "/tno-a/empulia/",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d31')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2981759&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-03T10:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d32')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2949386&tipobando=Bando&RicQ=YES&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T10:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d33')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2988943&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-01T10:10:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d34')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2985063&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T10:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d35')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2940554&tipobando=Bando&RicQ=NO&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T12:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d36')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2972234&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T10:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d37')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2960044&tipobando=Bando&RicQ=NO&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-28T20:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d38')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2931099&tipobando=Bando&RicQ=NO&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T11:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d39')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2987967&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-01T18:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d310')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2951614&tipobando=Bando&RicQ=NO&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-01T12:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d311')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2984125&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-01T10:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d312')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2932271&tipobando=Bando&RicQ=NO&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-03T12:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d313')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2954076&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T08:30:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d314')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2987435&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T13:00:00",
+    null
+   ],
+   [
+    "Bando",
+    "javascript:ToggleItemDescription('g_7c35484a_0845_4e7a_9891_6a13368b10d315')",
+    null
+   ],
+   [
+    "Vedi Dettaglio...",
+    "http://www.empulia.it/tno-a/empulia/Empulia/SitePages/New_Dettaglio Bando di Gara.aspx?getdettaglio=yes&bando=2898923&tipobando=Bando&RicQ=YES&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-21T13:00:00",
+    null
+   ],
+   [
+    "ACCESSO VECCHIA PIATTAFORMA EMPULIA",
+    "https://eprocurement.empulia.it/portale/LoginEsterno.asp",
+    null
+   ],
+   [
+    "",
+    "https://eprocurement.empulia.it/portale/LoginEsterno.asp",
+    null
+   ],
+   [
+    "MIGRAZIONE ​PIATTAFORMA",
+    "/tno-a/empulia/migrazione/SitePages/Pagina%20iniziale.aspx",
+    null
+   ],
+   [
+    "",
+    "/tno-a/empulia/migrazione/SitePages/Pagina%20iniziale.aspx",
+    null
+   ],
+   [
+    "COMUNICAZIONI DALLO STAFF DI EMPULIA",
+    "/tno-a/empulia/SitePages/Comunicazioni%20dallo%20staff%20di%20EmPULIA.aspx",
+    null
+   ],
+   [
+    "Titolo",
+    "javascript: ",
+    "javascript:return OnClickFilter(this,event);"
+   ],
+   [
+    "",
+    "javascript:;",
+    "PopMenuFromChevron(event); return false;"
+   ],
+   [
+    "Piattaforma EmPULIA: Rilasciate Nuove Funzionalità (30 Ottobre 2026)",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2675&ContentTypeID=0x01040049D0FDF7F116344684D3D4CD6E03BD38",
+    "EditLink2(this,17382);return false;"
+   ],
+   [
+    "Chiarimenti in merito all'utilizzo di EmPULIA per concessioni e contratti \"attivi\"",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2667&ContentTypeID=0x01040049D0FDF7F116344684D3D4CD6E03BD38",
+    "EditLink2(this,17382);return false;"
+   ],
+   [
+    "Piattaforma EmPULIA: Rilasciate Nuove Funzionalità (25 Settembre 2026)",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2666&ContentTypeID=0x01040049D0FDF7F116344684D3D4CD6E03BD38",
+    "EditLink2(this,17382);return false;"
+   ],
+   [
+    "Calendario Webinar Formativi per utenti delle stazioni appaltanti per il bimestre settembre - ottobre 2026",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2659&ContentTypeID=0x01040049D0FDF7F116344684D3D4CD6E03BD38",
+    "EditLink2(this,17382);return false;"
+   ],
+   [
+    "NEWS",
+    "/tno-a/empulia/Lists/NEWS",
+    null
+   ],
+   [
+    "procedura di alienazione mediante asta pubblica di immobili regionali ex ERSAP, ai sensi dell’art. 22 ter, comma 1, lett",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2683",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "​AVVISO DI PUBBLICAZIONE CONVENZIONI 2-12 novembre 2026",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2681",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "Concessione terreno appartenente al Demanio Irriguo Regionale sito nel Comune di Conversano (Ba)",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2680",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "​AVVISO DI PUBBLICAZIONE CONVENZIONI 21-29 ottobre 2026",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2679",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "Piattaforma EmPULIA: Rilasciate Nuove Funzionalità (30 Ottobre 2026)",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2675",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "​AVVISO DI PUBBLICAZIONE CONVENZIONI 1-20 ottobre 2026",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2674",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "AVVISO DI CONSULTAZIONE PRELIMINARE DI MERCATO ex art. 77 del D. Lgs. n. 36/2023 e s.m.i. - Sistemi per il lavaggio dell",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2672",
+    "GoToLink(this);return false;"
+   ],
+   [
+    "(Altri annunci...)",
+    "http://www.empulia.it/tno-a/empulia/_layouts/listform.aspx?ListId=%7B675CBC4A%2D06AD%2D4776%2D9CCF%2DAC0FB1B630AB%7D&PageType=0",
+    null
+   ],
+   [
+    "Archivio News",
+    "/tno-a/empulia/SitePages/Archivio%20News.aspx",
+    null
+   ],
+   [
+    "Certificazione AGID della piattaforma di e-procurement EmPULIA​",
+    "/tno-a/empulia/_layouts/listform.aspx?PageType=4&ListId={675CBC4A-06AD-4776-9CCF-AC0FB1B630AB}&ID=2340&ContentTypeID=0x01040049D0FDF7F116344684D3D4CD6E03BD38",
+    null
+   ],
+   [
+    "",
+    "/aagg/SitePages/Servizio%20Affari%20Generali.aspx",
+    null
+   ],
+   [
+    "",
+    "/pcp",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "RESP. PUBBLICAZIONE",
+    "/tno-a/empulia/Empulia/SitePages/Responsabile%20della%20pubblicazione.aspx",
+    null
+   ],
+   [
+    "CREDITS",
+    "/tno-a/empulia/Empulia/SitePages/Credits.aspx",
+    null
+   ],
+   [
+    "AIUTO",
+    "/tno-a/empulia/Empulia/SitePages/Aiuto.aspx",
+    null
+   ],
+   [
+    "PRIVACY",
+    "/tno-a/empulia/Empulia/SitePages/Privacy.aspx",
+    null
+   ],
+   [
+    "ACCESSIBILITÀ",
+    "/tno-a/empulia/Empulia/SitePages/Accessibilità.aspx",
+    null
+   ],
+   [
+    "NOTE LEGALI",
+    "/tno-a/empulia/Empulia/SitePages/Note%20Legali.aspx",
+    null
+   ],
+   [
+    "INFORMAZIONI SUL SITO",
+    "/tno-a/empulia/Empulia/SitePages/Informazioni%20sul%20sito.aspx",
+    null
+   ],
+   [
+    "INTRANET",
+    "/tno-a/empulia/SitePages/intranet.aspx",
+    null
+   ],
+   [
+    "TORNA SU",
+    "#Top",
+    null
+   ],
+   [
+    "",
+    "/acquistiverdi",
+    null
+   ],
+   [
+    "info@empulia.it",
+    "mailto:info@empulia.it",
+    null
+   ],
+   [
+    "helpdesk@empulia.it",
+    "mailto:helpdesk@empulia.it",
+    null
+   ],
+   [
+    "assistenza.empulia@pec.rupar.puglia.it",
+    "mailto:assistenza.empulia@pec.rupar.puglia.it",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "edit",
+   "edit",
+   "Revert"
+  ],
+  "rete": [
+   "GET http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+   "GET http://www.empulia.it/js/jquery-1.11.2.min.js",
+   "GET http://www.empulia.it/Style%20Library/Empulia_Brand/js/jquery-ui.js",
+   "GET http://www.empulia.it/js/datepicker-it.js",
+   "GET http://www.empulia.it/js/jquery.cookiebar.js",
+   "GET http://www.empulia.it/js/jquery.SharePointFormSubmit.js",
+   "GET http://www.empulia.it/WebResource.axd?d=D4uusnXVqxbD_zunHBXImvwq7YkTQhJzUu5I4tijuP5_DnDVrgHScBWI3zksXTtITvYkmImRZ-54N_XB4s4U5LfqdAQ1&t=635083232141708196",
+   "GET http://www.empulia.it/_layouts/blank.debug.js?rev=jE3bS2JFTB63z3iWgauX9w%3D%3D",
+   "GET http://www.empulia.it/Style%20Library/Empulia_Brand/js/commons.js",
+   "GET http://www.empulia.it/_layouts/images/CRPERSPC.GIF",
+   "GET http://www.empulia.it/_layouts/1040/init.debug.js?rev=kqeqSEOyzI3H8RDJWV6cBw%3D%3D",
+   "GET http://www.empulia.it/_layouts/rilevazionedati/js/scripts.js",
+   "GET http://www.empulia.it/ScriptResource.axd?d=gOhYwdsmoyvNPwUMqn5FAITGx8th0AMrt5xxisLCGG1QSF575gSAXYn71MnoEInkRi1ltmutJTzoy8kq5bElcpnP7x911tGT53EirO2w2K4-oIUmhJWJ41Ef794Htze7_Mvxt_j75ocyc2FG7InIPeWqsoIsVIOhukWN_pRRqKSIu7zp0&t=2e2045e2",
+   "GET http://www.empulia.it/ScriptResource.axd?d=O_V3vsR4H99mG65SRPG6ykn-tvEqH-4OUMRlibkiW3OPYKYyC-XtaJ1rggqzWcXAyKK3zdI5FDaYTtW-rRdP_1CgdsJ2lsBQXXItrPR-QI5r8XZ3P5cV3wQrzJ5aXeMll-6uFXNwjOa8jijYY2uwXuE9fy6sM7KZiJNiWz1X0VSjmj5m0&t=2e2045e2",
+   "GET https://stats.innova.puglia.it/piwik/piwik.js",
+   "POST https://stats.innova.puglia.it/piwik/piwik.php?action_name=EmPULIA%20-%20Home&idsite=8&rec=1&r=957251&h=13&m=23&s=28&url=http%3A%2F%2Fwww.empulia.it%2Ftno-a%2Fempulia%2FSitePages%2FHome.aspx&_id=704a21fc256853dc&_idn=1&send_image=0&_refts=0&pv_id=FNcslN&pf_net=50&pf_srv=263&pf_tfr=370&uadata=%7B%7D&",
+   "POST https://analytics.innova.puglia.it/piwik/piwik.php?action_name=EmPULIA%20-%20Home&idsite=8&rec=1&r=893868&h=13&m=23&s=28&url=http%3A%2F%2Fwww.empulia.it%2Ftno-a%2Fempulia%2FSitePages%2FHome.aspx&_id=704a21fc256853dc&_idn=0&send_image=0&_refts=0&pv_id=7zjVvI&pf_net=50&pf_srv=263&pf_tfr=370&uadata=%7B",
+   "POST http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+   "POST http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+   "GET http://www.empulia.it/_layouts/1040/core.debug.js?rev=cXdlpZR18KPEdrCNtTL%2F8Q%3D%3D",
+   "GET http://www.empulia.it/_layouts/sp.core.debug.js?rev=Qp5K7ycU%2FEY9IvE0KOi7zQ%3D%3D",
+   "GET http://www.empulia.it/_layouts/ScriptResx.ashx?culture=it%2Dit&name=SP%2ERes&rev=gvM1%2BlOz4%2FJjb57I3%2FNd8w%3D%3D",
+   "GET http://www.empulia.it/_layouts/cui.debug.js?rev=%2BhQl2NTQMTydPivdG%2Bq%2FdA%3D%3D",
+   "GET http://www.empulia.it/_layouts/sp.ui.dialog.debug.js?rev=I4RtkztzINg%2B%2BPCPe%2FeQlw%3D%3D",
+   "GET http://www.empulia.it/_layouts/search.js?rev=3pPWp493ZcP8RyBeS4aKSQ%3D%3D",
+   "GET http://www.empulia.it/_layouts/sp.runtime.debug.js?rev=f2An00kVlALdMLzcBc1cug%3D%3D",
+   "GET http://www.empulia.it/_layouts/sp.debug.js?rev=Bd43zMKp55FEd0Bf%2F942XA%3D%3D"
+  ]
+ }
+}
