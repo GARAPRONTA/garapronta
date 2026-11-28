@@ -1,0 +1,242 @@
+[
+ {
+  "cig": "BD9E902050",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=225657084\n",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 5
+ },
+ {
+  "cig": "BD58FFB083",
+  "url": "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara ",
+  "piattaforma": "comune.rho.mi.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9C3E2D59",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_c02508c8-28be-43d1-142ca-352a188207f3",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9E1E6266",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=225655110",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 7
+ },
+ {
+  "cig": "BD9C91BCAD",
+  "url": "https://comunedifondi.tuttogare.it/gare/dettaglio.php?codice=1105",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BD9A7F51D2",
+  "url": "https://cucdellagodiocchito.traspare.com/announcements/311",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9D387663",
+  "url": "https://garetelematiche.provincia.terni.it/PortaleAppalti/it/procedure/codice/G04192",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD952FB1DA",
+  "url": "https://acquisti.gruppocap.it/",
+  "piattaforma": "acquisti.gruppocap.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9DFE9E58",
+  "url": "https://appaltiecontratti.comune.rimini.it/PortaleAppalti/it/procedure/codice/G14213",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BD8728892D",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=25946",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9D9FEC21",
+  "url": "https://chivasso-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01361",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "progetto su cloud da scaricare dall'Italia",
+  "metodo": "server-IT/diretto",
+  "file": 14
+ },
+ {
+  "cig": "BD98FD6A0A",
+  "url": "https://www.comune.verona.it/Amministrazione-Trasparente/Bandi-di-gara-e-contratti",
+  "piattaforma": "www.comune.verona.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BD9A9C8333",
+  "url": "https://cucdellagodiocchito.traspare.com/announcements/312",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9ED76D0E",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=123102",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BD9BF950CA",
+  "url": "https://provinciaoristano.tuttogare.it/gare/dettaglio.php?codice=521",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD9AA7C7BC",
+  "url": "https://servizionline.comune.colognola.vr.it/c023028/zf/index.php/bandi-gara/avvisi/dettaglio-avviso/avviso/17",
+  "piattaforma": "servizionline.comune.colognola.vr.it",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9A0783DC",
+  "url": "https://gransassolagapark.acquistitelematici.it/tender-esiti/dettaglio/157",
+  "piattaforma": "gransassolagapark.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9E306011",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=225612311",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 7
+ },
+ {
+  "cig": "BD9C28E4C8",
+  "url": "https://cucunionevallesusa.traspare.com/announcements/1444",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9AA57933",
+  "url": "https://cucnichelino.tuttogare.it/gare/dettaglio.php?codice=663",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BD98BB629C",
+  "url": "https://provincia-novara.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01953",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BD98FF7547",
+  "url": "https://gare.sasispa.it/gare/dettaglio.php?codice=133",
+  "piattaforma": "gare.sasispa.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD9514F0A8",
+  "url": "https://ingate.invitalia.it/esop/guest/go/opportunity/detail?opportunityId=20218",
+  "piattaforma": "ingate.invitalia.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9CEAC4A2",
+  "url": "https://www.comune.padova.it/node/105116",
+  "piattaforma": "www.comune.padova.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 3
+ },
+ {
+  "cig": "BD9A74D72D",
+  "url": "https://sua.provincia.crotone.it/gare/dettaglio.php?codice=1071",
+  "piattaforma": "sua.provincia.crotone.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BD8F9BFE5F",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@17351157",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BD94BE1596",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9D09EF95",
+  "url": "https://magenta.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/3199134",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD99015E06",
+  "url": "https://gare.sasispa.it/gare/dettaglio.php?codice=134",
+  "piattaforma": "gare.sasispa.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD9CFF21A9",
+  "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5223",
+  "piattaforma": "gare.provincia.fr.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ }
+]
