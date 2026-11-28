@@ -259,99 +259,179 @@ CLICCABILI = ("a, label, span, button, td, li, div[onclick], [data-chiave-allega
 EST_RE = re.compile(r"\.(pdf|p7m|zip|7z|rar|docx?|odt|rtf)\s*(\(.*\))?\s*$", re.I)
 
 
-def browser_scarica(url):
+def _cookie_e_sezione(pg):
+    for t in COOKIE_NO:
+        try:
+            pg.get_by_role("button", name=t, exact=True).first.click(timeout=800)
+            break
+        except Exception:
+            pass
+    for t in ("Documenti di gara", "Documentazione di gara", "Documentazione", "Documenti", "Allegati",
+              "Allegati dell'Avviso", "Atti di gara"):
+        try:
+            pg.get_by_text(t, exact=True).first.click(timeout=1500)
+            pg.wait_for_timeout(2500)
+            break
+        except Exception:
+            pass
+
+
+def _scarica_pagina(pg, ctx, t0):
+    """Scarica gli allegati della pagina aperta: prima i link veri (stessi cookie), poi le voci con nome di file."""
+    files = []
+    html = pg.content()
+    for fr in pg.frames[1:]:
+        try:
+            html += fr.content()
+        except Exception:
+            pass
+    links = lettori.link_file(html, pg.url)
+    for u in links:
+        if len(files) >= MAX_FILES or time.time() - t0 > 150:
+            break
+        try:
+            r = ctx.request.get(u, timeout=60000, headers={"referer": pg.url})
+            body = r.body()
+            ct = r.headers.get("content-type", "")
+            if r.ok and body and len(body) < MAX_ARCH and ("text/html" not in ct or body[:4] == b"%PDF"):
+                files.append((nome_file(u, {k.lower(): v for k, v in r.headers.items()}), body))
+        except Exception:
+            continue
+    if files:
+        return links, files
+    cand = pg.locator(CLICCABILI).filter(has_text=EST_RE)
+    visti, n = set(), 0
+    for i in range(min(cand.count(), 120)):
+        if n >= MAX_FILES or time.time() - t0 > 200:
+            break
+        el = cand.nth(i)
+        try:
+            testo = el.inner_text(timeout=1000).strip()
+        except Exception:
+            continue
+        if not EST_RE.search(testo) or len(testo) > 200 or testo in visti or "\n" in testo:
+            continue
+        visti.add(testo)
+        try:
+            with pg.expect_download(timeout=20000) as dl:
+                el.click(timeout=4000)
+            d = dl.value
+            files.append((d.suggested_filename or testo, open(d.path(), "rb").read()))
+            n += 1
+            continue
+        except Exception:
+            pass
+        try:     # window.open: il file si apre in una nuova scheda
+            nuove = [x for x in ctx.pages if x is not pg]
+            if nuove:
+                u = nuove[-1].url
+                for x in nuove:
+                    x.close()
+                if u.startswith("http"):
+                    r = ctx.request.get(u, timeout=60000, headers={"referer": pg.url})
+                    if r.ok and r.body():
+                        files.append((testo, r.body()))
+                        n += 1
+        except Exception:
+            pass
+    return links, files
+
+
+SEZIONI_BANDI = ("Bandi e avvisi", "Bandi e avvisi in corso", "Bandi di gara", "Gare in corso", "Procedure in corso",
+                 "Bandi", "Gare", "Avvisi e gare attive", "Elenco bandi e avvisi in corso lavori", "Bandi aperti")
+
+
+def _trova_gara(pg, cig, titolo):
+    """Il link dell'ente porta alla home: entra nella sezione bandi, cerca il CIG (o il titolo) e apre la gara."""
+    parole = [w for w in re.findall(r"[a-zà-ù]{6,}", (titolo or "").lower())][:8]
+    for giro in range(3):
+        testo = (pg.inner_text("body") or "") if pg else ""
+        if cig and cig in testo:
+            # il link più vicino al CIG
+            try:
+                riga = pg.locator(f"tr:has-text('{cig}'), li:has-text('{cig}'), div.card:has-text('{cig}'), article:has-text('{cig}')").last
+                a = riga.locator("a").first
+                a.click(timeout=4000)
+                pg.wait_for_timeout(4000)
+                return True
+            except Exception:
+                pass
+        # casella di ricerca: scrivo il CIG come farebbe una persona
+        for sel in ("input[type=search]", "input[name*=cerca i]", "input[name*=search i]", "input[placeholder*=cerca i]",
+                    "input[placeholder*=CIG i]", "input[name*=cig i]", "input[id*=cig i]"):
+            try:
+                box = pg.locator(sel).first
+                if box.count() and box.is_visible():
+                    box.fill(cig, timeout=2000)
+                    box.press("Enter")
+                    pg.wait_for_timeout(5000)
+                    if cig in (pg.inner_text("body") or ""):
+                        break
+            except Exception:
+                continue
+        if cig and cig in (pg.inner_text("body") or ""):
+            continue
+        # link con molte parole del titolo
+        if parole:
+            migliore, punti = None, 2
+            anchors = pg.locator("a")
+            for k in range(min(anchors.count(), 300)):
+                try:
+                    t = anchors.nth(k).inner_text(timeout=300).lower()
+                except Exception:
+                    continue
+                p = sum(w in t for w in parole)
+                if p > punti:
+                    migliore, punti = anchors.nth(k), p
+            if migliore is not None:
+                try:
+                    migliore.click(timeout=4000)
+                    pg.wait_for_timeout(4000)
+                    return True
+                except Exception:
+                    pass
+        # entro nella sezione bandi e riprovo
+        mosso = False
+        for t in SEZIONI_BANDI:
+            try:
+                pg.get_by_role("link", name=t, exact=True).first.click(timeout=1500)
+                pg.wait_for_timeout(4000)
+                mosso = True
+                break
+            except Exception:
+                continue
+        if not mosso:
+            return False
+    return False
+
+
+def browser_scarica(url, cig="", titolo=""):
     """Browser automatico, come una persona: apre la pagina (segue i reindirizzamenti), chiude l'avviso cookie
-    con la scelta più riservata, apre la sezione documenti, poi scarica gli allegati pubblici.
-    Prima prova i link veri (con i cookie della stessa visita), poi clicca le voci che hanno nome di file
-    (piattaforme JSF come Sintel, window.open come Liferay e SardegnaCAT) e cattura download o finestre."""
+    con la scelta più riservata, apre la sezione documenti e scarica gli allegati pubblici.
+    Se la pagina è la home dell'ente o della piattaforma, cerca la gara per CIG o titolo e la apre."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         return [], []
-    files = []
+    files, links = [], []
     with sync_playwright() as p:
         b = p.chromium.launch()
         ctx = b.new_context(user_agent=UA, locale="it-IT", accept_downloads=True)
         pg = ctx.new_page()
+        t0 = time.time()
         try:
             pg.goto(url, wait_until="domcontentloaded", timeout=60000)
             for _ in range(6):
                 pg.wait_for_timeout(2500)
                 if pg.locator("a").count() > 15:
                     break
-            for t in COOKIE_NO:
-                try:
-                    pg.get_by_role("button", name=t, exact=True).first.click(timeout=800)
-                    break
-                except Exception:
-                    pass
-            for t in ("Documenti di gara", "Documentazione di gara", "Documentazione", "Documenti", "Allegati", "Atti di gara"):
-                try:
-                    pg.get_by_text(t, exact=True).first.click(timeout=1500)
-                    pg.wait_for_timeout(2500)
-                    break
-                except Exception:
-                    pass
-            html = pg.content()
-            for fr in pg.frames[1:]:
-                try:
-                    html += fr.content()
-                except Exception:
-                    pass
-            links = lettori.link_file(html, pg.url)
-            # 1) link veri, scaricati dentro la stessa visita (stessi cookie: TuttoGare, Asmecomm, Maggioli)
-            t0 = time.time()
-            for u in links:
-                if len(files) >= MAX_FILES or time.time() - t0 > 120:
-                    break
-                try:
-                    r = ctx.request.get(u, timeout=60000, headers={"referer": pg.url})
-                    body = r.body()
-                    ct = r.headers.get("content-type", "")
-                    if r.ok and body and len(body) < MAX_FILE and ("text/html" not in ct or body[:4] == b"%PDF"):
-                        files.append((nome_file(u, {k.lower(): v for k, v in r.headers.items()}), body))
-                except Exception:
-                    continue
-            # 2) voci con nome di file ma senza link vero: si cliccano
-            if not files:
-                cand = pg.locator(CLICCABILI).filter(has_text=EST_RE)
-                visti, n = set(), 0
-                for i in range(min(cand.count(), 120)):
-                    if n >= MAX_FILES or time.time() - t0 > 170:
-                        break
-                    el = cand.nth(i)
-                    try:
-                        testo = el.inner_text(timeout=1000).strip()
-                    except Exception:
-                        continue
-                    if not EST_RE.search(testo) or len(testo) > 200 or testo in visti or "\n" in testo.strip():
-                        continue
-                    visti.add(testo)
-                    try:
-                        with pg.expect_download(timeout=20000) as dl:
-                            el.click(timeout=4000)
-                        d = dl.value
-                        files.append((d.suggested_filename or testo, open(d.path(), "rb").read()))
-                        n += 1
-                        continue
-                    except Exception:
-                        pass
-                    # window.open: il file si apre in una nuova scheda
-                    try:
-                        nuove = [x for x in ctx.pages if x is not pg]
-                        if nuove:
-                            u = nuove[-1].url
-                            for x in nuove:
-                                x.close()
-                            if u.startswith("http"):
-                                r = ctx.request.get(u, timeout=60000, headers={"referer": pg.url})
-                                if r.ok and r.body():
-                                    files.append((testo, r.body()))
-                                    n += 1
-                    except Exception:
-                        pass
+            _cookie_e_sezione(pg)
+            links, files = _scarica_pagina(pg, ctx, t0)
+            if not files and cig and _trova_gara(pg, cig, titolo):
+                _cookie_e_sezione(pg)
+                links, files = _scarica_pagina(pg, ctx, time.time())
         except Exception:
-            links = []
+            pass
         finally:
             b.close()
     return links, files
@@ -417,12 +497,14 @@ def gara(cig, url, titolo=""):
         elementi = lettori.trova(url, cig, titolo, _get)
     except lettori.Riservata:
         return "documenti riservati agli invitati", metodo, []
-    except PermissionError as e:
-        return f"bloccata ({e})", metodo, []
-    except Exception as e:
-        return f"bloccata ({type(e).__name__})", metodo, []
+    except Exception as e:      # risposta negata o certificato che urllib non sa verificare: Chrome (come una persona)
+        motivo = str(e) if isinstance(e, PermissionError) else type(e).__name__
+        _, fl = browser_scarica(url, cig, titolo)
+        if fl:
+            return "ok", "browser", fl[:MAX_FILES]
+        return f"bloccata ({motivo})", metodo, []
     if not elementi:
-        links, fl = browser_scarica(url)
+        links, fl = browser_scarica(url, cig, titolo)
         metodo = "browser"
         if fl:
             return "ok", metodo, fl[:MAX_FILES]
@@ -444,7 +526,7 @@ def gara(cig, url, titolo=""):
         except Exception:
             continue
     if not files and metodo == "diretto":     # i link c'erano ma non danno file: riprovo come una persona, nel browser
-        _, fl = browser_scarica(url)
+        _, fl = browser_scarica(url, cig, titolo)
         if fl:
             return "ok", "browser", fl[:MAX_FILES]
     return ("ok" if files else "link senza file"), metodo, files
@@ -728,7 +810,11 @@ def link_ted(url_ted):
     m = re.search(r"NOTICE:([0-9]+-[0-9]{4})", url_ted or "")
     if not m:
         return []
-    st, hd, body, _ = _get(f"https://ted.europa.eu/it/notice/{m.group(1)}/xml", headers={"accept": "application/xml"})
+    for _ in range(4):        # TED a volte risponde 202 (sta preparando il file): si aspetta e si riprova
+        st, hd, body, _ = _get(f"https://ted.europa.eu/it/notice/{m.group(1)}/xml", headers={"accept": "application/xml"})
+        if st == 200 and body:
+            break
+        time.sleep(6)
     if st != 200 or not body:
         return []
     x = body.decode("utf-8", "ignore")

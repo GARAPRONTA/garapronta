@@ -86,7 +86,8 @@ def link_file(html, base):
             pass
     for href in re.findall(r"href=[\"']([^\"']+)[\"']", html, re.I):
         h = href.lower()
-        if (h.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", h)) \
+        if (h.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", h)
+                or "/downloadproxy/" in h) \
                 and not re.search(r"(login|registra|password|javascript:|mailto:|verifica|cookie|privacy)", h):
             trovati.append(href)
     trovati.sort(key=_prio)
