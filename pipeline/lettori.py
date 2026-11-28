@@ -216,8 +216,30 @@ class Riservata(Exception):
     """La scheda della gara non è pubblica: procedura a inviti, documenti solo agli invitati."""
 
 
+def sitat(url, get):
+    """SITAT Toscana (trasparenza delle gare START): la pagina è un'app che legge un servizio REST pubblico.
+    Dal JSON prendo i link ai documenti e, se c'è, il numero della gara START (poi letta con l'API di START)."""
+    m = re.search(r"uuid=([A-Za-z0-9_\-]+)", url)
+    if not m:
+        return []
+    st, h, body, _ = get(f"https://webs.rete.toscana.it/sitat-app/rest/gestione-trasparenza-ms/v1/public/procedura?uuid={m.group(1)}",
+                         headers={"accept": "application/json"})
+    if st != 200 or body[:1] not in (b"{", b"["):
+        return []
+    testo = body.decode("utf-8", "ignore")
+    gara = re.search(r"\b([0-9]{6}-20[0-9]{2})\b", testo)
+    if gara:
+        out = start_toscana(f"https://start.toscana.it/tendering/tenders/{gara.group(1)}/view/detail/1", get)
+        if out:
+            return out
+    link = [u for u in re.findall(r"https?://[^\"'\s]+", testo) if re.search(r"(download|allegat|document|file|\.pdf|\.zip|\.p7m)", u, re.I)]
+    return [("url", u) for u in dict.fromkeys(link)][:20]
+
+
 def trova(url, cig, titolo, get):
     """Restituisce i documenti da scaricare per una gara."""
+    if "webs.rete.toscana.it/sitat" in url:
+        return sitat(url, get)
     if "intercenter.regione.emilia-romagna.it" in url and "BANDO_GARA_PORTALE@" in url:
         return intercenter(url, get)
     if "start.toscana.it" in url and "/tenders/" in url:
