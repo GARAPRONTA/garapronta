@@ -1,0 +1,202 @@
+[
+ {
+  "cig": "BD9418376F",
+  "url": "https://sestrilevante.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/3214513",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9429598B",
+  "url": "https://cucdeltavoliere.traspare.com/announcements/3912",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD913658D0",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/24e3c872dafd732a",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD70CECD5F",
+  "url": "https://www.ariaspa.it",
+  "piattaforma": "www.ariaspa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD93DA0257",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@17496252",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BD9540093A",
+  "url": "https://appalti-usr.regione.marche.it/PortaleAppalti/it/procedure/codice/G00519",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 8
+ },
+ {
+  "cig": "BD91EC07BF",
+  "url": "https://gare.comune.torino.it/PortaleAppalti/it/procedure/codice/G01179",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BD9525F11E",
+  "url": "https://smlc.traspare.com/announcements/1644",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD93432A3C",
+  "url": "https://iuav.ubuy.cineca.it/PortaleAppalti/it/procedure/codice/G01047",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD85488771",
+  "url": "https://adepp-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G12374",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BD9587352A",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=122751",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BD913DA95D",
+  "url": "https://provinciaperugia-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00781",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BD92DA1F06",
+  "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=42",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD8C9A5C8A",
+  "url": "https://viveracquaprocurement.bravosolution.com",
+  "piattaforma": "viveracquaprocurement.bravosolution.com",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BD95676121",
+  "url": "https://bitonto.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/10603105",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD95463AEC",
+  "url": "https://start.toscana.it/tendering/tenders/041807-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 11
+ },
+ {
+  "cig": "BD934F0708",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1015400",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BD8E19B27D",
+  "url": "https://gare.astralspa.it/PortaleAppalti/it/procedure/codice/G03955",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BD934E8070",
+  "url": "https://portaleappalti.gesap.it/PortaleAppalti/it/procedure/codice/G02728",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "troppo lenta",
+  "metodo": "-",
+  "file": 0
+ },
+ {
+  "cig": "BD927B9F48",
+  "url": "https://gare-amapspa.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G03998",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BD93680121",
+  "url": "https://portaleappalti.gesap.it/PortaleAppalti/it/procedure/codice/G02725",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "troppo lenta",
+  "metodo": "-",
+  "file": 0
+ },
+ {
+  "cig": "BD954C3A25",
+  "url": "https://appalti.comune.benevento.it/PortaleAppalti/it/procedure/codice/G01228",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BD95CAAF92",
+  "url": "https://appalti.cdc-elimoericini.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=102",
+  "piattaforma": "appalti.cdc-elimoericini.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 16
+ },
+ {
+  "cig": "BD922049A2",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/828334f34e8bf6bd",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD95212193",
+  "url": "https://cuclungro.traspare.com/announcements/565",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ }
+]
