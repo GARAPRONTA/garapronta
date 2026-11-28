@@ -8,14 +8,6 @@
   "file": 4
  },
  {
-  "cig": "BDEE968E8F",
-  "url": "https://comunesantantonioabate-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00494",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDEF2EEA77",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1086220",
   "piattaforma": "sardegnacat.regione.sardegna.it",
@@ -30,14 +22,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 4
- },
- {
-  "cig": "BDEC190D41",
-  "url": "https://uc.casentino.toscana.it/trasparenza",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDEDD3B258",
@@ -64,52 +48,12 @@
   "file": 4
  },
  {
-  "cig": "BDCA1D9D35",
-  "url": "https://drive.google.com/drive/folders/19f_wNY_wZvfTR-C8i-iJ1aFXm0uCKhy2?usp=drive_link",
-  "piattaforma": "drive.google.com",
-  "esito": "troppo lenta",
-  "metodo": "-",
-  "file": 0
- },
- {
-  "cig": "BDEF6D962C",
-  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/7d9ef22e4a952d8d",
-  "piattaforma": "www.acquistinretepa.it",
-  "esito": "troppo lenta",
-  "metodo": "-",
-  "file": 0
- },
- {
-  "cig": "BDEEFFFEB7",
-  "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
-  "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDECF2E9FF",
   "url": "https://appaltisuam.regione.marche.it/PortaleAppalti/it/procedure/codice/G12005",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "server-IT/diretto",
   "file": 2
- },
- {
-  "cig": "BDEA12F4F7",
-  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
-  "piattaforma": "piattaforma.asmecomm.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDECEB0207",
-  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
-  "piattaforma": "acquisti.stradeanas.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDE546FEE9",
@@ -120,28 +64,12 @@
   "file": 2
  },
  {
-  "cig": "BDE4D1D473",
-  "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDE8621174",
   "url": "https://appaltisuam.regione.marche.it/PortaleAppalti/it/procedure/codice/G12015",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "server-IT/diretto",
   "file": 3
- },
- {
-  "cig": "BDEFBAC155",
-  "url": "https://orzinuovi.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8503375",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDEA89F831",
@@ -160,36 +88,12 @@
   "file": 8
  },
  {
-  "cig": "BDEF6E4F3D",
-  "url": "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436",
-  "piattaforma": "procurement-gruppoacea.app.jaggaer.com",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDEFFE1A17",
   "url": "https://portaleappalti-comune-acri.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00108",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
   "file": 9
- },
- {
-  "cig": "BDEC8F89E3",
-  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306",
-  "piattaforma": "acquisti.stradeanas.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDEE17928A",
-  "url": "https://appalti.cittametropolitana.ct.it/PortaleAppalti/it/procedure/codice/G00878",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "bloccata (TimeoutError)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDEEF411F0",
@@ -224,22 +128,6 @@
   "file": 8
  },
  {
-  "cig": "BDEDA54D30",
-  "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDEA7A59E2",
-  "url": "https://comunetiriolo.tuttogare.it/gare/dettaglio.php?codice=25",
-  "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDEEEBB35B",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1084487",
   "piattaforma": "sardegnacat.regione.sardegna.it",
@@ -254,22 +142,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 9
- },
- {
-  "cig": "BDED97A94B",
-  "url": "https://provincia-rieti.acquistitelematici.it/tender-esiti/dettaglio/2700",
-  "piattaforma": "provincia-rieti.acquistitelematici.it",
-  "esito": "bloccata (HTTP 404)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDEBA87F05",
-  "url": "https://www.sintel.regione.lombardia.it/",
-  "piattaforma": "www.sintel.regione.lombardia.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "B09356864C",
@@ -288,6 +160,142 @@
   "file": 7
  },
  {
+  "cig": "BDEB9D9F6E",
+  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto+cloud",
+  "file": 10
+ },
+ {
+  "cig": "BDEE968E8F",
+  "url": "https://comunesantantonioabate-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00494",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDEC190D41",
+  "url": "https://uc.casentino.toscana.it/trasparenza",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCA1D9D35",
+  "url": "https://drive.google.com/drive/folders/19f_wNY_wZvfTR-C8i-iJ1aFXm0uCKhy2?usp=drive_link",
+  "piattaforma": "drive.google.com",
+  "esito": "troppo lenta",
+  "metodo": "-",
+  "file": 0
+ },
+ {
+  "cig": "BDEF6D962C",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/7d9ef22e4a952d8d",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDEEFFFEB7",
+  "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
+  "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDEA12F4F7",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDECEB0207",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE4D1D473",
+  "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDEFBAC155",
+  "url": "https://orzinuovi.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8503375",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDEF6E4F3D",
+  "url": "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436",
+  "piattaforma": "procurement-gruppoacea.app.jaggaer.com",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDEC8F89E3",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDEE17928A",
+  "url": "https://appalti.cittametropolitana.ct.it/PortaleAppalti/it/procedure/codice/G00878",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDEDA54D30",
+  "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDEA7A59E2",
+  "url": "https://comunetiriolo.tuttogare.it/gare/dettaglio.php?codice=25",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDED97A94B",
+  "url": "https://provincia-rieti.acquistitelematici.it/tender-esiti/dettaglio/2700",
+  "piattaforma": "provincia-rieti.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDEBA87F05",
+  "url": "https://www.sintel.regione.lombardia.it/",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
   "cig": "BDED597433",
   "url": "https://www.halleyweb.com/c018153/zf/index.php/bandi-gara/avvisi/avvisi",
   "piattaforma": "www.halleyweb.com",
@@ -299,9 +307,9 @@
   "cig": "BDED1B1C9D",
   "url": "https://start.toscana.it/tendering/tenders/047667-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 10
  },
  {
   "cig": "BDEF8C18E1",
@@ -310,13 +318,5 @@
   "esito": "bloccata (HTTP 500)",
   "metodo": "diretto",
   "file": 0
- },
- {
-  "cig": "BDEB9D9F6E",
-  "url": "https://appalti.provincia.teramo.it/PortaleAppalti/it/procedure/codice/G03565",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "server-IT/diretto+cloud",
-  "file": 10
  }
 ]
