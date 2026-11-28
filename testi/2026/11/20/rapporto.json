@@ -8,14 +8,6 @@
   "file": 6
  },
  {
-  "cig": "BDDFD49421",
-  "url": "https://amagportalegare.aflink.it/",
-  "piattaforma": "amagportalegare.aflink.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDDC99489B",
   "url": "https://portaleappalti.mit.gov.it/PortaleAppalti/it/procedure/codice/G07732",
   "piattaforma": "Maggioli PortaleAppalti",
@@ -32,28 +24,12 @@
   "file": 11
  },
  {
-  "cig": "BDE04BEB7A",
-  "url": "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8536",
-  "piattaforma": "autobrennero.acquistitelematici.it",
-  "esito": "bloccata (HTTP 404)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDE4A6239E",
   "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5317",
   "piattaforma": "gare.provincia.fr.it",
   "esito": "ok",
   "metodo": "diretto",
   "file": 4
- },
- {
-  "cig": "BDE51F7561",
-  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77",
-  "piattaforma": "www.acquistinretepa.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDE400022B",
@@ -96,14 +72,6 @@
   "file": 9
  },
  {
-  "cig": "BDE50FD712",
-  "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDDBAD2AE6",
   "url": "https://appalti.comune.vicenza.it/PortaleAppalti/it/procedure/codice/G01153",
   "piattaforma": "Maggioli PortaleAppalti",
@@ -128,46 +96,6 @@
   "file": 1
  },
  {
-  "cig": "BDE53B7714",
-  "url": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1811",
-  "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "B80CA55C30",
-  "url": "https://www.comune.cogoleto.ge.it/",
-  "piattaforma": "www.comune.cogoleto.ge.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDE02DDE8A",
-  "url": "https://cucunionevallesusa.traspare.com/announcements/1450",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE469D745",
-  "url": "https://start.toscana.it/tendering/tenders/048007-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE15027B9",
-  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/af1602555d075807",
-  "piattaforma": "www.acquistinretepa.it",
-  "esito": "troppo lenta",
-  "metodo": "-",
-  "file": 0
- },
- {
   "cig": "BDDE0EBB54",
   "url": "https://arst.acquistitelematici.it/tender/700",
   "piattaforma": "arst.acquistitelematici.it",
@@ -176,28 +104,12 @@
   "file": 2
  },
  {
-  "cig": "BDE52FCCC1",
-  "url": "https://servizi.provincia.biella.it/openweb/trasparenza/index.php?layout=true",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDDFCE40C9",
   "url": "https://gare-provincia-agrigento.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01085",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
   "file": 15
- },
- {
-  "cig": "BD441AF1A9",
-  "url": "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara ",
-  "piattaforma": "comune.rho.mi.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDE4E9D157",
@@ -240,11 +152,99 @@
   "file": 2
  },
  {
+  "cig": "BDDFD49421",
+  "url": "https://amagportalegare.aflink.it/",
+  "piattaforma": "amagportalegare.aflink.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE04BEB7A",
+  "url": "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8536",
+  "piattaforma": "autobrennero.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE51F7561",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE50FD712",
+  "url": "https://suaprovinciaavellino.traspare.com/announcements/1279",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE53B7714",
+  "url": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1811",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "B80CA55C30",
+  "url": "https://www.comune.cogoleto.ge.it/",
+  "piattaforma": "www.comune.cogoleto.ge.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE02DDE8A",
+  "url": "https://cucunionevallesusa.traspare.com/announcements/1450",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE469D745",
+  "url": "https://start.toscana.it/tendering/tenders/048007-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 5
+ },
+ {
+  "cig": "BDE15027B9",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/af1602555d075807",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE52FCCC1",
+  "url": "https://servizi.provincia.biella.it/openweb/trasparenza/index.php?layout=true",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD441AF1A9",
+  "url": "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara ",
+  "piattaforma": "comune.rho.mi.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
   "cig": "BDE4225736",
   "url": "https://comunefrancavillaangitola.tuttogare.it/gare/dettaglio.php?codice=394",
   "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  },
  {
@@ -259,8 +259,8 @@
   "cig": "BDDDF5E3B9",
   "url": "https://start.toscana.it/tendering/tenders/047824-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 6
  }
 ]
