@@ -1,0 +1,258 @@
+[
+ {
+  "cig": "BDAB08FCF9",
+  "url": "https://giada.areacom.eu/Application/CustomDoc/DettaglioProcedura.asp?ID=354779",
+  "piattaforma": "giada.areacom.eu",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDAD61A83A",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=123422",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDADE12BAF",
+  "url": "https://rovigo.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8489845",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDAA6DAA4A",
+  "url": "https://gruppoastea.acquistitelematici.it/tender-esiti/dettaglio/5372",
+  "piattaforma": "gruppoastea.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDABAAC57E",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/975247dc7cb44455",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA4EDFFB7",
+  "url": "https://appalti.unionevalledelsosio.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=17",
+  "piattaforma": "appalti.unionevalledelsosio.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDA9B68861",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18275602",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDAAEF2829",
+  "url": "https://consap.acquistitelematici.it/tender/2233",
+  "piattaforma": "consap.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDAC726145",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1038507",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ },
+ {
+  "cig": "BDAEF18806",
+  "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5247",
+  "piattaforma": "gare.provincia.fr.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDAB7780D0",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18240078",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BD965B8874",
+  "url": "https://supplier.snam.it/",
+  "piattaforma": "supplier.snam.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BDAC9769CB",
+  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=7793015b-39c2-4c25-95d8-6e782d77b39b",
+  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDADC157A6",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1027689",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 11
+ },
+ {
+  "cig": "BDA9593851",
+  "url": "https://start.toscana.it/tendering/tenders/045371-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 1
+ },
+ {
+  "cig": "BD71E528EF",
+  "url": "https://www.agisupply.it/esop/guest/go/opportunity/detail?opportunityId=26097",
+  "piattaforma": "www.agisupply.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA408DE70",
+  "url": "https://start.toscana.it/tendering/tenders/044917-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 2
+ },
+ {
+  "cig": "BDAC38C867",
+  "url": "https://comunebrindisi.tuttogare.it/gare/dettaglio.php?codice=989",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDAE372B32",
+  "url": "https://saluzzo.tuttogare.it/gare/dettaglio.php?codice=267",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BDAB011501",
+  "url": "https://trasparenza.comune.rosignano.livorno.it/archivio105_procedure-dal-01012024_0_230934_566_1.html",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDAC894F49",
+  "url": "https://noci.tuttogare.it/gare/dettaglio.php?codice=235",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDABDFC14A",
+  "url": "https://romagnaoccidentaleportalegare.aflink.it/portale/",
+  "piattaforma": "romagnaoccidentaleportalegare.aflink.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDAA7F215D",
+  "url": "https://autoritabacinolario-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00341",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDAE52FA6C",
+  "url": "https://appalti.cittametropolitana.ct.it/PortaleAppalti/it/procedure/codice/G00840",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDAB42A6AA",
+  "url": "https://www.comune.forgarianelfriuli.ud.it/it/amministrazione-trasparente-30910/bandi-di-gara-e-contratti-30987",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD965D5065",
+  "url": "https://supplier.snam.it/",
+  "piattaforma": "supplier.snam.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BD965F6B9D",
+  "url": "https://supplier.snam.it/",
+  "piattaforma": "supplier.snam.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BD9659F3D4",
+  "url": "https://supplier.snam.it/",
+  "piattaforma": "supplier.snam.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BDAC9E98B2",
+  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=611a252d-dabc-4b35-bbc4-9a63f099cf31",
+  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA3E3B444",
+  "url": "https://cittadisusa.traspare.com/announcements/873",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA9EF99CF",
+  "url": "https://www.comune.mossa.go.it/",
+  "piattaforma": "www.comune.mossa.go.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BDADECE6D5",
+  "url": "https://www.consorzioit.net/realizzazione-ciclopedonale-pizzighettone-regona",
+  "piattaforma": "www.consorzioit.net",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ }
+]
