@@ -16,30 +16,6 @@
   "file": 15
  },
  {
-  "cig": "BDADE12BAF",
-  "url": "https://rovigo.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8489845",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDAA6DAA4A",
-  "url": "https://gruppoastea.acquistitelematici.it/tender-esiti/dettaglio/5372",
-  "piattaforma": "gruppoastea.acquistitelematici.it",
-  "esito": "bloccata (HTTP 404)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDABAAC57E",
-  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/975247dc7cb44455",
-  "piattaforma": "www.acquistinretepa.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDA4EDFFB7",
   "url": "https://appalti.unionevalledelsosio.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=17",
   "piattaforma": "appalti.unionevalledelsosio.lavoripubblici.sicilia.it",
@@ -96,14 +72,6 @@
   "file": 1
  },
  {
-  "cig": "BDAC9769CB",
-  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=7793015b-39c2-4c25-95d8-6e782d77b39b",
-  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDADC157A6",
   "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1027689",
   "piattaforma": "sardegnacat.regione.sardegna.it",
@@ -118,14 +86,6 @@
   "esito": "ok",
   "metodo": "server-IT/api-start",
   "file": 1
- },
- {
-  "cig": "BD71E528EF",
-  "url": "https://www.agisupply.it/esop/guest/go/opportunity/detail?opportunityId=26097",
-  "piattaforma": "www.agisupply.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDA408DE70",
@@ -152,14 +112,6 @@
   "file": 11
  },
  {
-  "cig": "BDAB011501",
-  "url": "https://trasparenza.comune.rosignano.livorno.it/archivio105_procedure-dal-01012024_0_230934_566_1.html",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDAC894F49",
   "url": "https://noci.tuttogare.it/gare/dettaglio.php?codice=235",
   "piattaforma": "TuttoGare",
@@ -168,36 +120,12 @@
   "file": 10
  },
  {
-  "cig": "BDABDFC14A",
-  "url": "https://romagnaoccidentaleportalegare.aflink.it/portale/",
-  "piattaforma": "romagnaoccidentaleportalegare.aflink.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDAA7F215D",
-  "url": "https://autoritabacinolario-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00341",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 2
- },
- {
   "cig": "BDAE52FA6C",
   "url": "https://appalti.cittametropolitana.ct.it/PortaleAppalti/it/procedure/codice/G00840",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
   "file": 15
- },
- {
-  "cig": "BDAB42A6AA",
-  "url": "https://www.comune.forgarianelfriuli.ud.it/it/amministrazione-trasparente-30910/bandi-di-gara-e-contratti-30987",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BD965D5065",
@@ -224,22 +152,6 @@
   "file": 1
  },
  {
-  "cig": "BDAC9E98B2",
-  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=611a252d-dabc-4b35-bbc4-9a63f099cf31",
-  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDA3E3B444",
-  "url": "https://cittadisusa.traspare.com/announcements/873",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDA9EF99CF",
   "url": "https://www.comune.mossa.go.it/",
   "piattaforma": "www.comune.mossa.go.it",
@@ -254,5 +166,93 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 3
+ },
+ {
+  "cig": "BDADE12BAF",
+  "url": "https://rovigo.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8489845",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDAA6DAA4A",
+  "url": "https://gruppoastea.acquistitelematici.it/tender-esiti/dettaglio/5372",
+  "piattaforma": "gruppoastea.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDABAAC57E",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/975247dc7cb44455",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDAC9769CB",
+  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=7793015b-39c2-4c25-95d8-6e782d77b39b",
+  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD71E528EF",
+  "url": "https://www.agisupply.it/esop/guest/go/opportunity/detail?opportunityId=26097",
+  "piattaforma": "www.agisupply.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDAB011501",
+  "url": "https://trasparenza.comune.rosignano.livorno.it/archivio105_procedure-dal-01012024_0_230934_566_1.html",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "server-IT/browser",
+  "file": 6
+ },
+ {
+  "cig": "BDABDFC14A",
+  "url": "https://romagnaoccidentaleportalegare.aflink.it/portale/",
+  "piattaforma": "romagnaoccidentaleportalegare.aflink.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDAA7F215D",
+  "url": "https://autoritabacinolario-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00341",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDAB42A6AA",
+  "url": "https://www.comune.forgarianelfriuli.ud.it/it/amministrazione-trasparente-30910/bandi-di-gara-e-contratti-30987",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 2
+ },
+ {
+  "cig": "BDAC9E98B2",
+  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=611a252d-dabc-4b35-bbc4-9a63f099cf31",
+  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA3E3B444",
+  "url": "https://cittadisusa.traspare.com/announcements/873",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
  }
 ]
