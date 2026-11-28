@@ -1,21 +1,5 @@
 [
  {
-  "cig": "BDB2A5BF85",
-  "url": "https://comunesantangeloacupolo.traspare.com/announcements/11",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDB3947FE2",
-  "url": "https://comunitamontanaxixaurunci.acquistitelematici.it/tender/514",
-  "piattaforma": "comunitamontanaxixaurunci.acquistitelematici.it",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 5
- },
- {
   "cig": "BDAF757614",
   "url": "https://gare.sasispa.it/gare/dettaglio.php?codice=135",
   "piattaforma": "gare.sasispa.it",
@@ -24,44 +8,12 @@
   "file": 12
  },
  {
-  "cig": "BDB1DBF7B3",
-  "url": "https://uc.casentino.toscana.it/trasparenza",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDB3960487",
-  "url": "https://castelsaraceno.tuttogare.it/gare/dettaglio.php?codice=224",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDAEF4C2F1",
   "url": "https://start.toscana.it/tendering/tenders/044690-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
   "esito": "ok",
   "metodo": "server-IT/api-start",
   "file": 12
- },
- {
-  "cig": "BDB357BDC4",
-  "url": "https://www.comune.ponte-di-legno.bs.it/Pages/Bandi/procedure/digara/?id=364334",
-  "piattaforma": "www.comune.ponte-di-legno.bs.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDA1C220DF",
-  "url": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
-  "piattaforma": "vigevano.e-pal.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDB03A6E5B",
@@ -96,14 +48,6 @@
   "file": 3
  },
  {
-  "cig": "BDB2DD7F9F",
-  "url": "https://provinciasalerno.traspare.com/announcements/471",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDAFBF44AC",
   "url": "https://appalti.ragusa.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=2945",
   "piattaforma": "appalti.ragusa.lavoripubblici.sicilia.it",
@@ -120,28 +64,12 @@
   "file": 4
  },
  {
-  "cig": "BDAC87668A",
-  "url": "https://www.portalegare.societagiubileo2025.it/esop/guest/go/opportunity/detail?opportunityId=5853",
-  "piattaforma": "www.portalegare.societagiubileo2025.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDAA027309",
   "url": "https://viveracquaprocurement.bravosolution.com",
   "piattaforma": "viveracquaprocurement.bravosolution.com",
   "esito": "ok",
   "metodo": "browser",
   "file": 1
- },
- {
-  "cig": "BDAF213DAA",
-  "url": "https://www.cmsebino.bs.it/Pages/Bandi/procedure/digara/?pg=0",
-  "piattaforma": "www.cmsebino.bs.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDB29F8DD3",
@@ -152,20 +80,92 @@
   "file": 4
  },
  {
-  "cig": "BDB0A8F232",
-  "url": "https://maletto.traspare.com/announcements/851",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDB1EAA9A0",
   "url": "https://lecce.tuttogare.it/gare/dettaglio.php?codice=2578",
   "piattaforma": "TuttoGare",
   "esito": "ok",
   "metodo": "diretto",
   "file": 13
+ },
+ {
+  "cig": "BDB2A5BF85",
+  "url": "https://comunesantangeloacupolo.traspare.com/announcements/11",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB3947FE2",
+  "url": "https://comunitamontanaxixaurunci.acquistitelematici.it/tender/514",
+  "piattaforma": "comunitamontanaxixaurunci.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDB1DBF7B3",
+  "url": "https://uc.casentino.toscana.it/trasparenza",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB3960487",
+  "url": "https://castelsaraceno.tuttogare.it/gare/dettaglio.php?codice=224",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB357BDC4",
+  "url": "https://www.comune.ponte-di-legno.bs.it/Pages/Bandi/procedure/digara/?id=364334",
+  "piattaforma": "www.comune.ponte-di-legno.bs.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA1C220DF",
+  "url": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
+  "piattaforma": "vigevano.e-pal.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB2DD7F9F",
+  "url": "https://provinciasalerno.traspare.com/announcements/471",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDAC87668A",
+  "url": "https://www.portalegare.societagiubileo2025.it/esop/guest/go/opportunity/detail?opportunityId=5853",
+  "piattaforma": "www.portalegare.societagiubileo2025.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDAF213DAA",
+  "url": "https://www.cmsebino.bs.it/Pages/Bandi/procedure/digara/?pg=0",
+  "piattaforma": "www.cmsebino.bs.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB0A8F232",
+  "url": "https://maletto.traspare.com/announcements/851",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
  },
  {
   "cig": "BB6FBD0E4D",
