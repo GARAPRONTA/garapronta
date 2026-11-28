@@ -128,6 +128,30 @@
   "file": 0
  },
  {
+  "cig": "BDF0BE32D8",
+  "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016",
+  "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDF0A2639E",
+  "url": "https://cucfrascineto.acquistitelematici.it/tender/1576",
+  "piattaforma": "cucfrascineto.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDF1724C4F",
+  "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=737",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
   "cig": "BDEDA3A7BD",
   "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
   "piattaforma": "app.albofornitori.it",
@@ -147,9 +171,9 @@
   "cig": "BDF5C60E9D",
   "url": "https://start.toscana.it/tendering/tenders/049143-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 6
  },
  {
   "cig": "BDF0795571",
@@ -200,22 +224,6 @@
   "file": 0
  },
  {
-  "cig": "BDF0BE32D8",
-  "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016",
-  "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDF0A2639E",
-  "url": "https://cucfrascineto.acquistitelematici.it/tender/1576",
-  "piattaforma": "cucfrascineto.acquistitelematici.it",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 4
- },
- {
   "cig": "BDF50EA968",
   "url": "https://www.ariaspa.it",
   "piattaforma": "www.ariaspa.it",
@@ -235,9 +243,9 @@
   "cig": "BDF55DEFC9",
   "url": "https://start.toscana.it/tendering/tenders/049164-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 8
  },
  {
   "cig": "BDF26B225F",
@@ -253,14 +261,6 @@
   "piattaforma": "www.acquistinretepa.it",
   "esito": "nessun file trovato",
   "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDF1724C4F",
-  "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=737",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
   "file": 0
  }
 ]
