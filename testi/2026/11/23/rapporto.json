@@ -160,14 +160,6 @@
   "file": 15
  },
  {
-  "cig": "BDE68A9FEE",
-  "url": "https://www.ariaspa.it/wps/portal/Aria/",
-  "piattaforma": "www.ariaspa.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDE97FCD8C",
   "url": "https://provincia-isernia.acquistitelematici.it/tender/664",
   "piattaforma": "provincia-isernia.acquistitelematici.it",
@@ -176,20 +168,28 @@
   "file": 12
  },
  {
-  "cig": "BDE096A674",
-  "url": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDE7EF1309",
   "url": "https://start.toscana.it/tendering/tenders/048481-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
   "esito": "ok",
   "metodo": "server-IT/api-start",
   "file": 5
+ },
+ {
+  "cig": "BDE68A9FEE",
+  "url": "https://www.ariaspa.it/wps/portal/Aria/",
+  "piattaforma": "www.ariaspa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE096A674",
+  "url": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
  },
  {
   "cig": "BDE3CAA16D",

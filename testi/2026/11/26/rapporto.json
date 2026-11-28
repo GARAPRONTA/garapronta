@@ -152,6 +152,30 @@
   "file": 15
  },
  {
+  "cig": "BDF99CE023",
+  "url": "https://start.toscana.it/tendering/tenders/048578-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 12
+ },
+ {
+  "cig": "BDF8046E71",
+  "url": "https://milomb-camcom.acquistitelematici.it/tender/3453",
+  "piattaforma": "milomb-camcom.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDFA9C5CD2",
+  "url": "https://provinciadilatina.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01368",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
   "cig": "BDF68F50AF",
   "url": "https://www.ats-brianza.it",
   "piattaforma": "www.ats-brianza.it",
@@ -176,36 +200,12 @@
   "file": 0
  },
  {
-  "cig": "BDF99CE023",
-  "url": "https://start.toscana.it/tendering/tenders/048578-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "ok",
-  "metodo": "server-IT/api-start",
-  "file": 12
- },
- {
   "cig": "BDF6D1AC3C",
   "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "bloccata (URLError)",
   "metodo": "diretto",
   "file": 0
- },
- {
-  "cig": "BDF8046E71",
-  "url": "https://milomb-camcom.acquistitelematici.it/tender/3453",
-  "piattaforma": "milomb-camcom.acquistitelematici.it",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 1
- },
- {
-  "cig": "BDFA9C5CD2",
-  "url": "https://provinciadilatina.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01368",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 2
  },
  {
   "cig": "BDF018EC1C",

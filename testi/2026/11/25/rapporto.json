@@ -152,6 +152,22 @@
   "file": 0
  },
  {
+  "cig": "BDF5C60E9D",
+  "url": "https://start.toscana.it/tendering/tenders/049143-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 6
+ },
+ {
+  "cig": "BDF55DEFC9",
+  "url": "https://start.toscana.it/tendering/tenders/049164-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 8
+ },
+ {
   "cig": "BDEDA3A7BD",
   "url": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
   "piattaforma": "app.albofornitori.it",
@@ -166,14 +182,6 @@
   "esito": "bloccata (HTTP 403)",
   "metodo": "diretto",
   "file": 0
- },
- {
-  "cig": "BDF5C60E9D",
-  "url": "https://start.toscana.it/tendering/tenders/049143-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "ok",
-  "metodo": "server-IT/api-start",
-  "file": 6
  },
  {
   "cig": "BDF0795571",
@@ -238,14 +246,6 @@
   "esito": "bloccata (HTTP 403)",
   "metodo": "diretto",
   "file": 0
- },
- {
-  "cig": "BDF55DEFC9",
-  "url": "https://start.toscana.it/tendering/tenders/049164-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "ok",
-  "metodo": "server-IT/api-start",
-  "file": 8
  },
  {
   "cig": "BDF26B225F",

@@ -120,6 +120,54 @@
   "file": 10
  },
  {
+  "cig": "BE01543168",
+  "url": "https://peccioli.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/10621828",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BE021C53C7",
+  "url": "https://start.toscana.it/tendering/tenders/032775-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 15
+ },
+ {
+  "cig": "BE00F3E9B9",
+  "url": "https://smlc.traspare.com/announcements/1663",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BE000B7CB4",
+  "url": "https://start.toscana.it/tendering/tenders/049730-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 1
+ },
+ {
+  "cig": "BDF80BCFD1",
+  "url": "https://sestofiorentino.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/5777083",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BE00C58569",
+  "url": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 6
+ },
+ {
   "cig": "BDEA5594A8",
   "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386",
   "piattaforma": "piattaforma.asmecomm.it",
@@ -139,17 +187,9 @@
   "cig": "BDFFE68501",
   "url": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790",
   "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BE01543168",
-  "url": "https://peccioli.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/10621828",
-  "piattaforma": "Traspare",
-  "esito": "ok",
+  "esito": "bloccata (HTTP 403)",
   "metodo": "diretto",
-  "file": 4
+  "file": 0
  },
  {
   "cig": "BDFA961A4D",
@@ -160,28 +200,12 @@
   "file": 0
  },
  {
-  "cig": "BE021C53C7",
-  "url": "https://start.toscana.it/tendering/tenders/032775-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "ok",
-  "metodo": "server-IT/api-start",
-  "file": 15
- },
- {
   "cig": "BE00789D8C",
   "url": "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658",
   "piattaforma": "sac3.halleysac.it",
   "esito": "nessun file trovato",
   "metodo": "browser",
   "file": 0
- },
- {
-  "cig": "BE00F3E9B9",
-  "url": "https://smlc.traspare.com/announcements/1663",
-  "piattaforma": "Traspare",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 9
  },
  {
   "cig": "BE0194E782",
@@ -230,29 +254,5 @@
   "esito": "nessun file trovato",
   "metodo": "browser",
   "file": 0
- },
- {
-  "cig": "BE000B7CB4",
-  "url": "https://start.toscana.it/tendering/tenders/049730-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "ok",
-  "metodo": "server-IT/api-start",
-  "file": 1
- },
- {
-  "cig": "BDF80BCFD1",
-  "url": "https://sestofiorentino.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/5777083",
-  "piattaforma": "Traspare",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 5
- },
- {
-  "cig": "BE00C58569",
-  "url": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "ok",
-  "metodo": "server-IT/api-start",
-  "file": 6
  }
 ]

@@ -1,6 +1,6 @@
 # Copertura documenti di gara (aggiornata da sola ogni mattina)
 
-Ultimo aggiornamento: 28/11/2026 13:07 · 6 giorni · 191 gare di lavori (bandi e indagini).
+Ultimo aggiornamento: 28/11/2026 12:44 · 6 giorni · 191 gare di lavori (bandi e indagini).
 
 - **Lette con i documenti: 123 su 191 (64%)**
 - Sulle gare con documenti pubblici (escluse 12 a inviti): **69%**
@@ -10,8 +10,8 @@ Ultimo aggiornamento: 28/11/2026 13:07 · 6 giorni · 191 gare di lavori (bandi 
 | Esito | Gare |
 |---|---|
 | ok | 123 |
-| nessun file trovato | 33 |
-| bloccata | 21 |
+| nessun file trovato | 32 |
+| bloccata | 22 |
 | documenti riservati agli invitati | 12 |
 | troppo lenta | 1 |
 | link senza file | 1 |
@@ -22,7 +22,7 @@ Ultimo aggiornamento: 28/11/2026 13:07 · 6 giorni · 191 gare di lavori (bandi 
 |---|---|---|---|
 | Traspare | 7 | 16 | bloccata 10, nessun file trovato 6 |
 | TuttoGare | 17 | 8 | documenti riservati agli invitati 7, nessun file trovato 1 |
-| Maggioli PortaleAppalti | 31 | 5 | bloccata 3, nessun file trovato 2 |
+| Maggioli PortaleAppalti | 31 | 5 | bloccata 4, nessun file trovato 1 |
 | www.acquistinretepa.it | 0 | 5 | nessun file trovato 5 |
 | www.ariaspa.it | 0 | 4 | nessun file trovato 4 |
 | piattaforma.asmecomm.it | 6 | 3 | documenti riservati agli invitati 3 |
@@ -58,7 +58,7 @@ Ultimo aggiornamento: 28/11/2026 13:07 · 6 giorni · 191 gare di lavori (bandi 
 | 2026/11/27 | BE011E05EE | app.albofornitori.it | nessun file trovato | https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia |
 | 2026/11/27 | BE00E35F08 | bandi.sanluigi.piemonte.it | nessun file trovato | https://bandi.sanluigi.piemonte.it/ |
 | 2026/11/27 | BE00789D8C | sac3.halleysac.it | nessun file trovato | https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658 |
-| 2026/11/27 | BDFFE68501 | Maggioli PortaleAppalti | nessun file trovato | https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790 |
+| 2026/11/27 | BDFFE68501 | Maggioli PortaleAppalti | bloccata (HTTP 403) | https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790 |
 | 2026/11/27 | BDFCAFB4E7 | Maggioli PortaleAppalti | bloccata (URLError) | https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267 |
 | 2026/11/27 | BDFA961A4D | www.fvgstrade.it | nessun file trovato | https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-vene |
 | 2026/11/27 | BDF804C368 | Traspare | bloccata (HTTP 403) | https://trasparenza.porto.trieste.it/page/10/bandi-di-gara-e-contratti.html |
