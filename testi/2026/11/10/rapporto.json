@@ -1,13 +1,5 @@
 [
  {
-  "cig": "BDB4703564",
-  "url": "https://sintel.regione.lombardia.it ",
-  "piattaforma": "sintel.regione.lombardia.it ",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDB91EA51A",
   "url": "https://direzioneregionalemuseipiemonte.acquistitelematici.it/tender/227",
   "piattaforma": "direzioneregionalemuseipiemonte.acquistitelematici.it",
@@ -40,36 +32,12 @@
   "file": 1
  },
  {
-  "cig": "BDB6E6447F",
-  "url": "https://bollate.portaletrasparenza.net/it/trasparenza/bandi-di-gara-e-contratti.html",
-  "piattaforma": "Traspare",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 1
- },
- {
-  "cig": "BDB49921EB",
-  "url": "https://www.sintel.regione.lombardia.it/fwep/prepareLaunchSavedAuctionV2.do?savedAuctionId=226263938",
-  "piattaforma": "www.sintel.regione.lombardia.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDB742B900",
   "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03225",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
   "file": 11
- },
- {
-  "cig": "BDB5B32D53",
-  "url": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1788",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDB92CBEC4",
@@ -104,14 +72,6 @@
   "file": 4
  },
  {
-  "cig": "BDA956FA9B",
-  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26153",
-  "piattaforma": "acquisti.stradeanas.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDB4D7FF41",
   "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03207",
   "piattaforma": "Maggioli PortaleAppalti",
@@ -134,14 +94,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 13
- },
- {
-  "cig": "BDB885C29A",
-  "url": "https://comunecardeto.tuttogare.it/gare/dettaglio.php?codice=198",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDB7FC3A45",
@@ -176,22 +128,6 @@
   "file": 2
  },
  {
-  "cig": "BDB44354E1",
-  "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=40",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDB85EF223",
-  "url": "https://pgt.regione.campania.it/portalegare/",
-  "piattaforma": "pgt.regione.campania.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDB65D32C7",
   "url": "https://appaltiecontratti.comune.rimini.it/PortaleAppalti/it/procedure/codice/G14246",
   "piattaforma": "Maggioli PortaleAppalti",
@@ -214,5 +150,69 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 4
+ },
+ {
+  "cig": "BDB4703564",
+  "url": "https://sintel.regione.lombardia.it ",
+  "piattaforma": "sintel.regione.lombardia.it ",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB6E6447F",
+  "url": "https://bollate.portaletrasparenza.net/it/trasparenza/bandi-di-gara-e-contratti.html",
+  "piattaforma": "Traspare",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDB49921EB",
+  "url": "https://www.sintel.regione.lombardia.it/fwep/prepareLaunchSavedAuctionV2.do?savedAuctionId=226263938",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB5B32D53",
+  "url": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1788",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA956FA9B",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26153",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB885C29A",
+  "url": "https://comunecardeto.tuttogare.it/gare/dettaglio.php?codice=198",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB44354E1",
+  "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=40",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB85EF223",
+  "url": "https://pgt.regione.campania.it/portalegare/",
+  "piattaforma": "pgt.regione.campania.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
  }
 ]
