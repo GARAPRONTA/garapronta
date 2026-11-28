@@ -112,20 +112,44 @@
   "file": 0
  },
  {
+  "cig": "BDF6AAFD6B",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDF69D6A59",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDFC0D227E",
+  "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
   "cig": "BDFBBFB409",
   "url": "https://sua-mbcmm.acquistitelematici.it/tender/741",
   "piattaforma": "sua-mbcmm.acquistitelematici.it",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
+  "esito": "ok",
+  "metodo": "diretto",
   "file": 4
  },
  {
   "cig": "BDF5AAC6D3",
   "url": "https://start.toscana.it/tendering/tenders/049221-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 15
  },
  {
   "cig": "BDF68F50AF",
@@ -155,9 +179,9 @@
   "cig": "BDF99CE023",
   "url": "https://start.toscana.it/tendering/tenders/048578-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 12
  },
  {
   "cig": "BDF6D1AC3C",
@@ -171,41 +195,17 @@
   "cig": "BDF8046E71",
   "url": "https://milomb-camcom.acquistitelematici.it/tender/3453",
   "piattaforma": "milomb-camcom.acquistitelematici.it",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 1
- },
- {
-  "cig": "BDF6AAFD6B",
-  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
-  "piattaforma": "intercenter.regione.emilia-romagna.it",
   "esito": "ok",
   "metodo": "diretto",
-  "file": 5
- },
- {
-  "cig": "BDF69D6A59",
-  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795",
-  "piattaforma": "piattaforma.asmecomm.it",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDFC0D227E",
-  "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
+  "file": 1
  },
  {
   "cig": "BDFA9C5CD2",
   "url": "https://provinciadilatina.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01368",
   "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 1
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
  },
  {
   "cig": "BDF018EC1C",
