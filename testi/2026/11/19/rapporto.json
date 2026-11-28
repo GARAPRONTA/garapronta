@@ -1,0 +1,242 @@
+[
+ {
+  "cig": "BDDA47DD14",
+  "url": "https://maletto.traspare.com/announcements/858",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDE0BC48D",
+  "url": "https://start.toscana.it/tendering/tenders/047922-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 6
+ },
+ {
+  "cig": "BDDBA76EF9",
+  "url": "https://provinciacatanzaro.tuttogare.it/gare/dettaglio.php?codice=1278",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BDDAA56075",
+  "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/PN26003",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDDF3B6D6",
+  "url": "https://cucroggiano.traspare.com/announcements/2405",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDE8775AC",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/cacf54057b6560b5",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDDE076AC7",
+  "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5307",
+  "piattaforma": "gare.provincia.fr.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDDCAC1102",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/ae0ed6947cec63d6",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDDDD63156",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124967",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDDA24150F",
+  "url": "https://comunediripateatina.tuttogare.it/gare/dettaglio.php?codice=41",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDC48D28C",
+  "url": "https://appalti.provincia.imperia.it/PortaleAppalti/it/procedure/codice/G01579",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDDC695FA6",
+  "url": "https://portale.comune.sansepolcro.ar.it/openweb/albo/albo_dettagli.php?id=33951&CSRF=706416a8106a761eac4a1dd2970b3ca1",
+  "piattaforma": "portale.comune.sansepolcro.ar.it",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDDD562671",
+  "url": "https://provviterbo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G03120",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ },
+ {
+  "cig": "BDD4BF6EFA",
+  "url": "https://appalti-consorziobacchiglione.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G02597",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDDAE2EC77",
+  "url": "https://www.comune.modena.it/amministrazione-trasparente/bandi-di-gara-e-contratti/procedure-di-affidamento/procedure-di-affidamento-di-appalti-pubblici-e-concessioni-dal-1-01-2024/lavori/procedura-aperta-per-laffidamento-dei-lavori-progetto-dorsale-ciclabile-via-emilia-ovest-tratto-salgari-delfini",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "server-IT/browser",
+  "file": 1
+ },
+ {
+  "cig": "BDDBE40F71",
+  "url": "https://provanco.tuttogare.it/gare/dettaglio.php?codice=867",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BDDAF09134",
+  "url": "https://cmvallecamonica-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00226",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDDCD540D5",
+  "url": "https://cucterradileuca.tuttogare.it/gare/dettaglio.php?codice=1115",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDDBFC3ECE",
+  "url": "https://www.cucrivieradiulisse.it/PortaleAppalti/it/procedure/codice/G02777",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDAC194A1",
+  "url": "https://suamontidauni.traspare.com/announcements/6773",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDB1B0188",
+  "url": "https://provincia.pistoia.it/gara/2026/11/procedura-aperta-su-start-adeguamento-regimazione-delle-acque-prossimita-di-fosso",
+  "piattaforma": "provincia.pistoia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDDA60A4B4",
+  "url": "https://start.toscana.it/tendering/tenders/047758-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 9
+ },
+ {
+  "cig": "BDDE309A9A",
+  "url": "https://aliseo-liguria.traspare.com/announcements/198",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDDB5B0E8C",
+  "url": "https://anbilazio.acquistitelematici.it/tender/8529",
+  "piattaforma": "anbilazio.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDDBAAED30",
+  "url": "https://provinciacatanzaro.tuttogare.it/gare/dettaglio.php?codice=1279",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BDDCF31A74",
+  "url": "https://www.portalegare.societagiubileo2025.it/esop/guest/go/opportunity/detail?opportunityId=5861",
+  "piattaforma": "www.portalegare.societagiubileo2025.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD3148AB0",
+  "url": "https://atcpiemontesud-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01364",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDDCADB675",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1072270",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDDAD3D598",
+  "url": "https://aica.tuttogare.it/gare/dettaglio.php?codice=3549",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDD700A4C7",
+  "url": "https://appalti.erapmarche.it/PortaleAppalti/it/procedure/codice/G03009",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ }
+]
