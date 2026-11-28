@@ -1,0 +1,194 @@
+[
+ {
+  "cig": "BD8F06BBBC",
+  "url": "https://start.toscana.it/tendering/tenders/043824-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 11
+ },
+ {
+  "cig": "BD855D9D89",
+  "url": "https://provinciasalerno.traspare.com/announcements?status=2",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD8F3E27B7",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18044997",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 9
+ },
+ {
+  "cig": "BD9032932E",
+  "url": "https://app.albofornitori.it/alboeproc/albo_apsholding?customEntryView=elencoBandiAlboByLinkEntryView&idProcedura=943",
+  "piattaforma": "app.albofornitori.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD853F9171",
+  "url": "https://satapweb.acquistitelematici.it/tender/414",
+  "piattaforma": "satapweb.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BD8FC323CD",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=122556",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BD8FED727B",
+  "url": "https://etvilloresi.traspare.com/announcements/171",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9048B74E",
+  "url": "https://infogare.comune.brescia.it/PortaleAppalti/it/procedure/codice/G13053",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD8E8AD824",
+  "url": "https://start.toscana.it/tendering/tenders/043296-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 12
+ },
+ {
+  "cig": "BD8DA3DE19",
+  "url": "https://www.polimi.it/imprese/bandi-per-le-imprese/bandi-di-gara",
+  "piattaforma": "www.polimi.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD8B674636",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1014716",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BD8F886C14",
+  "url": "https://www.acquistinretepa.it/bandi/negoziata/adi/fdf73f51600bae58",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD8CF8340A",
+  "url": "https://gare.comune.matera.it/PortaleAppalti/it/procedure/codice/G01718",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BD8CBC90C7",
+  "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03143",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BD8D9440A2",
+  "url": "https://appalti.ragusa.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=2913",
+  "piattaforma": "appalti.ragusa.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD7CD0FBC5",
+  "url": "https://eprocurement.gruppofs.it/esop/toolkit/negotiation/rfq/modify/configuration/initStepReadOnly.si?reset=true&isOnModification=false&_ncp=1792672144377.1581279-4",
+  "piattaforma": "eprocurement.gruppofs.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD8CC9484A",
+  "url": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/51060",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD8F741FE0",
+  "url": "https://viveracquaprocurement.bravosolution.com/",
+  "piattaforma": "viveracquaprocurement.bravosolution.com",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 1
+ },
+ {
+  "cig": "BD8F1EB8A0",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD8E3B701D",
+  "url": "https://diso.tuttogare.it/gare/dettaglio.php?codice=118",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BD884111A0",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD88B72878",
+  "url": "https://portaleappalti.adigepo.it/PortaleAppalti/it/procedure/codice/G06718",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BD8C79CE98",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@15915183",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD8FDF57F9",
+  "url": "https://colognomonzese.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/3213629",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ }
+]
