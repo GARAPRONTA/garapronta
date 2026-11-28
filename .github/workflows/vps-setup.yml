@@ -16,7 +16,7 @@ jobs:
         env: { SSHPASS: '${{ secrets.VPS_PASSWORD }}', H: '${{ secrets.VPS_HOST }}' }
         run: |
           S="sshpass -e ssh -o StrictHostKeyChecking=no -o ConnectTimeout=20 root@$H"
-          $S 'export DEBIAN_FRONTEND=noninteractive; apt-get update -qq && apt-get install -y -qq python3 python3-venv python3-pip poppler-utils openssl unattended-upgrades p7zip-full >/dev/null && echo pacchetti ok'
+          $S 'export DEBIAN_FRONTEND=noninteractive; apt-get update -qq && apt-get install -y -qq python3 python3-venv python3-pip poppler-utils openssl unattended-upgrades p7zip-full tesseract-ocr tesseract-ocr-ita >/dev/null && echo pacchetti ok'
           $S 'mkdir -p /opt/garapronta && cd /opt/garapronta && [ -d venv ] || python3 -m venv venv; ./venv/bin/pip install -q playwright httpx && ./venv/bin/python -m playwright install --with-deps chromium >/dev/null 2>&1 && echo chrome ok'
           $S 'ufw allow 22/tcp >/dev/null 2>&1; ufw --force enable >/dev/null 2>&1; free -h | head -2; df -h / | tail -1'
       - name: Copia i lettori e prova le piattaforme difficili dall'Italia

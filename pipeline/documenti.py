@@ -11,7 +11,7 @@ Solo documenti pubblici: niente login, niente CAPTCHA, richieste lente.
 
 Variabili: DATA (gg/mm/aaaa, default ieri), APIFY_TOKEN (opzionale, per il proxy), MAX_GARE.
 """
-import base64, gzip, io, json, os, re, subprocess, sys, tempfile, time, zipfile
+import shutil, base64, gzip, io, json, os, re, subprocess, sys, tempfile, time, zipfile
 import urllib.request, urllib.error
 from collections import Counter
 from datetime import datetime, timedelta, timezone
@@ -124,6 +124,31 @@ def nome_file(url, headers):
     return unquote(os.path.basename(urlparse(url).path)) or "documento"
 
 
+
+OCR_PAGINE = 25          # pagine massime lette con l'OCR per ogni PDF scansionato
+
+
+def ocr_pdf(percorso):
+    """Legge un PDF scansionato con Tesseract (italiano): immagini a 200 dpi delle prime OCR_PAGINE pagine."""
+    if not shutil.which("tesseract"):
+        return ""
+    out = []
+    with tempfile.TemporaryDirectory() as d:
+        try:
+            subprocess.run(["pdftoppm", "-r", "200", "-gray", "-l", str(OCR_PAGINE), "-png", percorso, f"{d}/p"],
+                           capture_output=True, timeout=240)
+            t0 = time.time()
+            for img in sorted(os.listdir(d)):
+                if time.time() - t0 > 150:
+                    break
+                r = subprocess.run(["tesseract", f"{d}/{img}", "-", "-l", "ita+eng", "--psm", "3"],
+                                   capture_output=True, timeout=60)
+                out.append(r.stdout.decode("utf-8", "ignore"))
+        except Exception:
+            pass
+    return "\n\f".join(out)
+
+
 def testo_da(nome, data):
     """Estrae il testo da pdf, p7m (firma digitale), zip, doc/docx."""
     n = nome.lower()
@@ -147,8 +172,11 @@ def testo_da(nome, data):
         with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
             f.write(data)
         r = subprocess.run(["pdftotext", "-layout", "-enc", "UTF-8", f.name, "-"], capture_output=True, timeout=120)
+        testo = r.stdout.decode("utf-8", "ignore")
+        if len(testo.strip()) < 300 and tipo_doc(nome) not in ("progetto", "altro", "modulistica"):
+            testo = ocr_pdf(f.name) or testo      # PDF scansionato: lo leggo con l'OCR
         os.unlink(f.name)
-        return "pdf", r.stdout.decode("utf-8", "ignore")
+        return "pdf", testo
     if n.endswith((".doc", ".docx", ".rtf", ".odt")):
         with tempfile.TemporaryDirectory() as d:
             p = os.path.join(d, os.path.basename(nome) or "x.doc")
