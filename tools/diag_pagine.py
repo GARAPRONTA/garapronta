@@ -4,6 +4,7 @@ Uso: python tools/diag_pagine.py <cartella_uscita>   (le pagine sono fisse, in P
 import gzip, json, os, re, sys, time, urllib.request
 
 PAGINE = {
+    "sitat": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391",
     "sintel_ricerca": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
     "anas_jaggaer": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
     "acea_jaggaer": "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436",
