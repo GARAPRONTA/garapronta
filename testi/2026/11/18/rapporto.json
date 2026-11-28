@@ -1,0 +1,314 @@
+[
+ {
+  "cig": "BDD6647689",
+  "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5299",
+  "piattaforma": "gare.provincia.fr.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDD404BE07",
+  "url": "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8475",
+  "piattaforma": "autobrennero.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD75061C5",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1068181",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDD7AC0B8A",
+  "url": "https://start.toscana.it/tendering/tenders/047674-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 2
+ },
+ {
+  "cig": "BDD78CCEEC",
+  "url": "https://start.toscana.it/tendering/tenders/045269-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 9
+ },
+ {
+  "cig": "BD77509821",
+  "url": "https://barge.tuttogare.it/gare/dettaglio.php?codice=764",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDD889DC44",
+  "url": "https://cmdrc.tuttogare.it/gare/dettaglio.php?codice=458",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDD6DAF32B",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_1d1baab2-6add-4f69-c9d2-619975363861",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDD1D969E6",
+  "url": "https://www.consip.it/bandi/edifici-temporanei-ad-uso-didattico-per-il-dipartimento-della-protezione-civile-id-3014",
+  "piattaforma": "www.consip.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDD857E8EA",
+  "url": "https://cmvallecamonica-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00223",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDD81FF657",
+  "url": "https://cbns.tuttogare.it/gare/dettaglio.php?codice=668",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDD66A64EF",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124422",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDD9C2171A",
+  "url": "https://www.onaosi.it/documentazione/content/3903/3903-decisione-del-direttore-generale-n-675-del-16-11-2026-20261116.pdf",
+  "piattaforma": "www.onaosi.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD8D0B415",
+  "url": "https://autobrennero.acquistitelematici.it/tender/8352",
+  "piattaforma": "autobrennero.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDD6644410",
+  "url": "https://eappalti.regione.fvg.it/esop/guest/go/opportunity/detail?opportunityId=26100",
+  "piattaforma": "eappalti.regione.fvg.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD14F2880",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/930a19137aa349b9",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCFFE6A2E",
+  "url": "https://www.bandi-altoadige.it/tendering/tenders/084936-2026/view/detail/1",
+  "piattaforma": "www.bandi-altoadige.it",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD8E030BE",
+  "url": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/58222",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDD743BA3D",
+  "url": "https://cloudanac.cittametropolitana.na.it:9191/DettaglioGara.aspx?id=ab963512-48df-4c28-ac22-82f31c6703d5",
+  "piattaforma": "cloudanac.cittametropolitana.na.it:9191",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD539AD1F",
+  "url": "https://servizionline.comune.colognola.vr.it/c023028/zf/index.php/bandi-gara/avvisi/dettaglio-avviso/avviso/20",
+  "piattaforma": "servizionline.comune.colognola.vr.it",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD9C0E76C",
+  "url": "https://www.onaosi.it/documentazione/content/3903/3903-decisione-del-direttore-generale-n-675-del-16-11-2026-20261116.pdf",
+  "piattaforma": "www.onaosi.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD6D0BBD2",
+  "url": "https://giardininaxos.tuttogare.it/gare/dettaglio.php?codice=583",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDD9C227ED",
+  "url": "https://www.onaosi.it/documentazione/content/3903/3903-decisione-del-direttore-generale-n-675-del-16-11-2026-20261116.pdf",
+  "piattaforma": "www.onaosi.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD9C0D699",
+  "url": "https://www.onaosi.it/documentazione/content/3903/3903-decisione-del-direttore-generale-n-675-del-16-11-2026-20261116.pdf",
+  "piattaforma": "www.onaosi.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD6B476D3",
+  "url": "https://comunecerretosannita.tuttogare.it/gare/dettaglio.php?codice=11",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDD6FCF417",
+  "url": "https://umpotenzaesino-appalti.regione.marche.it/PortaleAppalti/it/procedure/codice/G11434",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDD8253BA7",
+  "url": "https://arst.acquistitelematici.it/tender/631",
+  "piattaforma": "arst.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD695C1A5",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1070294",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDD404E085",
+  "url": "https://comunedicosenza.traspare.com/announcements/1059",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD415BE7D",
+  "url": "https://comunedicosenza.traspare.com/announcements/1061",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD9C20647",
+  "url": "https://www.onaosi.it/documentazione/content/3903/3903-decisione-del-direttore-generale-n-675-del-16-11-2026-20261116.pdf",
+  "piattaforma": "www.onaosi.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD9C0B4F3",
+  "url": "https://www.onaosi.it/documentazione/content/3903/3903-decisione-del-direttore-generale-n-675-del-16-11-2026-20261116.pdf",
+  "piattaforma": "www.onaosi.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD9677A85",
+  "url": "https://appalti.consorziobonifica9ct.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=351",
+  "piattaforma": "appalti.consorziobonifica9ct.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDD99B6849",
+  "url": "https://capoterra.albofornitori.net/tender-esiti/dettaglio/512",
+  "piattaforma": "capoterra.albofornitori.net",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDD73CDF75",
+  "url": "https://provincia-enna.acquistitelematici.it/tender/488",
+  "piattaforma": "provincia-enna.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BDD5E6DBD3",
+  "url": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+  "piattaforma": "www.empulia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDD7F936B3",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18661314",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDD843F1AD",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124814",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BDD9119CA8",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1069227",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ }
+]
