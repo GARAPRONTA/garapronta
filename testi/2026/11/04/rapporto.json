@@ -1,21 +1,5 @@
 [
  {
-  "cig": "BDA05EAAF9",
-  "url": "https://unipi.amministrazionetrasparente.cineca.it/archivio105_procedure-dal-01012024_0_5350320_566_1.html",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDA1F0FAF4",
-  "url": "https://servizionline.comune.colognola.vr.it/c023028/zf/index.php/bandi-gara/avvisi/dettaglio-avviso/avviso/16",
-  "piattaforma": "servizionline.comune.colognola.vr.it",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDA44D56E5",
   "url": "https://start.toscana.it/tendering/tenders/045067-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
@@ -30,38 +14,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 8
- },
- {
-  "cig": "BD9F116ADE",
-  "url": "https://associazioneconsortile.acquistitelematici.it/tender-esiti/dettaglio/1157",
-  "piattaforma": "associazioneconsortile.acquistitelematici.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BD99A51022",
-  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/eb09c76dfd9350ba",
-  "piattaforma": "www.acquistinretepa.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BD9F061582",
-  "url": "https://faeto.traspare.com/announcements/180",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDA0C610BC",
-  "url": "https://civillacidro.acquistitelematici.it/tender-esiti/dettaglio/471",
-  "piattaforma": "civillacidro.acquistitelematici.it",
-  "esito": "bloccata (HTTP 404)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BD9EFCCA8B",
@@ -88,14 +40,6 @@
   "file": 3
  },
  {
-  "cig": "BD99893015",
-  "url": "https://www.halleyweb.com/valceresio/zf/index.php/bandi-gara/avvisi/avvisi",
-  "piattaforma": "www.halleyweb.com",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDA16A37C5",
   "url": "https://surbo.tuttogare.it/gare/dettaglio.php?codice=522",
   "piattaforma": "TuttoGare",
@@ -118,22 +62,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 15
- },
- {
-  "cig": "BDA462F46D",
-  "url": "https://appaltiecontratti.comune.rimini.it/PortaleAppalti/it/procedure/codice/G14016",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 1
- },
- {
-  "cig": "BD949DEC96",
-  "url": "https://dati.anticorruzione.it/superset/dashboard/p/XYLMAx0lG1x/",
-  "piattaforma": "dati.anticorruzione.it",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BD9F8A57AF",
@@ -184,36 +112,12 @@
   "file": 13
  },
  {
-  "cig": "BDA10B9661",
-  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_3666b2f6-c71a-4b3e-14e6a-6b5c0fdba199",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDA19D7C73",
-  "url": "https://cucunionevalledeltorbido.tuttogare.it/gare/dettaglio.php?codice=87",
-  "piattaforma": "TuttoGare",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BD9B4E8172",
   "url": "https://portaleappalti.mit.gov.it/PortaleAppalti/it/procedure/codice/G07726",
   "piattaforma": "Maggioli PortaleAppalti",
   "esito": "ok",
   "metodo": "diretto",
   "file": 15
- },
- {
-  "cig": "BD9B7A64C0",
-  "url": "https://app.albofornitori.it/alboeproc/albo_abcnapoli",
-  "piattaforma": "app.albofornitori.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BD9FCD4B7F",
@@ -230,14 +134,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 9
- },
- {
-  "cig": "BDA2379F74",
-  "url": "https://comunebeinasco.traspare.com/announcements/668",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BD9F0766D6",
@@ -262,5 +158,109 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 4
+ },
+ {
+  "cig": "BDA05EAAF9",
+  "url": "https://unipi.amministrazionetrasparente.cineca.it/archivio105_procedure-dal-01012024_0_5350320_566_1.html",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA1F0FAF4",
+  "url": "https://servizionline.comune.colognola.vr.it/c023028/zf/index.php/bandi-gara/avvisi/dettaglio-avviso/avviso/16",
+  "piattaforma": "servizionline.comune.colognola.vr.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 9
+ },
+ {
+  "cig": "BD9F116ADE",
+  "url": "https://associazioneconsortile.acquistitelematici.it/tender-esiti/dettaglio/1157",
+  "piattaforma": "associazioneconsortile.acquistitelematici.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD99A51022",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/eb09c76dfd9350ba",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9F061582",
+  "url": "https://faeto.traspare.com/announcements/180",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ },
+ {
+  "cig": "BDA0C610BC",
+  "url": "https://civillacidro.acquistitelematici.it/tender-esiti/dettaglio/471",
+  "piattaforma": "civillacidro.acquistitelematici.it",
+  "esito": "bloccata (HTTP 404)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD99893015",
+  "url": "https://www.halleyweb.com/valceresio/zf/index.php/bandi-gara/avvisi/avvisi",
+  "piattaforma": "www.halleyweb.com",
+  "esito": "ok",
+  "metodo": "server-IT/browser",
+  "file": 13
+ },
+ {
+  "cig": "BDA462F46D",
+  "url": "https://appaltiecontratti.comune.rimini.it/PortaleAppalti/it/procedure/codice/G14016",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BD949DEC96",
+  "url": "https://dati.anticorruzione.it/superset/dashboard/p/XYLMAx0lG1x/",
+  "piattaforma": "dati.anticorruzione.it",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDA10B9661",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_3666b2f6-c71a-4b3e-14e6a-6b5c0fdba199",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA19D7C73",
+  "url": "https://cucunionevalledeltorbido.tuttogare.it/gare/dettaglio.php?codice=87",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD9B7A64C0",
+  "url": "https://app.albofornitori.it/alboeproc/albo_abcnapoli",
+  "piattaforma": "app.albofornitori.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA2379F74",
+  "url": "https://comunebeinasco.traspare.com/announcements/668",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
  }
 ]
