@@ -1,0 +1,154 @@
+[
+ {
+  "cig": "BDC9C2DEFA",
+  "url": "https://start.toscana.it/tendering/tenders/046442-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 10
+ },
+ {
+  "cig": "BDCA4AC1DC",
+  "url": "https://provvibovalentia-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/Gara2199",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDCD0C777B",
+  "url": "https://sestrilevante.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/3214513",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCA5F83D5",
+  "url": "https://www.comune.vezza-d-oglio.bs.it/",
+  "piattaforma": "www.comune.vezza-d-oglio.bs.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCBB98C46",
+  "url": "https://gare-provincia-trapani.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00365",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 10
+ },
+ {
+  "cig": "BDCDC8CDE1",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_0b6f871f-84a0-4690-c8fa-18f943b11731",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCADCA7EE",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18498226",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "server-IT/diretto+cloud",
+  "file": 11
+ },
+ {
+  "cig": "BDCC12D787",
+  "url": "https://pietramelara.traspare.com/announcements/354",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCC6E1C5A",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/a5235ced0f5d1822",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCBA03E0E",
+  "url": "https://appalti.cittametropolitana.me.it/PortaleAppalti/it/procedure/codice/G00541",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 12
+ },
+ {
+  "cig": "BDCC686145",
+  "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=204",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCC2B17B7",
+  "url": "https://terni.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/2088749",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDCA456AE1",
+  "url": "https://www.fvgstrade.it/it/31063/avviso-ricerca-di-mercato-codice-mc26pvs001-interventi-di-manutenzione-straordinaria-per-il-ripristino-funzionale-dei-piani-viabili-lungo-tratte-di-piste-ciclabili-ciclopedonali-in-gestione-a-friuli-venezia-giulia-strade-s-p-a",
+  "piattaforma": "www.fvgstrade.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCA09FA17",
+  "url": "https://appalti.fnmgroup.it/PortaleAppalti/it/procedure/codice/1282-2026",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC7C91941",
+  "url": "https://trasparenza.aci.it/aci/informatica/page/10/details/54929/lav0194l26.html",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCA58983A",
+  "url": "https://app.albofornitori.it/alboeproc/albo_regioneumbria",
+  "piattaforma": "app.albofornitori.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC7B818CB",
+  "url": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26010",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCDEC429F",
+  "url": "https://reggiocal.tuttogare.it/gare/dettaglio.php?codice=327",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCD10AEC3",
+  "url": "https://appalti.ibleaacque.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=383",
+  "piattaforma": "appalti.ibleaacque.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ }
+]
