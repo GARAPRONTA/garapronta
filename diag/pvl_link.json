@@ -1,0 +1,1061 @@
+{
+ "BDDFD49421": {
+  "esito": "nessun file trovato",
+  "usato": "https://amagportalegare.aflink.it/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://amagportalegare.aflink.it/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://amagportalegare.aflink.it/"
+   ]
+  ]
+ },
+ "BDE04BEB7A": {
+  "esito": "bloccata (HTTP 404)",
+  "usato": "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8536",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8536"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://autobrennero.acquistitelematici.it/tender-esiti/dettaglio/8536"
+   ]
+  ]
+ },
+ "BDE51F7561": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/aperta/gara-asp/3096ac8eca8a3a77"
+   ]
+  ]
+ },
+ "BDE50FD712": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://suaprovinciaavellino.traspare.com/announcements/1279",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://suaprovinciaavellino.traspare.com/announcements/1279"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://suaprovinciaavellino.traspare.com/announcements/1279"
+   ]
+  ]
+ },
+ "BDE53B7714": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1811",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1811"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1811"
+   ]
+  ]
+ },
+ "B80CA55C30": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.comune.cogoleto.ge.it/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.comune.cogoleto.ge.it/"
+   ]
+  ]
+ },
+ "BDE02DDE8A": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://cucunionevallesusa.traspare.com/announcements/1450",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://cucunionevallesusa.traspare.com/announcements/1450"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://cucunionevallesusa.traspare.com/announcements/1450"
+   ]
+  ]
+ },
+ "BDE15027B9": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.acquistinretepa.it/bandi/negoziata/adi/af1602555d075807",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/negoziata/adi/af1602555d075807"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/negoziata/adi/af1602555d075807"
+   ]
+  ]
+ },
+ "BDE52FCCC1": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://servizi.provincia.biella.it/openweb/trasparenza/index.php?layout=true",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://servizi.provincia.biella.it/openweb/trasparenza/index.php?layout=true"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://servizi.provincia.biella.it/openweb/trasparenza/index.php?layout=true"
+   ]
+  ]
+ },
+ "BD441AF1A9": {
+  "esito": "nessun file trovato",
+  "usato": "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara ",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara "
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://comune.rho.mi.it/it-it/amministrazione/bandi-di-gara "
+   ]
+  ]
+ },
+ "BDE4225736": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://comunefrancavillaangitola.tuttogare.it/gare/dettaglio.php?codice=394",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://comunefrancavillaangitola.tuttogare.it/gare/dettaglio.php?codice=394"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://comunefrancavillaangitola.tuttogare.it/gare/dettaglio.php?codice=394"
+   ]
+  ]
+ },
+ "BDDD54702B": {
+  "esito": "nessun file trovato",
+  "usato": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:806286-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_deef66da-0a58-4431-cc25-d7e071c71391"
+   ]
+  ]
+ },
+ "BDE68A9FEE": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.ariaspa.it/wps/portal/Aria/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.ariaspa.it/wps/portal/Aria/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.ariaspa.it/wps/portal/Aria/"
+   ]
+  ]
+ },
+ "BDE7F9498A": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=212",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=212"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=212"
+   ]
+  ]
+ },
+ "BDE096A674": {
+  "esito": "bloccata (URLError)",
+  "usato": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:810845-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120"
+   ]
+  ]
+ },
+ "BDE3CAA16D": {
+  "esito": "nessun file trovato",
+  "usato": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:808161-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx"
+   ]
+  ]
+ },
+ "BDE74F883A": {
+  "esito": "nessun file trovato",
+  "usato": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search="
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search="
+   ]
+  ]
+ },
+ "BDEE968E8F": {
+  "esito": "nessun file trovato",
+  "usato": "https://comunesantantonioabate-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00494",
+  "link": []
+ },
+ "BDEC190D41": {
+  "esito": "nessun file trovato",
+  "usato": "https://uc.casentino.toscana.it/trasparenza",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://uc.casentino.toscana.it/trasparenza"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://uc.casentino.toscana.it/trasparenza"
+   ]
+  ]
+ },
+ "BDCA1D9D35": {
+  "esito": "troppo lenta",
+  "usato": "https://drive.google.com/drive/folders/19f_wNY_wZvfTR-C8i-iJ1aFXm0uCKhy2?usp=drive_link",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://drive.google.com/drive/folders/19f_wNY_wZvfTR-C8i-iJ1aFXm0uCKhy2?usp=drive_link"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://drive.google.com/drive/folders/19f_wNY_wZvfTR-C8i-iJ1aFXm0uCKhy2?usp=drive_link"
+   ]
+  ]
+ },
+ "BDEF6D962C": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.acquistinretepa.it/bandi/negoziata/adi/7d9ef22e4a952d8d",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/negoziata/adi/7d9ef22e4a952d8d"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/negoziata/adi/7d9ef22e4a952d8d"
+   ]
+  ]
+ },
+ "BDEEFFFEB7": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240"
+   ]
+  ]
+ },
+ "BDEA12F4F7": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392"
+   ]
+  ]
+ },
+ "BDECEB0207": {
+  "esito": "bloccata (HTTP 500)",
+  "usato": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304"
+   ],
+   [
+    ".templates[0].template.sections[2].items[3].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304"
+   ]
+  ]
+ },
+ "BDE4D1D473": {
+  "esito": "bloccata (URLError)",
+  "usato": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:811963-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/amministrazione_trasparente/_lombardia/_azienda_lombardia_per_l__edilizia_residenziale_di_brescia_cremona_mantova/110_ban_gar_con/020_att_amm_agg_pro/2026/Documenti_1795082386531/"
+   ]
+  ]
+ },
+ "BDEFBAC155": {
+  "esito": "nessun file trovato",
+  "usato": "https://orzinuovi.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8503375",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://orzinuovi.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8503375"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://orzinuovi.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8503375"
+   ]
+  ]
+ },
+ "BDEF6E4F3D": {
+  "esito": "bloccata (HTTP 500)",
+  "usato": "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436"
+   ]
+  ]
+ },
+ "BDEC8F89E3": {
+  "esito": "bloccata (HTTP 500)",
+  "usato": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306"
+   ],
+   [
+    ".templates[0].template.sections[2].items[3].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26306"
+   ]
+  ]
+ },
+ "BDEDA54D30": {
+  "esito": "bloccata (URLError)",
+  "usato": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012"
+   ],
+   [
+    ".templates[0].template.sections[2].items[3].documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012"
+   ],
+   [
+    ".templates[0].template.sections[2].items[4].documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26012"
+   ]
+  ]
+ },
+ "BDEA7A59E2": {
+  "esito": "nessun file trovato",
+  "usato": "https://comunetiriolo.tuttogare.it/gare/dettaglio.php?codice=25",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://comunetiriolo.tuttogare.it/gare/dettaglio.php?codice=25"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://comunetiriolo.tuttogare.it/gare/dettaglio.php?codice=25"
+   ]
+  ]
+ },
+ "BDED97A94B": {
+  "esito": "bloccata (HTTP 404)",
+  "usato": "https://provincia-rieti.acquistitelematici.it/tender-esiti/dettaglio/2700",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://provincia-rieti.acquistitelematici.it/tender-esiti/dettaglio/2700"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://provincia-rieti.acquistitelematici.it/tender-esiti/dettaglio/2700"
+   ]
+  ]
+ },
+ "BDEBA87F05": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.sintel.regione.lombardia.it/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.sintel.regione.lombardia.it/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.sintel.regione.lombardia.it/"
+   ]
+  ]
+ },
+ "BDED597433": {
+  "esito": "bloccata (URLError)",
+  "usato": "https://www.halleyweb.com/c018153/zf/index.php/bandi-gara/avvisi/avvisi",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.halleyweb.com/c018153/zf/index.php/bandi-gara/avvisi/avvisi"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.halleyweb.com/c018153/zf/index.php/bandi-gara/avvisi/avvisi"
+   ]
+  ]
+ },
+ "BDEF8C18E1": {
+  "esito": "bloccata (HTTP 500)",
+  "usato": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26305",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26305"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26305"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26305"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26305"
+   ],
+   [
+    ".templates[0].template.sections[2].items[3].documenti_di_gara_link",
+    "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26305"
+   ]
+  ]
+ },
+ "BDF282113B": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738"
+   ]
+  ]
+ },
+ "BDEDA3A7BD": {
+  "esito": "nessun file trovato",
+  "usato": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:823186-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia"
+   ]
+  ]
+ },
+ "BDF4826D98": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://cucdellagodiocchito.traspare.com/announcements/332",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://cucdellagodiocchito.traspare.com/announcements/332"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://cucdellagodiocchito.traspare.com/announcements/332"
+   ]
+  ]
+ },
+ "BDF0795571": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml"
+   ]
+  ]
+ },
+ "BDF18B24C2": {
+  "esito": "nessun file trovato",
+  "usato": "https://trasparenza.comune.cremona.it/bandi-gara-contratti/atti-amministrazioni-aggiudicatrici-enti-aggiudicatori-distintamente-ogni-procedura?sf=3130",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://trasparenza.comune.cremona.it/bandi-gara-contratti/atti-amministrazioni-aggiudicatrici-enti-aggiudicatori-distintamente-ogni-procedura?sf=3130"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://trasparenza.comune.cremona.it/bandi-gara-contratti/atti-amministrazioni-aggiudicatrici-enti-aggiudicatori-distintamente-ogni-procedura?sf=3130"
+   ]
+  ]
+ },
+ "BDEA04A7FC": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/61205",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:815969-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/61205"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/61205"
+   ]
+  ]
+ },
+ "BDF4F8A6EE": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://massafra.traspare.com/announcements/861",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://massafra.traspare.com/announcements/861"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://massafra.traspare.com/announcements/861"
+   ]
+  ]
+ },
+ "BDEB96D651": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/piattaforma-sintel",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/piattaforma-sintel"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement/piattaforma-sintel"
+   ]
+  ]
+ },
+ "BDF5A1BF28": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://cucdellagodiocchito.traspare.com/announcements/333",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://cucdellagodiocchito.traspare.com/announcements/333"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://cucdellagodiocchito.traspare.com/announcements/333"
+   ]
+  ]
+ },
+ "BDF0BE32D8": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016"
+   ]
+  ]
+ },
+ "BDF50EA968": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.ariaspa.it",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.ariaspa.it"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.ariaspa.it"
+   ]
+  ]
+ },
+ "BDF5B38A5A": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://comunedicosenza.traspare.com/announcements/1077",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://comunedicosenza.traspare.com/announcements/1077"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://comunedicosenza.traspare.com/announcements/1077"
+   ]
+  ]
+ },
+ "BDF26B225F": {
+  "esito": "nessun file trovato",
+  "usato": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1074228",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1074228"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1074228"
+   ]
+  ]
+ },
+ "BDEAE35445": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/880751a639bbbd4e",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:814952-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/aperta/gara-asp/880751a639bbbd4e"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/aperta/gara-asp/880751a639bbbd4e"
+   ]
+  ]
+ },
+ "BDF1724C4F": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=737",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=737"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=737"
+   ]
+  ]
+ },
+ "BDFA177267": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=49",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=49"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=49"
+   ]
+  ]
+ },
+ "BDF68F50AF": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.ats-brianza.it",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.ats-brianza.it"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.ats-brianza.it"
+   ]
+  ]
+ },
+ "BDF97C6304": {
+  "esito": "link senza file",
+  "usato": "https://acquistionline.trenord.it",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://acquistionline.trenord.it"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://acquistionline.trenord.it"
+   ]
+  ]
+ },
+ "BCEC107BE9": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.ariaspa.it/wps/portal/Aria/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.ariaspa.it/wps/portal/Aria/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.ariaspa.it/wps/portal/Aria/"
+   ]
+  ]
+ },
+ "BDF6D1AC3C": {
+  "esito": "bloccata (URLError)",
+  "usato": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013"
+   ]
+  ]
+ },
+ "BDF69D6A59": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795"
+   ]
+  ]
+ },
+ "BDFC0D227E": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217"
+   ]
+  ]
+ },
+ "BDF018EC1C": {
+  "esito": "bloccata (HTTP 500)",
+  "usato": "http://eprocurement.gruppofs.it",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:819029-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "http://eprocurement.gruppofs.it"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "http://eprocurement.gruppofs.it"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "http://eprocurement.gruppofs.it"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "http://eprocurement.gruppofs.it"
+   ]
+  ]
+ },
+ "BDF804C368": {
+  "esito": "bloccata (HTTP 403)",
+  "usato": "https://trasparenza.porto.trieste.it/page/10/bandi-di-gara-e-contratti.html",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:821662-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://trasparenza.porto.trieste.it/page/10/bandi-di-gara-e-contratti.html"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://trasparenza.porto.trieste.it/page/10/bandi-di-gara-e-contratti.html"
+   ]
+  ]
+ },
+ "BDFFE68501": {
+  "esito": "nessun file trovato",
+  "usato": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790"
+   ]
+  ]
+ },
+ "BDFA961A4D": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interventi-di-manutenzione-straordinaria-e-di-ripristino-funzionale-dei-conglomerati-bituminosi",
+  "link": [
+   [
+    ".templates[0].template.metadata.link_eform_ted",
+    "https://ted.europa.eu/udl?uri=TED:NOTICE:824137-2026:TEXT:IT:HTML"
+   ],
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interventi-di-manutenzione-straordinaria-e-di-ripristino-funzionale-dei-conglomerati-bituminosi"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interventi-di-manutenzione-straordinaria-e-di-ripristino-funzionale-dei-conglomerati-bituminosi"
+   ],
+   [
+    ".templates[0].template.sections[2].items[1].documenti_di_gara_link",
+    "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interventi-di-manutenzione-straordinaria-e-di-ripristino-funzionale-dei-conglomerati-bituminosi"
+   ],
+   [
+    ".templates[0].template.sections[2].items[2].documenti_di_gara_link",
+    "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interventi-di-manutenzione-straordinaria-e-di-ripristino-funzionale-dei-conglomerati-bituminosi"
+   ]
+  ]
+ },
+ "BE00789D8C": {
+  "esito": "nessun file trovato",
+  "usato": "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658"
+   ]
+  ]
+ },
+ "BDEA5594A8": {
+  "esito": "documenti riservati agli invitati",
+  "usato": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386"
+   ]
+  ]
+ },
+ "BE0194E782": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.cittametropolitana.mi.it/_cmmi_ext/amministrazione-trasparente/scheda/?id=AT3966 ",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.cittametropolitana.mi.it/_cmmi_ext/amministrazione-trasparente/scheda/?id=AT3966 "
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.cittametropolitana.mi.it/_cmmi_ext/amministrazione-trasparente/scheda/?id=AT3966 "
+   ]
+  ]
+ },
+ "BE00E35F08": {
+  "esito": "nessun file trovato",
+  "usato": "https://bandi.sanluigi.piemonte.it/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://bandi.sanluigi.piemonte.it/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://bandi.sanluigi.piemonte.it/"
+   ]
+  ]
+ },
+ "BDFCAFB4E7": {
+  "esito": "bloccata (URLError)",
+  "usato": "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267"
+   ]
+  ]
+ },
+ "BE011E05EE": {
+  "esito": "nessun file trovato",
+  "usato": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia"
+   ]
+  ]
+ },
+ "BD8B91B68A": {
+  "esito": "nessun file trovato",
+  "usato": "https://eappalti.regione.fvg.it/",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://eappalti.regione.fvg.it/"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://eappalti.regione.fvg.it/"
+   ]
+  ]
+ },
+ "BE029B0C80": {
+  "esito": "nessun file trovato",
+  "usato": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/29cade40f39ca284",
+  "link": [
+   [
+    ".templates[0].template.sections[1].fields.documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/aperta/gara-asp/29cade40f39ca284"
+   ],
+   [
+    ".templates[0].template.sections[2].items[0].documenti_di_gara_link",
+    "https://www.acquistinretepa.it/bandi/aperta/gara-asp/29cade40f39ca284"
+   ]
+  ]
+ }
+}
