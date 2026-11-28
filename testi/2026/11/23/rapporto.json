@@ -1,171 +1,11 @@
 [
  {
-  "cig": "BDE833475A",
-  "url": "https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
-  "piattaforma": "TuttoGare",
-  "esito": "link senza file",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE68A9FEE",
-  "url": "https://www.ariaspa.it/wps/portal/Aria/",
-  "piattaforma": "www.ariaspa.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE939E2F5",
-  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125319",
-  "piattaforma": "piattaforma.asmecomm.it",
-  "esito": "link senza file",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE97FCD8C",
-  "url": "https://provincia-isernia.acquistitelematici.it/tender/664",
-  "piattaforma": "provincia-isernia.acquistitelematici.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE8A6676B",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1084883",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE7F9498A",
-  "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=212",
-  "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE096A674",
-  "url": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE7EF1309",
-  "url": "https://start.toscana.it/tendering/tenders/048481-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE9A06C51",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1071561",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE7340D1F",
-  "url": "https://garecomunedifondi.tuttogare.it/gare/dettaglio.php?codice=996",
-  "piattaforma": "TuttoGare",
-  "esito": "link senza file",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE8058B48",
-  "url": "https://poliba.tuttogare.it/gare/dettaglio.php?codice=840",
-  "piattaforma": "TuttoGare",
-  "esito": "link senza file",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE7D6081D",
-  "url": "https://gtprmc.regione.marche.it/PortaleAppalti/it/procedure/codice/G03586",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BDE85002F6",
   "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18746988",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
   "esito": "ok",
   "metodo": "diretto",
   "file": 1
- },
- {
-  "cig": "BDE60E0345",
-  "url": "https://appalti.ragusa.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=2988",
-  "piattaforma": "appalti.ragusa.lavoripubblici.sicilia.it",
-  "esito": "link senza file",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE3CAA16D",
-  "url": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
-  "piattaforma": "www.empulia.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE74F883A",
-  "url": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
-  "piattaforma": "vigevano.e-pal.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE8E04395",
-  "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=226856892 ",
-  "piattaforma": "www.sintel.regione.lombardia.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE5A69D82",
-  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124945",
-  "piattaforma": "piattaforma.asmecomm.it",
-  "esito": "link senza file",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE8F9A2A0",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1085222",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE6EBE4D2",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1065938",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE63A3AB2",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1079224",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "nessun file trovato",
-  "metodo": "diretto",
-  "file": 0
  },
  {
   "cig": "BDE5F18AF5",
@@ -200,11 +40,171 @@
   "file": 1
  },
  {
+  "cig": "BDE833475A",
+  "url": "https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDE68A9FEE",
+  "url": "https://www.ariaspa.it/wps/portal/Aria/",
+  "piattaforma": "www.ariaspa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE939E2F5",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125319",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDE97FCD8C",
+  "url": "https://provincia-isernia.acquistitelematici.it/tender/664",
+  "piattaforma": "provincia-isernia.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 12
+ },
+ {
+  "cig": "BDE8A6676B",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1084883",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDE7F9498A",
+  "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=212",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE096A674",
+  "url": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE7EF1309",
+  "url": "https://start.toscana.it/tendering/tenders/048481-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "errore TimeoutError",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE9A06C51",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1071561",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDE7340D1F",
+  "url": "https://garecomunedifondi.tuttogare.it/gare/dettaglio.php?codice=996",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDE8058B48",
+  "url": "https://poliba.tuttogare.it/gare/dettaglio.php?codice=840",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDE7D6081D",
+  "url": "https://gtprmc.regione.marche.it/PortaleAppalti/it/procedure/codice/G03586",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDE60E0345",
+  "url": "https://appalti.ragusa.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=2988",
+  "piattaforma": "appalti.ragusa.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDE3CAA16D",
+  "url": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+  "piattaforma": "www.empulia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE74F883A",
+  "url": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
+  "piattaforma": "vigevano.e-pal.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE8E04395",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=226856892 ",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 4
+ },
+ {
+  "cig": "BDE5A69D82",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124945",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDE8F9A2A0",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1085222",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 16
+ },
+ {
+  "cig": "BDE6EBE4D2",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1065938",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDE63A3AB2",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1079224",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
   "cig": "BDE81F501D",
   "url": "https://unionedeltappino.tuttogare.it/gare/dettaglio.php?codice=715",
   "piattaforma": "TuttoGare",
-  "esito": "link senza file",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
+  "file": 15
  }
 ]
