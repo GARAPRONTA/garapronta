@@ -1,0 +1,194 @@
+[
+ {
+  "cig": "BDC2750EB0",
+  "url": "https://crpiemonte.traspare.com/announcements/66",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDBF03DBD4",
+  "url": "https://cucterredimezzo.tuttogare.it/gare/dettaglio.php?codice=1415",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC3C43862",
+  "url": "https://comunepratella.tuttogare.it/gare/dettaglio.php?codice=137",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDC1BBF335",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18303569",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDC2CEE161",
+  "url": "https://eprocurement.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G13023",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDC28BCB13",
+  "url": "https://www.comune.verona.it/Amministrazione-Trasparente/Bandi-di-gara-e-contratti/Atti-e-documenti-relativi-alle-singole-procedure-e-link-alla-BDNCP/Gare-Documenti-Link-BDNCP-Art.-82-D.lgs-36-2023-Documenti-di-gara/Procedura-aperta-sotto-soglia-n.-40-26-Rifacimenti-e-completamenti-strade-Circ.-7-e-8",
+  "piattaforma": "www.comune.verona.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDBFB49992",
+  "url": "https://appalti.cittametropolitana.me.it/PortaleAppalti/it/procedure/codice/G00537",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDC255C217",
+  "url": "https://www.comune.verona.it/Amministrazione-Trasparente/Bandi-di-gara-e-contratti/Atti-e-documenti-relativi-alle-singole-procedure-e-link-alla-BDNCP/Gare-Documenti-Link-BDNCP-Art.-82-D.lgs-36-2023-Documenti-di-gara/Procedura-aperta-sotto-soglia-n.-39-26-Rifacimenti-e-completamenti-strade-Circ.-1-e-6",
+  "piattaforma": "www.comune.verona.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDC118204B",
+  "url": "https://comunecelle.tuttogare.it/gare/dettaglio.php?codice=1776",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDBE88B225",
+  "url": "https://comunegalatina.tuttogare.it/gare/dettaglio.php?codice=1446",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDBF99736E",
+  "url": "https://www.comune.padova.it/node/105252",
+  "piattaforma": "www.comune.padova.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 3
+ },
+ {
+  "cig": "BDC320764B",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18468305",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDC1B4F6C7",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124189",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC31A014D",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/22add6bbeb95fca2",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDBE8D3D8C",
+  "url": "https://montedoro.traspare.com/announcements/30784",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC395D412",
+  "url": "https://www.ausschreibungen-suedtirol.it/tendering/tenders/084740-2026/view/detail/1",
+  "piattaforma": "www.ausschreibungen-suedtirol.it",
+  "esito": "ok",
+  "metodo": "server-IT/browser",
+  "file": 3
+ },
+ {
+  "cig": "BDC37C0F3D",
+  "url": "https://www.ausschreibungen-suedtirol.it/tendering/tenders/084797-2026/view/detail/1",
+  "piattaforma": "www.ausschreibungen-suedtirol.it",
+  "esito": "ok",
+  "metodo": "server-IT/browser",
+  "file": 3
+ },
+ {
+  "cig": "BDBCFA23AD",
+  "url": "https://portaleappalti.amiu.genova.it/PortaleAppalti/it/procedure/codice/G06880",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ },
+ {
+  "cig": "BDC2D8C3C3",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124140",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC32D3EA1",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1040100",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ },
+ {
+  "cig": "BDBF892C09",
+  "url": "https://sua.provincia.crotone.it/gare/dettaglio.php?codice=1077",
+  "piattaforma": "sua.provincia.crotone.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC011C7FC",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/a4d20be10952178d",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB8C0362F",
+  "url": "https://appalti-cas.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00873",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDC1862CAD",
+  "url": "https://start.toscana.it/tendering/tenders/046575-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 3
+ }
+]
