@@ -120,6 +120,14 @@
   "file": 10
  },
  {
+  "cig": "BDEA5594A8",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
   "cig": "BDF804C368",
   "url": "https://trasparenza.porto.trieste.it/page/10/bandi-di-gara-e-contratti.html",
   "piattaforma": "Traspare",
@@ -139,9 +147,9 @@
   "cig": "BE01543168",
   "url": "https://peccioli.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/10621828",
   "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
  },
  {
   "cig": "BDFA961A4D",
@@ -155,9 +163,9 @@
   "cig": "BE021C53C7",
   "url": "https://start.toscana.it/tendering/tenders/032775-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 15
  },
  {
   "cig": "BE00789D8C",
@@ -171,17 +179,9 @@
   "cig": "BE00F3E9B9",
   "url": "https://smlc.traspare.com/announcements/1663",
   "piattaforma": "Traspare",
-  "esito": "bloccata (HTTP 403)",
+  "esito": "ok",
   "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDEA5594A8",
-  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125386",
-  "piattaforma": "piattaforma.asmecomm.it",
-  "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
+  "file": 9
  },
  {
   "cig": "BE0194E782",
@@ -235,24 +235,24 @@
   "cig": "BE000B7CB4",
   "url": "https://start.toscana.it/tendering/tenders/049730-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 1
  },
  {
   "cig": "BDF80BCFD1",
   "url": "https://sestofiorentino.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/5777083",
   "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
  },
  {
   "cig": "BE00C58569",
   "url": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
-  "metodo": "diretto",
-  "file": 0
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 6
  }
 ]
