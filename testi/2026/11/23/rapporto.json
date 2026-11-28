@@ -48,28 +48,12 @@
   "file": 15
  },
  {
-  "cig": "BDE68A9FEE",
-  "url": "https://www.ariaspa.it/wps/portal/Aria/",
-  "piattaforma": "www.ariaspa.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
   "cig": "BDE939E2F5",
   "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125319",
   "piattaforma": "piattaforma.asmecomm.it",
   "esito": "ok",
   "metodo": "diretto",
   "file": 3
- },
- {
-  "cig": "BDE97FCD8C",
-  "url": "https://provincia-isernia.acquistitelematici.it/tender/664",
-  "piattaforma": "provincia-isernia.acquistitelematici.it",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
-  "file": 12
  },
  {
   "cig": "BDE8A6676B",
@@ -84,22 +68,6 @@
   "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=212",
   "piattaforma": "TuttoGare",
   "esito": "documenti riservati agli invitati",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE096A674",
-  "url": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
-  "piattaforma": "Traspare",
-  "esito": "bloccata (URLError)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
-  "cig": "BDE7EF1309",
-  "url": "https://start.toscana.it/tendering/tenders/048481-2026/view/detail/1",
-  "piattaforma": "start.toscana.it",
-  "esito": "errore TimeoutError",
   "metodo": "diretto",
   "file": 0
  },
@@ -142,22 +110,6 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 15
- },
- {
-  "cig": "BDE3CAA16D",
-  "url": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
-  "piattaforma": "www.empulia.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BDE74F883A",
-  "url": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
-  "piattaforma": "vigevano.e-pal.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
  },
  {
   "cig": "BDE8E04395",
@@ -206,5 +158,53 @@
   "esito": "ok",
   "metodo": "diretto",
   "file": 15
+ },
+ {
+  "cig": "BDE68A9FEE",
+  "url": "https://www.ariaspa.it/wps/portal/Aria/",
+  "piattaforma": "www.ariaspa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE97FCD8C",
+  "url": "https://provincia-isernia.acquistitelematici.it/tender/664",
+  "piattaforma": "provincia-isernia.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 12
+ },
+ {
+  "cig": "BDE096A674",
+  "url": "https://trasparenza.provincia.re.it/L190/?idSezione=266431&id=&justGrid=1&logo=1&ricerca=2026-4120",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDE7EF1309",
+  "url": "https://start.toscana.it/tendering/tenders/048481-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 5
+ },
+ {
+  "cig": "BDE3CAA16D",
+  "url": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+  "piattaforma": "www.empulia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDE74F883A",
+  "url": "https://vigevano.e-pal.it/L190/?idSezione=&activePage=&search=",
+  "piattaforma": "vigevano.e-pal.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
  }
 ]
