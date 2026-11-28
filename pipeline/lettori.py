@@ -5,7 +5,7 @@ Uso: trova(url, cig, titolo, get) -> lista di elementi:
       ("file", nome, bytes)            già scaricato (es. START)
 `get(url, method="GET", data=None, headers=None)` -> (status, headers_minuscoli, bytes, url_finale)
 """
-import base64, json, re
+import base64, json, re, time
 from html import unescape
 from urllib.parse import urljoin, urlparse, parse_qs, unquote
 
@@ -119,18 +119,23 @@ def start_toscana(url, get):
     atts = [a for a in info.get("attachments") or [] if a.get("file") and a.get("whoCanDownload") == "anyone"
             and not a.get("isDeleted")]
     atts.sort(key=lambda a: _prio(((a.get("description") or {}).get("it_IT") or "") + (a["file"].get("fileName") or "")))
-    out = []
-    for a in atts[:12]:
-        st, h, body, _ = get(f"{host}/tendering-api/tenders/{tipo}/{tid}/attachments/{a['id']}/template",
-                             headers={"accept": "application/json"})
-        if st != 200:
+    out, t0 = [], time.time()
+    for a in atts[:15]:
+        if time.time() - t0 > 240:
+            break
+        try:     # un allegato che non scende (troppo grande, lento) non deve far perdere gli altri
+            st, h, body, _ = get(f"{host}/tendering-api/tenders/{tipo}/{tid}/attachments/{a['id']}/template",
+                                 headers={"accept": "application/json"})
+            if st != 200:
+                continue
+            red = json.loads(body).get("redirectUrl")
+            if not red:
+                continue
+            st, h, data, _ = get(urljoin(host, red))
+            if st == 200 and data:
+                out.append(("file", a["file"].get("fileName") or "documento", data))
+        except Exception:
             continue
-        red = json.loads(body).get("redirectUrl")
-        if not red:
-            continue
-        st, h, data, _ = get(urljoin(host, red))
-        if st == 200 and data:
-            out.append(("file", a["file"].get("fileName") or "documento", data))
     return out
 
 

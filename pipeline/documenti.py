@@ -234,7 +234,7 @@ def _get(url, method="GET", data=None, headers=None):
     h.update(headers or {})
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_cookies))
     req = urllib.request.Request(url, data=data, headers=h, method=method)
-    fine = time.time() + 90
+    fine = time.time() + 150
     try:
         with opener.open(req, timeout=30) as r:
             buf = bytearray()
@@ -243,7 +243,7 @@ def _get(url, method="GET", data=None, headers=None):
                 if not pezzo:
                     break
                 buf += pezzo
-                if len(buf) > MAX_FILE or time.time() > fine:
+                if len(buf) > MAX_ARCH or time.time() > fine:     # archivi di progetto fino a 300 MB
                     raise ValueError("file troppo grande o lento")
             hd = {k.lower(): v for k, v in r.headers.items()}
             if "text/html" in hd.get("content-type", ""):
@@ -405,6 +405,8 @@ def gara(cig, url, titolo=""):
     if "start.toscana.it" in url:
         try:
             fl = [(e[1], e[2]) for e in lettori.start_toscana(url, _get) if e[0] == "file"]
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            return f"bloccata (START non raggiungibile: {type(e).__name__})", "api-start", []   # dall'estero: ci pensa il server italiano
         except Exception:
             fl = []
         if fl:
