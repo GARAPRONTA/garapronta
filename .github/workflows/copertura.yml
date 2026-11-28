@@ -1,0 +1,34 @@
+name: Copertura documenti (più giorni insieme)
+on:
+  workflow_dispatch:
+    inputs:
+      giorni:
+        description: 'Giorni come lista JSON, es. ["28/10/2026","29/10/2026"]'
+        required: true
+permissions:
+  contents: write
+jobs:
+  giorno:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        data: ${{ fromJson(github.event.inputs.giorni) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends poppler-utils sshpass p7zip-full tesseract-ocr tesseract-ocr-ita >/dev/null
+          pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+      - env:
+          DATA: ${{ matrix.data }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          SSHPASS: ${{ secrets.VPS_PASSWORD }}
+        run: python pipeline/documenti.py
+      - run: |
+          git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
+          git add testi/ && git commit -q -m "Documenti di gara ${{ matrix.data }} (copertura)" || exit 0
+          for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase -X theirs origin main && git push -q && break; sleep $((RANDOM % 20 + 5)); done

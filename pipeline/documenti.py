@@ -693,16 +693,17 @@ def lista(tsv, outdir):
 def vps_giro(falliti, unici, titoli, base):
     """Manda le gare fallite al server italiano, le fa leggere lì e riporta indietro i testi."""
     host, d = os.environ["VPS_HOST"], os.path.dirname(os.path.abspath(__file__))
+    tag = re.sub(r"\W", "", base)[-8:]          # cartelle separate per giorno: più giorni possono girare insieme
     ssh = ["sshpass", "-e", "ssh", "-o", "StrictHostKeyChecking=no", "-o", "ConnectTimeout=20", f"root@{host}"]
     scp = ["sshpass", "-e", "scp", "-o", "StrictHostKeyChecking=no"]
-    with open("/tmp/vps.tsv", "w", encoding="utf-8") as f:
+    with open(f"/tmp/vps_{tag}.tsv", "w", encoding="utf-8") as f:
         for u in falliti:
             t = titoli.get(unici[u], "").replace("\t", " ").replace("\n", " ")
             f.write(f"{u}\t{unici[u]}\t{t}\n")
-    subprocess.run(scp + [f"{d}/lettori.py", f"{d}/documenti.py", "/tmp/vps.tsv", f"root@{host}:/opt/garapronta/"],
+    subprocess.run(scp + [f"{d}/lettori.py", f"{d}/documenti.py", f"/tmp/vps_{tag}.tsv", f"root@{host}:/opt/garapronta/"],
                    check=True, timeout=120)
-    r = subprocess.run(ssh + ["cd /opt/garapronta && rm -rf /tmp/gp && mkdir -p /tmp/gp && "
-                              "./venv/bin/python documenti.py --lista vps.tsv /tmp/gp"],
+    r = subprocess.run(ssh + [f"cd /opt/garapronta && rm -rf /tmp/gp_{tag} && mkdir -p /tmp/gp_{tag} && "
+                              f"./venv/bin/python documenti.py --lista vps_{tag}.tsv /tmp/gp_{tag}"],
                        capture_output=True, text=True, timeout=3600)
     out = {}
     for l in r.stdout.splitlines():
@@ -715,7 +716,7 @@ def vps_giro(falliti, unici, titoli, base):
     ok = {u: x for u, x in out.items() if x.get("file", 0) > 0}
     if ok:
         os.makedirs(base, exist_ok=True)
-        tar = subprocess.run(ssh + ["tar czf - -C /tmp/gp ."], capture_output=True, timeout=600).stdout
+        tar = subprocess.run(ssh + [f"tar czf - -C /tmp/gp_{tag} ."], capture_output=True, timeout=600).stdout
         subprocess.run(["tar", "xzf", "-", "-C", base], input=tar, check=True)
     return ok
 
