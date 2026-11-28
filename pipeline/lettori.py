@@ -198,6 +198,10 @@ def intercenter(url, get):
     return [("url", a["url"].replace(" ", "%20")) for a in alle[:15]]
 
 
+class Riservata(Exception):
+    """La scheda della gara non è pubblica: procedura a inviti, documenti solo agli invitati."""
+
+
 def trova(url, cig, titolo, get):
     """Restituisce i documenti da scaricare per una gara."""
     if "intercenter.regione.emilia-romagna.it" in url and "BANDO_GARA_PORTALE@" in url:
@@ -209,6 +213,9 @@ def trova(url, cig, titolo, get):
         raise PermissionError(f"HTTP {st}")
     if body[:4] == b"%PDF":
         return [("file", unquote(urlparse(fu).path.rsplit("/", 1)[-1]) or "documento.pdf", body)]
+    # piattaforme TuttoGare/Asmecomm/Sicilia: la scheda di una gara a inviti rimanda subito alla home
+    if "/gare/dettaglio.php" in url and len(body) < 400 and re.search(rb"refresh[^>]+index\.php", body, re.I):
+        raise Riservata()
     html = body.decode("utf-8", "ignore")
     links = link_file(html, fu)
     if links:

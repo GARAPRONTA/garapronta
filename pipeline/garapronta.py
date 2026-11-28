@@ -1223,6 +1223,7 @@ table.u th{{width:auto;font-size:11px;padding:6px 8px 6px 0}} table.u td{{font-s
 <div style="margin-top:22px"><a class="btn" href="{e(a.get("link") or SITE)}">Apri i documenti di gara</a>
 {f'<a class="btn" style="background:#f0f0f3;color:#1d1d1f;margin-left:8px" href="{e(url_anac(a))}">Avviso ufficiale ANAC</a>' if url_anac(a) else ''}</div>
 {('<p class="uff" style="margin-top:12px;color:#c2410c">Il link indicato dall\'ente non porta alla pagina della gara (o la gara non è ancora visibile sulla piattaforma). Usa l\'avviso ufficiale ANAC e, per i documenti, contatta l\'ente o riprova nei prossimi giorni: noi ricontrolliamo ogni mattina.</p>') if esito_documenti(it).startswith(("nessun file", "bloccata", "link senza")) else ''}
+{('<p class="uff" style="margin-top:12px;color:#c2410c">Procedura a inviti: sulla piattaforma la scheda e i documenti sono visibili solo alle imprese invitate. Se ti interessa, chiedi all\'ente di essere invitato o iscriviti al suo elenco operatori.</p>') if esito_documenti(it).startswith("documenti riservati") else ''}
 </div>
 {blocco_st}
 {blocco_comp}

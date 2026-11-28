@@ -237,24 +237,41 @@ def _get(url, method="GET", data=None, headers=None):
         return e.code, {k.lower(): v for k, v in (e.headers or {}).items()}, b"", url
 
 
+COOKIE_NO = ("Solo cookies tecnici", "Solo cookie tecnici", "Rifiuta", "Rifiuta tutti", "Rifiuto", "Accetta solo necessari",
+             "Solo necessari", "Accetto i cookie", "Ho capito", "OK")   # prima le scelte più riservate
+CLICCABILI = ("a, label, span, button, td, li, div[onclick], [data-chiave-allegato]")
+EST_RE = re.compile(r"\.(pdf|p7m|zip|7z|rar|docx?|odt|rtf)\s*(\(.*\))?\s*$", re.I)
+
+
 def browser_scarica(url):
-    """Browser automatico: per pagine dinamiche (es. MEPA). Legge i link dopo il caricamento e,
-    se non ce ne sono, clicca i documenti e cattura i download."""
+    """Browser automatico, come una persona: apre la pagina (segue i reindirizzamenti), chiude l'avviso cookie
+    con la scelta più riservata, apre la sezione documenti, poi scarica gli allegati pubblici.
+    Prima prova i link veri (con i cookie della stessa visita), poi clicca le voci che hanno nome di file
+    (piattaforme JSF come Sintel, window.open come Liferay e SardegnaCAT) e cattura download o finestre."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
         return [], []
-    files, links = [], []
+    files = []
     with sync_playwright() as p:
         b = p.chromium.launch()
         ctx = b.new_context(user_agent=UA, locale="it-IT", accept_downloads=True)
         pg = ctx.new_page()
         try:
-            pg.goto(url, wait_until="domcontentloaded", timeout=30000)
-            pg.wait_for_timeout(5000)
-            for t in ("Documenti di gara", "Documentazione", "Documenti", "Allegati"):
+            pg.goto(url, wait_until="domcontentloaded", timeout=60000)
+            for _ in range(6):
+                pg.wait_for_timeout(2500)
+                if pg.locator("a").count() > 15:
+                    break
+            for t in COOKIE_NO:
                 try:
-                    pg.get_by_text(t, exact=True).first.click(timeout=2000)
+                    pg.get_by_role("button", name=t, exact=True).first.click(timeout=800)
+                    break
+                except Exception:
+                    pass
+            for t in ("Documenti di gara", "Documentazione di gara", "Documentazione", "Documenti", "Allegati", "Atti di gara"):
+                try:
+                    pg.get_by_text(t, exact=True).first.click(timeout=1500)
                     pg.wait_for_timeout(2500)
                     break
                 except Exception:
@@ -266,16 +283,59 @@ def browser_scarica(url):
                 except Exception:
                     pass
             links = lettori.link_file(html, pg.url)
-            if not links:
-                cand = pg.locator("text=/\\.(pdf|p7m|zip)\\s*$/i")
-                for i in range(min(cand.count(), 10)):
+            # 1) link veri, scaricati dentro la stessa visita (stessi cookie: TuttoGare, Asmecomm, Maggioli)
+            t0 = time.time()
+            for u in links:
+                if len(files) >= MAX_FILES or time.time() - t0 > 120:
+                    break
+                try:
+                    r = ctx.request.get(u, timeout=60000, headers={"referer": pg.url})
+                    body = r.body()
+                    ct = r.headers.get("content-type", "")
+                    if r.ok and body and len(body) < MAX_FILE and ("text/html" not in ct or body[:4] == b"%PDF"):
+                        files.append((nome_file(u, {k.lower(): v for k, v in r.headers.items()}), body))
+                except Exception:
+                    continue
+            # 2) voci con nome di file ma senza link vero: si cliccano
+            if not files:
+                cand = pg.locator(CLICCABILI).filter(has_text=EST_RE)
+                visti, n = set(), 0
+                for i in range(min(cand.count(), 120)):
+                    if n >= MAX_FILES or time.time() - t0 > 170:
+                        break
+                    el = cand.nth(i)
                     try:
-                        with pg.expect_download(timeout=15000) as dl:
-                            cand.nth(i).click(timeout=5000)
-                        d = dl.value
-                        files.append((d.suggested_filename, open(d.path(), "rb").read()))
+                        testo = el.inner_text(timeout=1000).strip()
                     except Exception:
                         continue
+                    if not EST_RE.search(testo) or len(testo) > 200 or testo in visti or "\n" in testo.strip():
+                        continue
+                    visti.add(testo)
+                    try:
+                        with pg.expect_download(timeout=20000) as dl:
+                            el.click(timeout=4000)
+                        d = dl.value
+                        files.append((d.suggested_filename or testo, open(d.path(), "rb").read()))
+                        n += 1
+                        continue
+                    except Exception:
+                        pass
+                    # window.open: il file si apre in una nuova scheda
+                    try:
+                        nuove = [x for x in ctx.pages if x is not pg]
+                        if nuove:
+                            u = nuove[-1].url
+                            for x in nuove:
+                                x.close()
+                            if u.startswith("http"):
+                                r = ctx.request.get(u, timeout=60000, headers={"referer": pg.url})
+                                if r.ok and r.body():
+                                    files.append((testo, r.body()))
+                                    n += 1
+                    except Exception:
+                        pass
+        except Exception:
+            links = []
         finally:
             b.close()
     return links, files
@@ -327,10 +387,18 @@ def gara(cig, url, titolo=""):
     """Scarica i documenti di una gara. Restituisce (esito, metodo, files)."""
     metodo = "diretto"
     if "start.toscana.it" in url:
+        try:
+            fl = [(e[1], e[2]) for e in lettori.start_toscana(url, _get) if e[0] == "file"]
+        except Exception:
+            fl = []
+        if fl:
+            return "ok", "api-start", fl
         fl = browser_start(url)
         return ("ok" if fl else "nessun file trovato"), "browser-start", fl
     try:
         elementi = lettori.trova(url, cig, titolo, _get)
+    except lettori.Riservata:
+        return "documenti riservati agli invitati", metodo, []
     except PermissionError as e:
         return f"bloccata ({e})", metodo, []
     except Exception as e:
@@ -357,6 +425,10 @@ def gara(cig, url, titolo=""):
             files.append((nome_file(el[1], hd), data))
         except Exception:
             continue
+    if not files and metodo == "diretto":     # i link c'erano ma non danno file: riprovo come una persona, nel browser
+        _, fl = browser_scarica(url)
+        if fl:
+            return "ok", "browser", fl[:MAX_FILES]
     return ("ok" if files else "link senza file"), metodo, files
 
 
