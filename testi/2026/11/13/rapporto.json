@@ -1,0 +1,346 @@
+[
+ {
+  "cig": "BDC4BB0335",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124321",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDC3D9B444",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/898ee0d6bb5de096",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDBBECE09B",
+  "url": "https://sismaischia.acquistitelematici.it/",
+  "piattaforma": "sismaischia.acquistitelematici.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC46D94C0",
+  "url": "https://gtt-to.acquistitelematici.it/tender/9843",
+  "piattaforma": "gtt-to.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC4ABFC51",
+  "url": "https://carmagnolacuc.tuttogare.it/gare/dettaglio.php?codice=866",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC4A75F3F",
+  "url": "https://suaprovinciaavellino.traspare.com/announcements/1261",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC942A274",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_0ae677d4-db92-4721-cd57-70d6f3c41294",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC99E7EB2",
+  "url": "https://comunepescosannita.tuttogare.it/gare/dettaglio.php?codice=257",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDC6155FC5",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/2e54bfd87fbbe064",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDBEDB65EA",
+  "url": "https://cmdrc.tuttogare.it/gare/dettaglio.php?codice=455",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDBDBC46D3",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26044",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC83F95E3",
+  "url": "https://appalti-usr.regione.marche.it/PortaleAppalti/it/procedure/codice/G00556",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC7C6FD31",
+  "url": "https://appaltiecontratti.comune.rimini.it/PortaleAppalti/it/procedure/codice/G14048",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDC25027D0",
+  "url": "https://www.comune.lonato.bs.it/",
+  "piattaforma": "www.comune.lonato.bs.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC558939A",
+  "url": "https://suaprovinciaavellino.traspare.com/announcements/1259",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC9A0AB95",
+  "url": "https://www.muzza.it/",
+  "piattaforma": "www.muzza.it",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC46390B8",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18467500",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDC7EDBCD5",
+  "url": "https://eappalti.regione.fvg.it/esop/guest/go/opportunity/detail?opportunityId=26286",
+  "piattaforma": "eappalti.regione.fvg.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC444A839",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=941545",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDC97CD2BD",
+  "url": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/57251",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC94A364D",
+  "url": "https://unica.ubuy.cineca.it/PortaleAppalti/it/procedure/codice/G03306",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDC3AD4986",
+  "url": "https://www.comune.caraglio.cn.it/Dettaglibandi?ID=75145-1",
+  "piattaforma": "www.comune.caraglio.cn.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDC4F4EF5A",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124315",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDC95EE773",
+  "url": "https://appalticucascoli.regione.marche.it/PortaleAppalti/it/procedure/codice/G01225",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDBE3522D1",
+  "url": "https://adb-eprocurement.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00091",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDC130E713",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/c7ce1fb7d424e2fc",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC7563C7C",
+  "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18499497",
+  "piattaforma": "intercenter.regione.emilia-romagna.it",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDBD9CF962",
+  "url": "https://start.toscana.it/tendering/tenders/032662-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "bloccata (START non raggiungibile: URLError)",
+  "metodo": "api-start",
+  "file": 0
+ },
+ {
+  "cig": "BDC7B3386D",
+  "url": "https://unionecomunimonviso.tuttogare.it/gare/dettaglio.php?codice=397",
+  "piattaforma": "TuttoGare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC8384556",
+  "url": "https://comune.legnano.mi.it/amministrazione-trasparente/sezioni/3660943-documenti-gara-anno-2026",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BD1648BFE8",
+  "url": "https://www.sintel.regione.lombardia.it/fwep/welcomeSintel.do",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC3DCEE57",
+  "url": "https://baroniacuc.tuttogare.it/gare/dettaglio.php?codice=135",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BDC557FB57",
+  "url": "https://gare-provincia-trapani.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00363",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC89B5153",
+  "url": "https://fano.tuttogare.it/gare/dettaglio.php?codice=2348",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDC63140AA",
+  "url": "https://www.regione.sardegna.it/atti-bandi-archivi/atti-amministrativi/bandi/179440696134417",
+  "piattaforma": "www.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDC416009D",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC0F160A7",
+  "url": "https://appalti.comune.cagliari.it/PortaleAppalti/it/procedure/codice/G02284",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDC6BFCA2B",
+  "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=44",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC7BD2BA2",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124358",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDC963A62B",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/1666e7f34d390300",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC86FB151",
+  "url": "https://appalti.fnmgroup.it/PortaleAppalti/it/procedure/codice/1271-2026",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDC4C8FB39",
+  "url": "https://gtprmc.regione.marche.it/PortaleAppalti/it/procedure/codice/G03236",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDC68D5039",
+  "url": "https://start.toscana.it/tendering/tenders/046684-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 11
+ }
+]
