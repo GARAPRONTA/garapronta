@@ -1,0 +1,218 @@
+[
+ {
+  "cig": "BDB4703564",
+  "url": "https://sintel.regione.lombardia.it ",
+  "piattaforma": "sintel.regione.lombardia.it ",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB91EA51A",
+  "url": "https://direzioneregionalemuseipiemonte.acquistitelematici.it/tender/227",
+  "piattaforma": "direzioneregionalemuseipiemonte.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDB72A13DE",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1047083",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDB43EC8A2",
+  "url": "https://provcaserta-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/GARA_N1397",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDB5F918C2",
+  "url": "https://direzioneregionalemuseipiemonte.acquistitelematici.it/tender/229",
+  "piattaforma": "direzioneregionalemuseipiemonte.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDB6E6447F",
+  "url": "https://bollate.portaletrasparenza.net/it/trasparenza/bandi-di-gara-e-contratti.html",
+  "piattaforma": "Traspare",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDB49921EB",
+  "url": "https://www.sintel.regione.lombardia.it/fwep/prepareLaunchSavedAuctionV2.do?savedAuctionId=226263938",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB742B900",
+  "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03225",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BDB5B32D53",
+  "url": "https://castelfidardo.tuttogare.it/gare/dettaglio.php?codice=1788",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB92CBEC4",
+  "url": "https://comune.sarezzo.bs.it/amministrazione-trasparente/sezioni/620750-atti-relativi-procedure-affidamento-appalti/contenuti/3678704-lavori-riqualificazione-viabilita-ed-area-verde",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDB040A0E5",
+  "url": "https://gtprmc.regione.marche.it/PortaleAppalti/it/procedure/codice/G03519",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "server-IT/diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDB3B12AAB",
+  "url": "https://cucunionevalledeltorbido.tuttogare.it/gare/dettaglio.php?codice=88",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDB4A86B43",
+  "url": "https://portalegare.avmspa.it/PortaleAppalti/it/procedure/codice/G40775",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDA956FA9B",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26153",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB4D7FF41",
+  "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03207",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDB6C19018",
+  "url": "https://gestioneacqua.acquistitelematici.it/tender/2034",
+  "piattaforma": "gestioneacqua.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDB6E6DBEA",
+  "url": "https://provanco.tuttogare.it/gare/dettaglio.php?codice=853",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 13
+ },
+ {
+  "cig": "BDB885C29A",
+  "url": "https://comunecardeto.tuttogare.it/gare/dettaglio.php?codice=198",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB7FC3A45",
+  "url": "https://provcaserta-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/GARA_N1398",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BDB6F5D1FB",
+  "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=7835",
+  "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BDB814ACEE",
+  "url": "https://amministrazionetrasparente.asst-val.it/bando-gara/dgr-xii-1517-2023-e-dgr-xii-862-2023-trasferimento-del-servizio-di-farmacia-dal-padiglione-servizi-amministrativi-al-pad-1-p-o-di-sondalo-cup-f68123000990002-avviso-di/",
+  "piattaforma": "Traspare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDB58CF51F",
+  "url": "https://www.comune.padova.it/node/104962",
+  "piattaforma": "www.comune.padova.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 2
+ },
+ {
+  "cig": "BDB44354E1",
+  "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=40",
+  "piattaforma": "TuttoGare",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB85EF223",
+  "url": "https://pgt.regione.campania.it/portalegare/",
+  "piattaforma": "pgt.regione.campania.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDB65D32C7",
+  "url": "https://appaltiecontratti.comune.rimini.it/PortaleAppalti/it/procedure/codice/G14246",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDB4AFCCA3",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1036121",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDB8AE3884",
+  "url": "https://sua.provincia.crotone.it/gare/dettaglio.php?codice=1074",
+  "piattaforma": "sua.provincia.crotone.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ }
+]
