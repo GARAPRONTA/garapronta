@@ -123,8 +123,8 @@
   "cig": "BDF282113B",
   "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
   "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  },
  {
@@ -203,16 +203,16 @@
   "cig": "BDF0BE32D8",
   "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8016",
   "piattaforma": "appalti.regionesiciliana.lavoripubblici.sicilia.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  },
  {
   "cig": "BDF0A2639E",
   "url": "https://cucfrascineto.acquistitelematici.it/tender/1576",
   "piattaforma": "cucfrascineto.acquistitelematici.it",
-  "esito": "file senza testo (scansioni?)",
-  "metodo": "server-IT/diretto",
+  "esito": "ok",
+  "metodo": "diretto",
   "file": 4
  },
  {
@@ -259,8 +259,8 @@
   "cig": "BDF1724C4F",
   "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=737",
   "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  }
 ]
