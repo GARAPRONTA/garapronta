@@ -1,0 +1,231 @@
+{
+ "url": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+  "byte": 1119,
+  "secondi": 0.1,
+  "tipo": "text/html; charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 0.1,
+  "attesa_s": 5.2,
+  "url_finale": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+  "link": [
+   [
+    "",
+    "https://www.regione.toscana.it/",
+    null
+   ],
+   [
+    "",
+    "/",
+    null
+   ],
+   [
+    "Italiano",
+    null,
+    null
+   ],
+   [
+    "HOME",
+    "/",
+    null
+   ],
+   [
+    "BANDI E AVVISI",
+    "/initiatives/list",
+    null
+   ],
+   [
+    "E-PROCUREMENT",
+    "/sourcing",
+    null
+   ],
+   [
+    "SISTEMA DINAMICO ACQUISTO",
+    "/dynamic-purchasing-system",
+    null
+   ],
+   [
+    "MERCATO ELETTRONICO",
+    "/marketplace",
+    null
+   ],
+   [
+    "start.oe@accenture.com",
+    "mailto:start.oe@accenture.com",
+    null
+   ],
+   [
+    "start.sa@pamercato.it",
+    "mailto:start.sa@pamercato.it",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/bolzano/documenti/CookiePolicy.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884 ",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/bolzano/documenti/CookiePolicy.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "Cliccare qui",
+    "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884",
+    null
+   ],
+   [
+    "Cliccare qui",
+    "https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ],
+   [
+    "cliccare qui.",
+    "/pleiade/comune/Informativa_sui_cookie.pdf",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Accetto i cookie",
+   "ACCETTO I COOKIE",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie",
+   "Accetto i cookie"
+  ],
+  "rete": [
+   "GET https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+   "GET https://start.toscana.it/tendering/inline.318b50c57b4eba3d437b.bundle.js",
+   "GET https://start.toscana.it/tendering/polyfills.a099562730b92de100f0.bundle.js",
+   "GET https://start.toscana.it/tendering/main.8d2980150bed3dc5ade4.bundle.js",
+   "GET https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,greek,greek-ext",
+   "GET https://start.toscana.it/cookie-api/cookie/is-enabled",
+   "GET https://start.toscana.it/users-api/user",
+   "GET https://start.toscana.it/api/menu/top",
+   "GET https://start.toscana.it/tendering-api/locales",
+   "GET https://start.toscana.it/users-api/user",
+   "GET https://start.toscana.it/users-api/user",
+   "GET https://start.toscana.it/tendering-api/tenders/049760-2026/document-request-counter",
+   "GET https://start.toscana.it/tendering-api/tenders/tenderType/049760-2026",
+   "GET https://start.toscana.it/tendering-api/doc-procedure/tenders/049760-2026/doc-procedure-count",
+   "GET https://start.toscana.it/tendering/translations/it_IT.json",
+   "GET https://start.toscana.it/tendering/translations/tenants/start/it_IT.json",
+   "GET https://start.toscana.it/tendering-api/tenders/049760-2026/user-metadata-lite",
+   "GET https://start.toscana.it/tendering-api/tenders/open_procedure/049760-2026/basic-info",
+   "GET https://start.toscana.it/tendering-api/tenders/isNpaPcpEnabled/049760-2026",
+   "GET https://start.toscana.it/tendering-api/tenders/open_procedure/049760-2026/lots-paginated/0/100?isBeingPublished=false",
+   "GET https://start.toscana.it/tendering-api/tenders/049760-2026/number-anac",
+   "GET https://start.toscana.it/tendering-api/tenders/metadataExt/open_procedure/resume?isNpaEnabled=true"
+  ]
+ }
+}

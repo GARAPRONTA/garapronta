@@ -1,0 +1,401 @@
+{
+ "url": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=G01790",
+  "byte": 34136,
+  "secondi": 2.0,
+  "tipo": "text/html;charset=utf-8"
+ },
+ "chrome": {
+  "commit_s": 0.6,
+  "attesa_s": 5.7,
+  "url_finale": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=G01790",
+  "link": [
+   [
+    "fun",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/do/funopen.action",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Vai alla pagina iniziale",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Vai alla pagina di aiuto alla navigazione",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp",
+    null
+   ],
+   [
+    "Vai alla mappa del sito",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppcommon_site_map.wp",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione standard",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?font=normal",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione grande",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?font=big",
+    null
+   ],
+   [
+    "Passa al testo con caratteri di dimensione molto grande",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?font=verybig",
+    null
+   ],
+   [
+    "Passa alla visualizzazione grafica",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?skin=normal",
+    null
+   ],
+   [
+    "Passa alla visualizzazione solo testo",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?skin=text",
+    null
+   ],
+   [
+    "Passa alla visualizzazione in alto contrasto e solo testo",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?skin=highcontrast",
+    null
+   ],
+   [
+    "Salta alla ricerca di contenuti",
+    "#searchform",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Accedi - Registrati",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_auth.wp",
+    null
+   ],
+   [
+    "",
+    "/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "A",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?font=normal",
+    null
+   ],
+   [
+    "A",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?font=big",
+    null
+   ],
+   [
+    "A",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?font=verybig",
+    null
+   ],
+   [
+    "Grafica",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?skin=normal",
+    null
+   ],
+   [
+    "Testo",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?skin=text",
+    null
+   ],
+   [
+    "Alto contrasto",
+    "\n\t\t\t\t\t\t\n\t\t\t\t\thttps://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?skin=highcontrast",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Home",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/homepage.wp",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Accedi - Registrati",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_auth.wp",
+    null
+   ],
+   [
+    "Accesso area riservata",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_accesso_area_riserv.wp",
+    null
+   ],
+   [
+    "Istruzioni e manuali",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_istruzioni.wp",
+    null
+   ],
+   [
+    "Assistenza operatori economici",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_assistenza_tecnica.wp",
+    null
+   ],
+   [
+    "News",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_news.wp",
+    null
+   ],
+   [
+    "Verifica documenti",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_verifica_doc.wp",
+    null
+   ],
+   [
+    "Avvisi, comunicazioni e atti di carattere generale",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_avvisi_atti_doc_gen.wp",
+    null
+   ],
+   [
+    "Avvisi di avvio consultazione",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_avvisi_avvio_consult.wp",
+    null
+   ],
+   [
+    "Avvisi pubblici",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_avvisi_lista.wp",
+    null
+   ],
+   [
+    "Delibere a contrarre o atto equivalente",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_delibere_contrarre.wp",
+    null
+   ],
+   [
+    "Gare e procedure",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_bandi_lista.wp",
+    null
+   ],
+   [
+    "Avvisi di aggiudicazione, esiti e affidamenti",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+    null
+   ],
+   [
+    "Riepilogo contratti - Link BDNCP",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_ammtrasp_contratti.wp",
+    null
+   ],
+   [
+    "Varianti in corso d'opera",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_varianti_corso_opera.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_oper_ec_bandi_avvisi.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione archiviati",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_op_ec_bandi_archiviati.wp",
+    null
+   ],
+   [
+    "Esiti affidamenti",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_oper_ec_esiti_aff.wp",
+    null
+   ],
+   [
+    "Prospetti annuali (art. 1 c. 32 L.190 del 6/11/2012)",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_ammtrasp_anticorr.wp",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al menù",
+    "#menu1",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Salta al contenuto della pagina",
+    "#mainarea",
+    null
+   ],
+   [
+    "Accessibilità",
+    "ppgare_doc_accessibilita.wp",
+    null
+   ],
+   [
+    "Credits",
+    "ppgare_doc_credits.wp",
+    null
+   ],
+   [
+    "Cookies",
+    "ppgare_cookies.wp",
+    null
+   ],
+   [
+    "Mappa sito",
+    "ppcommon_site_map.wp",
+    null
+   ],
+   [
+    "Torna all'inizio",
+    "#pagestart",
+    null
+   ],
+   [
+    "Accedi - Registrati",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_auth.wp",
+    null
+   ],
+   [
+    "Accesso area riservata",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_accesso_area_riserv.wp",
+    null
+   ],
+   [
+    "Istruzioni e manuali",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_istruzioni.wp",
+    null
+   ],
+   [
+    "Assistenza operatori economici",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_assistenza_tecnica.wp",
+    null
+   ],
+   [
+    "News",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_news.wp",
+    null
+   ],
+   [
+    "Verifica documenti",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_doc_verifica_doc.wp",
+    null
+   ],
+   [
+    "Avvisi, comunicazioni e atti di carattere generale",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_avvisi_atti_doc_gen.wp",
+    null
+   ],
+   [
+    "Avvisi di avvio consultazione",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_avvisi_avvio_consult.wp",
+    null
+   ],
+   [
+    "Avvisi pubblici",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_avvisi_lista.wp",
+    null
+   ],
+   [
+    "Delibere a contrarre o atto equivalente",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_delibere_contrarre.wp",
+    null
+   ],
+   [
+    "Gare e procedure",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_bandi_lista.wp",
+    null
+   ],
+   [
+    "Avvisi di aggiudicazione, esiti e affidamenti",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+    null
+   ],
+   [
+    "Riepilogo contratti - Link BDNCP",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_ammtrasp_contratti.wp",
+    null
+   ],
+   [
+    "Varianti in corso d'opera",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_varianti_corso_opera.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_oper_ec_bandi_avvisi.wp",
+    null
+   ],
+   [
+    "Bandi e avvisi d'iscrizione archiviati",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_op_ec_bandi_archiviati.wp",
+    null
+   ],
+   [
+    "Esiti affidamenti",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_oper_ec_esiti_aff.wp",
+    null
+   ],
+   [
+    "Prospetti annuali (art. 1 c. 32 L.190 del 6/11/2012)",
+    "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_ammtrasp_anticorr.wp",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Accedi",
+   "Ok",
+   "Clicca per iniziare"
+  ],
+  "rete": [
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/ppgare_detail.wp?actionPath=/ExtStr2/do/FrontEnd/Bandi/openProcedura.action&currentFrame=7&codice=G01790",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/resources/static/js/jquery-3.7.1.min.js",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/resources/static/js/jquery.alphanum.js",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/resources/static/js/jquery.character.js",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/resources/static/js/resizeBalloon.js",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/resources/static/js/jquery-ui-1.13.2.min.js",
+   "GET https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/resources/static/js/captcha/widget.module.min.js",
+   "GET blob:https://provinciacomo-appalti.maggiolicloud.it/3b2d1135-04eb-4c99-837d-4fc2aa3871ac",
+   "GET blob:https://provinciacomo-appalti.maggiolicloud.it/5790dc9c-196c-45cb-91a7-9b2e35f16436",
+   "GET blob:https://provinciacomo-appalti.maggiolicloud.it/61753ae7-fd3e-4219-8887-bce5b40ae5a5",
+   "GET blob:https://provinciacomo-appalti.maggiolicloud.it/facf3dae-7a16-455b-96ba-a69ce1f7b10b"
+  ]
+ }
+}

@@ -1,0 +1,675 @@
+{
+ "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+  "byte": 372290,
+  "secondi": 1.7,
+  "tipo": "text/html; charset=utf-8"
+ },
+ "chrome": {
+  "commit_s": 0.6,
+  "attesa_s": 5.6,
+  "url_finale": "https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+  "link": [
+   [
+    "Vai al contenuto",
+    "#view",
+    null
+   ],
+   [
+    "Vai alla navigazione",
+    "#navigation",
+    null
+   ],
+   [
+    "Vai al footer",
+    "#footer",
+    null
+   ],
+   [
+    "Regione Emilia-Romagna",
+    "https://www.regione.emilia-romagna.it",
+    null
+   ],
+   [
+    "Accedi a SATER",
+    "https://sater.regione.emilia-romagna.it/portale/index.asp",
+    null
+   ],
+   [
+    "Accedi a NoTI-ER",
+    "https://notier.regione.emilia-romagna.it/notier/",
+    null
+   ],
+   [
+    "Agenzia per lo sviluppo\ndei mercati telematici",
+    "/",
+    null
+   ],
+   [
+    "",
+    "/newsletter",
+    null
+   ],
+   [
+    "",
+    "https://www.linkedin.com/company/intercent-er",
+    null
+   ],
+   [
+    "",
+    "https://www.youtube.com/@intercent-er6413 ",
+    null
+   ],
+   [
+    "",
+    "/search",
+    null
+   ],
+   [
+    "Agenzia per lo sviluppodei mercati telematici",
+    "/",
+    null
+   ],
+   [
+    "L'Agenzia",
+    "#",
+    null
+   ],
+   [
+    "Chi siamo e ambiti di attività",
+    "/agenzia/chi-siamo",
+    null
+   ],
+   [
+    "Profilo",
+    "/agenzia/chi-siamo/intercent-er",
+    null
+   ],
+   [
+    "Centrale di acquisto",
+    "/agenzia/chi-siamo/centrale-di-committenza",
+    null
+   ],
+   [
+    "Stazione appaltante",
+    "/agenzia/chi-siamo/stazione-appaltante",
+    null
+   ],
+   [
+    "Transizione digitale",
+    "/agenzia/chi-siamo/digitalizzazione-degli-acquisti",
+    null
+   ],
+   [
+    "Soggetto aggregatore",
+    "/agenzia/chi-siamo/soggetti-aggregatori",
+    null
+   ],
+   [
+    "Programmazione e risultati",
+    "/agenzia/programmazione-attivita",
+    null
+   ],
+   [
+    "Programmazione gare",
+    "/agenzia/programmazione-attivita/programmazione-gare",
+    null
+   ],
+   [
+    "Progetti",
+    "/agenzia/programmazione-attivita/progetti-regionali-nazionali-ed-europei",
+    null
+   ],
+   [
+    "Cruscotto gare",
+    "/agenzia/programmazione-attivita/cruscotto-gare",
+    null
+   ],
+   [
+    "Risultati raggiunti",
+    "/agenzia/programmazione-attivita/risultati-raggiunti",
+    null
+   ],
+   [
+    "Sistemi di gestione e certificazioni",
+    "/agenzia/sistemi-di-gestione-e-certificazioni",
+    null
+   ],
+   [
+    "Qualità dei processi (ISO 9001)",
+    "/agenzia/sistemi-di-gestione-e-certificazioni/sistema-gestione-qualita",
+    null
+   ],
+   [
+    "Prevenzione della corruzione (ISO 37001)",
+    "/agenzia/sistemi-di-gestione-e-certificazioni/prevenzione-della-corruzione",
+    null
+   ],
+   [
+    "Sicurezza dei sistemi (ISO 27001)",
+    "/agenzia/sistemi-di-gestione-e-certificazioni/sistema-gestione-sicurezza-delle-informazioni",
+    null
+   ],
+   [
+    "Bandi e strumenti di acquisto",
+    "#",
+    null
+   ],
+   [
+    "Bandi Intercent-ER",
+    "/bandi-e-strumenti-di-acquisto/bandi-intercenter",
+    null
+   ],
+   [
+    "Bandi e Procedure di gara",
+    "/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-e-procedure-di-gara",
+    null
+   ],
+   [
+    "Bandi istitutivi Sistemi Dinamici (SDA)",
+    "/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-istitutivi-sistemi-dinamici-sda",
+    null
+   ],
+   [
+    "Bandi di abilitazione - Mercato elettronico",
+    "/bandi-e-strumenti-di-acquisto/bandi-intercenter/bandi-di-abilitazione-mercato-elettronico",
+    null
+   ],
+   [
+    "Consultazioni preliminari di mercato",
+    "/bandi-e-strumenti-di-acquisto/bandi-intercenter/consultazioni-preliminari-di-mercato",
+    null
+   ],
+   [
+    "Accesso agli atti",
+    "/bandi-e-strumenti-di-acquisto/bandi-intercenter/accesso-agli-atti",
+    null
+   ],
+   [
+    "Bandi altri Enti",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti",
+    null
+   ],
+   [
+    "Altri Enti - Bandi e Procedure di gara",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara",
+    null
+   ],
+   [
+    "Altri Enti - Avvisi e indagini di mercato",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-avvisi-e-indagini-di-mercato",
+    null
+   ],
+   [
+    "Altri Enti - Consultazioni Preliminari",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-consultazioni-preliminari",
+    null
+   ],
+   [
+    "Motore di ricerca bandi",
+    "/bandi-e-strumenti-di-acquisto/ricerca-bandi",
+    null
+   ],
+   [
+    "Strumenti di acquisto",
+    "/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto",
+    null
+   ],
+   [
+    "Convenzioni",
+    "/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/convenzioni",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/bandi-e-strumenti-di-acquisto/strumenti-di-acquisto/mercato-elettronico",
+    null
+   ],
+   [
+    "Acquisti sostenibili",
+    "/bandi-e-strumenti-di-acquisto/acquisti-sostenibili",
+    null
+   ],
+   [
+    "Supporto",
+    "#",
+    null
+   ],
+   [
+    "Call Center",
+    "/help/call-center",
+    null
+   ],
+   [
+    "Manuali",
+    "/help/guide",
+    null
+   ],
+   [
+    "Chiedi a AI ProcChiedi a AI Proc - Si apre in una nuova scheda",
+    "https://aiproc.regione.emilia-romagna.it/app/aiproc/",
+    null
+   ],
+   [
+    "Manuali per le P.A.",
+    "/help/guide/manuali-pa",
+    null
+   ],
+   [
+    "Manuali per le imprese",
+    "/help/guide/manuali-oe",
+    null
+   ],
+   [
+    "Eventi e formazione",
+    "/help/eventi-e-formazione",
+    null
+   ],
+   [
+    "Webinar formativi",
+    "/help/eventi-e-formazione/incontri-formativi-registrazioni-video",
+    null
+   ],
+   [
+    "Videotutorial",
+    "/help/eventi-e-formazione/videotutorial",
+    null
+   ],
+   [
+    "Centro di competenze",
+    "/help/eventi-e-formazione/centro-di-competenze",
+    null
+   ],
+   [
+    "Risorse utili",
+    "/help/risorse-utili",
+    null
+   ],
+   [
+    "FAQ",
+    "/help/risorse-utili/faq",
+    null
+   ],
+   [
+    "Normativa",
+    "/help/risorse-utili/normativa",
+    null
+   ],
+   [
+    "Link utili",
+    "/help/risorse-utili/link-utili-1",
+    null
+   ],
+   [
+    "Referenti Associazioni di Categoria",
+    "/help/risorse-utili/associazioni-di-categoria",
+    null
+   ],
+   [
+    "Piattaforme telematiche",
+    "#",
+    null
+   ],
+   [
+    "Sistema per gli Acquisti Telematici (SATER)",
+    "/piattaforme-telematiche/sistema-acquisti-sater",
+    null
+   ],
+   [
+    "Cos'è SATER",
+    "/piattaforme-telematiche/sistema-acquisti-sater/cose-sater",
+    null
+   ],
+   [
+    "Regolamenti d'utilizzo",
+    "/piattaforme-telematiche/sistema-acquisti-sater/regolamenti",
+    null
+   ],
+   [
+    "Aggiornamenti SATER",
+    "/piattaforme-telematiche/sistema-acquisti-sater/aggiornamenti-sater",
+    null
+   ],
+   [
+    "Registrati a SATER",
+    "/piattaforme-telematiche/sistema-acquisti-sater/registrazione",
+    null
+   ],
+   [
+    "Accedi a SATERAccedi a SATER - Si apre in una nuova scheda",
+    "https://sater.regione.emilia-romagna.it/portale/index.asp",
+    null
+   ],
+   [
+    "NoTI-ER - Ordini, DDT e Fatture",
+    "/piattaforme-telematiche/noti-er-ordini-ddt-fatture",
+    null
+   ],
+   [
+    "Cos'è NoTI-ER (Ordini, DDT e Fatture)",
+    "/piattaforme-telematiche/noti-er-ordini-ddt-fatture/noti-er-informazioni-generali",
+    null
+   ],
+   [
+    "Specifiche di ordini, DDT e fatture",
+    "/piattaforme-telematiche/noti-er-ordini-ddt-fatture/specifiche-di-ordini-ddt-e-fatture",
+    null
+   ],
+   [
+    "Indicazioni per gli Enti",
+    "/piattaforme-telematiche/noti-er-ordini-ddt-fatture/indicazioni-per-gli-enti",
+    null
+   ],
+   [
+    "Indicazioni per i Fornitori",
+    "/piattaforme-telematiche/noti-er-ordini-ddt-fatture/indicazioni-per-i-fornitori",
+    null
+   ],
+   [
+    "Accedi a NoTI-ERAccedi a NoTI-ER - Si apre in una nuova scheda",
+    "https://notier.regione.emilia-romagna.it/notier/",
+    null
+   ],
+   [
+    "English site",
+    "/en",
+    null
+   ],
+   [
+    "Newsletter",
+    "/newsletter",
+    null
+   ],
+   [
+    "Linkedin",
+    "https://www.linkedin.com/company/intercent-er",
+    null
+   ],
+   [
+    "Youtube",
+    "https://www.youtube.com/@intercent-er6413 ",
+    null
+   ],
+   [
+    "Accedi a SATER Si apre in una nuova scheda",
+    "https://sater.regione.emilia-romagna.it/portale/index.asp",
+    null
+   ],
+   [
+    "Accedi a NoTI-ER Si apre in una nuova scheda",
+    "https://notier.regione.emilia-romagna.it/notier/",
+    null
+   ],
+   [
+    "Home",
+    "/",
+    null
+   ],
+   [
+    "Bandi e strumenti di acquisto",
+    "/bandi-e-strumenti-di-acquisto",
+    null
+   ],
+   [
+    "Bandi altri Enti",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti",
+    null
+   ],
+   [
+    "Altri Enti - Bandi e Procedure di gara",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara",
+    null
+   ],
+   [
+    "Altri Enti - Bandi e Procedure di gara APERTI",
+    "/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti",
+    null
+   ],
+   [
+    "Salta al contenuto",
+    "#main-content-section",
+    null
+   ],
+   [
+    "FacebookFacebook",
+    "https://www.facebook.com/sharer/sharer.php?u=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+    null
+   ],
+   [
+    "Twitter",
+    "https://twitter.com/intent/tweet?url=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+    null
+   ],
+   [
+    "LinkedInLinkedIn",
+    "https://www.linkedin.com/shareArticle?mini=true&url=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580&title=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+    null
+   ],
+   [
+    "WhatsappWhatsapp",
+    "https://api.whatsapp.com/send?phone=&text=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+    null
+   ],
+   [
+    "Telegram",
+    "https://t.me/share/url?url=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580&text=Manutenzione straordinaria delle strade comunali anno 2026",
+    null
+   ],
+   [
+    "StampaStampa",
+    null,
+    null
+   ],
+   [
+    "InviaInvia",
+    null,
+    null
+   ],
+   [
+    "InviaInvia",
+    "mailto:?subject=Manutenzione straordinaria delle strade comunali anno 2026&body=https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+    null
+   ],
+   [
+    "Dati del bando",
+    "#header-text-body",
+    null
+   ],
+   [
+    "Allegati",
+    "#header-allegati",
+    null
+   ],
+   [
+    "Referenti",
+    "#header-referenti",
+    null
+   ],
+   [
+    "Pubblicità legale",
+    "#header-pubb-legale",
+    null
+   ],
+   [
+    "Cig",
+    "#header-cig",
+    null
+   ],
+   [
+    "ACCEDI AL SISTEMA ACQUISTI TELEMATICI – SATER",
+    "https://piattaformaintercenter.regione.emilia-romagna.it/portale/",
+    null
+   ],
+   [
+    "CONSULTA LE GUIDE ALL'USO",
+    "/help/guide/manuali-oe/guide_operatori_economici",
+    null
+   ],
+   [
+    "Avviso / Bando di gara",
+    "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=bando di gara Asfalti 2026_signed.pdf*pdf*510923*r11bd3d3346841cd8_20261126151909842*SHA256*63B96B0D50F8FE11781C863D44F0AF03ABF9E096FA903B65F8FE4077FBEE1609*2026-11-26T16:19:10",
+    null
+   ],
+   [
+    "Decisione di contrarre o atto equivalente",
+    "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=determina a contrarre 1270_2026 Asfalti 2026.pdf*pdf*65995*r25f705584104701a_20261126152001533*SHA256*E6AF7A013CB55C7D64A444834092A8777A618B569E46020E29048696218E6668*2026-11-26T16:20:01",
+    null
+   ],
+   [
+    "Disciplinare di gara",
+    "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=disciplinare di gara asfalti 2026_signed.pdf*pdf*854469*r7c125ab63a34eb4a_20261126152103174*SHA256*669BF6325B92DEC4042709E5ED987736E7782570506490E489E9F9707918692D*2026-11-26T16:21:04",
+    null
+   ],
+   [
+    "allegati alla procedura",
+    "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=allegati di gara.zip*zip*1708712*b032b54880254901a_20261126152348372*SHA256*73713D816952A629AE230243F8D13DA2784E7900E7081B5CC6B169ED56B1AA9F*2026-11-26T16:23:50",
+    null
+   ],
+   [
+    "Progetto di gara",
+    "https://sater.regione.emilia-romagna.it/application/CTL_Library/functions/field/DisplayAttach.ASP?OPERATION=DISPLAY&FIELD=Allegato&PATH=%2E%2E%2F&TECHVALUE=ESECUTIVO PDF.zip*zip*11372646*raf4988b611a4f66a_20261126152617414*SHA256*9249947F6BD82185DC0FBDB9678EDB2EC10FAF74409A06B8559B5B22499C1949*2026-11-26T16:26:29",
+    null
+   ],
+   [
+    "moira.piva@comune.mesola.fe.it",
+    "mailto:moira.piva@comune.mesola.fe.it",
+    null
+   ],
+   [
+    "PVL/ANAC (26/11/2026)",
+    "https://pubblicitalegale.anticorruzione.it/bandi/74f63001-eedf-46b9-9490-9157b9775c6d",
+    null
+   ],
+   [
+    "OpenData ANAC",
+    "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDF6AAFD6B",
+    null
+   ],
+   [
+    "e-mail",
+    "mailto:intercenter@regione.emilia-romagna.it",
+    null
+   ],
+   [
+    "PEC",
+    "mailto:intercenter@postacert.regione.emilia-romagna.it",
+    null
+   ],
+   [
+    "Informazioni sul sito e crediti",
+    "/info",
+    null
+   ],
+   [
+    "e-mail redazione",
+    "mailto:comunicazioneintercenter@regione.emilia-romagna.it",
+    null
+   ],
+   [
+    "e-mail",
+    "mailto:info.intercenter@regione.emilia-romagna.it",
+    null
+   ],
+   [
+    "Amministrazione trasparente",
+    "/amm-trasparente",
+    null
+   ],
+   [
+    "Segnala illeciti o irregolarità",
+    "https://trasparenza.regione.emilia-romagna.it/altri-contenuti/prevenzione-della-corruzione/anticorruzione/segnala-illeciti",
+    null
+   ],
+   [
+    "Note legali e copyright",
+    "/note-legali",
+    null
+   ],
+   [
+    "Privacy e cookie",
+    "/privacy",
+    null
+   ],
+   [
+    "Dichiarazione di accessibilità",
+    "/accessibilita",
+    null
+   ],
+   [
+    "051 5271",
+    "tel:+39.0515271",
+    null
+   ],
+   [
+    "Cerca telefoni o indirizzi",
+    "http://wwwservizi.regione.emilia-romagna.it/Cercaregione/Default.aspx?cons=0",
+    null
+   ],
+   [
+    "Sito",
+    "http://www.regione.emilia-romagna.it/urp",
+    null
+   ],
+   [
+    "Privacy policy",
+    "/privacy",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Apri il menu",
+   "L'Agenzia",
+   "Bandi e strumenti di acquisto",
+   "Supporto",
+   "Piattaforme telematiche",
+   "Chiudi menu",
+   "Lettura facilitata",
+   "Condividi",
+   "Vedi azioni",
+   "StampaStampa",
+   "INDICE",
+   "Indietro",
+   "Avanti",
+   "Impostazioni cookie",
+   "Solo cookies tecnici",
+   "Accetta tutti",
+   "Cambia le impostazioni"
+  ],
+  "rete": [
+   "GET https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
+   "GET https://intercenter.regione.emilia-romagna.it/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/runtime~client.b5f24d0d.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/client.78085024.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/VoltoFeedbackView.0ee9502a.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/NewsletterManage.1095e733.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/InvalidatePageAction.b7c3d371.chunk.js",
+   "GET https://cdn.jsdelivr.net/npm/@cap.js/wasm@0.0.8/browser/cap_wasm_bg.wasm",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/react-google-recaptcha-v3.862c2563.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/++api++/bandi-e-strumenti-di-acquisto/bandi-altri-enti/altri-enti-bandi-e-procedure-di-gara/bandi-altri-enti-aperti/BANDO_GARA_PORTALE@18824580?expand=breadcrumbs,actions,navroot,gdpr-cookie-settings,immersive-reader,navigation,subsite&expand.navigation.",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/35640.305d43d8.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/67174.0ba88e44.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/10303.66c4a4b4.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/86544.630d0f5e.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/90894.f2a8b59b.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/38155.ee6e7a4c.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/++api++/@secondary-menu",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/42025.5779fae0.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/++api++/@dropdown-menu",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/34425.60243892.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/58559.a2903735.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/62252.255fe369.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/86092.abe0556c.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/33927.50654677.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/71201.56d56b5b.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/11190.450d909f.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/27003.f4fb1c4f.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/26761.341b4faf.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/static/js/89381.2b5f1fde.chunk.js",
+   "GET https://intercenter.regione.emilia-romagna.it/++api++/@subfooter",
+   "GET https://statisticheweb.regione.emilia-romagna.it/analytics/piwik.js",
+   "POST https://statisticheweb.regione.emilia-romagna.it/analytics/matomo.php?action_name=Manutenzione%20straordinaria%20delle%20strade%20comunali%20anno%202026&idsite=91&rec=1&r=885155&h=9&m=49&s=33&url=https%3A%2F%2F18824580%2Fbandi-e-strumenti-di-acquisto%2Fbandi-altri-enti%2Faltri-enti-bandi-e-procedure"
+  ]
+ }
+}

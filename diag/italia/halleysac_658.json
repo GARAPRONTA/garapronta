@@ -1,0 +1,2080 @@
+{
+ "url": "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://sac3.halleysac.it/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/658",
+  "byte": 118993,
+  "secondi": 0.5,
+  "tipo": "text/html; charset=ISO-8859-1"
+ },
+ "chrome": {
+  "commit_s": 0.5,
+  "attesa_s": 5.6,
+  "url_finale": "https://sac3.halleysac.it/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/658",
+  "link": [
+   [
+    "PRIVACY",
+    "/c023060/zf/index.php/privacy/index/privacy",
+    null
+   ],
+   [
+    "INFORMATIVA COOKIE",
+    "/c023060/zf/index.php/privacy/index/cookie",
+    null
+   ],
+   [
+    "Vai al Contenuto",
+    "#main",
+    null
+   ],
+   [
+    "Vai alla navigazione del sito",
+    "#menu",
+    null
+   ],
+   [
+    "Regione Veneto",
+    "https://www.regione.veneto.it/",
+    null
+   ],
+   [
+    "",
+    "/c023060/index.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/",
+    null
+   ],
+   [
+    "Comune di Povegliano Veronese",
+    "https://www.comune.poveglianoveronese.vr.it",
+    null
+   ],
+   [
+    "Facebook",
+    "https://www.facebook.com/pages/Comune-di-Povegliano-Veronese/128140773978146",
+    null
+   ],
+   [
+    "Youtube",
+    "https://www.youtube.com/channel/UCHN2P6l8bmdaQI8NR1MqWMg",
+    null
+   ],
+   [
+    "Menu",
+    "#menu",
+    null
+   ],
+   [
+    "Homepage",
+    "https://www.comune.poveglianoveronese.vr.it",
+    null
+   ],
+   [
+    "Il Comune informa",
+    "javascript:void(0)",
+    null
+   ],
+   [
+    "",
+    "/c023060/mc/mc_p_ricerca.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/mc/mc_matri_p_ricerca.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/atti-amministrativi/delibere",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/atti-amministrativi/determine",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/atti-amministrativi/ordinanze",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/trasparenza/index/index",
+    null
+   ],
+   [
+    "",
+    "/c023060/if/if_p_info_consulta.php?idinfo=9&amp;idtipo=1",
+    null
+   ],
+   [
+    "",
+    "/c023060/el/elettorale.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/md/md_p_introduzione.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/gu/gu_p_elenco.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/nu/nu_p_elenco.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/gt/gt_p_vie_elenco.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/lu/lu_p_elenco.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/po/po_p_eventi.php",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20001",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20036",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20102",
+    null
+   ],
+   [
+    "",
+    "/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20104",
+    null
+   ],
+   [
+    "",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20157",
+    null
+   ],
+   [
+    "Cittadino",
+    "https://servizionline.comune.poveglianoveronese.vr.it/po/po_login.php",
+    null
+   ],
+   [
+    "Extranet",
+    "https://servizionline.comune.poveglianoveronese.vr.it/c023060/po/po_exlogin.php",
+    null
+   ],
+   [
+    "Intranet",
+    "https://servizionline.comune.poveglianoveronese.vr.it/c023060/hh/login.php",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "",
+    "https://www.comune.poveglianoveronese.vr.it",
+    null
+   ],
+   [
+    "",
+    "javascript:void(0)",
+    null
+   ],
+   [
+    "Accesso agli atti",
+    null,
+    null
+   ],
+   [
+    "Albo pretorio",
+    "/c023060/mc/mc_p_ricerca.php",
+    null
+   ],
+   [
+    "Pubblicazioni di matrimonio",
+    "/c023060/mc/mc_matri_p_ricerca.php",
+    null
+   ],
+   [
+    "Delibere",
+    "/c023060/zf/index.php/atti-amministrativi/delibere",
+    null
+   ],
+   [
+    "Determine",
+    "/c023060/zf/index.php/atti-amministrativi/determine",
+    null
+   ],
+   [
+    "Ordinanze",
+    "/c023060/zf/index.php/atti-amministrativi/ordinanze",
+    null
+   ],
+   [
+    "Amministrazione trasparente",
+    null,
+    null
+   ],
+   [
+    "Amministrazione trasparente",
+    "/c023060/zf/index.php/trasparenza/index/index",
+    null
+   ],
+   [
+    "Il comune informa",
+    null,
+    null
+   ],
+   [
+    "Rilascio/rinnovo passaporto",
+    "/c023060/if/if_p_info_consulta.php?idinfo=9&amp;idtipo=1",
+    null
+   ],
+   [
+    "Risultati elettorali",
+    "/c023060/el/elettorale.php",
+    null
+   ],
+   [
+    "Modulistica",
+    "/c023060/md/md_p_introduzione.php",
+    null
+   ],
+   [
+    "Segnalazione guasti",
+    "/c023060/gu/gu_p_elenco.php",
+    null
+   ],
+   [
+    "Numeri e indirizzi utili",
+    "/c023060/nu/nu_p_elenco.php",
+    null
+   ],
+   [
+    "Stradario",
+    "/c023060/gt/gt_p_vie_elenco.php",
+    null
+   ],
+   [
+    "Link utili",
+    "/c023060/lu/lu_p_elenco.php",
+    null
+   ],
+   [
+    "News ed Eventi",
+    "/c023060/po/po_p_eventi.php",
+    null
+   ],
+   [
+    "Lo statuto",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20001",
+    null
+   ],
+   [
+    "SERVIZIO TRIBUTI ACCERTAMENTO RISCOSSIONI",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20036",
+    null
+   ],
+   [
+    "Feedback accessibilità sito web",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20102",
+    null
+   ],
+   [
+    "Prenotazione appuntamenti",
+    "/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20104",
+    null
+   ],
+   [
+    "Statistiche e accessi al sito istituzionale",
+    "/c023060/zf/index.php/servizi-aggiuntivi/index/index/idtesto/20157",
+    null
+   ],
+   [
+    "",
+    "https://servizionline.comune.poveglianoveronese.vr.it/po/po_login.php",
+    null
+   ],
+   [
+    "",
+    "https://servizionline.comune.poveglianoveronese.vr.it/c023060/po/po_exlogin.php",
+    null
+   ],
+   [
+    "",
+    "https://servizionline.comune.poveglianoveronese.vr.it/c023060/hh/login.php",
+    null
+   ],
+   [
+    "Home",
+    "/c023060/hh/index.php",
+    null
+   ],
+   [
+    "Amministrazione trasparente",
+    "/c023060/zf/index.php/trasparenza/index/index",
+    null
+   ],
+   [
+    "Bandi di gara e contratti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi",
+    null
+   ],
+   [
+    "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BE00789D8C",
+    "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BE00789D8C",
+    null
+   ],
+   [
+    "Pubblicazione n. 673 del 2026",
+    "/c023060/zf/../mc/mc_p_dettaglio.php?id_pubbl=18780",
+    null
+   ],
+   [
+    "reg.gen. 393 del 18/11/2026",
+    "/c023060/zf/index.php/atti-amministrativi-bandi/determine/dettaglio/atto/G5WpVekTEYz0-A",
+    null
+   ],
+   [
+    "Disposizioni generali",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Disposizioni generali",
+    "#",
+    null
+   ],
+   [
+    "Piano Integrato di Attività e Organizzazione (PIAO)",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Piano Integrato di Attività e Organizzazione (PIAO)",
+    "#",
+    null
+   ],
+   [
+    "PIAO 2026-2028",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/413",
+    null
+   ],
+   [
+    "PIAO 2023-2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/345",
+    null
+   ],
+   [
+    "PIAO 2022-2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/344",
+    null
+   ],
+   [
+    "PIAO 2024-2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/356",
+    null
+   ],
+   [
+    "PIAO 2025-2027",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/391",
+    null
+   ],
+   [
+    "Piano triennale per la prevenzione della corruzione e della trasparenza",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/8",
+    null
+   ],
+   [
+    "Atti generali",
+    "/c023060/zf/index.php/atti-generali",
+    null
+   ],
+   [
+    "Codice disciplinare e codice condotta",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/164",
+    null
+   ],
+   [
+    "Oneri informativi per cittadini e imprese",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/138",
+    null
+   ],
+   [
+    "Organizzazione",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Organizzazione",
+    "#",
+    null
+   ],
+   [
+    "Articolazione degli uffici",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Articolazione degli uffici",
+    "#",
+    null
+   ],
+   [
+    "Articolazione degli uffici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/80",
+    null
+   ],
+   [
+    "Organigramma",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/162",
+    null
+   ],
+   [
+    "Titolari di incarichi politici, di amministrazione, di direzione o di governo",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/77",
+    null
+   ],
+   [
+    "ART. 14-BIS D.LGS. 33/2013",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/415",
+    null
+   ],
+   [
+    "Sanzioni per mancata comunicazione dei dati",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Sanzioni per mancata comunicazione dei dati",
+    "#",
+    null
+   ],
+   [
+    "d.lgs. 14.03.2013 n. 33 art. 47",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/167",
+    null
+   ],
+   [
+    "Rendiconti gruppi consiliari regionali/provinciali",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/79",
+    null
+   ],
+   [
+    "Telefono e posta elettronica",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/81",
+    null
+   ],
+   [
+    "Consulenti e collaboratori",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Consulenti e collaboratori",
+    "#",
+    null
+   ],
+   [
+    "Avvisi di selezione",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/321",
+    null
+   ],
+   [
+    "Titolari di incarichi di collaborazione o consulenza",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/221",
+    null
+   ],
+   [
+    "Personale",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Personale",
+    "#",
+    null
+   ],
+   [
+    "Titolari di incarichi dirigenziali amministrativi di vertice",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/84",
+    null
+   ],
+   [
+    "Posizioni organizzative",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/86",
+    null
+   ],
+   [
+    "Dotazione organica",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/87",
+    null
+   ],
+   [
+    "Personale non a tempo indeterminato",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/88",
+    null
+   ],
+   [
+    "Tassi di assenza",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Tassi di assenza",
+    "#",
+    null
+   ],
+   [
+    "2011",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/187",
+    null
+   ],
+   [
+    "2012",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/188",
+    null
+   ],
+   [
+    "2013",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/189",
+    null
+   ],
+   [
+    "2014",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/190",
+    null
+   ],
+   [
+    "2015",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/191",
+    null
+   ],
+   [
+    "2016",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/199",
+    null
+   ],
+   [
+    "2017",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/229",
+    null
+   ],
+   [
+    "2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/251",
+    null
+   ],
+   [
+    "2019",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/267",
+    null
+   ],
+   [
+    "2020",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/280",
+    null
+   ],
+   [
+    "2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/298",
+    null
+   ],
+   [
+    "2022",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/320",
+    null
+   ],
+   [
+    "2023",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/334",
+    null
+   ],
+   [
+    "2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/354",
+    null
+   ],
+   [
+    "2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/388",
+    null
+   ],
+   [
+    "2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/408",
+    null
+   ],
+   [
+    "Incarichi conferiti e autorizzati ai dipendenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/90",
+    null
+   ],
+   [
+    "Pari opportunità - piano delle azioni positive",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/179",
+    null
+   ],
+   [
+    "Comitato unico di garanzia",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/180",
+    null
+   ],
+   [
+    "Contrattazione collettiva",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/91",
+    null
+   ],
+   [
+    "Titolari di incarichi dirigenziali (dirigenti non generali)",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/222",
+    null
+   ],
+   [
+    "Contrattazione integrativa",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Contrattazione integrativa",
+    "#",
+    null
+   ],
+   [
+    "2011",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/194",
+    null
+   ],
+   [
+    "2012",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/195",
+    null
+   ],
+   [
+    "2013",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/196",
+    null
+   ],
+   [
+    "2014",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/197",
+    null
+   ],
+   [
+    "2015",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/198",
+    null
+   ],
+   [
+    "2016",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/277",
+    null
+   ],
+   [
+    "2017",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/273",
+    null
+   ],
+   [
+    "2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/274",
+    null
+   ],
+   [
+    "2019",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/275",
+    null
+   ],
+   [
+    "2020",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/293",
+    null
+   ],
+   [
+    "2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/323",
+    null
+   ],
+   [
+    "2022",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/332",
+    null
+   ],
+   [
+    "2023",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/365",
+    null
+   ],
+   [
+    "2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/384",
+    null
+   ],
+   [
+    "2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/402",
+    null
+   ],
+   [
+    "OIV",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/93",
+    null
+   ],
+   [
+    "Dirigenti cessati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/223",
+    null
+   ],
+   [
+    "Sanzioni per mancata comunicazione dei dati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/224",
+    null
+   ],
+   [
+    "Bandi di concorso",
+    "/c023060/zf/index.php/bandi-di-concorso",
+    null
+   ],
+   [
+    "Performance",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Performance",
+    "#",
+    null
+   ],
+   [
+    "Piano della Performance",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/96",
+    null
+   ],
+   [
+    "Sistema di misurazione e valutazione della Performance",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/142",
+    null
+   ],
+   [
+    "Relazione sulla Performance",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/97",
+    null
+   ],
+   [
+    "Ammontare complessivo dei premi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/98",
+    null
+   ],
+   [
+    "Dati relativi ai premi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/99",
+    null
+   ],
+   [
+    "Conto Annuale del Personale",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/290",
+    null
+   ],
+   [
+    "Enti controllati",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Enti controllati",
+    "#",
+    null
+   ],
+   [
+    "Enti pubblici vigilati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/102",
+    null
+   ],
+   [
+    "Società partecipate",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Società partecipate",
+    "#",
+    null
+   ],
+   [
+    "NEWCO S.p.A. - società in house per la gestione dei rifiuti urbani",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/394",
+    null
+   ],
+   [
+    "Elenco società partecipate",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/206",
+    null
+   ],
+   [
+    "Piano di razionalizzazione delle società partecipate",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/186",
+    null
+   ],
+   [
+    "Enti di diritto privato controllati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/104",
+    null
+   ],
+   [
+    "Rappresentazione grafica",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/105",
+    null
+   ],
+   [
+    "Attività e procedimenti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Attività e procedimenti",
+    "#",
+    null
+   ],
+   [
+    "Dati aggregati attività amministrativa",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/107",
+    null
+   ],
+   [
+    "Tipologie di procedimento",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/108",
+    null
+   ],
+   [
+    "Attivita e procedimenti servizi demografici",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Attivita e procedimenti servizi demografici",
+    "#",
+    null
+   ],
+   [
+    "Anagrafe",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/184",
+    null
+   ],
+   [
+    "Stato Civile",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/185",
+    null
+   ],
+   [
+    "Elettorale",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/203",
+    null
+   ],
+   [
+    "Provvedimenti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Provvedimenti",
+    "#",
+    null
+   ],
+   [
+    "Provvedimenti organi indirizzo-politico",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/112",
+    null
+   ],
+   [
+    "Provvedimenti dirigenti amministrativi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/113",
+    null
+   ],
+   [
+    "Controlli sulle attività economiche",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/392",
+    null
+   ],
+   [
+    "Bandi di gara e contratti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Bandi di gara e contratti",
+    "#",
+    null
+   ],
+   [
+    "Atti e documenti di carattere generale riferiti a tutte le procedure",
+    "/c023060/zf/index.php/bandi-gara/atti-documenti/tipologie",
+    null
+   ],
+   [
+    "Atti relativi alla programmazione di lavori, opere, servizi e forniture",
+    "/c023060/zf/index.php/bandi-gara/atti-programmazione/atti",
+    null
+   ],
+   [
+    "Avvisi",
+    "/c023060/zf/index.php/bandi-gara/avvisi/avvisi",
+    null
+   ],
+   [
+    "Bandi di gara e contratti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi",
+    null
+   ],
+   [
+    "Procedure fino al 31/12/2023",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Procedure fino al 31/12/2023",
+    "#",
+    null
+   ],
+   [
+    "Bandi di gara e contratti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Bandi di gara e contratti",
+    "#",
+    null
+   ],
+   [
+    "LAVORI DI SISTEMAZIONE DI VIA DOSSO POLI CON REALIZZAZIONE DI STALLI AUTO E PEDANA RIALZATA SULL’INTERSEZIONE CON VIA VI",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/358",
+    null
+   ],
+   [
+    "COMPLETAMENTO DEI LAVORI DI ADEGUAMENTO IGIENICO-SANITARIO DEGLI SPOGLIATOI DELL'EDIFICIO COMUNALE DESTINATO A PALESTRA ",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/357",
+    null
+   ],
+   [
+    "Sotto-sezioni eliminate dalla Delibera n. 7 del 17 gennaio 2023",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Sotto-sezioni eliminate dalla Delibera n. 7 del 17 gennaio 2023",
+    "#",
+    null
+   ],
+   [
+    "Atti delle amministrazioni aggiudicatrici e degli enti aggiudicatori distintamente per ogni procedura",
+    "/c023060/zf/index.php/bandi-di-gara/atti-aggiudicatori/index",
+    null
+   ],
+   [
+    "Bandi di gara e contratti attivi",
+    "/c023060/zf/index.php/bandi-di-gara/bandi-di-gara/elenco/sezione/attivi",
+    null
+   ],
+   [
+    "Bandi di gara e contratti scaduti ed esiti",
+    "/c023060/zf/index.php/bandi-di-gara/bandi-di-gara/elenco/sezione/scaduti",
+    null
+   ],
+   [
+    "Bandi di gara e contratti archiviati",
+    "/c023060/zf/index.php/bandi-di-gara/bandi-di-gara/elenco/sezione/archivio",
+    null
+   ],
+   [
+    "Profilo committente",
+    "/c023060/zf/index.php/bandi-di-gara/profilo-committente/index",
+    null
+   ],
+   [
+    "progetto defintivo/esecutivo lavori messa in sicurezza viabilità comunale di via F.Rosselli, via Montessori e via Piave",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/299",
+    null
+   ],
+   [
+    "progetto defintivo/esecutivo lavori adeguamento sismico palestra scuola A. Manzoni",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/291",
+    null
+   ],
+   [
+    "Atti relativi alle procedure per l'affidamento di appalti pubblici di servizi, forniture, lavori e opere, di concorsi pu",
+    "/c023060/zf/index.php/bandi-di-gara/bandi-di-gara/tabelle-riassuntive",
+    null
+   ],
+   [
+    "Atti relativi alla programmazione di lavori, opere, servizi e forniture attivi",
+    "/c023060/zf/index.php/bandi-di-gara/atti-programmazione",
+    null
+   ],
+   [
+    "Elenco operatori economici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/371",
+    null
+   ],
+   [
+    "Conferenze di servizi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/372",
+    null
+   ],
+   [
+    "Pubblicazione",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/1",
+    null
+   ],
+   [
+    "Affidamento",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/2",
+    null
+   ],
+   [
+    "Esecutiva",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/3",
+    null
+   ],
+   [
+    "Sponsorizzazioni",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/4",
+    null
+   ],
+   [
+    "Procedure di somma urgenza e di protezione civile",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/5",
+    null
+   ],
+   [
+    "Finanza di progetto",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/6",
+    null
+   ],
+   [
+    "Varianti in corso d'opera",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/bandi-fas/sez/7",
+    null
+   ],
+   [
+    "Sovvenzioni, contributi, sussidi, vantaggi economici",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Sovvenzioni, contributi, sussidi, vantaggi economici",
+    "#",
+    null
+   ],
+   [
+    "Criteri e modalità",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/117",
+    null
+   ],
+   [
+    "Atti di concessione",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/63",
+    null
+   ],
+   [
+    "Albo dei beneficiari",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/236",
+    null
+   ],
+   [
+    "Contributi a beneficio del Comune da parte di altre pubbliche amm.ni",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/300",
+    null
+   ],
+   [
+    "Rendicontazione utilizzo 5 per mille IRPEF",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/295",
+    null
+   ],
+   [
+    "Bilanci",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Bilanci",
+    "#",
+    null
+   ],
+   [
+    "Bilancio preventivo e consuntivo",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Bilancio preventivo e consuntivo",
+    "#",
+    null
+   ],
+   [
+    "Bilanci anno 2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/410",
+    null
+   ],
+   [
+    "Bilanci anno 2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/393",
+    null
+   ],
+   [
+    "Bilanci anno 2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/366",
+    null
+   ],
+   [
+    "Bilanci anno 2023",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/339",
+    null
+   ],
+   [
+    "Bilanci anno 2022",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/330",
+    null
+   ],
+   [
+    "Bilanci anno 2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/307",
+    null
+   ],
+   [
+    "Bilanci anno 2020",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/287",
+    null
+   ],
+   [
+    "Bilanci anno 2019",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/270",
+    null
+   ],
+   [
+    "Bilanci anno 2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/215",
+    null
+   ],
+   [
+    "Bilanci anno 2017",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/213",
+    null
+   ],
+   [
+    "Bilanci anno 2016",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/214",
+    null
+   ],
+   [
+    "Bilanci anno 2015",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/216",
+    null
+   ],
+   [
+    "Bilanci anno 2014",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/217",
+    null
+   ],
+   [
+    "Bilanci anno 2013",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/218",
+    null
+   ],
+   [
+    "Bilanci anno 2012",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/219",
+    null
+   ],
+   [
+    "Piano degli indicatori e dei risultati attesi di bilancio",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/120",
+    null
+   ],
+   [
+    "Beni immobili e gestione patrimonio",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Beni immobili e gestione patrimonio",
+    "#",
+    null
+   ],
+   [
+    "Patrimonio immobiliare",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/122",
+    null
+   ],
+   [
+    "Canoni di locazione e affitto",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/123",
+    null
+   ],
+   [
+    "Autovetture in servizio",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/193",
+    null
+   ],
+   [
+    "Controlli e rilievi sull'amministrazione",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Controlli e rilievi sull'amministrazione",
+    "#",
+    null
+   ],
+   [
+    "Organismi indipendenti di valutazione, nuclei di valutazione o altri oganismi con funzioni analoghe",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Organismi indipendenti di valutazione, nuclei di valutazione o altri oganismi con funzioni analoghe",
+    "#",
+    null
+   ],
+   [
+    "Atti di nomina OIV",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/342",
+    null
+   ],
+   [
+    "ATTESTAZIONI OIV",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "ATTESTAZIONI OIV",
+    "#",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/406",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/386",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/377",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2023",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/347",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2022",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/331",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2019",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/271",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/258",
+    null
+   ],
+   [
+    "Attestazioni OIV anni precedenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/241",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2020",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/313",
+    null
+   ],
+   [
+    "Attestazioni OIV anno 2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/316",
+    null
+   ],
+   [
+    "Documento OIV di validazione della relazione sulla performance",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/242",
+    null
+   ],
+   [
+    "Relazione OIV sul funzionamento complessivo del sistema di valutazione",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/243",
+    null
+   ],
+   [
+    "Altri atti dell'OIV o altri organi con funzioni analoghe",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/244",
+    null
+   ],
+   [
+    "Relazione dell'OIV sul funzionamento complessivo del Sistema di valutazione, trasparenza e integrità dei controlli inter",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/144",
+    null
+   ],
+   [
+    "Organi di revisione amministrativa e contabile",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/226",
+    null
+   ],
+   [
+    "Relazione del Segretario sul controllo successivo",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/245",
+    null
+   ],
+   [
+    "Rilievi A.N.A.C.",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/427",
+    null
+   ],
+   [
+    "Corte dei conti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Corte dei conti",
+    "#",
+    null
+   ],
+   [
+    "Rilievi Corte dei Conti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/247",
+    null
+   ],
+   [
+    "Servizi erogati",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Servizi erogati",
+    "#",
+    null
+   ],
+   [
+    "Carta dei servizi e standard di qualità",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/126",
+    null
+   ],
+   [
+    "Costi contabilizzati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/127",
+    null
+   ],
+   [
+    "Class action",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/145",
+    null
+   ],
+   [
+    "Liste di attesa",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/129",
+    null
+   ],
+   [
+    "Servizi in rete",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/230",
+    null
+   ],
+   [
+    "Pagamenti dell'amministrazione",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Pagamenti dell'amministrazione",
+    "#",
+    null
+   ],
+   [
+    "Indicatore di tempestività dei pagamenti",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Indicatore di tempestività dei pagamenti",
+    "#",
+    null
+   ],
+   [
+    "2014",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/237",
+    null
+   ],
+   [
+    "2015",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/238",
+    null
+   ],
+   [
+    "2016",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/239",
+    null
+   ],
+   [
+    "2017",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/240",
+    null
+   ],
+   [
+    "2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/257",
+    null
+   ],
+   [
+    "2019",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/269",
+    null
+   ],
+   [
+    "2020",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/286",
+    null
+   ],
+   [
+    "2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/302",
+    null
+   ],
+   [
+    "2022",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/325",
+    null
+   ],
+   [
+    "2023",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/336",
+    null
+   ],
+   [
+    "2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/355",
+    null
+   ],
+   [
+    "2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/390",
+    null
+   ],
+   [
+    "2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/412",
+    null
+   ],
+   [
+    "IBAN e pagamenti informatici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/132",
+    null
+   ],
+   [
+    "Dati sui pagamenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/231",
+    null
+   ],
+   [
+    "Dati sui pagamenti del servizio sanitario nazionale",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/232",
+    null
+   ],
+   [
+    "Ammontare complessivo dei debiti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/246",
+    null
+   ],
+   [
+    "Opere pubbliche",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Opere pubbliche",
+    "#",
+    null
+   ],
+   [
+    "Nuclei di valutazione e verifica degli investimenti pubblici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/233",
+    null
+   ],
+   [
+    "Atti di programmazione delle opere pubbliche",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/234",
+    null
+   ],
+   [
+    "PON Scuola",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "PON Scuola",
+    "#",
+    null
+   ],
+   [
+    "10.7.1A-FESRPON-VE-2020-279",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/305",
+    null
+   ],
+   [
+    "10.7.1A-FESRPON-VE-2020-280",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/306",
+    null
+   ],
+   [
+    "Monitoraggio Opere Pubbliche BDAP",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/250",
+    null
+   ],
+   [
+    "Tempi costi e indicatori di realizzazione delle opere pubbliche",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/235",
+    null
+   ],
+   [
+    "contributi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/262",
+    null
+   ],
+   [
+    "variante al PRG e progetto definitivo pista ciclopedonale",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/208",
+    null
+   ],
+   [
+    "PROGETTO ESECUTIVO DEI LAVORI DI AMPLIAMENTO DEL CIMITERO COMUNALE CON REALIZZAZIONE DI NUOVI LOCULI CUP E85I25000090004",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/442",
+    null
+   ],
+   [
+    "Pianificazione e governo del territorio",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Pianificazione e governo del territorio",
+    "#",
+    null
+   ],
+   [
+    "VARIANTE AL P.I. PER ADEGUAMENTO URBANISTICO RACCORDO VIABILISTICO TRA LA SR62 E LA S.P.52",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/387",
+    null
+   ],
+   [
+    "ADOZIONE PUA ROI IN DEROGA AL P.I.AI SENSI DELL'ART. 4 DELLA LRV N. 19/2021 CHE MODIFICA L'ART. 20 DELLA LRV N. 11/2004",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/381",
+    null
+   ],
+   [
+    "PIANO DEGLI INTERVENTI",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/315",
+    null
+   ],
+   [
+    "PAT E VARIANTI varie",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/134",
+    null
+   ],
+   [
+    "PEBA",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/352",
+    null
+   ],
+   [
+    "VARIANTE N. 2 AL PIANO DEGLI INTERVENTI -2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/363",
+    null
+   ],
+   [
+    "PAT",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/378",
+    null
+   ],
+   [
+    "MICROZONAZIONE SISMICA",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/379",
+    null
+   ],
+   [
+    "PAS/SCIA IMP FOTOVOLTAICO A TERRA AZ. AGR. DOSSO REGGIO",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/380",
+    null
+   ],
+   [
+    "VARIANTE N. 2 AL P.I. - DOCUMENTI PER CONSORZIO DI BONIFICA E GENIO CIVILE",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/411",
+    null
+   ],
+   [
+    "REGOLAMENTO EDILIZIO",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/440",
+    null
+   ],
+   [
+    "Informazioni ambientali",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Informazioni ambientali",
+    "#",
+    null
+   ],
+   [
+    "Informazioni generali",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/425",
+    null
+   ],
+   [
+    "PEF",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "PEF",
+    "#",
+    null
+   ],
+   [
+    "PEF 2022/2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/326",
+    null
+   ],
+   [
+    "PEF 2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/318",
+    null
+   ],
+   [
+    "PEF 2024-2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/431",
+    null
+   ],
+   [
+    "PEF 2026-2029",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/430",
+    null
+   ],
+   [
+    "Stato dell'ambiente",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/418",
+    null
+   ],
+   [
+    "Fattori inquinanti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/419",
+    null
+   ],
+   [
+    "Misure incidenti sull'ambiente e relative analisi di impatto",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/420",
+    null
+   ],
+   [
+    "Misure a protezione dell'ambiente e relative analisi di impatto",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/421",
+    null
+   ],
+   [
+    "Relazioni sull'attuazione della legislazione",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/422",
+    null
+   ],
+   [
+    "Stato della salute e della sicurezza umana",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/423",
+    null
+   ],
+   [
+    "Relazione sullo stato dell'ambiente del Ministero dell’Ambiente e della tutela del territorio",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/424",
+    null
+   ],
+   [
+    "Strutture sanitarie private accreditate",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/136",
+    null
+   ],
+   [
+    "Interventi straordinari e di emergenza",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Interventi straordinari e di emergenza",
+    "#",
+    null
+   ],
+   [
+    "Ordinanze sindacali contingibili ed urgenti art. 42, c. 1, lett.a), del D.Lgs. 33/2013",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Ordinanze sindacali contingibili ed urgenti art. 42, c. 1, lett.a), del D.Lgs. 33/2013",
+    "#",
+    null
+   ],
+   [
+    "ORDINANZE 2021",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/432",
+    null
+   ],
+   [
+    "ORDINANZE 2022",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/433",
+    null
+   ],
+   [
+    "ORDINANZA 2023",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/434",
+    null
+   ],
+   [
+    "ORDINANZA 2024",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/435",
+    null
+   ],
+   [
+    "ORDINANZA 2025",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/436",
+    null
+   ],
+   [
+    "ORDINANZA 2026",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/437",
+    null
+   ],
+   [
+    "Rendiconto della raccolta fondi a sostegno del contrasto all'emergenza epidemiologica da Covid-19",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/327",
+    null
+   ],
+   [
+    "Altri contenuti - Dati ulteriori",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Altri contenuti - Dati ulteriori",
+    "#",
+    null
+   ],
+   [
+    "Relazioni di inizio e fine mandato",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/212",
+    null
+   ],
+   [
+    "Albi beneficiari provvidenze",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/70",
+    null
+   ],
+   [
+    "Buone prassi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/5",
+    null
+   ],
+   [
+    "Consorzi, Enti e società",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/67",
+    null
+   ],
+   [
+    "Contabilizzazione servizi erogati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/65",
+    null
+   ],
+   [
+    "Contratti integrativi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/66",
+    null
+   ],
+   [
+    "Dati informativi sul personale",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Dati informativi sul personale",
+    "#",
+    null
+   ],
+   [
+    "Assenze e Presenze",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/13",
+    null
+   ],
+   [
+    "Codice disciplinare",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/17",
+    null
+   ],
+   [
+    "Contrattazione nazionale",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/61",
+    null
+   ],
+   [
+    "Curricula degli OIV",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/12",
+    null
+   ],
+   [
+    "Dati Segretario Comunale",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/14",
+    null
+   ],
+   [
+    "Incarichi a dipendenti e soggetti privati",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/62",
+    null
+   ],
+   [
+    "Nominativi e CV Dirigenti e titolari posizioni organizzative",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/68",
+    null
+   ],
+   [
+    "Premi e compensi",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/15",
+    null
+   ],
+   [
+    "Premialità",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/16",
+    null
+   ],
+   [
+    "Retribuzioni Dirigenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/19",
+    null
+   ],
+   [
+    "Retribuzioni e CV per incarichi politici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/11",
+    null
+   ],
+   [
+    "Dati informativi sull'organizzazione e i procedimenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/3",
+    null
+   ],
+   [
+    "Dati sulla gestione economico finanziaria dei servizi pubblici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/4",
+    null
+   ],
+   [
+    "Gestione dei pagamenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/64",
+    null
+   ],
+   [
+    "Piano e la relazione sulle performance",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/18",
+    null
+   ],
+   [
+    "Altri contenuti - Prevenzione della Corruzione",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Altri contenuti - Prevenzione della Corruzione",
+    "#",
+    null
+   ],
+   [
+    "Responsabile anticorruzione e trasparenza",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Responsabile anticorruzione e trasparenza",
+    "#",
+    null
+   ],
+   [
+    "nomina RPCT",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/266",
+    null
+   ],
+   [
+    "Comunicazione pubblicazione relazione 2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/263",
+    null
+   ],
+   [
+    "Relazioni del Responsabile della Prevenzione della Corruzione e della Trasparenza",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/264",
+    null
+   ],
+   [
+    "RPCT ante 2018 - relazioni e nomina",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/171",
+    null
+   ],
+   [
+    "Portale PIAO - Piani Integrati di Attività e Organizzazione",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/343",
+    null
+   ],
+   [
+    "Regolamenti per la prevenzione e la repressione della corruzione e dell'illegalità",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/416",
+    null
+   ],
+   [
+    "Patto di integrità in materia di contratti pubblici",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/348",
+    null
+   ],
+   [
+    "Provvedimenti adottati dall'A.N.AC. ed atti di adeguamento a tali provvedimenti",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/426",
+    null
+   ],
+   [
+    "Atti di accertamento delle violazioni",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/428",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2014/2016",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/174",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2015/2017",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/176",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2016/2018",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/205",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2017/2019",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/211",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2018/2020",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/248",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2019/2021",
+    "/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/417",
+    null
+   ],
+   [
+    "Piano triennale di prevenzione della corruzione 2019/2021",
+    "#",
+    null
+   ],
+   [
+    "avviso di aggiornamento",
+    "/c023060/zf/index.php/trasparenza/index/index/categoria/261",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "OK",
+   "Disposizioni generali",
+   "Piano Integrato di Attività e Organizzazione (PIAO)",
+   "Organizzazione",
+   "Articolazione degli uffici",
+   "Sanzioni per mancata comunicazione dei dati",
+   "Consulenti e collaboratori",
+   "Personale",
+   "Tassi di assenza",
+   "Contrattazione integrativa",
+   "Performance",
+   "Enti controllati",
+   "Società partecipate",
+   "Attività e procedimenti",
+   "Attivita e procedimenti servizi demografici",
+   "Provvedimenti",
+   "Bandi di gara e contratti",
+   "Procedure fino al 31/12/2023",
+   "Bandi di gara e contratti",
+   "Sotto-sezioni eliminate dalla Delibera n. 7 del 17 gennaio 2023",
+   "Sovvenzioni, contributi, sussidi, vantaggi economici",
+   "Bilanci",
+   "Bilancio preventivo e consuntivo",
+   "Beni immobili e gestione patrimonio",
+   "Controlli e rilievi sull'amministrazione",
+   "Organismi indipendenti di valutazione, nuclei di valutazione o altri oganismi co",
+   "ATTESTAZIONI OIV",
+   "Corte dei conti",
+   "Servizi erogati",
+   "Pagamenti dell'amministrazione",
+   "Indicatore di tempestività dei pagamenti",
+   "Opere pubbliche",
+   "PON Scuola",
+   "Pianificazione e governo del territorio",
+   "Informazioni ambientali",
+   "PEF",
+   "Interventi straordinari e di emergenza",
+   "Ordinanze sindacali contingibili ed urgenti art. 42, c. 1, lett.a), del D.Lgs. 3",
+   "Altri contenuti - Dati ulteriori",
+   "Dati informativi sul personale",
+   "Altri contenuti - Prevenzione della Corruzione",
+   "Responsabile anticorruzione e trasparenza",
+   "Piano triennale di prevenzione della corruzione 2019/2021",
+   "Piano triennale di prevenzione della corruzione e della trasparenza 2020/2022",
+   "Sotto-sezioni eliminate dal D.Lgs 97/2016"
+  ],
+  "rete": [
+   "GET https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658",
+   "GET https://sac3.halleysac.it/include/redBandi.php?multiente=c023060&bando=658",
+   "GET https://sac3.halleysac.it/c023060/zf/index.php/bandi-gara/bandi-gara/dettaglio-bando/bando/658",
+   "GET https://sac3.halleysac.it/km/design-web-toolkit/build/vendor/modernizr.js",
+   "GET https://sac3.halleysac.it/km/design-web-toolkit/build/vendor/jquery.min.js",
+   "GET https://sac3.halleysac.it/c023060/km/scripts.js?041443&tm=1602828654",
+   "GET https://sac3.halleysac.it/c023060/km/bootstrap/js/bootstrap.min.js",
+   "GET https://sac3.halleysac.it/c023060/km/bootstrap/bootstrap.halley.js",
+   "GET https://sac3.halleysac.it/c023060/editor/CKeditor/ckeditor.js",
+   "GET https://sac3.halleysac.it/c023060/km/css/accessibilita.php?nocache=1795859490",
+   "GET https://sac3.halleysac.it/c023060/zf/index.php/kamaleonte/index/logo/preview/0",
+   "GET https://sac3.halleysac.it/km/design-web-toolkit/build/IWT.min.js",
+   "GET https://ingestion.webanalytics.italia.it/matomo.js",
+   "POST https://ingestion.webanalytics.italia.it/matomo.php?action_name=Comune%20di%20Povegliano%20Veronese&idsite=K23zO8Vp6X&rec=1&r=032695&h=10&m=51&s=31&url=https%3A%2F%2Fsac3.halleysac.it%2Fc023060%2Fzf%2Findex.php%2Fbandi-gara%2Fbandi-gara%2Fdettaglio-bando%2Fbando%2F658&_id=334818c0a3f0a2ae&_idn=1&cs="
+  ]
+ }
+}

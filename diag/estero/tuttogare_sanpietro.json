@@ -1,0 +1,417 @@
+{
+ "url": "https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
+  "byte": 82784,
+  "secondi": 1.4,
+  "tipo": "text/html; charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 0.6,
+  "attesa_s": 5.6,
+  "url_finale": "https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
+  "link": [
+   [
+    "Aggiorna browser",
+    "https://browser-update.org/update-browser.html#3.3.67:sanpietroamaida.tuttogare.it",
+    null
+   ],
+   [
+    "Ignora",
+    null,
+    null
+   ],
+   [
+    "Salta al contenuto principale",
+    "#main-content",
+    null
+   ],
+   [
+    "Homepage",
+    "/index.php",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Sito istituzionale",
+    "http://www.comune.sanpietroamaida.cz.it",
+    null
+   ],
+   [
+    "Italiano",
+    "#",
+    null
+   ],
+   [
+    "English",
+    "/index.php?language=EN",
+    null
+   ],
+   [
+    "Español",
+    "/index.php?language=ES",
+    null
+   ],
+   [
+    "Català",
+    "/index.php?language=CA",
+    null
+   ],
+   [
+    "Deutsch",
+    "/index.php?language=DE",
+    null
+   ],
+   [
+    "Cerca",
+    "#",
+    "showModalWithURL('/search/form.php')"
+   ],
+   [
+    "Accedi",
+    "/login-form.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "Procedure di gara",
+    "#",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Elenchi e qualifiche fornitori",
+    "#",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Altre iniziative e informazioni",
+    "#",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "Home",
+    "/index.php",
+    null
+   ],
+   [
+    "Gare e affidamenti",
+    "/gare/",
+    null
+   ],
+   [
+    "Accedi",
+    "/accesso.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDE833475A\n(si apre in una nuova finestra)",
+    "https://dati.anticorruzione.it/superset/dashboard/dettaglio_cig/?cig=BDE833475A",
+    null
+   ],
+   [
+    "MODIFICA TERMINI DI GARA - EFFICIENTAMENTO ENERGETICO DELLA PALESTRA DELLA SCUOLA PRIMARIA E SECONDARIA DI PRIMO GRADO S",
+    "/avvisi/dettaglio.php?codice=7&modulo=gare&codice_elemento=59&sub=58",
+    null
+   ],
+   [
+    "AVVISO DI RETTIFICA E PROROGA TERMINI",
+    "/avvisi/dettaglio.php?codice=6&modulo=gare&codice_elemento=59&sub=58",
+    null
+   ],
+   [
+    "bando-di-gara.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=131&filename=YmFuZG8tZGktZ2FyYS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "opere-migliorative.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=133&filename=b3BlcmUtbWlnbGlvcmF0aXZlLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.01-computo-metrico-estimativo.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=134&filename=Yy4wMS1jb21wdXRvLW1ldHJpY28tZXN0aW1hdGl2by5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.02-elenco-prezzi-unitari.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=135&filename=Yy4wMi1lbGVuY28tcHJlenppLXVuaXRhcmkucGRm&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.03-analisi-dei-prezzi.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=136&filename=Yy4wMy1hbmFsaXNpLWRlaS1wcmV6emkucGRm&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.04-stima-incidenza-manodopera.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=137&filename=Yy4wNC1zdGltYS1pbmNpZGVuemEtbWFub2RvcGVyYS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.05-computo-metrico-sicurezza.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=138&filename=Yy4wNS1jb21wdXRvLW1ldHJpY28tc2ljdXJlenphLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.06-elenco-prezzi-sicurezza.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=139&filename=Yy4wNi1lbGVuY28tcHJlenppLXNpY3VyZXp6YS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "c.07-quadro-economico.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=140&filename=Yy4wNy1xdWFkcm8tZWNvbm9taWNvLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "r.01-relazione-generale-tecnica-illustrativa.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=141&filename=ci4wMS1yZWxhemlvbmUtZ2VuZXJhbGUtdGVjbmljYS1pbGx1c3RyYXRpdmEucGRm&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "s.01-capitolato-speciale-dappalto-e-schema-di-contratto.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=142&filename=cy4wMS1jYXBpdG9sYXRvLXNwZWNpYWxlLWRhcHBhbHRvLWUtc2NoZW1hLWRpLWNvbnRyYXR0by5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "s.03-cronoprogramma-dei-lavori.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=143&filename=cy4wMy1jcm9ub3Byb2dyYW1tYS1kZWktbGF2b3JpLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "s.04-piano-di-sicurezza-e-coordinamento.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=144&filename=cy4wNC1waWFuby1kaS1zaWN1cmV6emEtZS1jb29yZGluYW1lbnRvLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "s.05-layout-di-cantiere.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=145&filename=cy4wNS1sYXlvdXQtZGktY2FudGllcmUucGRm&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.05-pianta-piano-terra-stato-di-progetto.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=146&filename=ZWcuMDUtcGlhbnRhLXBpYW5vLXRlcnJhLXN0YXRvLWRpLXByb2dldHRvLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.06-pianta-copertura-stato-di-progetto.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=147&filename=ZWcuMDYtcGlhbnRhLWNvcGVydHVyYS1zdGF0by1kaS1wcm9nZXR0by5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.07-prospetti-stato-di-progetto.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=148&filename=ZWcuMDctcHJvc3BldHRpLXN0YXRvLWRpLXByb2dldHRvLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.08-sezioni-e-particolari-costruttivi-stato-di-progetto.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=149&filename=ZWcuMDgtc2V6aW9uaS1lLXBhcnRpY29sYXJpLWNvc3RydXR0aXZpLXN0YXRvLWRpLXByb2dldHRvLnBkZg==&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.09-schema-unifilare.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=150&filename=ZWcuMDktc2NoZW1hLXVuaWZpbGFyZS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.10-schema-tipo-centrale-termica.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=151&filename=ZWcuMTAtc2NoZW1hLXRpcG8tY2VudHJhbGUtdGVybWljYS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "eg.11-abaco-degli-infissi.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=152&filename=ZWcuMTEtYWJhY28tZGVnbGktaW5maXNzaS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "it.01-inquadramento-territoriale.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=153&filename=aXQuMDEtaW5xdWFkcmFtZW50by10ZXJyaXRvcmlhbGUucGRm&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "disciplinare-di-gara.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=154&filename=ZGlzY2lwbGluYXJlLWRpLWdhcmEucGRm&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "avviso-rettifica.pdf\n(si apre in una nuova finestra)",
+    "/allegati/open.php?codice=174&filename=YXZ2aXNvLXJldHRpZmljYS5wZGY=&sourceID=58&sourceType=Z2FyZS1wdWJsaWM=&general_connection=1",
+    null
+   ],
+   [
+    "Accedi",
+    "/accesso.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Comune di San Pietro a Maida",
+    "http://www.comune.sanpietroamaida.cz.it",
+    null
+   ],
+   [
+    "utc.sanpietroamaida@asmepec.it",
+    "mailto:utc.sanpietroamaida@asmepec.it",
+    null
+   ],
+   [
+    "TUTTOGARE",
+    "https://app.tuttogare.it",
+    null
+   ],
+   [
+    "Norme tecniche di utilizzo",
+    "/norme_tecniche.php",
+    null
+   ],
+   [
+    "Policy privacy",
+    "/privacy.php",
+    null
+   ],
+   [
+    "Verifica documento",
+    "/allegati/verifica/form.php",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Ignora",
+   "Torna su",
+   "Ritorna",
+   "Menu",
+   "Procedure di gara",
+   "Elenchi e qualifiche fornitori",
+   "Altre iniziative e informazioni",
+   "Informazioni appalto",
+   "Categorie merceologiche",
+   "Lotti",
+   "Scadenze",
+   "Avvisi pubblici",
+   "Allegati",
+   "Chiarimenti",
+   "Indietro",
+   "×"
+  ],
+  "rete": [
+   "GET https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
+   "GET https://sanpietroamaida.tuttogare.it/src/ckeditor5/ckeditor.js",
+   "GET https://sanpietroamaida.tuttogare.it/src/js/app.js?date=20260805",
+   "GET https://sanpietroamaida.tuttogare.it/src/highcharts/highcharts.js",
+   "GET https://sanpietroamaida.tuttogare.it/src/highcharts/highcharts-more.js",
+   "GET https://sanpietroamaida.tuttogare.it/src/typeahead/typeahead.bundle.js",
+   "GET https://sanpietroamaida.tuttogare.it/src/js/extra/files.js",
+   "GET https://sanpietroamaida.tuttogare.it/src/js/resumable.js",
+   "GET https://js-de.sentry-cdn.com/1b745bc2fb8d172adc30424a79934c15.min.js",
+   "GET https://sanpietroamaida.tuttogare.it/dictionary/IT.json",
+   "GET https://browser.sentry-cdn.com/10.78.0/bundle.tracing.replay.min.js",
+   "GET https://browser-update.org/update.min.js",
+   "GET blob:https://sanpietroamaida.tuttogare.it/d478f20c-17bb-4848-b87c-4ce8a9c639f5",
+   "GET https://browser-update.org/update.show.min.js",
+   "POST https://o4509864878080000.ingest.de.sentry.io/api/4509870668972112/envelope/?sentry_version=7&sentry_key=1b745bc2fb8d172adc30424a79934c15&sentry_client=sentry.javascript.browser%2F10.78.0"
+  ]
+ }
+}

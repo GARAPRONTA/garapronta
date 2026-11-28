@@ -1,0 +1,568 @@
+{
+ "url": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
+  "byte": 56,
+  "secondi": 1.0,
+  "tipo": "text/html; charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 0.4,
+  "attesa_s": 5.4,
+  "url_finale": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/index.php",
+  "link": [
+   [
+    "Aggiorna browser",
+    "https://browser-update.org/update-browser.html#3.3.67:appalti.regionesiciliana.lavoripubblici.sicilia.it",
+    null
+   ],
+   [
+    "Ignora",
+    null,
+    null
+   ],
+   [
+    "Homepage",
+    "/index.php",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Qualifiche / Richiesta ammissione agli ALBI",
+    "/pagine/id6-qualifiche-richiesta-ammissione-agli-albi",
+    null
+   ],
+   [
+    "Procedure di somma urgenza",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?somma_urgenza=1",
+    null
+   ],
+   [
+    "Sponsarizzazioni",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?search=sponsor",
+    null
+   ],
+   [
+    "Composizioni delle commissioni giudicatrici e CV dei Componenti",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?criterio=vantaggiosa",
+    null
+   ],
+   [
+    "Pari opportunità e inclusione lavorativa nei contratti pubblici PNRR e PNC e nei contratti riservati",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?pari_opportunita=1",
+    null
+   ],
+   [
+    "Finanza di progetto",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?finanza_progetto=1",
+    null
+   ],
+   [
+    "Sito istituzionale",
+    "http://www.regione.sicilia.it",
+    null
+   ],
+   [
+    "Accedi",
+    "/login-form.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "Cerca",
+    "#",
+    "showModalWithURL('/search/form.php')"
+   ],
+   [
+    "Italiano",
+    "#",
+    null
+   ],
+   [
+    "English",
+    "/index.php?language=EN",
+    null
+   ],
+   [
+    "Español",
+    "/index.php?language=ES",
+    null
+   ],
+   [
+    "Català",
+    "/index.php?language=CA",
+    null
+   ],
+   [
+    "Deutsch",
+    "/index.php?language=DE",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "Procedure di gara",
+    "#",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Elenchi e qualifiche fornitori",
+    "#",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "Altre iniziative e informazioni",
+    "#",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Qualifiche / Richiesta ammissione agli ALBI",
+    "/pagine/id6-qualifiche-richiesta-ammissione-agli-albi",
+    null
+   ],
+   [
+    "Procedure di somma urgenza",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?somma_urgenza=1",
+    null
+   ],
+   [
+    "Sponsarizzazioni",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?search=sponsor",
+    null
+   ],
+   [
+    "Composizioni delle commissioni giudicatrici e CV dei Componenti",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?criterio=vantaggiosa",
+    null
+   ],
+   [
+    "Pari opportunità e inclusione lavorativa nei contratti pubblici PNRR e PNC e nei contratti riservati",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?pari_opportunita=1",
+    null
+   ],
+   [
+    "Finanza di progetto",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?finanza_progetto=1",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "CIE",
+    null,
+    null
+   ],
+   [
+    "SPID",
+    null,
+    null
+   ],
+   [
+    "Credenziali",
+    null,
+    null
+   ],
+   [
+    "Entra con CIE",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/oidc/request.php?service=CIE&env=PROD&provider_id=oidc.idserver.servizicie.interno.gov.it",
+    null
+   ],
+   [
+    "Maggiori informazioni su SPID",
+    "https://www.spid.gov.it",
+    null
+   ],
+   [
+    "Non hai SPID?",
+    "https://www.spid.gov.it/richiedi-spid",
+    null
+   ],
+   [
+    "Serve aiuto?",
+    "https://www.spid.gov.it/serve-aiuto",
+    null
+   ],
+   [
+    "Entra con SPID",
+    "#",
+    null
+   ],
+   [
+    "Maggiori informazioni",
+    "https://www.spid.gov.it",
+    null
+   ],
+   [
+    "Non hai SPID?",
+    "https://www.spid.gov.it/richiedi-spid",
+    null
+   ],
+   [
+    "Serve aiuto?",
+    "https://www.spid.gov.it/serve-aiuto",
+    null
+   ],
+   [
+    "Accedi con credenziali",
+    "/accesso.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "Vedi tutti",
+    "/news/index.php",
+    null
+   ],
+   [
+    "AVVISO MANUTENZIONE - LUNEDÌ 30 NOVEMBRE - ORE 15:00",
+    "/news/id16-avviso-manutenzione-luned236-30-novembre-ore-1500",
+    null
+   ],
+   [
+    "Vedi tutti",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "TERZO CONVEGNO INTERNAZIONALE DI STUDI (LIPARI, 1/3 OTTOBRE 2026) - “ PUBBLICAZIONE ATTI DEL CONVEGNO ”",
+    "/gare/dettaglio.php?codice=8343",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=8343",
+    null
+   ],
+   [
+    "AFFIDAMENTO DIRETTO, AI SENSI DELL’ART. 50, COMMA 1, LETT. B) DEL D.LGS. N. 36/2023, PREVIA INDAGINE ESPLORATIVA DI MERC",
+    "/gare/dettaglio.php?codice=8232",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=8232",
+    null
+   ],
+   [
+    "PROCEDURA APERTA SOPRA SOGLIA COMUNITARIA CON TERMINI RIDOTTI PER URGENZA AI SENSI DELL’ART. 71, COMMI 1 E 3, DEL D.LGS.",
+    "/gare/dettaglio.php?codice=8154",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=8154",
+    null
+   ],
+   [
+    "SERVIZIO DI PROGETTAZIONE ESECUTIVA, ALLESTIMENTO PER EVENTO “SERVIZI TECNICO-LOGISTICI PER LA REALIZZAZIONE DELLO SPETT",
+    "/gare/dettaglio.php?codice=8213",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=8213",
+    null
+   ],
+   [
+    "ACQUISTO SOFTWARE SPECIALISTICO E RINNOVO LICENZE - ACCA SOFTWARE",
+    "/gare/dettaglio.php?codice=8230",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=8230",
+    null
+   ],
+   [
+    "PROCEDURA APERTA RELATIVA ALL’AFFIDAMENTO DEI “LAVORI DI MANUTENZIONE ORDINARIA E STRAORDINARIA DEGLI AMBIENTI E DEGLI I",
+    "/gare/dettaglio.php?codice=7835",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=7835",
+    null
+   ],
+   [
+    "AFFIDAMENTO, DEL SERVIZIO DI SPAZZAMENTO, RACCOLTA E TRASPORTO ALLO SMALTIMENTO DEI RIFIUTI SOLIDI URBANI DIFFERENZIATI ",
+    "/gare/dettaglio.php?codice=4382",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=4382",
+    null
+   ],
+   [
+    "Albi fornitori\n8",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albi professionisti\n18",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "AVVISO DI GARA – SICILIA EXPRESS NATALE 2026 (CIG: BDD9936EA6 – CODICE GARA: 8154)",
+    "/avvisi/dettaglio.php?codice=1653&modulo=gare&codice_elemento=8154&sub=7818",
+    null
+   ],
+   [
+    "SEDUTA PUBBLICA DI GARA 04/08/2026 ORE 10.00",
+    "/avvisi/dettaglio.php?codice=1496&modulo=gare&codice_elemento=3053&sub=2903",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Qualifiche / Richiesta ammissione agli ALBI",
+    "/pagine/id6-qualifiche-richiesta-ammissione-agli-albi",
+    null
+   ],
+   [
+    "Procedure di somma urgenza",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?somma_urgenza=1",
+    null
+   ],
+   [
+    "Sponsarizzazioni",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?search=sponsor",
+    null
+   ],
+   [
+    "Composizioni delle commissioni giudicatrici e CV dei Componenti",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?criterio=vantaggiosa",
+    null
+   ],
+   [
+    "Pari opportunità e inclusione lavorativa nei contratti pubblici PNRR e PNC e nei contratti riservati",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?pari_opportunita=1",
+    null
+   ],
+   [
+    "Finanza di progetto",
+    "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/index.php?finanza_progetto=1",
+    null
+   ],
+   [
+    "Regione Siciliana - Dipartimento Regionale tecnico - Centrale unica di committenza di Lavori e Servizi di progettazione ",
+    "http://www.regione.sicilia.it",
+    null
+   ],
+   [
+    "dipartimento.tecnico@certmail.regione.sicilia.it",
+    "mailto:dipartimento.tecnico@certmail.regione.sicilia.it",
+    null
+   ],
+   [
+    "https://supporto.lavoripubblici.sicilia.it/",
+    "https://supporto.lavoripubblici.sicilia.it/",
+    null
+   ],
+   [
+    "TUTTOGARE",
+    "https://app.tuttogare.it",
+    null
+   ],
+   [
+    "Norme tecniche di utilizzo",
+    "/norme_tecniche.php",
+    null
+   ],
+   [
+    "Policy privacy",
+    "/privacy.php",
+    null
+   ],
+   [
+    "Verifica documento",
+    "/allegati/verifica/form.php",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Ignora",
+   "__(\"Torna su\") ?>",
+   "Ritorna",
+   "Menu",
+   "Procedure di gara",
+   "Elenchi e qualifiche fornitori",
+   "Altre iniziative e informazioni",
+   "CIE",
+   "SPID",
+   "Credenziali",
+   "ArubaPEC S.p.A.",
+   "TeamSystem s.p.a.",
+   "InfoCert S.p.A.",
+   "TI Trust Technologies srl",
+   "Intesi Group S.p.A.",
+   "EtnaHitech S.C.p.A.",
+   "Poste Italiane SpA",
+   "InfoCamere S.C.p.A.",
+   "Namirial",
+   "Agenzia per l'Italia Digitale - AgID",
+   "Register.it S.p.A.",
+   "Lepida S.p.A.",
+   "Sielte S.p.A.",
+   "Indietro",
+   "×"
+  ],
+  "rete": [
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/index.php",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/ckeditor5/ckeditor.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/js/app.js?date=20260805",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/highcharts/highcharts.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/highcharts/highcharts-more.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/typeahead/typeahead.bundle.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/js/extra/files.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/js/resumable.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/js/extra/spid-sp-access-button.min.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/src/js/extra/spid-idps.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/dictionary/IT.json",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/spid/idps.php?cache=no",
+   "GET https://browser-update.org/update.min.js",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/cie/button.php",
+   "GET https://appalti.regionesiciliana.lavoripubblici.sicilia.it/undefined",
+   "GET https://browser-update.org/update.show.min.js"
+  ]
+ }
+}

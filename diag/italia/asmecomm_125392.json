@@ -1,0 +1,2042 @@
+{
+ "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
+  "byte": 56,
+  "secondi": 0.1,
+  "tipo": "text/html; charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 0.2,
+  "attesa_s": 7.7,
+  "url_finale": "https://piattaforma.asmecomm.it/index.php",
+  "link": [
+   [
+    "Aggiorna browser",
+    "https://browser-update.org/update-browser.html#3.3.67:piattaforma.asmecomm.it",
+    null
+   ],
+   [
+    "Ignora",
+    null,
+    null
+   ],
+   [
+    "Homepage",
+    "/index.php",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "S.D.A.",
+    "/archivio_sda/index.php",
+    null
+   ],
+   [
+    "Albi commissione",
+    "/albi_commissione/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "? F.A.Q. - ASMECOMM",
+    "/pagine/id1--f.a.q.-asmecomm",
+    null
+   ],
+   [
+    "La Rete di committenza qualificata dei Comuni",
+    "https://www.asmel.eu/servizi/dettaglio-servizi/rete-di-committenza-qualificata",
+    null
+   ],
+   [
+    "Infografica di tutti i servizi della rete di  committenza",
+    "https://www.asmel.eu/servizi/dettaglio-servizi/servizi-di-supporto-agli-enti-appaltanti",
+    null
+   ],
+   [
+    "Focus su ALBO ESPERTI PA per nomine Commissari, Rup esterni e CCT",
+    "https://www.asmecomm.it/index.php?action=index&p=10265",
+    null
+   ],
+   [
+    "Assistenza OE",
+    "https://ws.asmel.eu/f/AperturaTicketOE.html",
+    null
+   ],
+   [
+    "Assistenza SA",
+    "https://ws.asmel.eu/f/AperturaTicketSA.html",
+    null
+   ],
+   [
+    "Sito istituzionale",
+    "http://www.asmecomm.it",
+    null
+   ],
+   [
+    "Accedi",
+    "/login-form.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "Cerca",
+    "#",
+    "showModalWithURL('/search/form.php')"
+   ],
+   [
+    "Italiano",
+    "#",
+    null
+   ],
+   [
+    "English",
+    "/index.php?language=EN",
+    null
+   ],
+   [
+    "Español",
+    "/index.php?language=ES",
+    null
+   ],
+   [
+    "Català",
+    "/index.php?language=CA",
+    null
+   ],
+   [
+    "Deutsch",
+    "/index.php?language=DE",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "Procedure di gara",
+    "#",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Elenchi e qualifiche fornitori",
+    "#",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "S.D.A.",
+    "/archivio_sda/index.php",
+    null
+   ],
+   [
+    "Altre iniziative e informazioni",
+    "#",
+    null
+   ],
+   [
+    "Albi commissione",
+    "/albi_commissione/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "? F.A.Q. - ASMECOMM",
+    "/pagine/id1--f.a.q.-asmecomm",
+    null
+   ],
+   [
+    "La Rete di committenza qualificata dei Comuni",
+    "https://www.asmel.eu/servizi/dettaglio-servizi/rete-di-committenza-qualificata",
+    null
+   ],
+   [
+    "Infografica di tutti i servizi della rete di  committenza",
+    "https://www.asmel.eu/servizi/dettaglio-servizi/servizi-di-supporto-agli-enti-appaltanti",
+    null
+   ],
+   [
+    "Focus su ALBO ESPERTI PA per nomine Commissari, Rup esterni e CCT",
+    "https://www.asmecomm.it/index.php?action=index&p=10265",
+    null
+   ],
+   [
+    "Assistenza OE",
+    "https://ws.asmel.eu/f/AperturaTicketOE.html",
+    null
+   ],
+   [
+    "Assistenza SA",
+    "https://ws.asmel.eu/f/AperturaTicketSA.html",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "La Rete di committenza qualificata dei Comuni",
+    "https://www.asmel.eu/servizi/dettaglio-servizi/rete-di-committenza-qualificata",
+    null
+   ],
+   [
+    "Infografica di tutti i servizi della rete di committenza",
+    "https://www.asmel.eu/servizi/dettaglio-servizi/servizi-di-supporto-agli-enti-appaltanti",
+    null
+   ],
+   [
+    "Focus su ALBO ESPERTI PA per nomine Commissari, Rup esterni e CCT",
+    "https://www.asmecomm.it/index.php?action=index&p=10265",
+    null
+   ],
+   [
+    "Vedi tutti",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "RELAZIONE TECNICA FORESTALE O AGRONOMICA, SERVIZIO DI CONSULENZA, DIREZIONE LAVORI E RENDICONDAZIONE",
+    "/gare/dettaglio.php?codice=125608",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125608",
+    null
+   ],
+   [
+    "ORDINANZA PRESIDENTE DEL CONSIGLIO DEI MINISTRI N. 250 DEL 22 DICEMBRE 2025. PROCEDURA DI GARA APERTA PER L’AFFIDAMENTO ",
+    "/gare/dettaglio.php?codice=122751",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122751",
+    null
+   ],
+   [
+    "AFFIDAMENTO DIRETTO DEL SERVIZIO DI ORGANIZZAZIONE E GESTIONE DELLO SPORTELLO SPECIALISTICO DI ORIENTAMENTO AL LAVORO (O",
+    "/gare/dettaglio.php?codice=124589",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124589",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO INTEGRATO DI GESTIONE, COORDINAMENTO OPERATIVO E ATTUAZIONE DELLE ATTIVITÀ PROGETTUALI, NONCHÉ ",
+    "/gare/dettaglio.php?codice=124590",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124590",
+    null
+   ],
+   [
+    "PROCEDURA APERTA PER L’AFFIDAMENTO DI CONTRATTI PUBBLICI DI SERVIZI E FORNITURE NEI SETTORI ORDINARI DI IMPORTO SUPERIOR",
+    "/gare/dettaglio.php?codice=122153",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122153",
+    null
+   ],
+   [
+    "DECRETO DEL MINISTERO DELLE INFRASTRUTTURE E DEI TRASPORTI, DI CONCERTO CON IL MINISTERO DELL’ECONOMIA E DELLE FINANZE D",
+    "/gare/dettaglio.php?codice=125745",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125745",
+    null
+   ],
+   [
+    "APPALTO INTEGRATO (ART. 44 D.LGS. 36/2023) PER I LAVORI DI ADEGUAMENTO DELL'EX EDIFICIO SCOLASTICO SITO IN VIA POTENZA D",
+    "/gare/dettaglio.php?codice=111421",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=111421",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO DI GESTIONE INTEGRATA DEI PROCEDIMENTI SANZIONATORI RELATIVI AL CODICE DELLA STRADA AI SENSI DE",
+    "/gare/dettaglio.php?codice=121739",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=121739",
+    null
+   ],
+   [
+    "PR CAMPANIA FESR 2021-2027. ASSE 3 - RSO 3.2. - AZIONE: 3.2.3. -INTERVENTI DI ADEGUAMENTO E MESSA IN SICUREZZA DELLE STR",
+    "/gare/dettaglio.php?codice=122306",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122306",
+    null
+   ],
+   [
+    "LAVORI PER IL COMPLETAMENTO PROGRAMMA MESSA IN SICUREZZA E RIAMMAGLIAMENTO RETE STRADALE IN CAMPANIA STRADA COMUNALE CAP",
+    "/gare/dettaglio.php?codice=122556",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122556",
+    null
+   ],
+   [
+    "SERVIZIO DI TESORERIA 01.01.2027 - 31.12.2029",
+    "/gare/dettaglio.php?codice=123390",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123390",
+    null
+   ],
+   [
+    "“INTERVENTI URGENTI DI MESSA IN SICUREZZA DEL COSTONE ROCCIOSO SOVRASTANTE LA VIA CASTELLO A SEGUITO DEL FENOMENO DI CAD",
+    "/gare/dettaglio.php?codice=126004",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126004",
+    null
+   ],
+   [
+    "PROCEDURA NEGOZIATA PRECEDUTA DA AVVISO DI MANIFESTAZIONE DI INTERESSE PER L’AFFIDAMENTO DELLA “CONCESSIONE DEL SERVIZIO",
+    "/gare/dettaglio.php?codice=124291",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124291",
+    null
+   ],
+   [
+    "GARA A PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO IN APPALTO DEI SERVIZI TECNICI DI DIREZIONE LAVORI, CONTABILITÀ, LI",
+    "/gare/dettaglio.php?codice=122318",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122318",
+    null
+   ],
+   [
+    "FORNITURE ARREDI INNOVATIVI NIDO SEPICCIANO, INFANZIA SEPICCIANO, INFANZIA PRINCIPE UMBERTO - CUP D14D25008540007",
+    "/gare/dettaglio.php?codice=124419",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124419",
+    null
+   ],
+   [
+    "PROCEDURA APERTA TELEMATICA AI SENSI DELL’ART. 71, D.LGS. 36/23 PER L’AFFIDAMENTO DI CONTRATTI PUBBLICI DI SERVIZI NEI S",
+    "/gare/dettaglio.php?codice=118528",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=118528",
+    null
+   ],
+   [
+    "\"INTERVENTI DI MITIGAZIONE DEL RISCHIO IDROGEOLOGICO E VALORIZZAZIONE DEL PATRIMONIO FORESTALE E AMBIENTALE NEL TERRITOR",
+    "/gare/dettaglio.php?codice=126215",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126215",
+    null
+   ],
+   [
+    "\"INTERVENTI DI MITIGAZIONE DEL RISCHIO IDROGEOLOGICO E VALORIZZAZIONE DEL PATRIMONIO FORESTALE E AMBIENTALE NEL TERRITOR",
+    "/gare/dettaglio.php?codice=126240",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126240",
+    null
+   ],
+   [
+    "MANUTENZIONE STRAORDINARIA VIABILITÀ COMUNALE – ANNUALITÀ 2026",
+    "/gare/dettaglio.php?codice=124582",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124582",
+    null
+   ],
+   [
+    "LAVORI DI MANUTENZIONE STRAORDINARIA DEL TRATTO VIARIO TRA LA VIA N. INFERIORE E LA C. DA CARBONE - CUP: E87H25001460004",
+    "/gare/dettaglio.php?codice=124765",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124765",
+    null
+   ],
+   [
+    "PROCEDURA APERTA PER L’AFFIDAMENTO DEL SERVIZIO DI GESTIONE DEI RIFIUTI SOLIDI URBANI E DEI SERVIZI DI IGIENE URBANA DEL",
+    "/gare/dettaglio.php?codice=118140",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=118140",
+    null
+   ],
+   [
+    "PROCEDURA APERTA AI SENSI DELL'ARTT. 71 E 108 DEL D.LGS. 36/2023 PER LA FORNITURA E POSA IN OPERA DI ARREDI DIDATTICI IN",
+    "/gare/dettaglio.php?codice=121879",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=121879",
+    null
+   ],
+   [
+    "AFFIDAMENTO SERVIZI TECNICI PER LA MANUTENZIONE E MESSA IN SICUREZZA DELLA VIABILITÀ CITTADINA",
+    "/gare/dettaglio.php?codice=126386",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126386",
+    null
+   ],
+   [
+    "LAVORI DI RIQUALIFICAZIONE URBANA E RIFACIMENTO MARCIAPIEDI E ARREDO URBANO IN PIAZZA ALCIDE DE GASPERI",
+    "/gare/dettaglio.php?codice=126373",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126373",
+    null
+   ],
+   [
+    "GARA EUROPEA A PROCEDURA TELEMATICA APERTA PER LA FORNITURA DI ATTREZZATURE E MACCHINARI A SERVIZIO DEL CENTRO COMUNALE ",
+    "/gare/dettaglio.php?codice=122364",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122364",
+    null
+   ],
+   [
+    "INTERVENTO DI MESSA IN SICUREZZA E RIAMMAGLIAMENTO DELLA RETE STRADALE COMUNALE, ANCHE MEDIANTE IL COMPLETAMENTO DI ALCU",
+    "/gare/dettaglio.php?codice=124321",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124321",
+    null
+   ],
+   [
+    "GARA EUROPEA A PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO DELL’APPALTO DI SERVIZI DI PROGETTAZIONE, REALIZZAZIONE E G",
+    "/gare/dettaglio.php?codice=122043",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122043",
+    null
+   ],
+   [
+    "AFFIDAMENTO IN CONCESSIONE MEDIANTE PROJECT FINANCING DELLA PROGETTAZIONE ESECUTIVA, REALIZZAZIONE DEI LAVORI DI RIQUALI",
+    "/gare/dettaglio.php?codice=123026",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123026",
+    null
+   ],
+   [
+    "L.R. 2/2009 - BANDO INVESTIMENTI SISTEMA NEVE REGIONE PIEMONTE 2025-2030 - SCI DA DISCESA - AREA SCIISTICA VALDO_PONTE –",
+    "/gare/dettaglio.php?codice=126149",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126149",
+    null
+   ],
+   [
+    "L.R. 2/2009 - BANDO INVESTIMENTI SISTEMA NEVE REGIONE PIEMONTE 2025-2030 - SCI DA DISCESA - AREA SCIISTICA VALDO_PONTE –",
+    "/gare/dettaglio.php?codice=126177",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126177",
+    null
+   ],
+   [
+    "\"FONDO INVESTIMENTI STRADALI NEI PICCOLI COMUNI\", DI CUI ALL'ARTICOLO 19, COMMA 1, DEL DECRETO-LEGGE 10 AGOSTO 2023, N. ",
+    "/gare/dettaglio.php?codice=123422",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123422",
+    null
+   ],
+   [
+    "SERVIZIO DI TRASPORTO PUBBLICO LOCALE URBANO CON AUTOBUS DEL COMUNE DI SAMBUCA DI SICILIA.",
+    "/gare/dettaglio.php?codice=122713",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122713",
+    null
+   ],
+   [
+    "PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO DEI LAVORI DI REALIZZAZIONE DELLA VARIANTE DI COLLEGAMENTO ALLE STRADE S.R",
+    "/gare/dettaglio.php?codice=123113",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123113",
+    null
+   ],
+   [
+    "INTERVENTI DI RIFUNZIONALIZZAZIONE E RIQUALIFICAZIONE DELLA BIBLIOTECA COMUNALE PER SOSTENERE L’EROGAZIONE DI SERVIZI PU",
+    "/gare/dettaglio.php?codice=110154",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=110154",
+    null
+   ],
+   [
+    "PROCEDURA APERTA TELEMATICA PER L'AFFIDAMENTO DEL SERVIZIO DI TESORERIA COMUNALE PER IL QUINQUENNIO 2027-2031",
+    "/gare/dettaglio.php?codice=121687",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=121687",
+    null
+   ],
+   [
+    "PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO IN CONCESSIONE MISTA DI SERVIZI E FORNITURE PER LA GESTIONE DELLE AREE DI ",
+    "/gare/dettaglio.php?codice=123165",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123165",
+    null
+   ],
+   [
+    "PROCEDURA APERTA TELEMATICA AI SENSI DELL’ART. 71 DEL D. LGS. 36/2023 PER L’AFFIDAMENTO DI CONTRATTI PUBBLICI DI LAVORI ",
+    "/gare/dettaglio.php?codice=123385",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123385",
+    null
+   ],
+   [
+    "AFFIDAMENTO IN CONCESSIONE DELLA GESTIONE INTEGRATA DEI SERVIZI CIMITERIALI E DELL’ILLUMINAZIONE VOTIVA DEI CIMITERI COM",
+    "/gare/dettaglio.php?codice=123742",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123742",
+    null
+   ],
+   [
+    "SERVIZIO DI RACCOLTA, TRASPORTO, CONFERIMENTO E SMALTIMENTO DEI RIFIUTI URBANI DIFFERENZIATI E NON DIFFERENZIATI CON IL ",
+    "/gare/dettaglio.php?codice=122816",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122816",
+    null
+   ],
+   [
+    "POC 14 - 20 - DGR N. 391 DEL 28/07/20 - VALORIZZAZIONE STORICO CULTURALE DEL BORGO DI MONTEVERDE: MIGLIORAMENTO DELL'ACC",
+    "/gare/dettaglio.php?codice=124788",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124788",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI E PULIZIA DEGLI SPAZI AD USO PUBBLICO, SUL TERRITORIO COM",
+    "/gare/dettaglio.php?codice=123250",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123250",
+    null
+   ],
+   [
+    "COMUNE DI CASTELLALTO - AFFIDAMENTO IN CONCESSIONE MEDIANTE PROJECT FINANCING (FINANZA DI PROGETTO) AI SENSI DELL'ART. 1",
+    "/gare/dettaglio.php?codice=124256",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124256",
+    null
+   ],
+   [
+    "LAVORI DI SISTEMAZIONE PIAZZALE E AREE ESTERNE AL CIMITERO IN LOC. PREMIA",
+    "/gare/dettaglio.php?codice=125659",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125659",
+    null
+   ],
+   [
+    "LAVORI DI RIPRISTINO DELLA SEZIONE IDRAULICA DEL RIO GABBI IN LOCALITÀ CADARESE",
+    "/gare/dettaglio.php?codice=125749",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125749",
+    null
+   ],
+   [
+    "AVVISO ESPLORATIVO DIRETTO ALL’ACQUISIZIONE DI MANIFESTAZIONE DI INTERESSE DA PARTE DI OPERATORI ECONOMICI DA INVITARE A",
+    "/gare/dettaglio.php?codice=125718",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125718",
+    null
+   ],
+   [
+    "PROCEDURA APERTA PER L’AFFIDAMENTO DEL SERVIZIO DI REFEZIONE SCOLASTICA PER GLI ALUNNI DELLE SCUOLE DELL’INFANZIA, PRIMA",
+    "/gare/dettaglio.php?codice=118376",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=118376",
+    null
+   ],
+   [
+    "BANDO E DISCIPLINARE DI GARA TELEMATICA (ASTA PUBBLICA) ALIENAZIONE DI UN LOTTO UNICO DI MATERIALE LEGNOSO IN PIEDI (BOS",
+    "/gare/dettaglio.php?codice=124048",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124048",
+    null
+   ],
+   [
+    "SERVIZI DI ACCOGLIENZA NELL’AMBITO SISTEMA DI ACCOGLIENZA E INTEGRAZIONE – SAI PERIODO 24 MESI.",
+    "/gare/dettaglio.php?codice=125161",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125161",
+    null
+   ],
+   [
+    "SERVIZIO DI NOLO A CALDO DI MEZZI MECCANICI OPERATIVI (PALA CINGOLATA, ESCAVATORE E COMPATTATORE DA DISCARICA) CON SUPPO",
+    "/gare/dettaglio.php?codice=120330",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=120330",
+    null
+   ],
+   [
+    "OPERE DI COMPLETAMENTO DELLA CASERMETTA IN LOCALITÀ PASSO SAN GIACOMO",
+    "/gare/dettaglio.php?codice=125961",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125961",
+    null
+   ],
+   [
+    "L.R. 2/2009 – BANDO INVESTIMENTI SISTEMA NEVE REGIONE PIEMONTE 2025-2030 – SCI DA DISCESA – AREA SCIISTICA VALDO PONTE –",
+    "/gare/dettaglio.php?codice=126374",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126374",
+    null
+   ],
+   [
+    "GARA PER AFFIDAMENTO SERVIZIO DI TESORERIA COMUNALE ANNI 2027/2028/2029/2030/2031",
+    "/gare/dettaglio.php?codice=124352",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124352",
+    null
+   ],
+   [
+    "CONCESSIONE D’USO DI LOCALI COMUNALI SITI IN VIA DELLE SCUOLE N. 5/7, PIANO TERRA, FINALIZZATA ALLA REALIZZAZIONE E GEST",
+    "/gare/dettaglio.php?codice=123090",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123090",
+    null
+   ],
+   [
+    "LAVORI \"PROGETTO FOSMIT SELE TANAGRO”.",
+    "/gare/dettaglio.php?codice=126138",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126138",
+    null
+   ],
+   [
+    "PROCEDURA APERTA DI CUI ALL’ART. 71 DEL D.LGS. 36/2023 PER L’AFFIDAMENTO IN CONCESSIONE DEL SERVIZIO DI GESTIONE DELL’IM",
+    "/gare/dettaglio.php?codice=123619",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123619",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO DI PULIZIA ORDINARIA STRADE INTERNE.",
+    "/gare/dettaglio.php?codice=124100",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124100",
+    null
+   ],
+   [
+    "SERVIZIO DI SUPPORTO ALL'ATTIVITÀ ORDINARIA DI BACK-FRONT OFFICE DELL'UFFICIO TRIBUTI E ATTIVITÀ DI VERIFICA E ACCERTAME",
+    "/gare/dettaglio.php?codice=124250",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124250",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO DI TESORERIA DEL COMUNE DI SAN NICANDRO GARGANICO PER CINQUE ANNI",
+    "/gare/dettaglio.php?codice=125771",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125771",
+    null
+   ],
+   [
+    "AVVISO D’ASTA PUBBLICA PER L’ALIENAZIONE DI MOTOSLITTA DI PROPRIETÀ COMUNALE (MARCA POLARIS WIDETRAK – TELAIO N. 3373432",
+    "/gare/dettaglio.php?codice=126227",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126227",
+    null
+   ],
+   [
+    "PROCEDURA APERTA TELEMATICA PER L’AFFIDAMENTO IN CONCESSIONE DEL SERVIZIO DI GESTIONE DELL’AUDITORIUM COMUNALE “SANDRO R",
+    "/gare/dettaglio.php?codice=122881",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=122881",
+    null
+   ],
+   [
+    "PROCEDURA NEGOZIATA SENZA BANDO, AI SENSI DELL'ART. 50, COMMA 1, LETT. E) DEL D.LGS. N. 36/2023, PER L'AFFIDAMENTO IN CO",
+    "/gare/dettaglio.php?codice=126042",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126042",
+    null
+   ],
+   [
+    "MANIFESTAZIONE D’INTERESSE PER L’INDIVIDUAZIONE DI OPERATORI ECONOMICI INTERESSATI A STIPULARE CONVENZIONE PER LA SOMMIN",
+    "/gare/dettaglio.php?codice=121024",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=121024",
+    null
+   ],
+   [
+    "PROCEDURA DI GARA APERTA, MEDIANTE IL CRITERIO DELL'OFFERETA ECONOMICAMENTE PIU' VANTAGGIOSA, PER L’AFFIDAMENTO DEL SERV",
+    "/gare/dettaglio.php?codice=125784",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125784",
+    null
+   ],
+   [
+    "PROCEDURA TELEMATICA APERTA PER L’APPALTO DEI LAVORI PER ADEGUAMENTO FUNZIONALE, MESSA IN SICUREZZA ED ELIMINAZIONE DEL ",
+    "/gare/dettaglio.php?codice=124315",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124315",
+    null
+   ],
+   [
+    "MITIGAZIONE DEL RISCHIO IDROGEOLOGICO ALLE LOCALITÀ MACCHIETELLE E SAN GENNARO – VALLONE PIESCO DEL COMUNE DI PIETRADEFU",
+    "/gare/dettaglio.php?codice=124422",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124422",
+    null
+   ],
+   [
+    "ADEGUAMENTO AMMODERNAMENTO, RISTRUTTURAZIONE ED EFFICIENTAMENTO ENERGETICO COMPLESSO SPORTIVO DI CASTEL MORRONE (CAMPO D",
+    "/gare/dettaglio.php?codice=124814",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124814",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEI LAVORI DI REALIZZAZIONE DI UNA PALESTRA SCOLASTICA CON CAMPO SPORTIVO POLIFUNZIONALE, SPOGLIATOI E SPAZI",
+    "/gare/dettaglio.php?codice=125902",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125902",
+    null
+   ],
+   [
+    "GARA A PROCEDURA TELEMATICA APERTA PER L’APPALTO DEI LAVORI DI \"RIAMMAGLIAMENTO DELLA VIABILITÀ A SERVIZIO DELLA STAZION",
+    "/gare/dettaglio.php?codice=123976",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123976",
+    null
+   ],
+   [
+    "GARA EUROPEA PER SERVIZI TECNICI DI INGEGNERIA E ARCHITETTURA PER L’AFFIDAMENTO DELLA PROGETTAZIONE ESECUTIVA, DIREZIONE",
+    "/gare/dettaglio.php?codice=123984",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=123984",
+    null
+   ],
+   [
+    "GARA EUROPEA A PROCEDURA APERTA PER AFFIDAMENTO DEL SERVIZIO DI GESTIONE DEL PROCEDIMENTO SANZIONATORIO AMMINISTRATIVO A",
+    "/gare/dettaglio.php?codice=124779",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124779",
+    null
+   ],
+   [
+    "“LAVORI DI SISTEMAZIONE IDROGEOLOGICA E RIQUALIFICAZIONE DELL’AREA SOTTOSTANTE VIA ROSETTA - CUP: G63H19000920005",
+    "/gare/dettaglio.php?codice=125276",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125276",
+    null
+   ],
+   [
+    "MANUTENZIONE STRAORDINARIA DI STRADE URBANE ED EXTRAURBANE ESISTENTI: BANDO DI GARA A PROCEDURA APERTA AFFIDAMENTO LAVOR",
+    "/gare/dettaglio.php?codice=124945",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124945",
+    null
+   ],
+   [
+    "PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO DEI LAVORI RELATIVI ALL’INTERVENTO DI COMPLETAMENTO RELATIVO ALLA MESSA IN",
+    "/gare/dettaglio.php?codice=124967",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124967",
+    null
+   ],
+   [
+    "PROCEDURA APERTA PER L’AFFIDAMENTO IN CONCESSIONE DEL SERVIZIO DEL NUOVO MICRONIDO COMUNALE NEL COMUNE DI TRMESTIERI ETN",
+    "/gare/dettaglio.php?codice=124981",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=124981",
+    null
+   ],
+   [
+    "PROCEDURA APERTA TELEMATICA AI SENSI DELL’ART. 71 DEL D. LGS. 36/2023 PER L’AFFIDAMENTO DI CONTRATTI PUBBLICI DI LAVORI ",
+    "/gare/dettaglio.php?codice=125319",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125319",
+    null
+   ],
+   [
+    "PROCEDURA APERTA AI SENSI DELL’ART. 71 DEL D. LGS. 36/2023 PER L’AFFIDAMENTO DEI LAVORI DI “POTENZIAMENTO DI SERVIZI E I",
+    "/gare/dettaglio.php?codice=125235",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125235",
+    null
+   ],
+   [
+    "SERVIZIO DI TRASPORTO PUBBLICO LOCALE URBANO CON AUTOBUS DEL COMUNE DI SANTA MARGHERITA DI BELICE",
+    "/gare/dettaglio.php?codice=125250",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125250",
+    null
+   ],
+   [
+    "SERVIZIO DI TESORERIA DEL CONSORZIO PER LO SVILUPPO INDUSTRIALE DELLA PROVINCIA DI MATERA - PERIODO 01/01/2027 – 31/12/2",
+    "/gare/dettaglio.php?codice=125575",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125575",
+    null
+   ],
+   [
+    "SERVIZIO DI GESTIONE TECNICO-OPERATIVA E MANUTENZIONE ORDINARIA DEI 9 IMPIANTI DI DEPURAZIONE COMUNALI: GALLUCCIO, VAGLI",
+    "/gare/dettaglio.php?codice=125507",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125507",
+    null
+   ],
+   [
+    "AFFIDAMENTO IN CONCESSIONE DEL SERVIZIO DI GESTIONE, ACCERTAMENTO E RISCOSSIONE DEL CANONE UNICO PATRIMONIALE RELATIVO A",
+    "/gare/dettaglio.php?codice=125559",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125559",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO DI RISTORAZIONE DELLA ASP N.1 DELLA PROVINCIA DI CHIETI PRESSO LA SEDE DEGLI ISTITUTI RIUNITI D",
+    "/gare/dettaglio.php?codice=125198",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125198",
+    null
+   ],
+   [
+    "PROCEDURA APERTA TELEMATICA PER L’AFFIDAMENTO IN CONCESSIONE PER IL PERIODO DI ANNI 12 (DODICI) DELL’AREA IN LOC. SU GUV",
+    "/gare/dettaglio.php?codice=125242",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125242",
+    null
+   ],
+   [
+    "AVVISO PUBBLICO PER L'AFFIDAMENTO DI N. 19 LOTTI DI CONCESSIONI DEMANIALI MARITTIME - STABILIMENTI BALNEARI",
+    "/gare/dettaglio.php?codice=125073",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125073",
+    null
+   ],
+   [
+    "AFFIDAMENTO DEL SERVIZIO TRIENNALE DI CATTURA, RECUPERO, TRASPORTO, RICOVERO, CUSTODIA, MANTENIMENTO E ASSISTENZA DEI CA",
+    "/gare/dettaglio.php?codice=125367",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=125367",
+    null
+   ],
+   [
+    "BANDO E DISCIPLINARE DI GARA PER L’ALIENAZIONE, MEDIANTE ASTA PUBBLICA TELEMATICA, DEL MATERIALE LEGNOSO DIVELTO DAGLI E",
+    "/gare/dettaglio.php?codice=126093",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/gare/dettaglio.php?codice=126093",
+    null
+   ],
+   [
+    "Vedi tutti",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "AFFIDAMENTO MEDIANTE PROCEDURA NEGOZIATA DEL ÂSERVIZIO BIENNALE DI GESTIONE TECNICA ED OPERATIVA DELLÂIMPIANTO DI DE",
+    "/albo_fornitori/dettaglio.php?codice=559",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/albo_fornitori/dettaglio.php?codice=559",
+    null
+   ],
+   [
+    "FORNITURA CONTATORI IDRICI",
+    "/albo_fornitori/dettaglio.php?codice=331",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/albo_fornitori/dettaglio.php?codice=331",
+    null
+   ],
+   [
+    "LAVORI DI RISTRUTTURAZIONE E MIGLIORAMENTO SISMICO DELLA SCUOLA MATERNA SITA IN PIAZZA FRATELLI ROSSELLI",
+    "/albo_fornitori/dettaglio.php?codice=248",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/albo_fornitori/dettaglio.php?codice=248",
+    null
+   ],
+   [
+    "AVVISO DI SORTEGGIO MANIFESTAZIONE DI INTERESSE ALLA PROCEDURA NEGOZIATA PER L’ESECUZIONE DEI LAVORI “RIMOZIONE MACERIE ",
+    "/albo_fornitori/dettaglio.php?codice=171",
+    null
+   ],
+   [
+    "Vedi dettagli",
+    "/albo_fornitori/dettaglio.php?codice=171",
+    null
+   ],
+   [
+    "Albi fornitori\n128",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albi professionisti\n45",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "AVVISO PUBBLICO RINVIO PRIMA SEDUTA PUBBLICA DI GARA.",
+    "/avvisi/dettaglio.php?codice=30726&modulo=gare&codice_elemento=120700&sub=120305",
+    null
+   ],
+   [
+    "AVVISO SECONDA SEDUTA PUBBLICA DI GARA",
+    "/avvisi/dettaglio.php?codice=30703&modulo=gare&codice_elemento=120631&sub=120236",
+    null
+   ],
+   [
+    "AVVISO VERIFICA ULTERIORE SOCCORSO ISTRUTTORIO",
+    "/avvisi/dettaglio.php?codice=30671&modulo=gare&codice_elemento=119484&sub=119078",
+    null
+   ],
+   [
+    "LAVORI DI “INTERVENTO DI MANUTENZIONE STRAORDINARIA DEGLI IMPIANTI DI PUBBLICA ILLUMINAZIONE”.- IMPORTO COMPLESSIVO €. 1",
+    "/avvisi/dettaglio.php?codice=30668&modulo=gare&codice_elemento=120631&sub=120236",
+    null
+   ],
+   [
+    "AVVISO SECONDA SEDUTA PUBBLICA DI GARA",
+    "/avvisi/dettaglio.php?codice=30645&modulo=gare&codice_elemento=118995&sub=118593",
+    null
+   ],
+   [
+    "AVVISO DI APPALTO AGGIUDICATO",
+    "/avvisi/dettaglio.php?codice=30643&modulo=gare&codice_elemento=109499&sub=109337",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=30628&modulo=gare&codice_elemento=119484&sub=119078",
+    null
+   ],
+   [
+    "AVVISO RINVIO 1° SEDUTA PUBBLICA DI GARA.",
+    "/avvisi/dettaglio.php?codice=30618&modulo=gare&codice_elemento=120805&sub=120412",
+    null
+   ],
+   [
+    "ORGANIZZAZIONE SOPRALLUOGO",
+    "/avvisi/dettaglio.php?codice=30586&modulo=gare&codice_elemento=123984&sub=123590",
+    null
+   ],
+   [
+    "VERBALE DI 5 SEDUTA",
+    "/avvisi/dettaglio.php?codice=30535&modulo=gare&codice_elemento=116031&sub=115627",
+    null
+   ],
+   [
+    "VERBALE 4 SEDUTA",
+    "/avvisi/dettaglio.php?codice=30534&modulo=gare&codice_elemento=116031&sub=115627",
+    null
+   ],
+   [
+    "VERBALE DI GARA TERZA SEDUTA",
+    "/avvisi/dettaglio.php?codice=30533&modulo=gare&codice_elemento=116031&sub=115627",
+    null
+   ],
+   [
+    "SEDUTA PUBBLICA DI GARA – APERTURA DELLE OFFERTE ECONOMICHE",
+    "/avvisi/dettaglio.php?codice=30531&modulo=gare&codice_elemento=108259&sub=107879",
+    null
+   ],
+   [
+    "PROPOSTA DI AGGIUDICAZIONE",
+    "/avvisi/dettaglio.php?codice=30516&modulo=gare&codice_elemento=118761&sub=118360",
+    null
+   ],
+   [
+    "AVVISO SEDUTA PUBBLICA",
+    "/avvisi/dettaglio.php?codice=30481&modulo=gare&codice_elemento=112249&sub=111830",
+    null
+   ],
+   [
+    "AVISO APPALTO AGGIUDICATO",
+    "/avvisi/dettaglio.php?codice=30465&modulo=gare&codice_elemento=123327&sub=122939",
+    null
+   ],
+   [
+    "COMUNICAZIONE SEDUTA PUBBLICA CONCLUSIVA DI GARA",
+    "/avvisi/dettaglio.php?codice=30461&modulo=gare&codice_elemento=119984&sub=119585",
+    null
+   ],
+   [
+    "AVVISO AGGIUDICAZIONE",
+    "/avvisi/dettaglio.php?codice=30443&modulo=gare&codice_elemento=101788&sub=101390",
+    null
+   ],
+   [
+    "SCHEMA DI OFFERTA TEMPORALE.",
+    "/avvisi/dettaglio.php?codice=30398&modulo=gare&codice_elemento=120700&sub=120305",
+    null
+   ],
+   [
+    "COMUNICAZIONE RINVIO SEDUTA A NUOVA DATA",
+    "/avvisi/dettaglio.php?codice=30392&modulo=gare&codice_elemento=119484&sub=119078",
+    null
+   ],
+   [
+    "COMUNICAZIONE SOSPENSIONE SEDUTA ED AGGIORNAMENTO ALLE ORE 15:30",
+    "/avvisi/dettaglio.php?codice=30384&modulo=gare&codice_elemento=119484&sub=119078",
+    null
+   ],
+   [
+    "AVVISO PRIMA SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=30371&modulo=gare&codice_elemento=119484&sub=119078",
+    null
+   ],
+   [
+    "2^ AVVISO RETTIFICA E INTEGRAZIONE CRITERIO D6 OFFERTA TECNICA DEL DISCIPLINARE DI GARA.",
+    "/avvisi/dettaglio.php?codice=30345&modulo=gare&codice_elemento=120700&sub=120305",
+    null
+   ],
+   [
+    "GRADUATORIA DEFINITIVA",
+    "/avvisi/dettaglio.php?codice=30342&modulo=gare&codice_elemento=113910&sub=113488",
+    null
+   ],
+   [
+    "AVVISO RETTIFICA E INTEGRAZIONE ART.8.2.2 DEL DISCIPLINARE DI GARA.",
+    "/avvisi/dettaglio.php?codice=30324&modulo=gare&codice_elemento=120700&sub=120305",
+    null
+   ],
+   [
+    "AVVISO SEDUTA PUBBLICA DI GARA - APERTURA OFFERTE ECONOMICHE.",
+    "/avvisi/dettaglio.php?codice=30272&modulo=gare&codice_elemento=113910&sub=113488",
+    null
+   ],
+   [
+    "AVVISO AGLI OPERATORI ECONOMICI - N° 03",
+    "/avvisi/dettaglio.php?codice=30041&modulo=gare&codice_elemento=116843&sub=116435",
+    null
+   ],
+   [
+    "AVVISO PUBBLICO DI INTEGRAZIONE DOCUMENTAZIONE E RIAPERTURA TERMINI DI GARA.",
+    "/avvisi/dettaglio.php?codice=29820&modulo=gare&codice_elemento=113910&sub=113488",
+    null
+   ],
+   [
+    "AVVISO PUBBLICO DI SOSPENSIONE DELLA PROCEDURA DI GARA.",
+    "/avvisi/dettaglio.php?codice=29677&modulo=gare&codice_elemento=113910&sub=113488",
+    null
+   ],
+   [
+    "ATTI PROCEDURA SOMMA URGENZA RELATIVA AI LAVORI DI CERNITA E TRASPORTO DEL MATERIALE DEPOSITATO LUNGO L' ARENILE PER L' ",
+    "/avvisi/dettaglio.php?codice=29633&modulo=gare&codice_elemento=114456&sub=114040",
+    null
+   ],
+   [
+    "ATTI PROCEDURA SOMMA URGENZA RELATIVA AI LAVORI DI CERNITA E TRASPORTO DEL MATERIALE DEPOSITATO LUNGO L' ARENILE PER L' ",
+    "/avvisi/dettaglio.php?codice=29632&modulo=gare&codice_elemento=114581&sub=114165",
+    null
+   ],
+   [
+    "ATTI PROCEDURA DI SOMMA URGENZA DEI LAVORI DI MESSA IN SICUREZZA ED ELIMINAZIONE DEL PERICOLO PER LA PUBBLICA E PRIVATA ",
+    "/avvisi/dettaglio.php?codice=29628&modulo=gare&codice_elemento=114596&sub=114179",
+    null
+   ],
+   [
+    "COMUNICAZIONE AI SENSI DELL’ART. 90 DEL D.LGS. 31 MARZO 2023, N. 36 – RITIRO DELLA PROCEDURA DI GARA PER L’AFFIDAMENTO D",
+    "/avvisi/dettaglio.php?codice=29592&modulo=gare&codice_elemento=100812&sub=100406",
+    null
+   ],
+   [
+    "SOSTITUZIONE DISCIPLINARE DI GARA",
+    "/avvisi/dettaglio.php?codice=29537&modulo=gare&codice_elemento=114525&sub=114109",
+    null
+   ],
+   [
+    "ESITO PERIZIA PER COMUNE EDILFERRO",
+    "/avvisi/dettaglio.php?codice=28432&modulo=gare&codice_elemento=49002&sub=48631",
+    null
+   ],
+   [
+    "ALLEGATO 4 - DETTAGLI FORNITURE E CHIARIMENTI",
+    "/avvisi/dettaglio.php?codice=27887&modulo=gare&codice_elemento=98784&sub=98384",
+    null
+   ],
+   [
+    "CHIARIMENTO N.2",
+    "/avvisi/dettaglio.php?codice=27823&modulo=albo_fornitori&codice_elemento=973&sub=0",
+    null
+   ],
+   [
+    "CHIARIMENTO N.1",
+    "/avvisi/dettaglio.php?codice=27725&modulo=albo_fornitori&codice_elemento=973&sub=0",
+    null
+   ],
+   [
+    "SERVIZIO DI RACCOLTA E TRASPORTO DEI RIFIUTI URBANI E ALTRI SERVIZI DI IGIENE URBANA NEL COMUNE DI MONDRAGONE. - PROCEDU",
+    "/avvisi/dettaglio.php?codice=27628&modulo=gare&codice_elemento=77564&sub=77111",
+    null
+   ],
+   [
+    "AVVISO OPERAZIONI DI SORTEGGIO EX AEQUO – RIPRISTINO FUNZIONALITÀ PIATTAFORMA ASMECOMM",
+    "/avvisi/dettaglio.php?codice=27356&modulo=gare&codice_elemento=92434&sub=92019",
+    null
+   ],
+   [
+    "RINVIO OPERAZIONI DI SORTEGGIO EX AEQUO",
+    "/avvisi/dettaglio.php?codice=27344&modulo=gare&codice_elemento=92434&sub=92019",
+    null
+   ],
+   [
+    "AVVISO DI RINVIO OPERAZIONI DI SORTEGGIO",
+    "/avvisi/dettaglio.php?codice=27331&modulo=gare&codice_elemento=92434&sub=92019",
+    null
+   ],
+   [
+    "COMUNICAZIONE RICALCOLO AUTOMATICO DELLA SOGLIA DI ANOMALIA E PUBBLICAZIONE VERBALE AGGIORNATO",
+    "/avvisi/dettaglio.php?codice=27322&modulo=gare&codice_elemento=92434&sub=92019",
+    null
+   ],
+   [
+    "DETERMINA DG DI AGGIUDICAZIONE",
+    "/avvisi/dettaglio.php?codice=27254&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "VERBALI NN.2 E 3 COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27221&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "PUBBLICAZIONE VERBALI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=27195&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=27168&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "CHIARIMENTI IN MATERIA DI AVVALIMENTO E PARTECIPAZIONE DELL’IMPRESA AUSILIARIA",
+    "/avvisi/dettaglio.php?codice=27166&modulo=gare&codice_elemento=92434&sub=92019",
+    null
+   ],
+   [
+    "AVVISO DEL 02/02/2026 - LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27158&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "AVVISO DI GARA",
+    "/avvisi/dettaglio.php?codice=27156&modulo=concorsi&codice_elemento=78&sub=151",
+    null
+   ],
+   [
+    "PROROGA TERMINI DI GARA - MANIFESTAZIONE D’INTERESSE PER L’INDIVIDUAZIONE DI OPERATORI ECONOMICI INTERESSATI A STIPULARE",
+    "/avvisi/dettaglio.php?codice=27143&modulo=gare&codice_elemento=77689&sub=77236",
+    null
+   ],
+   [
+    "AVVISO DEL 22/01/2026 - LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27067&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "VERBALE N.1 COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27066&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27063&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "AVVISO COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27051&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "AVVISO COMMISSIONE GIUDICATRCE",
+    "/avvisi/dettaglio.php?codice=27024&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "AVVISO DEL 19/01/2026 - LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27021&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=27000&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "AVVISO DEL 15/01/2026 - LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26994&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "RETTIFICA DOCUMENTI CON ESCLUSIONE DEL MERO REFUSO E PROROGA TERMINI DI GARA",
+    "/avvisi/dettaglio.php?codice=26966&modulo=gare&codice_elemento=88787&sub=88380",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26926&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "DETERMINA DI AGGIUDICAZIONE LOTTO N.2",
+    "/avvisi/dettaglio.php?codice=26747&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "DETERMINA DI AGGIUDICAZIONE LOTTO N.1",
+    "/avvisi/dettaglio.php?codice=26745&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "PUBBLICAZIONE VERBALE SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=26692&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "CHIARIMENTO",
+    "/avvisi/dettaglio.php?codice=26659&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "PUBBLICAZIONE VERBALI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=26651&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "VERBALI NN. 2-3-4 SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=26623&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "COMUNICAZIONE DI AVVENUTA STIPULA DEL CONTRATTO",
+    "/avvisi/dettaglio.php?codice=26613&modulo=gare&codice_elemento=13136&sub=13136",
+    null
+   ],
+   [
+    "VERBALE N. 01 - COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26532&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "VERBALI N. 02 - 03 - 04 - 05 - 06 E 07 - COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26533&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "VERBALI COMMISSIONE GIUDICATRICE N.7-8-9",
+    "/avvisi/dettaglio.php?codice=26526&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "VERBALI COMMISSIONE GIUDICATRICE N.10",
+    "/avvisi/dettaglio.php?codice=26527&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "VERBALI COMMISSIONE GIUDICATRICE N.11",
+    "/avvisi/dettaglio.php?codice=26528&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "VERBALI COMMISSIONE GIUDICATRICE N.2-3-4-5-6",
+    "/avvisi/dettaglio.php?codice=26525&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26505&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "AVVISO DEL 09/12/2025 - PROSIEGUO LAVORI DEL SEGGIO DI GARA.",
+    "/avvisi/dettaglio.php?codice=26481&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26453&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26452&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26426&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "AVVISO DEL 04/12/2025 - PROSIEGUO LAVORI DEL SEGGIO DI GARA.",
+    "/avvisi/dettaglio.php?codice=26421&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "AVVISO ELABORATI PROGETTUALI",
+    "/avvisi/dettaglio.php?codice=26398&modulo=gare&codice_elemento=84051&sub=83622",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26360&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26359&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "VERBALE N. 01 - SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=26300&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "AVVISO DEL 27/11/2025 - ANTICIPO PRIMA SEDUTA DEL SEGGIO DI GARA.",
+    "/avvisi/dettaglio.php?codice=26294&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26268&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26245&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26214&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26165&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26135&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "VERBALE DI SEGGIO N.1",
+    "/avvisi/dettaglio.php?codice=26131&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 14/11/2025",
+    "/avvisi/dettaglio.php?codice=26110&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "VERBALE N.1 COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=26088&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "RIAPERTURA TERMINI - MANIFESTAZIONE D’INTERESSE PER L’INDIVIDUAZIONE DI OPERATORI ECONOMICI INTERESSATI A STIPULARE CONV",
+    "/avvisi/dettaglio.php?codice=26060&modulo=gare&codice_elemento=77689&sub=77236",
+    null
+   ],
+   [
+    "CONVOCAZIONE SEDUTA COMMISSIONE VALUTATRICE",
+    "/avvisi/dettaglio.php?codice=26006&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 06/11/2025",
+    "/avvisi/dettaglio.php?codice=25981&modulo=gare&codice_elemento=81308&sub=80858",
+    null
+   ],
+   [
+    "AVVISO DI GARA",
+    "/avvisi/dettaglio.php?codice=25926&modulo=concorsi&codice_elemento=78&sub=150",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 21/10/2025",
+    "/avvisi/dettaglio.php?codice=25791&modulo=gare&codice_elemento=77689&sub=77236",
+    null
+   ],
+   [
+    "DEPOSITO DOCUMENTAZIONE",
+    "/avvisi/dettaglio.php?codice=25677&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "AVVISO ELABORATI PFTE",
+    "/avvisi/dettaglio.php?codice=25674&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE",
+    "/avvisi/dettaglio.php?codice=25668&modulo=gare&codice_elemento=79015&sub=78568",
+    null
+   ],
+   [
+    "VERBALI NN. 02-03-04-05 COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=25642&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 06/10/2025",
+    "/avvisi/dettaglio.php?codice=25600&modulo=gare&codice_elemento=77689&sub=77236",
+    null
+   ],
+   [
+    "AVVISO DEL 02/10/2025 - PROSIEGUO LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=25575&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO DEL 30/09/2025 - PROSIEGUO LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=25558&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "VERBALE N. 01 - COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=25524&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO DEL 23/09/2025 - PROSIEGUO LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=25465&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO DEL 15/09/2025 - AVVIO LAVORI COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=25373&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "VERBALI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=25246&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO DEL 28/08/2025 - PROSIEGUO LAVORI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=25160&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO DEL 26/08/2025 - PROSIEGUO LAVORI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=25121&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO SEDUTA PUBBLICA - PROSIEGUO LAVORI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=25101&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 31/07/2025",
+    "/avvisi/dettaglio.php?codice=24836&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 24/07/2025",
+    "/avvisi/dettaglio.php?codice=24731&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=24585&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "COMUNICAZIONE PROSSIMA SEDUTA SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=24535&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 03/07/2025",
+    "/avvisi/dettaglio.php?codice=24505&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 25/06/2025",
+    "/avvisi/dettaglio.php?codice=24378&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "AVVISO RINVIO SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=24358&modulo=gare&codice_elemento=65698&sub=65243",
+    null
+   ],
+   [
+    "CHIARIMENTI - AGGIORNATI AL 18/06/2025",
+    "/avvisi/dettaglio.php?codice=24317&modulo=gare&codice_elemento=66665&sub=66421",
+    null
+   ],
+   [
+    "VERBALE COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=23634&modulo=gare&codice_elemento=61085&sub=60678",
+    null
+   ],
+   [
+    "AVVISO DI CONVOCAZIONE SEDUTA PUBBLICA - COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=23604&modulo=gare&codice_elemento=61085&sub=60678",
+    null
+   ],
+   [
+    "VERBALE SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=23581&modulo=gare&codice_elemento=61085&sub=60678",
+    null
+   ],
+   [
+    "ANNULLAMENTO D'UFFICIO PROCEDURA DI GARA",
+    "/avvisi/dettaglio.php?codice=23488&modulo=gare&codice_elemento=57492&sub=57072",
+    null
+   ],
+   [
+    "VERBALE DI SEGGIO DI GARA N.1",
+    "/avvisi/dettaglio.php?codice=23386&modulo=gare&codice_elemento=57492&sub=57072",
+    null
+   ],
+   [
+    "MODIFICA TERMINI DI GARA - GARA EUROPEA A PROCEDURA TELEMATICA APERTA PER L’AFFIDAMENTO DEL",
+    "/avvisi/dettaglio.php?codice=23055&modulo=gare&codice_elemento=55078&sub=54677",
+    null
+   ],
+   [
+    "VERBALE COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=20030&modulo=gare&codice_elemento=32483&sub=32074",
+    null
+   ],
+   [
+    "AVVISO DI CONVOCAZIONE SEDUTA PUBBLICA - COMMISSIONE GIUDICATRICE",
+    "/avvisi/dettaglio.php?codice=20017&modulo=gare&codice_elemento=32483&sub=32074",
+    null
+   ],
+   [
+    "VERBALI SEGGIO DI GARA",
+    "/avvisi/dettaglio.php?codice=19886&modulo=gare&codice_elemento=32483&sub=32074",
+    null
+   ],
+   [
+    "AVVISO RETTIFICA INDICAZIONE CIG",
+    "/avvisi/dettaglio.php?codice=17808&modulo=gare&codice_elemento=21026&sub=20724",
+    null
+   ],
+   [
+    "AVVISO AVVENUTA AGGIUDICAZIONE",
+    "/avvisi/dettaglio.php?codice=17339&modulo=concorsi&codice_elemento=48&sub=92",
+    null
+   ],
+   [
+    "PROCEDURA CIG A01F0C74F3 - COMUNICAZIONE 1Â° SEDUTA DI GARA - 17/11/2023 ORE 12:00",
+    "/avvisi/dettaglio.php?codice=16925&modulo=gare&codice_elemento=18047&sub=18047",
+    null
+   ],
+   [
+    "MODIFICA DATE PROCEDURA APERTA (PROROGA TERMINI) E RETTIFICA DISCIPLINARE: GARA EUROPEA A PROCEDURA TELEMATICA APERTA - ",
+    "/avvisi/dettaglio.php?codice=16955&modulo=gare&codice_elemento=18072&sub=18072",
+    null
+   ],
+   [
+    "COMUNICAZIONE 1Â° SEDUTA DI GARA - 28/09/2023 ORE 15:00",
+    "/avvisi/dettaglio.php?codice=14191&modulo=gare&codice_elemento=14538&sub=14538",
+    null
+   ],
+   [
+    "COMUNICAZIONE RINVIO 1Â° SEDUTA PUBBLICA",
+    "/avvisi/dettaglio.php?codice=14190&modulo=gare&codice_elemento=14538&sub=14538",
+    null
+   ],
+   [
+    "COMUNICAZIONE 1Â° SEDUTA DI GARA - 21/09/2023 ORE 11:00",
+    "/avvisi/dettaglio.php?codice=14292&modulo=gare&codice_elemento=14656&sub=14656",
+    null
+   ],
+   [
+    "COMUNICAZIONE NUOVO CIG: 9955753347",
+    "/avvisi/dettaglio.php?codice=16696&modulo=gare&codice_elemento=17781&sub=17781",
+    null
+   ],
+   [
+    "AVVISO MODIFICA CIG",
+    "/avvisi/dettaglio.php?codice=12838&modulo=gare&codice_elemento=13084&sub=13084",
+    null
+   ],
+   [
+    "RINVIO APERTURA BUSTE",
+    "/avvisi/dettaglio.php?codice=12639&modulo=gare&codice_elemento=12880&sub=12880",
+    null
+   ],
+   [
+    "AVVISO PASS OE",
+    "/avvisi/dettaglio.php?codice=12991&modulo=gare&codice_elemento=13213&sub=13213",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE OFFERTA ECONOMICA",
+    "/avvisi/dettaglio.php?codice=13075&modulo=gare&codice_elemento=13310&sub=13310",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE OFFERTA ECONOMICA",
+    "/avvisi/dettaglio.php?codice=13078&modulo=gare&codice_elemento=13312&sub=13312",
+    null
+   ],
+   [
+    "AVVISO PASS OE",
+    "/avvisi/dettaglio.php?codice=12900&modulo=gare&codice_elemento=13145&sub=13145",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=12825&modulo=gare&codice_elemento=13073&sub=13073",
+    null
+   ],
+   [
+    "SEDUTA PUBBLICA DI GARA DEL GIORNO 09/06/2022 ORE 10:30",
+    "/avvisi/dettaglio.php?codice=10254&modulo=gare&codice_elemento=10301&sub=10301",
+    null
+   ],
+   [
+    "AVVISO",
+    "/avvisi/dettaglio.php?codice=12455&modulo=gare&codice_elemento=12708&sub=12708",
+    null
+   ],
+   [
+    "AVVISO DI GARA",
+    "/avvisi/dettaglio.php?codice=12100&modulo=gare&codice_elemento=12310&sub=12310",
+    null
+   ],
+   [
+    "AVVISO RISPOSTA QUESITI",
+    "/avvisi/dettaglio.php?codice=16512&modulo=gare&codice_elemento=17637&sub=17637",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE",
+    "/avvisi/dettaglio.php?codice=11913&modulo=gare&codice_elemento=12109&sub=12109",
+    null
+   ],
+   [
+    "SEDUTA PUBBLICA DI GARA DEL GIORNO 03/04/2023 ORE 11:00",
+    "/avvisi/dettaglio.php?codice=10253&modulo=gare&codice_elemento=10301&sub=10301",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE",
+    "/avvisi/dettaglio.php?codice=16473&modulo=gare&codice_elemento=17600&sub=17600",
+    null
+   ],
+   [
+    "AVVISO PROROGA DEI TERMINI",
+    "/avvisi/dettaglio.php?codice=16427&modulo=gare&codice_elemento=17541&sub=17541",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE CIG",
+    "/avvisi/dettaglio.php?codice=11637&modulo=gare&codice_elemento=11813&sub=11813",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=10467&modulo=gare&codice_elemento=10514&sub=10514",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=16359&modulo=gare&codice_elemento=17498&sub=17498",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE CIG",
+    "/avvisi/dettaglio.php?codice=16421&modulo=gare&codice_elemento=17535&sub=17535",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE",
+    "/avvisi/dettaglio.php?codice=16419&modulo=gare&codice_elemento=17535&sub=17535",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=10488&modulo=gare&codice_elemento=10520&sub=10520",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE",
+    "/avvisi/dettaglio.php?codice=16425&modulo=gare&codice_elemento=17541&sub=17541",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=11356&modulo=gare&codice_elemento=11423&sub=11423",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE CIG.",
+    "/avvisi/dettaglio.php?codice=16418&modulo=gare&codice_elemento=17535&sub=17535",
+    null
+   ],
+   [
+    "AVVISO",
+    "/avvisi/dettaglio.php?codice=16319&modulo=gare&codice_elemento=17465&sub=17465",
+    null
+   ],
+   [
+    "AVVISO SOSTITUZIONE DISCIPLINARE DI GARA",
+    "/avvisi/dettaglio.php?codice=16383&modulo=gare&codice_elemento=17510&sub=17510",
+    null
+   ],
+   [
+    "AVVISO SEDUTA DI GARA",
+    "/avvisi/dettaglio.php?codice=10466&modulo=gare&codice_elemento=10514&sub=10514",
+    null
+   ],
+   [
+    "AVVISO ERRATA CORRIGE",
+    "/avvisi/dettaglio.php?codice=16358&modulo=gare&codice_elemento=17498&sub=17498",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Ignora",
+   "__(\"Torna su\") ?>",
+   "Ritorna",
+   "Menu",
+   "Procedure di gara",
+   "Elenchi e qualifiche fornitori",
+   "Altre iniziative e informazioni",
+   "Indietro",
+   "×"
+  ],
+  "rete": [
+   "GET https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
+   "GET https://piattaforma.asmecomm.it/index.php",
+   "GET https://piattaforma.asmecomm.it/src/ckeditor5/ckeditor.js",
+   "GET https://piattaforma.asmecomm.it/src/js/app.js?date=20260805",
+   "GET https://piattaforma.asmecomm.it/src/highcharts/highcharts.js",
+   "GET https://piattaforma.asmecomm.it/src/highcharts/highcharts-more.js",
+   "GET https://piattaforma.asmecomm.it/src/typeahead/typeahead.bundle.js",
+   "GET https://piattaforma.asmecomm.it/src/js/extra/files.js",
+   "GET https://piattaforma.asmecomm.it/src/js/resumable.js",
+   "GET https://piattaforma.asmecomm.it/dictionary/IT.json",
+   "GET https://browser-update.org/update.min.js",
+   "GET https://browser-update.org/update.show.min.js"
+  ]
+ }
+}

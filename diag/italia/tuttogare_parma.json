@@ -1,0 +1,513 @@
+{
+ "url": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
+  "byte": 56,
+  "secondi": 0.2,
+  "tipo": "text/html; charset=UTF-8"
+ },
+ "chrome": {
+  "commit_s": 0.2,
+  "attesa_s": 5.7,
+  "url_finale": "https://parmainfrastrutture.tuttogare.it/index.php",
+  "link": [
+   [
+    "Aggiorna browser",
+    "https://browser-update.org/update-browser.html#3.3.67:parmainfrastrutture.tuttogare.it",
+    null
+   ],
+   [
+    "Ignora",
+    null,
+    null
+   ],
+   [
+    "Salta al contenuto principale",
+    "#main-content",
+    null
+   ],
+   [
+    "Homepage",
+    "/index.php",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "S.D.A.",
+    "/archivio_sda/index.php",
+    null
+   ],
+   [
+    "Albi commissione",
+    "/albi_commissione/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Documentazione per i fornitori",
+    "/pagine/id1-documentazione-per-i-fornitori",
+    null
+   ],
+   [
+    "Sito istituzionale",
+    "https://www.parmainfrastrutture.it",
+    null
+   ],
+   [
+    "Italiano",
+    "#",
+    null
+   ],
+   [
+    "English",
+    "/index.php?language=EN",
+    null
+   ],
+   [
+    "Español",
+    "/index.php?language=ES",
+    null
+   ],
+   [
+    "Català",
+    "/index.php?language=CA",
+    null
+   ],
+   [
+    "Deutsch",
+    "/index.php?language=DE",
+    null
+   ],
+   [
+    "Cerca",
+    "#",
+    "showModalWithURL('/search/form.php')"
+   ],
+   [
+    "Accedi",
+    "/login-form.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "Procedure di gara",
+    "#",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Elenchi e qualifiche fornitori",
+    "#",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "S.D.A.",
+    "/archivio_sda/index.php",
+    null
+   ],
+   [
+    "Altre iniziative e informazioni",
+    "#",
+    null
+   ],
+   [
+    "Albi commissione",
+    "/albi_commissione/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Documentazione per i fornitori",
+    "/pagine/id1-documentazione-per-i-fornitori",
+    null
+   ],
+   [
+    "",
+    "/index.php",
+    null
+   ],
+   [
+    "CIE",
+    null,
+    null
+   ],
+   [
+    "SPID",
+    null,
+    null
+   ],
+   [
+    "CNS",
+    null,
+    null
+   ],
+   [
+    "Credenziali",
+    null,
+    null
+   ],
+   [
+    "Entra con CIE",
+    "https://parmainfrastrutture.tuttogare.it/oidc/request.php?service=CIE&env=PROD&provider_id=oidc.idserver.servizicie.interno.gov.it",
+    null
+   ],
+   [
+    "Maggiori informazioni su SPID",
+    "https://www.spid.gov.it",
+    null
+   ],
+   [
+    "Non hai SPID?",
+    "https://www.spid.gov.it/richiedi-spid",
+    null
+   ],
+   [
+    "Serve aiuto?",
+    "https://www.spid.gov.it/serve-aiuto",
+    null
+   ],
+   [
+    "Entra con SPID",
+    "#",
+    null
+   ],
+   [
+    "Maggiori informazioni",
+    "https://www.spid.gov.it",
+    null
+   ],
+   [
+    "Non hai SPID?",
+    "https://www.spid.gov.it/richiedi-spid",
+    null
+   ],
+   [
+    "Serve aiuto?",
+    "https://www.spid.gov.it/serve-aiuto",
+    null
+   ],
+   [
+    "Accesso con CNS",
+    "https://parmainfrastrutture.tuttogare.it/cns",
+    null
+   ],
+   [
+    "Accedi con credenziali",
+    "/accesso.php",
+    null
+   ],
+   [
+    "Registrati",
+    "/register.php",
+    null
+   ],
+   [
+    "Albi professionisti\n27",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Albi fornitori\n127",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Aggiornamenti normativi",
+    "https://app.tuttogare.it/news/",
+    null
+   ],
+   [
+    "Equivalenza CCNL negli appalti pubblici: il superminimo non colma il divario tra...",
+    "https://app.tuttogare.it/it/equivalenza-ccnl-negli-appalti-il-superminimo-non-basta/",
+    null
+   ],
+   [
+    "MIT: Pagamento diretto ai subappaltatori",
+    "https://app.tuttogare.it/it/pagamento-diretto-ai-subappaltatori-il-parere-mit-n-4736/",
+    null
+   ],
+   [
+    "...",
+    "https://app.tuttogare.it/it/iscrizione-categoria-9-albo-gestori-requisito-nei-bandi/",
+    null
+   ],
+   [
+    "Pre-giustificativi difformi dall’offerta tecnica: l’esclusione scatta...",
+    "https://app.tuttogare.it/it/pre-giustificativi-e-offerta-tecnica-difformi-esclusione/",
+    null
+   ],
+   [
+    "Focus — Violazioni reiterate della normativa sulla sicurezza e grave illecito professionale:...",
+    "https://app.tuttogare.it/it/sicurezza-sul-lavoro-violazioni-ed-esclusione-dalla-gara/",
+    null
+   ],
+   [
+    "Focus — Dichiarazioni incomplete e FVOE: quando il fascicolo virtuale integra la...",
+    "https://app.tuttogare.it/it/focus-dichiarazioni-incomplete-e-fvoe-quando-il-fascicolo-virtuale-integra-la-domanda-di-partecipazione/",
+    null
+   ],
+   [
+    "Quote di esecuzione RTI e qualificazione SOA: gli arrotondamenti decimali non causano...",
+    "https://app.tuttogare.it/it/quote-di-esecuzione-rti-e-qualificazione-soa-gli-arrotondamenti-decimali-non-causano-lesclusione/",
+    null
+   ],
+   [
+    "Dismissione avcp.it dal 27 novembre 2026: stop al reindirizzamento verso ANAC",
+    "https://app.tuttogare.it/it/dismissione-avcp-it-dal-27-novembre-2026-cosa-fare/",
+    null
+   ],
+   [
+    "Revisione prezzi nelle convenzioni quadro: l’istanza va all’amministrazione...",
+    "https://app.tuttogare.it/it/revisione-prezzi-convenzioni-quadro-chi-e-competente/",
+    null
+   ],
+   [
+    "Focus — Direttore dei lavori e CSE oltre il milione di euro: il cumulo non è causa...",
+    "https://app.tuttogare.it/it/direttore-lavori-e-coordinatore-sicurezza-limiti-a-cumulo-appalti/",
+    null
+   ],
+   [
+    "Consultazioni preliminari di mercato: pre-fase facoltativa che può portare all’affidamento...",
+    "https://app.tuttogare.it/it/consultazioni-preliminari-di-mercato-pre-fase-facoltativa/",
+    null
+   ],
+   [
+    "Documenti digitali IT-Wallet: otto documenti su app IO al posto di quelli fisici",
+    "https://app.tuttogare.it/it/documenti-digitali-it-wallet-al-posto-di-quelli-fisici/",
+    null
+   ],
+   [
+    "Indagini di mercato ante 31/12/2023",
+    "/archivio_indagini/index.php",
+    null
+   ],
+   [
+    "Concorsi di idee",
+    "/concorsi/index.php",
+    null
+   ],
+   [
+    "Contratti",
+    "/contratti-trasparenza/index.php",
+    null
+   ],
+   [
+    "Avvisi e gare attive",
+    "/gare/index.php",
+    null
+   ],
+   [
+    "Albo dei fornitori",
+    "/archivio_albo/index.php",
+    null
+   ],
+   [
+    "Albo dei professionisti",
+    "/archivio_professionisti/index.php",
+    null
+   ],
+   [
+    "Mercato elettronico",
+    "/archivio_mercato/index.php",
+    null
+   ],
+   [
+    "S.D.A.",
+    "/archivio_sda/index.php",
+    null
+   ],
+   [
+    "Albi commissione",
+    "/albi_commissione/index.php",
+    null
+   ],
+   [
+    "Notizie",
+    "/news/",
+    null
+   ],
+   [
+    "Documentazione per i fornitori",
+    "/pagine/id1-documentazione-per-i-fornitori",
+    null
+   ],
+   [
+    "PARMA INFRASTRUTTURE S.P.A",
+    "https://www.parmainfrastrutture.it",
+    null
+   ],
+   [
+    "info@parmainfrastrutture.it",
+    "mailto:info@parmainfrastrutture.it",
+    null
+   ],
+   [
+    "parmainfrastrutture@pec.tuttogare.it",
+    "mailto:parmainfrastrutture@pec.tuttogare.it",
+    null
+   ],
+   [
+    "TUTTOGARE",
+    "https://app.tuttogare.it",
+    null
+   ],
+   [
+    "Norme tecniche di utilizzo",
+    "/norme_tecniche.php",
+    null
+   ],
+   [
+    "Policy privacy",
+    "/privacy.php",
+    null
+   ],
+   [
+    "Verifica documento",
+    "/allegati/verifica/form.php",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Ignora",
+   "Torna su",
+   "Ritorna",
+   "Menu",
+   "Procedure di gara",
+   "Elenchi e qualifiche fornitori",
+   "Altre iniziative e informazioni",
+   "CIE",
+   "SPID",
+   "CNS",
+   "Credenziali",
+   "ArubaPEC S.p.A.",
+   "EtnaHitech S.C.p.A.",
+   "Namirial",
+   "InfoCert S.p.A.",
+   "Poste Italiane SpA",
+   "Intesi Group S.p.A.",
+   "Register.it S.p.A.",
+   "Lepida S.p.A.",
+   "TeamSystem s.p.a.",
+   "Agenzia per l'Italia Digitale - AgID",
+   "Sielte S.p.A.",
+   "InfoCamere S.C.p.A.",
+   "TI Trust Technologies srl",
+   "Indietro",
+   "×"
+  ],
+  "rete": [
+   "GET https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
+   "GET https://parmainfrastrutture.tuttogare.it/index.php",
+   "GET https://parmainfrastrutture.tuttogare.it/src/ckeditor5/ckeditor.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/js/app.js?date=20260805",
+   "GET https://parmainfrastrutture.tuttogare.it/src/highcharts/highcharts.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/highcharts/highcharts-more.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/typeahead/typeahead.bundle.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/js/extra/files.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/js/resumable.js",
+   "GET https://js-de.sentry-cdn.com/1b745bc2fb8d172adc30424a79934c15.min.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/js/extra/spid-sp-access-button.min.js",
+   "GET https://parmainfrastrutture.tuttogare.it/src/js/extra/spid-idps.js",
+   "GET https://parmainfrastrutture.tuttogare.it/dictionary/IT.json",
+   "GET https://browser.sentry-cdn.com/10.78.0/bundle.tracing.replay.min.js",
+   "GET https://parmainfrastrutture.tuttogare.it/home/aggiornamentiNormativiContenuto.php",
+   "GET https://parmainfrastrutture.tuttogare.it/spid/idps.php?cache=no",
+   "GET https://browser-update.org/update.min.js",
+   "GET https://parmainfrastrutture.tuttogare.it/cie/button.php",
+   "GET blob:https://parmainfrastrutture.tuttogare.it/0db97fd1-48f2-4b2a-a286-7646c71e928c",
+   "GET https://browser-update.org/update.show.min.js",
+   "GET https://parmainfrastrutture.tuttogare.it/undefined"
+  ]
+ }
+}

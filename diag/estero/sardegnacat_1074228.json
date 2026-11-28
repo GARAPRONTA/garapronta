@@ -1,0 +1,198 @@
+{
+ "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1074228",
+ "diretto": {
+  "status": 200,
+  "url_finale": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1074228&tipobando=Bando&RicQ=YES&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE",
+  "byte": 29064,
+  "secondi": 3.6,
+  "tipo": "text/html; charset=utf-8"
+ },
+ "chrome": {
+  "commit_s": 1.8,
+  "attesa_s": 6.8,
+  "url_finale": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1074228&tipobando=Bando&RicQ=YES&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE",
+  "link": [
+   [
+    "Vai ai contenuti",
+    "#main",
+    null
+   ],
+   [
+    "Vai al menu",
+    "#nav",
+    null
+   ],
+   [
+    "",
+    "https://www.regione.sardegna.it/",
+    null
+   ],
+   [
+    "",
+    "/portalegare/index.php",
+    null
+   ],
+   [
+    "",
+    "https://www.regione.sardegna.it/",
+    null
+   ],
+   [
+    "Alto contrasto",
+    "/portalegare/index.php?template=aflinktemplate3_contrast",
+    null
+   ],
+   [
+    "A(+)",
+    "#",
+    "changeFontSize(2); return false"
+   ],
+   [
+    "Ripristina font",
+    "#",
+    "revertStyles(); return false"
+   ],
+   [
+    "a(-)",
+    "#",
+    "changeFontSize(-2); return false"
+   ],
+   [
+    "Portale gare",
+    "/portalegare/index.php",
+    null
+   ],
+   [
+    "Home",
+    "/portalegare/index.php",
+    null
+   ],
+   [
+    "Bandi Di Gara",
+    "/portalegare/index.php/bandi",
+    null
+   ],
+   [
+    "Home",
+    "/portalegare/index.php",
+    null
+   ],
+   [
+    "Bandi Di Gara",
+    "/portalegare/index.php/bandi",
+    null
+   ],
+   [
+    "Consultazioni Preliminari di Mercato",
+    "/portalegare/index.php/consultazioni-preliminari-di-mercato",
+    null
+   ],
+   [
+    "Convenzioni",
+    "/portalegare/index.php/convenzioni",
+    null
+   ],
+   [
+    "Contatti",
+    "/portalegare/index.php/contatti",
+    null
+   ],
+   [
+    "Feed rss",
+    "/portalegare/index.php/feed-rss",
+    null
+   ],
+   [
+    "Entra con SPID, CIE, CNS o eIDAS",
+    "/Application/OpenID/Login.aspx",
+    null
+   ],
+   [
+    "Hai dimenticato la password?",
+    "/application/modal/recuperopwd_joomla.asp",
+    null
+   ],
+   [
+    "Hai dimenticato Codice di Accesso e Nome Utente ?",
+    "/application/modal/recuperouser_joomla.asp",
+    null
+   ],
+   [
+    "Registrazione Operatori Economici",
+    "/portalegare/index.php/registrazione",
+    null
+   ],
+   [
+    "IE6 non supportato",
+    "//portalegare/requisitiminimi.asp",
+    null
+   ],
+   [
+    "Registrazione Utenti P.A.",
+    "/portalegare/./index.php/registrazione-ente",
+    null
+   ],
+   [
+    "Attestazione Documenti",
+    "/application/portale/attestazione_doc",
+    null
+   ],
+   [
+    "×",
+    null,
+    null
+   ],
+   [
+    "Nascondi suggerimenti",
+    "#",
+    null
+   ],
+   [
+    "Registrati ora!",
+    "./registrazione",
+    null
+   ],
+   [
+    "Dichiarazione di accessibilità",
+    "https://form.agid.gov.it/r_sardeg/Centrale_Regionale_di_Committenza/dichiarazione",
+    null
+   ],
+   [
+    "",
+    "#",
+    null
+   ]
+  ],
+  "pulsanti": [
+   "Accedi"
+  ],
+  "rete": [
+   "GET https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1074228",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1074228&tipobando=Bando&RicQ=YES&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/system/js/core.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/system/js/keepalive.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/system/js/mootools-core.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/system/js/mootools-more.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/system/js/modal.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/jui/js/jquery.min.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/jui/js/jquery-noconflict.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/jui/js/jquery-migrate.min.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/system/js/caption.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/media/jui/js/bootstrap.min.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/templates/aflinktemplate3/js/template.js?fbef0d9704b4eccda187ca90e6bc2c85",
+   "GET https://fonts.googleapis.com/css?family=Titillium%20Web",
+   "GET https://fonts.googleapis.com/css?family=Montserrat%3A400italic%2C400%2C500%2C600%2C700%2C300&subset=latin%2Clatin-ext&ver=5.2.3",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/templates/aflinktemplate3/js/md_stylechanger.js",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/templates/aflinktemplate3/js/FldHierarchy.js?ver=2",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/templates/aflinktemplate3/js/SearchDocumentForExtendeAttrib.js?ver=2",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/templates/aflinktemplate3/js/getObj.js?ver=2",
+   "GET https://code.jquery.com/jquery-1.9.1.min.js",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/public/js/spid_button.min.js",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/modules/mod_rss_aflink/aflink_js_util.js?Saturday%2028th%20of%20November%202026%2009:45:20%20AM",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/modules/mod_rss_aflink/aflink_js_lista.js?Saturday%2028th%20of%20November%202026%2009:45:20%20AM",
+   "GET https://sardegnacat.regione.sardegna.it/portalegare/modules/mod_rss_aflink/ajaxsbmt.js",
+   "GET https://fonts.googleapis.com/css?family=Titillium%20Web&display=swap",
+   "POST https://sardegnacat.regione.sardegna.it/portalegare/modules/mod_rss_aflink/mod_rss_aflink.php?grigliaQuesiti=yes&feed_quesiti=http%3A%2F%2Flocalhost%2Fportale%2Frss_quesiti.asp%3F1%3D1%26Filter%3DID_ORIGIN%3D1074228%2Band%2Bdocument%253D%2527BANDO_GARA%2527%26FilterHide%3D%2520ChiarimentoPubblico%25"
+  ]
+ }
+}

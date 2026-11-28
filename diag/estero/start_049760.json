@@ -1,0 +1,14 @@
+{
+ "url": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
+ "diretto": {
+  "errore": "URLError: <urlopen error timed out>",
+  "secondi": 60.4
+ },
+ "chrome": {
+  "errore": "TimeoutError: Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1\", waiting until \"commit\"\n",
+  "errore2": "Error: Page.content: Unable to retrieve content because the page is navigating and changing the content.",
+  "rete": [
+   "GET https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1"
+  ]
+ }
+}
