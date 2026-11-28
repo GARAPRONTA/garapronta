@@ -4,20 +4,16 @@ Uso: python tools/diag_pagine.py <cartella_uscita>   (le pagine sono fisse, in P
 import gzip, json, os, re, sys, time, urllib.request
 
 PAGINE = {
-    "tuttogare_frosinone": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217",
-    "tuttogare_parma": "https://parmainfrastrutture.tuttogare.it/gare/dettaglio.php?codice=738",
-    "tuttogare_sanpietro": "https://sanpietroamaida.tuttogare.it/gare/dettaglio.php?codice=59",
-    "asmecomm_125795": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795",
-    "asmecomm_125392": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125392",
-    "sardegnacat_1074228": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1074228",
-    "sardegnacat_1084883": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1084883",
-    "sintel_226856892": "https://www.sintel.regione.lombardia.it/eprocdata/auctionDetail.xhtml?id=226856892",
-    "start_049760": "https://start.toscana.it/tendering/tenders/049760-2026/view/detail/1",
-    "sicilia_8240": "https://appalti.regionesiciliana.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=8240",
-    "maggioli_como": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01790",
-    "halleysac_658": "https://sac3.halleysac.it/c023060/eg0/EGBANDI.HBL?bando=658",
-    "intercenter_18824580": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
-    "trasparenza_peccioli": "https://peccioli.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/10621828",
+    "sintel_ricerca": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+    "anas_jaggaer": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26304",
+    "acea_jaggaer": "https://procurement-gruppoacea.app.jaggaer.com/esop/guest/go/opportunity/detail?opportunityId=20436",
+    "empulia_home": "http://www.empulia.it/tno-a/empulia/SitePages/Home.aspx",
+    "albofornitori": "https://app.albofornitori.it/alboeproc/albo_ucomidrogeosicilia",
+    "maggioli_bari": "https://portaleappalti.comune.bari.it/PortaleAppalti/it/procedure/codice/L26013",
+    "maggioli_tivoli": "https://cuc-comunitamontanativoli.org/PortaleAppalti/it/procedure/codice/G00267",
+    "fvg_eappalti": "https://eappalti.regione.fvg.it/",
+    "fvgstrade": "https://www.fvgstrade.it/it/31103/gara-europea-a-procedura-aperta-gara-08-2026-friuli-venezia-giulia-strade-s-p-a-accordo-quadro-per-interve",
+    "ted_808161": "https://ted.europa.eu/it/notice/808161-2026/xml",
 }
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
 OUT = sys.argv[1] if len(sys.argv) > 1 else "diag"
