@@ -177,6 +177,22 @@ def testo_da(nome, data):
             testo = ocr_pdf(f.name) or testo      # PDF scansionato: lo leggo con l'OCR
         os.unlink(f.name)
         return "pdf", testo
+    if data[:2] == b"PK" and n.endswith((".docx", ".odt")):     # Word/OpenOffice: il testo sta in un XML dentro lo ZIP
+        try:
+            with zipfile.ZipFile(io.BytesIO(data)) as z:
+                xml = z.read("word/document.xml" if n.endswith(".docx") else "content.xml").decode("utf-8", "ignore")
+            xml = re.sub(r"</w:p>|</text:p>|</text:h>|<w:br/>|<w:tab/>", "\n", xml)
+            t = unescape(re.sub(r"<[^>]+>", "", xml))
+            if t.strip():
+                return "doc", re.sub(r"\n{3,}", "\n\n", t)
+        except Exception:
+            pass
+    if n.endswith(".rtf") and data[:5] == b"{\\rtf":
+        t = re.sub(r"\\'([0-9a-f]{2})", lambda m: bytes.fromhex(m.group(1)).decode("cp1252", "ignore"), data.decode("latin-1", "ignore"))
+        t = re.sub(r"\\par[d]?|\\line", "\n", t)
+        t = re.sub(r"\\[a-z]+-?\d* ?|[{}]", "", t)
+        if len(t.strip()) > 100:
+            return "doc", t
     if n.endswith((".doc", ".docx", ".rtf", ".odt")):
         with tempfile.TemporaryDirectory() as d:
             p = os.path.join(d, os.path.basename(nome) or "x.doc")

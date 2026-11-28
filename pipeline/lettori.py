@@ -76,6 +76,14 @@ def link_file(html, base):
     # Piattaforme "AF" (SardegnaCAT, EmPULIA, Intercent-ER, aflink): window.open('…TECHVALUE=' + escape('…') + '…')
     for a, b, c in re.findall(r"""['"](https?://[^'"]*?DisplayAttach\.ASP\?[^'"]*?TECHVALUE=)['"]\s*\+\s*escape\(\s*['"]([^'"]+)['"]\s*\)\s*\+\s*['"]([^'"]*)['"]""", html, re.I):
         trovati.append(a + js_escape(b) + c)
+    # portali trasparenza JCityGov (…trasparenza-valutazione-merito.it): window.open(atob('…indirizzo in base64…'))
+    for b64 in re.findall(r"window\.open\(\s*atob\(\s*['\"]([A-Za-z0-9+/=]{20,})['\"]", html):
+        try:
+            u = base64.b64decode(b64 + "=" * (-len(b64) % 4)).decode("utf-8", "ignore")
+            if u.startswith("http"):
+                trovati.append(u)
+        except Exception:
+            pass
     for href in re.findall(r"href=[\"']([^\"']+)[\"']", html, re.I):
         h = href.lower()
         if (h.split("?")[0].endswith(EST) or re.search(r"(download|scarica|getfile|allegato|attachment)[^/]*([?=&]|$)", h)) \
