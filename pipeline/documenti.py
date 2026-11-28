@@ -393,13 +393,16 @@ def _trova_gara(pg, cig, titolo):
         # entro nella sezione bandi e riprovo
         mosso = False
         for t in SEZIONI_BANDI:
-            try:
-                pg.get_by_role("link", name=t, exact=True).first.click(timeout=1500)
-                pg.wait_for_timeout(4000)
-                mosso = True
+            for loc in (pg.get_by_role("link", name=t, exact=True), pg.get_by_text(t, exact=True)):
+                try:
+                    loc.first.click(timeout=1500)
+                    pg.wait_for_timeout(4000)
+                    mosso = True
+                    break
+                except Exception:
+                    continue
+            if mosso:
                 break
-            except Exception:
-                continue
         if not mosso:
             return False
     return False
