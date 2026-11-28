@@ -107,8 +107,8 @@
   "cig": "BDFA177267",
   "url": "https://marinadigioiosaionica.tuttogare.it/gare/dettaglio.php?codice=49",
   "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  },
  {
@@ -179,24 +179,24 @@
   "cig": "BDF6AAFD6B",
   "url": "https://intercenter.regione.emilia-romagna.it/trovabando/BANDO_GARA_PORTALE@18824580",
   "piattaforma": "intercenter.regione.emilia-romagna.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
  },
  {
   "cig": "BDF69D6A59",
   "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=125795",
   "piattaforma": "piattaforma.asmecomm.it",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  },
  {
   "cig": "BDFC0D227E",
   "url": "https://comunefrosinone.tuttogare.it/gare/dettaglio.php?codice=217",
   "piattaforma": "TuttoGare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
+  "esito": "documenti riservati agli invitati",
+  "metodo": "diretto",
   "file": 0
  },
  {
