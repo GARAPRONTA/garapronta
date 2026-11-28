@@ -1,21 +1,5 @@
 [
  {
-  "cig": "BD94ADAC8B",
-  "url": "https://biella.trasparenza-valutazione-merito.it/",
-  "piattaforma": "Traspare",
-  "esito": "nessun file trovato",
-  "metodo": "browser",
-  "file": 0
- },
- {
-  "cig": "BD9531467A",
-  "url": "https://eprocurement.gruppofs.it/",
-  "piattaforma": "eprocurement.gruppofs.it",
-  "esito": "bloccata (HTTP 500)",
-  "metodo": "diretto",
-  "file": 0
- },
- {
   "cig": "BD98DDEA20",
   "url": "https://start.toscana.it/tendering/tenders/044400-2026/view/detail/1",
   "piattaforma": "start.toscana.it",
@@ -40,12 +24,60 @@
   "file": 14
  },
  {
-  "cig": "BD91139DFB",
-  "url": "https://provincia-va.acquistitelematici.it/list/tender/procedure-gara",
-  "piattaforma": "provincia-va.acquistitelematici.it",
+  "cig": "BD8F5F4D14",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1006489",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 14
+ },
+ {
+  "cig": "BD990E1661",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1010072",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD959E567F",
+  "url": "https://comuneteramo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00942",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BD96867F60",
+  "url": "https://gare.comune.matera.it/PortaleAppalti/it/procedure/codice/G01709",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BD94ADAC8B",
+  "url": "https://biella.trasparenza-valutazione-merito.it/",
+  "piattaforma": "Traspare",
   "esito": "nessun file trovato",
   "metodo": "browser",
   "file": 0
+ },
+ {
+  "cig": "BD9531467A",
+  "url": "https://eprocurement.gruppofs.it/",
+  "piattaforma": "eprocurement.gruppofs.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD91139DFB",
+  "url": "https://provincia-va.acquistitelematici.it/list/tender/procedure-gara",
+  "piattaforma": "provincia-va.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 4
  },
  {
   "cig": "BD9179A197",
@@ -56,28 +88,12 @@
   "file": 0
  },
  {
-  "cig": "BD8F5F4D14",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1006489",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "ok",
-  "metodo": "diretto+cloud",
-  "file": 14
- },
- {
   "cig": "BD99BDB544",
   "url": "https://biella.trasparenza-valutazione-merito.it/",
   "piattaforma": "Traspare",
   "esito": "nessun file trovato",
   "metodo": "browser",
   "file": 0
- },
- {
-  "cig": "BD990E1661",
-  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1010072",
-  "piattaforma": "sardegnacat.regione.sardegna.it",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 15
  },
  {
   "cig": "BD93542AB2",
@@ -94,14 +110,6 @@
   "esito": "nessun file trovato",
   "metodo": "browser",
   "file": 0
- },
- {
-  "cig": "BD959E567F",
-  "url": "https://comuneteramo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00942",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 14
  },
  {
   "cig": "BD928463A7",
@@ -142,13 +150,5 @@
   "esito": "file senza testo (scansioni?)",
   "metodo": "server-IT/diretto",
   "file": 15
- },
- {
-  "cig": "BD96867F60",
-  "url": "https://gare.comune.matera.it/PortaleAppalti/it/procedure/codice/G01709",
-  "piattaforma": "Maggioli PortaleAppalti",
-  "esito": "ok",
-  "metodo": "diretto",
-  "file": 8
  }
 ]
