@@ -1,0 +1,154 @@
+[
+ {
+  "cig": "BD94ADAC8B",
+  "url": "https://biella.trasparenza-valutazione-merito.it/",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9531467A",
+  "url": "https://eprocurement.gruppofs.it/",
+  "piattaforma": "eprocurement.gruppofs.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD98DDEA20",
+  "url": "https://start.toscana.it/tendering/tenders/044400-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 7
+ },
+ {
+  "cig": "BD999DE13B",
+  "url": "https://cuctorredelgreco.acquistitelematici.it/tender/177",
+  "piattaforma": "cuctorredelgreco.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BD98EC1575",
+  "url": "https://appalti.provincia.foggia.it/PortaleAppalti/it/procedure/codice/G03196",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BD91139DFB",
+  "url": "https://provincia-va.acquistitelematici.it/list/tender/procedure-gara",
+  "piattaforma": "provincia-va.acquistitelematici.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9179A197",
+  "url": "https://www.comune.roma.it/SUAFF-public/#/trasparenza/repository/51390",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD8F5F4D14",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1006489",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto+cloud",
+  "file": 14
+ },
+ {
+  "cig": "BD99BDB544",
+  "url": "https://biella.trasparenza-valutazione-merito.it/",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD990E1661",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1010072",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD93542AB2",
+  "url": "https://acquistisacbo.tlk.app.jaggaer.com/go/4833357201A1546F9AD1",
+  "piattaforma": "acquistisacbo.tlk.app.jaggaer.com",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD97D19370",
+  "url": "https://adespa.acquistitelematici.it/tender-esiti/dettaglio/697",
+  "piattaforma": "adespa.acquistitelematici.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD959E567F",
+  "url": "https://comuneteramo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00942",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 14
+ },
+ {
+  "cig": "BD928463A7",
+  "url": "https://biella.trasparenza-valutazione-merito.it/",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD924DD33B",
+  "url": "https://casaspa.acquistitelematici.it/tender/1000",
+  "piattaforma": "casaspa.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 5
+ },
+ {
+  "cig": "BD919910AE",
+  "url": "https://biella.trasparenza-valutazione-merito.it/",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BD9549C9F6",
+  "url": "https://eprocurement.gruppofs.it/",
+  "piattaforma": "eprocurement.gruppofs.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BD96EFDEB5",
+  "url": "https://gare.provincia.fr.it/gare/dettaglio.php?codice=5211",
+  "piattaforma": "gare.provincia.fr.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 15
+ },
+ {
+  "cig": "BD96867F60",
+  "url": "https://gare.comune.matera.it/PortaleAppalti/it/procedure/codice/G01709",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ }
+]
