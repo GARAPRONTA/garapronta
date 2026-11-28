@@ -1,0 +1,146 @@
+[
+ {
+  "cig": "BDBAB6B102",
+  "url": "https://sardegnacat.regione.sardegna.it/application/ctl_library/document/document.asp?lo=base&JScript=BANDO_GARA&DOCUMENT=BANDO_GARA&IDDOC=1050746&MODE=SHOW",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDBE436EF4",
+  "url": "https://cucdeltavoliere.traspare.com/announcements/3944",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDB1E542AA",
+  "url": "https://start.toscana.it/tendering/tenders/045399-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 15
+ },
+ {
+  "cig": "BDBCAFCDA5",
+  "url": "https://direzioneregionalemuseipiemonte.acquistitelematici.it/tender/230",
+  "piattaforma": "direzioneregionalemuseipiemonte.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDBC412900",
+  "url": "https://www.acquistinretepa.it/bandi/aperta/gara-asp/48497ccf22738e3b",
+  "piattaforma": "www.acquistinretepa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDBDC364E7",
+  "url": "https://acquisti.stradeanas.it/esop/guest/go/opportunity/detail?opportunityId=26244",
+  "piattaforma": "acquisti.stradeanas.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDBDDA321D",
+  "url": "https://comunelaquila.tuttogare.it/gare/dettaglio.php?codice=1016",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDB7DAC0C9",
+  "url": "https://montedomini.acquistitelematici.it/tender/584",
+  "piattaforma": "montedomini.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 4
+ },
+ {
+  "cig": "BDB9AF7D24",
+  "url": "https://provcaserta-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/GARA_N1396",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 10
+ },
+ {
+  "cig": "BCFEC0CE24",
+  "url": "https://supplier.snam.it/esop/toolkit/negotiation/rfq/modify/configuration/initStepReadOnly.si?reset=true&isOnModification=false&_ncp=1788871974741.762469-4#fh",
+  "piattaforma": "supplier.snam.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDBA3BC9C7",
+  "url": "https://www.cucrivieradiulisse.it/PortaleAppalti/it/procedure/codice/G02750",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDBBF8ABBC",
+  "url": "https://portaleappalti.mit.gov.it/PortaleAppalti/it/procedure/codice/G07742",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDBC8B3AE4",
+  "url": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
+  "piattaforma": "www.sintel.regione.lombardia.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDA9F4DF1F",
+  "url": "https://comunesanferdinandodipuglia.traspare.com/announcements/635",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDBD178787",
+  "url": "https://appalti-cmmontilattari.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00144",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 11
+ },
+ {
+  "cig": "BDBD503403",
+  "url": "https://website.pa-online.it/aree-protette-alpi-marittime/amm_trasp/bandi-di-gara-e-contratti-procedure-dal-01-01-2024/",
+  "piattaforma": "website.pa-online.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDBD9DE5C4",
+  "url": "https://comunelaquila.tuttogare.it/gare/dettaglio.php?codice=1015",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDBDD9568E",
+  "url": "https://www.comune.sestosangiovanni.mi.it/it/b/66796/affidamento-dellappalto-di-lavori-per-la-realizzazione-di-una-nuova-fontana-scenografica-nella-rotatoria-stradale-di-via-partigiani-via-di-vittorio-in-sesto-san-giovanni",
+  "piattaforma": "www.comune.sestosangiovanni.mi.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 4
+ }
+]
