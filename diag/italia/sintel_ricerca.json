@@ -4,12 +4,12 @@
   "status": 200,
   "url_finale": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
   "byte": 79875,
-  "secondi": 0.6,
+  "secondi": 0.2,
   "tipo": "text/html;charset=UTF-8"
  },
  "chrome": {
-  "commit_s": 3.6,
-  "attesa_s": 31.4,
+  "commit_s": 0.2,
+  "attesa_s": 5.3,
   "url_finale": "https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
   "link": [
    [
@@ -406,6 +406,181 @@
     "Bandi di gara",
     "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara",
     null
+   ],
+   [
+    "",
+    "#",
+    null
+   ],
+   [
+    "Chi Siamo",
+    null,
+    null
+   ],
+   [
+    "Azienda",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/azienda",
+    null
+   ],
+   [
+    "Organizzazione",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/organizzazione",
+    null
+   ],
+   [
+    "Comunicazione",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/comunicazione",
+    null
+   ],
+   [
+    "Contatti",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/contatti",
+    null
+   ],
+   [
+    "Cosa Facciamo",
+    null,
+    null
+   ],
+   [
+    "Acquisti",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/acquisti",
+    null
+   ],
+   [
+    "Innovazione digitale",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/innovazione-digitale",
+    null
+   ],
+   [
+    "Infrastrutture",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/infrastrutture",
+    null
+   ],
+   [
+    "Energia",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cosa-facciamo/energia",
+    null
+   ],
+   [
+    "Bandi e Convenzioni",
+    null,
+    null
+   ],
+   [
+    "Bandi di gara",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara",
+    null
+   ],
+   [
+    "Convenzioni",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/convenzioni",
+    null
+   ],
+   [
+    "E-procurement",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/e-procurement",
+    null
+   ],
+   [
+    "Progetti",
+    null,
+    null
+   ],
+   [
+    "Procurement",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/procurement",
+    null
+   ],
+   [
+    "Digital",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/digital",
+    null
+   ],
+   [
+    "Infrastrutture ed Energia",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/infrastrutture-ed-energia",
+    null
+   ],
+   [
+    "Progetti trasversali",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/progetti/progetti-trasversali",
+    null
+   ],
+   [
+    "Link Utili",
+    null,
+    null
+   ],
+   [
+    "Mappa del sito",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/mappa-sito",
+    null
+   ],
+   [
+    "Società Trasparente",
+    "https://trasparenza.ariaspa.it/wps/portal/site/aria-st",
+    null
+   ],
+   [
+    "Lavora con noi",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/chi-siamo/organizzazione/lavora-con-noi",
+    null
+   ],
+   [
+    "ARIA - PagoPA",
+    "https://trasparenza.ariaspa.it/wps/portal/site/aria-st/pagamenti/iban-e-pagamenti-informatici",
+    null
+   ],
+   [
+    "",
+    "https://www.facebook.com/AriaLombardia/",
+    null
+   ],
+   [
+    "",
+    "https://twitter.com/AriaLombardia",
+    null
+   ],
+   [
+    "",
+    "https://www.linkedin.com/company/ariaspa/about/",
+    null
+   ],
+   [
+    "Credits",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/credits",
+    null
+   ],
+   [
+    "Note legali",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/note-legali",
+    null
+   ],
+   [
+    "Accessibilità",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/accessibilita",
+    null
+   ],
+   [
+    "Cookie policy",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/cookie-policy",
+    null
+   ],
+   [
+    "Social media policy",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/social-media-policy",
+    null
+   ],
+   [
+    "About us",
+    "https://www.ariaspa.it/wps/portal/Aria/Home/about-us/",
+    null
+   ],
+   [
+    "protocollo@pec.ariaspa.it",
+    "mailto:protocollo@pec.ariaspa.it",
+    null
    ]
   ],
   "pulsanti": [
@@ -415,24 +590,26 @@
    "TIPO",
    "STATO",
    "AMBITO DELLA PROCEDURA",
-   "Cancella",
+   "DATA INIZIO DAL",
+   "DATA INIZIO AL",
+   "CANCELLA",
    "Applica"
   ],
   "rete": [
    "GET https://www.sintel.regione.lombardia.it/eprocdata/sintelSearch.xhtml",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/primefaces.js.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/primefaces.css.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat?ln=primefaces&v=5.3",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-burger.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-close.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/img/loghi/aria_LOGO.png.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/img/loghi/REGIONE_LOGO.png.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-chevron-down.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/arrow.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-facebook.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-twitter.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
-   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-linkedin.svg.xhtml;jsessionid=3A0D12E344BE645C66043A6FF6EAA650.SINTEL-02-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/primefaces.js.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/primefaces.css.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat?ln=primefaces&v=5.3",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-burger.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-close.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/img/loghi/aria_LOGO.png.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/img/loghi/REGIONE_LOGO.png.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-chevron-down.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/arrow.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-facebook.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-twitter.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
+   "GET https://www.sintel.regione.lombardia.it/eprocdata/javax.faces.resource/minisiti/tema/svg/it-linkedin.svg.xhtml;jsessionid=573882387C01FB2E83ED5000F0191D3A.SINTEL-01-tomcat",
    "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/jquery/jquery-3.2.1.min.js",
    "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/bootstrap-3.3.7/dist/js/bootstrap.min.js",
    "GET https://www.sintel.regione.lombardia.it/eprocdata/resources/minisiti/tema/libs/jqueryui/jquery-ui-1.12.1/jquery-ui-non-AMD.js",
