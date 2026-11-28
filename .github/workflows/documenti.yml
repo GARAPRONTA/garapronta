@@ -34,8 +34,16 @@ jobs:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           SSHPASS: ${{ secrets.VPS_PASSWORD }}
         run: python pipeline/documenti.py
+      - name: Riprova le gare non lette della settimana (solo nel giro automatico)
+        if: github.event_name == 'workflow_run'
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          SSHPASS: ${{ secrets.VPS_PASSWORD }}
+        run: timeout 3600 python tools/riprova_settimana.py || true
+      - name: Rapporto di copertura
+        run: python tools/copertura_report.py || true
       - name: Salva i testi
         run: |
           git config user.name "GaraPronta bot"; git config user.email "garapronta@users.noreply.github.com"
-          git add testi/ && git commit -q -m "Documenti di gara $(date -u +%F)" || exit 0
+          git add testi/ docs/progetto/09_COPERTURA.md && git commit -q -m "Documenti di gara $(date -u +%F)" || exit 0
           for i in 1 2 3 4 5; do git pull -q --rebase -X theirs origin main && git push -q && break; sleep 7; done

@@ -722,6 +722,27 @@ def vps_giro(falliti, unici, titoli, base):
 
 
 
+
+def link_ted(url_ted):
+    """Dall'avviso europeo (TED, eForms) prende l'indirizzo dei documenti di gara (BT-15)."""
+    m = re.search(r"NOTICE:([0-9]+-[0-9]{4})", url_ted or "")
+    if not m:
+        return []
+    st, hd, body, _ = _get(f"https://ted.europa.eu/it/notice/{m.group(1)}/xml", headers={"accept": "application/xml"})
+    if st != 200 or not body:
+        return []
+    x = body.decode("utf-8", "ignore")
+    out = []
+    for blocco in re.findall(r"<cac:CallForTendersDocumentReference>(.*?)</cac:CallForTendersDocumentReference>", x, re.S):
+        out += re.findall(r"<cbc:URI>([^<]+)</cbc:URI>", blocco)
+    out += re.findall(r"<cbc:AccessToolsURI>([^<]+)</cbc:AccessToolsURI>", x)
+    visti = []
+    for u in out:
+        u = unescape(u.strip())
+        if u.startswith("http") and u not in visti:
+            visti.append(u)
+    return visti[:3]
+
 def giorno_default():
     """Di sera (dalle 18 ora italiana) il giorno stesso, per il giro serale; altrimenti ieri."""
     from zoneinfo import ZoneInfo
@@ -733,13 +754,15 @@ def main():
     giorno = os.environ.get("DATA") or giorno_default()
     d = datetime.strptime(giorno, "%d/%m/%Y")
     avvisi = json.load(gzip.open(f"data/{d:%Y/%m/%d}.json.gz", "rt"))
-    righe, titoli = [], {}
+    righe, titoli, ted = [], {}, {}
     for a in avvisi:
         if a["tipo"] != "avviso" or a["tipologia"] not in ("BANDI", "INDAGINI_DI_MERCATO_SOTTO_SOGLIA"):
             continue
         for it in a["items"]:
             if (it.get("natura") or "").lower() == "lavori" and a.get("link") and it.get("cig"):
                 righe.append((it["cig"], a["link"], a["tipologia"]))
+                if a.get("ted"):
+                    ted[it["cig"]] = a["ted"]
                 titoli[it["cig"]] = (a.get("titolo") or it.get("descr") or "")[:200]
                 break
     solo = {x.strip() for x in (os.environ.get("SOLO_CIG") or "").split(",") if x.strip()}
@@ -822,6 +845,32 @@ def main():
                     print(f"  browser ok {len(files):2} file  {urlparse(url).netloc}", flush=True)
             except Exception as e:
                 print(f"  Apify browser non disponibile: {e}", flush=True)
+    # --- giro TED: per le gare europee l'avviso TED indica l'indirizzo dei documenti, spesso diverso da quello dato all'ANAC
+    falliti = [u for u, r in risultati.items() if r["esito"].split(" (")[0] in DA_RIFARE and unici[u] in ted]
+    if falliti:
+        alt = {}
+        for u in falliti:
+            try:
+                for v in link_ted(ted[unici[u]]):
+                    if v.rstrip("/") != u.strip().rstrip("/"):
+                        alt[v] = u
+                        break
+            except Exception:
+                continue
+        if alt:
+            print(f"\n== TED: {len(alt)} gare con un indirizzo dei documenti diverso", flush=True)
+            with ThreadPoolExecutor(max_workers=6) as ex:
+                for v, ris in ex.map(lambda v: (v, lancia((v, unici[alt[v]]))[1]), list(alt)):
+                    if ris["esito"] == "ok":
+                        risultati[alt[v]] = {**ris, "metodo": "ted/" + ris.get("metodo", "")}
+            ancora = [v for v in alt if risultati[alt[v]]["esito"] != "ok"]
+            if ancora and os.environ.get("VPS_HOST") and os.environ.get("SSHPASS"):
+                try:
+                    for v, ris in vps_giro(ancora, {v: unici[alt[v]] for v in ancora}, titoli, base).items():
+                        risultati[alt[v]] = {**ris, "metodo": "ted/server-IT/" + ris.get("metodo", "")}
+                except Exception as e:
+                    print(f"  Server italiano non disponibile (TED): {e}", flush=True)
+            print(f"  TED: {sum(1 for v in alt if risultati[alt[v]]['esito'] == 'ok')} recuperate", flush=True)
     esiti, per_piatt, rapporto = Counter(), {}, []
     for cig, url, tip in righe:
         r = risultati[url]

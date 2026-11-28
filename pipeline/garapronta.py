@@ -153,6 +153,7 @@ def estrai(a):
         "ente": ente_bello(trova(A, "denominazione_amministrazione") or ""),
         "procedura": trova(B, "tipo_procedura_aggiudicazione"),
         "link": trova(B, "documenti_di_gara_link") or trova(C, "documenti_di_gara_link"),
+        "ted": (t.get("metadata") or {}).get("link_eform_ted"),
         "items": items,
     }
 
