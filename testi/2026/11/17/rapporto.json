@@ -1,0 +1,218 @@
+[
+ {
+  "cig": "BDD117ABB2",
+  "url": "https://provinciacomo-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G01741",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BDD2CCA5AF",
+  "url": "https://start.toscana.it/tendering/tenders/046799-2026/view/detail/1",
+  "piattaforma": "start.toscana.it",
+  "esito": "ok",
+  "metodo": "server-IT/api-start",
+  "file": 12
+ },
+ {
+  "cig": "BDD23B248F",
+  "url": "https://place-vda.aflink.it//Application/CustomDoc/DettaglioProcedura.asp?ID=1322015",
+  "piattaforma": "place-vda.aflink.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 10
+ },
+ {
+  "cig": "BDCE5B6DDC",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1063144",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDD25D8A6D",
+  "url": "https://webs.rete.toscana.it/sitat/trasparenza/#/procedura?uuid=START_3c58ed3b-efaa-4736-14f68-0bd875884b70",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCEBFBA5A",
+  "url": "https://bellizzi-appalti.maggiolicloud.it/PortaleAppalti/it/procedure/codice/G00639",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDD2FC7CF9",
+  "url": "https://appalti.comune.arzignano.vi.it/PortaleAppalti/it/procedure/codice/G00256",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDD3512B28",
+  "url": "https://appalti.ibleaacque.lavoripubblici.sicilia.it/gare/dettaglio.php?codice=384",
+  "piattaforma": "appalti.ibleaacque.lavoripubblici.sicilia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD14B562A",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=123976",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 8
+ },
+ {
+  "cig": "BDD05BFD8A",
+  "url": "https://www.unionemontanavalsesia.it/it-it/amministrazione/procedure-senza-bando/2026/avviso-pubblico-di-manifestazione-di-interesse-per-l-espletamento-di-procedura-negoziata-senza-58199-1-b327a433caf050d854c2361701c970ac",
+  "piattaforma": "www.unionemontanavalsesia.it",
+  "esito": "ok",
+  "metodo": "browser",
+  "file": 3
+ },
+ {
+  "cig": "BDCFE31191",
+  "url": "https://infrato.tuttogare.it/gare/dettaglio.php?codice=592",
+  "piattaforma": "TuttoGare",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDD1753F0E",
+  "url": "https://infogare.comune.brescia.it/PortaleAppalti/it/procedure/codice/G13101",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "bloccata (URLError)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCB037865",
+  "url": "https://eprocurement.gruppofs.it/",
+  "piattaforma": "eprocurement.gruppofs.it",
+  "esito": "bloccata (HTTP 500)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCAEA4BD3",
+  "url": "https://cbonificabergamo.acquistitelematici.it/tender/1149",
+  "piattaforma": "cbonificabergamo.acquistitelematici.it",
+  "esito": "file senza testo (scansioni?)",
+  "metodo": "server-IT/diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDCD058BE0",
+  "url": "https://www.ariaspa.it/wps/portal/Aria/Home/bandi-convenzioni/bandi-di-gara/bandi-sulla-piattaforma-sintel",
+  "piattaforma": "www.ariaspa.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDCEF46207",
+  "url": "https://provincia.pistoia.it/gara/2026/11/procedura-aperta-su-start-consolidamento-opere-di-sostegno-infrastruttura-stradale",
+  "piattaforma": "provincia.pistoia.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 2
+ },
+ {
+  "cig": "BDD0DE67CB",
+  "url": "https://consorziozai.acquistitelematici.it/tender/741",
+  "piattaforma": "consorziozai.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 1
+ },
+ {
+  "cig": "BDD3DE20E1",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1068728",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 6
+ },
+ {
+  "cig": "BDCFC612A9",
+  "url": "https://www.muzza.it/",
+  "piattaforma": "www.muzza.it",
+  "esito": "link senza file",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCF012A5D",
+  "url": "https://appalti.comune.vicenza.it/PortaleAppalti/it/procedure/codice/G01136",
+  "piattaforma": "Maggioli PortaleAppalti",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 9
+ },
+ {
+  "cig": "BDD1E45A50",
+  "url": "https://celano.acquistitelematici.it/tender/1067",
+  "piattaforma": "celano.acquistitelematici.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 5
+ },
+ {
+  "cig": "BDD21A5351",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1055727",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDD1815F26",
+  "url": "https://unipi.amministrazionetrasparente.cineca.it/archivio105_procedure-dal-01012024_0_5354643_566_1.html",
+  "piattaforma": "Traspare",
+  "esito": "bloccata (HTTP 403)",
+  "metodo": "diretto",
+  "file": 0
+ },
+ {
+  "cig": "BDCE890848",
+  "url": "https://piattaforma.asmecomm.it/gare/dettaglio.php?codice=124582",
+  "piattaforma": "piattaforma.asmecomm.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 3
+ },
+ {
+  "cig": "BD227C17C4",
+  "url": "https://www.comune.locatevaresino.co.it/amministrazione/trasparenza/bandi_di_gara/scheda_bando_nuovo_10.html",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDC8F14003",
+  "url": "https://orzinuovi.trasparenza-valutazione-merito.it/web/trasparenza/papca-g/-/papca/display/8503375",
+  "piattaforma": "Traspare",
+  "esito": "nessun file trovato",
+  "metodo": "browser",
+  "file": 0
+ },
+ {
+  "cig": "BDD11B6D35",
+  "url": "https://sardegnacat.regione.sardegna.it/Application/CustomDoc/DettaglioProcedura.asp?ID=1059950",
+  "piattaforma": "sardegnacat.regione.sardegna.it",
+  "esito": "ok",
+  "metodo": "diretto",
+  "file": 7
+ }
+]
